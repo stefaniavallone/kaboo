@@ -1,1 +1,7 @@
+# Kivy
 kivy==2.0.0
+kivymd==0.104.2
+kaki==0.1.4
+
+# Mobile abstraction
+plyer==2.0.0

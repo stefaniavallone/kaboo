@@ -1,0 +1,7 @@
+{
+    "home": {
+        "import": "from src.uix.pages.home_screen import HomeScreen",
+        "kv": "src/uix/pages/kv/home_screen.kv",
+        "object": "HomeScreen()"
+    }
+}
