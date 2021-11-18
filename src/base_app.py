@@ -11,7 +11,7 @@ def initialize_app(app):
     Window.soft_input_mode = "below_target"
     app.title = "KTaboo"
 
-    app.theme_cls.primary_palette = "Amber"
+    app.theme_cls.primary_palette = "Blue"
     app.theme_cls.primary_hue = "500"
 
     app.theme_cls.accent_palette = "Amber"

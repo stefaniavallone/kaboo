@@ -2,10 +2,6 @@
     MDBoxLayout:
         orientation: "vertical"
 
-        MDToolbar:
-            title: "App"
-            right_action_items: [["dots-vertical", lambda x: x]]
-
         MDBoxLayout:
             size_hint_y:.25
             padding:dp(25)
@@ -52,7 +48,35 @@
                 subtext:"play"
                 items_count:"56 cards"
 
+        MDGridLayout:
+            size_hint_y:.100
+            cols:4
+            padding:[dp(60),dp(15),dp(10),dp(80)]
+            spacing:dp(15)
+            MDIconButton:
+                icon: "android"
+                md_bg_color: app.theme_cls.primary_color
 
+            MDIconButton:
+                id: history
+                icon: "android"
+                md_bg_color: app.theme_cls.primary_color
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'history'
+
+            MDIconButton:
+                icon: "android"
+                md_bg_color: app.theme_cls.primary_color
+                on_release: root.show_rate_us_dialog()
+
+            MDIconButton:
+                id: settings
+                icon: "android"
+                md_bg_color: app.theme_cls.primary_color
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'settings'
 
 
 <ElementCard@MDCard>:
