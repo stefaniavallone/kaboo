@@ -1,26 +1,26 @@
 {
     "home": {
-        "import": "from src.uix.pages.home_screen import HomeScreen",
+        "import": "from uix.pages.home_screen import HomeScreen",
         "kv": "src/uix/pages/kv/home_screen.kv",
         "object": "HomeScreen()"
     },
     "settings": {
-        "import": "from src.uix.pages.settings_screen import SettingsScreen",
+        "import": "from uix.pages.settings_screen import SettingsScreen",
         "kv": "src/uix/pages/kv/settings_screen.kv",
         "object": "SettingsScreen()"
     },
     "history": {
-        "import": "from src.uix.pages.history_screen import HistoryScreen",
+        "import": "from uix.pages.history_screen import HistoryScreen",
         "kv": "src/uix/pages/kv/history_screen.kv",
         "object": "HistoryScreen()"
     },
     "trophies": {
-        "import": "from src.uix.pages.trophies_screen import TrophiesScreen",
+        "import": "from uix.pages.trophies_screen import TrophiesScreen",
         "kv": "src/uix/pages/kv/trophies_screen.kv",
         "object": "TrophiesScreen()"
     },
     "game": {
-        "import": "from src.uix.pages.game_screen import GameScreen",
+        "import": "from uix.pages.game_screen import GameScreen",
         "kv": "src/uix/pages/kv/game_screen.kv",
         "object": "GameScreen()"
     }
