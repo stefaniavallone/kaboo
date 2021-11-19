@@ -2,10 +2,6 @@
     MDBoxLayout:
         orientation: "vertical"
 
-        MDToolbar:
-            title: "App"
-            right_action_items: [["dots-vertical", lambda x: x]]
-
         MDBoxLayout:
             size_hint_y:.25
             padding:dp(25)
@@ -25,7 +21,7 @@
                         icon:'chevron-down'
 
             MDIconButton:
-                icon:"assets/images/logo.png"
+                icon:"assets/appicon.png"
         MDGridLayout:
             size_hint_y:.75
             cols:2
@@ -33,24 +29,52 @@
             spacing:dp(15)
             ElementCard:
                 md_bg_color:55/255,255/255,86/255,1
-                image:"assets/images/logo.png"
+                image:"assets/images/darts.png"
                 text:"Easy"
                 subtext:"play"
                 items_count:"33 Cards"
 
             ElementCard:
-                md_bg_color:255/255,69/255,86/255,1
-                image:"assets/images/logo.png"
+                md_bg_color:205/255,69/255,126/255,1
+                image:"assets/images/darts2.png"
                 text:"Medium"
                 subtext:"play"
                 items_count:"45 Cards"
 
             ElementCard:
                 md_bg_color:69/255,55/255,255/255,1
-                image:"assets/images/logo.png"
+                image:"assets/images/darts3.png"
                 text:"Hard"
                 subtext:"play"
                 items_count:"56 cards"
+
+        MDBoxLayout:
+            size_hint_y:.10
+            padding_y:dp(15)
+            spacing:dp(15)
+            orientation:"horizontal"
+            md_bg_color:55/255,155/255,155/255,1
+
+            MDIconButton:
+                icon: "trophy"
+                user_font_size: "48sp"
+                padding:dp(5)
+            MDIconButton:
+                icon: "book-open-outline"
+                user_font_size: "48sp"
+                padding:dp(5)
+            MDIconButton:
+                icon: "star"
+                user_font_size: "48sp"
+                padding:dp(5)
+            MDIconButton:
+                icon: "menu"
+                user_font_size: "48sp"
+                padding:dp(5)
+
+
+
+
 
 
 

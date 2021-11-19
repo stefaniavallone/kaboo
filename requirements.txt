@@ -5,3 +5,4 @@ kaki==0.1.4
 
 # Mobile abstraction
 plyer==2.0.0
+python-for-android==2021.9.5

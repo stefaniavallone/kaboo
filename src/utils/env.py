@@ -1,9 +1,9 @@
 import os
 import platform
 import sys
-
 from kivy.core.window import Window
 from kivy.logger import LOG_LEVELS, Logger
+#from android.permissions import request_permissions, Permission
 
 
 def setup_env():
@@ -15,3 +15,8 @@ def setup_env():
     if platform.system() == "Windows":
         Window.size = (360, 740)
         os.environ["KIVY_GL_BACKEND"] = "angle_sdl2"
+
+
+    # if kivy.utils.platform == "android":
+    #     request_permissions([Permission.READ_EXTERNAL_STORAGE,
+    #                          Permission.WRITE_EXTERNAL_STORAGE])
