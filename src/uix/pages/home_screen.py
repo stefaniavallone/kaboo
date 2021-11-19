@@ -21,7 +21,7 @@ class HomeScreen(MDScreen):
                     MDFlatButton(
                         text="Rate us",
                         theme_text_color="Custom",
-                        on_release=self.go_to_playstore
+                        on_release=self.go_to_play_store
                     ),
                 ]
             )
