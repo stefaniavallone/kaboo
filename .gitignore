@@ -19,7 +19,6 @@ src/__pycache__/
 
 # Buildozer Files
 .buildozer
-*.spec
 
 # Distribution / packaging
 .Python

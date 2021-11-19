@@ -1,0 +1,16 @@
+<GameScreen>
+    MDBoxLayout:
+        orientation: "vertical"
+        MDBoxLayout:
+            size_hint_y:.10
+            padding:dp(10)
+            #md_bg_color: 255/255, 25/255, 25/255,  1
+            orientation: "horizontal"
+            MDIconButton:
+                icon: "chevron-left"
+                md_bg_color: app.theme_cls.primary_color
+                on_release:
+                    root.manager.transition.direction = 'right'
+                    root.manager.current = 'home'
+        MDBoxLayout:
+            id: container

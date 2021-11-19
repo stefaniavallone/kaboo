@@ -24,7 +24,7 @@ class LiveApp(MDApp, HotReloaderApp):
 
     # Auto Reloader Path
     AUTORELOADER_PATHS = [
-        (".", {"recursive": True}),
+        ("./src", {"recursive": True}),
     ]
 
     def __init__(self, **kwargs):

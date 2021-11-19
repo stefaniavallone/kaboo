@@ -1,7 +1,7 @@
 import json
 
 from kivy.clock import Clock
-from kivy.lang import Builder
+from kivy.core.window import Window
 from kivy.uix.screenmanager import ScreenManager
 
 from utils import utils
@@ -17,7 +17,7 @@ class Root(ScreenManager):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         Clock.schedule_once(self.add_screens)
-
+        Window.bind(on_keyboard=self.keyboard)
 
     def add_screens(self, interval):
         """
@@ -50,3 +50,10 @@ class Root(ScreenManager):
             self.add_widget(
                 screen_object
             )  # finally adding it to the screen manager
+
+    def keyboard(self, window, key, *args):
+        if key == 27 and self.sm.current != "home":
+            self.current = "home"
+            return True  # key event consumed by app
+        else:
+            return False  # key event passed to Android

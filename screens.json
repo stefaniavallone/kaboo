@@ -9,9 +9,19 @@
         "kv": "src/uix/pages/kv/settings_screen.kv",
         "object": "SettingsScreen()"
     },
-     "history": {
+    "history": {
         "import": "from src.uix.pages.history_screen import HistoryScreen",
         "kv": "src/uix/pages/kv/history_screen.kv",
         "object": "HistoryScreen()"
+    },
+    "trophies": {
+        "import": "from src.uix.pages.trophies_screen import TrophiesScreen",
+        "kv": "src/uix/pages/kv/trophies_screen.kv",
+        "object": "TrophiesScreen()"
+    },
+    "game": {
+        "import": "from src.uix.pages.game_screen import GameScreen",
+        "kv": "src/uix/pages/kv/game_screen.kv",
+        "object": "GameScreen()"
     }
 }

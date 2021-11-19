@@ -20,8 +20,6 @@
                     MDIcon:
                         icon:'chevron-down'
 
-            MDIconButton:
-                icon:"assets/images/logo.png"
         MDGridLayout:
             size_hint_y:.75
             cols:2
@@ -29,24 +27,33 @@
             spacing:dp(15)
             ElementCard:
                 md_bg_color:55/255,255/255,86/255,1
-                image:"assets/images/logo.png"
+                image:"assets/images/darts.png"
                 text:"Easy"
                 subtext:"play"
                 items_count:"33 Cards"
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'game'
 
             ElementCard:
                 md_bg_color:255/255,69/255,86/255,1
-                image:"assets/images/logo.png"
+                image:"assets/images/darts2.png"
                 text:"Medium"
                 subtext:"play"
                 items_count:"45 Cards"
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'game'
 
             ElementCard:
                 md_bg_color:69/255,55/255,255/255,1
-                image:"assets/images/logo.png"
+                image:"assets/images/darts3.png"
                 text:"Hard"
                 subtext:"play"
                 items_count:"56 cards"
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'game'
 
         MDGridLayout:
             size_hint_y:.100
@@ -54,25 +61,28 @@
             padding:[dp(60),dp(15),dp(10),dp(80)]
             spacing:dp(15)
             MDIconButton:
-                icon: "android"
+                icon: "trophy"
                 md_bg_color: app.theme_cls.primary_color
+                on_release:
+                    root.manager.transition.direction = 'left'
+                    root.manager.current = 'trophies'
 
             MDIconButton:
                 id: history
-                icon: "android"
+                icon: "book"
                 md_bg_color: app.theme_cls.primary_color
                 on_release:
                     root.manager.transition.direction = 'left'
                     root.manager.current = 'history'
 
             MDIconButton:
-                icon: "android"
+                icon: "star"
                 md_bg_color: app.theme_cls.primary_color
                 on_release: root.show_rate_us_dialog()
 
             MDIconButton:
                 id: settings
-                icon: "android"
+                icon: "menu"
                 md_bg_color: app.theme_cls.primary_color
                 on_release:
                     root.manager.transition.direction = 'left'
