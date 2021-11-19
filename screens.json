@@ -3,5 +3,15 @@
         "import": "from src.uix.pages.home_screen import HomeScreen",
         "kv": "src/uix/pages/kv/home_screen.kv",
         "object": "HomeScreen()"
+    },
+    "settings": {
+        "import": "from src.uix.pages.settings_screen import SettingsScreen",
+        "kv": "src/uix/pages/kv/settings_screen.kv",
+        "object": "SettingsScreen()"
+    },
+     "history": {
+        "import": "from src.uix.pages.history_screen import HistoryScreen",
+        "kv": "src/uix/pages/kv/history_screen.kv",
+        "object": "HistoryScreen()"
     }
 }

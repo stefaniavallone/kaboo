@@ -6,6 +6,7 @@ venv/
 bin/
 lib/
 lib64/
+design_utils/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
