@@ -1,5 +1,4 @@
 import webbrowser
-from multiprocessing import Process
 
 from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
