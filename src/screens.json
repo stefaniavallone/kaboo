@@ -1,14 +1,13 @@
 {
-
-    "settings": {
-        "import": "from uix.pages.settings_screen import SettingsScreen",
-        "kv": "uix/pages/kv/settings_screen.kv",
-        "object": "SettingsScreen()"
-    },
     "home": {
         "import": "from uix.pages.home_screen import HomeScreen",
         "kv": "uix/pages/kv/home_screen.kv",
         "object": "HomeScreen()"
+    },
+    "settings": {
+        "import": "from uix.pages.settings_screen import SettingsScreen",
+        "kv": "uix/pages/kv/settings_screen.kv",
+        "object": "SettingsScreen()"
     },
     "history": {
         "import": "from uix.pages.history_screen import HistoryScreen",

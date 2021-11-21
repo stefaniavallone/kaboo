@@ -12,6 +12,11 @@
                 on_release:
                     root.manager.transition.direction = 'right'
                     root.manager.current = 'home'
+
         MDBoxLayout:
             orientation: "vertical"
-            id: scroll
+            pos_hint: {}
+            ScrollView:
+                MDList:
+                    id: trophies_list
+

@@ -6,7 +6,7 @@
     "check": "You win 50 points"
   },
   {
-    "icon": "android",
+    "icon": "star",
     "name": "100 Point",
     "points": "100",
     "check": "You win 100 points"
