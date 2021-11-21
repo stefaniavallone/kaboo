@@ -1,8 +1,7 @@
-from kivy.core.text import Label
 from kivy.core.window import Window
-from kivy.uix.screenmanager import Screen
+from kivy.uix.button import Button
+from kivy.uix.screenmanager import Screen, ScreenManager
 from kivymd.app import MDApp
-from kivymd.uix.button import MDRectangleFlatButton
 
 from uix.pages.root import Root
 
@@ -17,7 +16,7 @@ def initialize_app(app):
     app.theme_cls.accent_palette = "Amber"
     app.theme_cls.accent_hue = "500"
 
-    app.theme_cls.theme_style = "Dark"
+    app.theme_cls.theme_style = "Light"
 
 
 class BaseApp(MDApp):
@@ -26,11 +25,4 @@ class BaseApp(MDApp):
         initialize_app(self)
 
     def build(self):
-        screen = Screen()
-        screen.add_widget(
-            MDRectangleFlatButton(
-                text="Hello, World",
-                pos_hint={"center_x": 0.5, "center_y": 0.5},
-            )
-        )
-        return screen
+        return Root()

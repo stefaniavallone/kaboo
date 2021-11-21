@@ -1,9 +1,10 @@
 import os
 
+from kivy import Logger
 from kivy.lang import Builder
 
 
-def load_kv(file_name, file_path=os.path.join("src", "libs", "uix", "kv")):
+def load_kv(file_name, file_path=os.path.join("../uix", "pages", "kv")):
     """
     `load_kv` func is used to load a .kv file.
     args that you can pass:

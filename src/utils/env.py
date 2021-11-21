@@ -16,7 +16,6 @@ def setup_env():
         Window.size = (360, 740)
         os.environ["KIVY_GL_BACKEND"] = "angle_sdl2"
 
-
     # if kivy.utils.platform == "android":
     #     request_permissions([Permission.READ_EXTERNAL_STORAGE,
     #                          Permission.WRITE_EXTERNAL_STORAGE])

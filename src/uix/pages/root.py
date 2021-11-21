@@ -1,12 +1,13 @@
 import json
 
+from kivy import Logger
 from kivy.clock import Clock
 from kivy.core.window import Window
+from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
 
-from utils import utils
 
-utils.load_kv("root.kv", "src/uix/pages/kv")
+Builder.load_file("uix/pages/kv/root.kv")
 
 
 class Root(ScreenManager):
@@ -19,7 +20,7 @@ class Root(ScreenManager):
         Clock.schedule_once(self.add_screens)
         Window.bind(on_keyboard=self.keyboard)
 
-    def add_screens(self, interval):
+    def add_screens(self, interval=0.1):
         """
         If you need to use more screens in your app,
         Create your screen files like below:
@@ -43,16 +44,18 @@ class Root(ScreenManager):
 
         for screen_name in screens.keys():
             screen_details = screens[screen_name]
-            #Builder.load_file(screen_details["kv"])
-            exec(screen_details["import"])  # excecuting imports
+            Builder.load_file(screen_details["kv"])  # You must import kv before
+            exec(screen_details["import"])  # executing imports
             screen_object = eval(screen_details["object"])  # calling it
+
             screen_object.name = screen_name  # giving the name of the screen
             self.add_widget(
                 screen_object
             )  # finally adding it to the screen manager
+            Logger.debug(f"Added Screen: {screen_name}")
 
     def keyboard(self, window, key, *args):
-        if key == 27 and self.sm.current != "home":
+        if key == 27 and self.current != "home":
             self.current = "home"
             return True  # key event consumed by app
         else:

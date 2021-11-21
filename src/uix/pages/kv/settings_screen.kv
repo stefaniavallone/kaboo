@@ -12,10 +12,29 @@
                 on_release:
                     root.manager.transition.direction = 'right'
                     root.manager.current = 'home'
-        MDBoxLayout:
-            orientation: "vertical"
-            id: sound
-            active: False
-            # Arranging a callback to the switch
-            # on_active: root.switch_callback(self, self.active)
-            # active: root.active
+        MDGridLayout:
+            id: settings
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(35)]
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+
+            MDLabel:
+                text: "Sounds"
+            MDSwitch:
+                widget_style: "ios"
+                active: root.sounds_on
+                on_active: root.toggle_sounds()
+            MDLabel:
+                text: "Notifications"
+            MDSwitch:
+                widget_style: "ios"
+                active: root.notifications_on
+                on_active: root.toggle_notifications()
+            MDLabel:
+                text: "Enable Dark Theme"
+            MDSwitch:
+                widget_style: "ios"
+                active: root.theme_dark_on
+                on_active: root.toggle_dark_theme(app)
