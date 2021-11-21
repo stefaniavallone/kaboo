@@ -1,6 +1,8 @@
+from kivy.lang import Builder
 from kivymd.uix.datatables import MDDataTable
 from kivymd.uix.screen import MDScreen
 from kivy.metrics import dp
+
 
 class HistoryScreen(MDScreen):
     data_tables = None

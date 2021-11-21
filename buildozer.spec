@@ -46,7 +46,7 @@ requirements = python3,kivy==2.0.0,kivymd==0.104.2,plyer==2.0.0,sdl2_ttf==2.0.15
 #garden_requirements =
 
 # (str) Presplash of the application
-#presplash.filename = %(source.dir)s/data/presplash.png
+presplash.filename = ./assets/appicon.png
 
 # (str) Icon of the application
 icon.filename = ./assets/appicon.png

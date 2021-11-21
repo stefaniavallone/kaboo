@@ -1,6 +1,5 @@
-from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.screen import MDScreen
-from kivymd.uix.selectioncontrol import MDSwitch
+
 
 
 class SettingsScreen(MDScreen):
@@ -18,21 +17,6 @@ class SettingsScreen(MDScreen):
     def toggle_dark_theme(self, app):
         self.theme_dark_on = not self.theme_dark_on
         app.theme_cls.theme_style = "Dark" if self.theme_dark_on else "Light"
-    # switch_sound = None
-    # switch_notify = None
-    #
-    # def on_enter(self):
-    #     self.settings()
-    #
-    # def settings(self):
-    #     if not self.switch_sound:
-    #         self.switch_sound = MDSwitch(
-    #             active=True,
-    #         )
-    #         self.switch_notify = MDSwitch(
-    #             active=False
-    #         )
-    #     self.ids.sound.add_widget(self.switch_sound)
-    #     self.ids.sound.add_widget(self.switch_notify)
+
 
 

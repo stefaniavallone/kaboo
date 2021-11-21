@@ -1,6 +1,5 @@
 import webbrowser
 
-from kivy.uix.button import Button
 from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
