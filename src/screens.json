@@ -23,5 +23,11 @@
         "import": "from uix.pages.game_screen import GameScreen",
         "kv": "uix/pages/kv/game_screen.kv",
         "object": "GameScreen()"
+    },
+    "pregame": {
+        "import": "from uix.pages.pregame_screen import PreGameScreen",
+        "kv": "uix/pages/kv/pregame_screen.kv",
+        "object": "PreGameScreen()"
     }
 }
+

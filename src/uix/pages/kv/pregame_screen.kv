@@ -1,0 +1,57 @@
+#:import ButtonGroup uix.components.button_group
+#:import AutoScaleLabel uix.components.autoscale_label
+<PreGameScreen>
+    MDBoxLayout:
+        orientation: "vertical"
+        MDBoxLayout:
+            size_hint_y:.10
+            padding:dp(10)
+            #md_bg_color: 255/255, 25/255, 25/255,  1
+            orientation: "horizontal"
+            MDIconButton:
+                icon: "chevron-left"
+                md_bg_color: app.theme_cls.primary_color
+                on_release:
+                    root.manager.transition.direction = 'right'
+                    root.manager.current = 'home'
+
+        MDFloatLayout:
+
+        MDIconButton:
+            icon: "android"
+            pos_hint: {"center_x": .5, "y": .6}
+            size_hint: .4, .3
+
+        MDBoxLayout:
+            orientation: "vertical"
+            padding: dp(10)
+            adaptive_height: True
+            pos_hint: {"center_x": .5, "top": .5}
+            spacing: dp(20)
+            size_hint_x: .7
+
+            canvas.before:
+                Color:
+                    rgba: app.theme_cls.primary_dark
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+
+            MDLabel:
+                text: "Title"
+                bold: True
+                size_hint_y: None
+                height: self.texture_size[1]
+                theme_text_color: "Primary"
+                font_style: "H6"
+                halign: "center"
+                valign: "center"
+
+            MDLabel:
+                size_hint_y: None
+                height: self.texture_size[1]
+                theme_text_color: "Primary"
+                font_style: "Body1"
+                halign: "center"
+                valign: "center"
+                text: "text"
