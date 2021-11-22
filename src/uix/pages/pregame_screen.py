@@ -1,18 +1,19 @@
-from kivy.app import App
+
 from kivy.factory import Factory
 from kivy.uix.carousel import Carousel
+from kivymd.uix.screen import MDScreen
 
 
-class Logo(App):
-    def build(self):
+class PreGameScreen(MDScreen):
+    def on_enter(self):
+        self.create_carousel()
 
-        carousel = Carousel(direction='right', loop=True)
+    def create_carousel(self):
+
         for i in range(2):
             image = Factory.Label(text=str(i))
-            carousel.add_widget(image)
-
-        return carousel
+            self.ids.carousel.add_widget(image)
 
 
-if __name__ == '__main__':
-    Logo().run()
+
+
