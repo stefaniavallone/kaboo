@@ -70,9 +70,11 @@
 
         MDFlatButton:
             text: 'Play'
-            on_release: root._on_finish_dispatch()
-            disabled: False if root.skip_button else True
-            opacity: 1 if root.skip_button else 0
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'game'
+            disabled: False if root.play_button else True
+            opacity: 1 if root.play_button else 0
             text_color: root.circles_color if root.circles_color else root.theme_cls.primary_color
             pos_hint: {'right': .95, 'center_y': .5}
 
