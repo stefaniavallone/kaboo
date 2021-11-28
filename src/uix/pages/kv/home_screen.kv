@@ -4,26 +4,20 @@
         orientation: "vertical"
 
         MDBoxLayout:
-            size_hint_y:.25
+            size_hint_y: .25
+            pos_hint: {"center_x": .5, "center_y": .5}
             padding:dp(25)
             MDBoxLayout:
                 orientation:"vertical"
                 MDLabel:
                     text:"KTaboo"
                     font_style:"H4"
-                MDBoxLayout:
-                    adaptive_size:True
-                    spacing:dp(10)
-                    MDLabel:
-                        text:"Home"
-                        text_size:None,None
-                        adaptive_width:True
-                    MDIcon:
-                        icon:'chevron-down'
+                    halign: "center"
 
         MDGridLayout:
-            size_hint_y:.75
-            cols:2
+            size_hint: .75, .75
+            pos_hint: {"center_x": .5, "center_y": .5}
+            cols:1
             padding:[dp(15),dp(15),dp(15),dp(35)]
             spacing:dp(15)
             ElementCard:
@@ -57,7 +51,8 @@
                     root.manager.current = 'pregame'
 
         MDGridLayout:
-            size_hint_y:.100
+            size_hint_y: .100
+            pos_hint: {"center_x": .5, "center_y": .5}
             cols:4
             padding:[dp(60),dp(15),dp(10),dp(80)]
             spacing:dp(15)

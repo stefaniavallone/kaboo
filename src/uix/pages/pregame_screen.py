@@ -24,7 +24,6 @@ class PreGameScreen(MDScreen,ThemableBehavior, BoxLayout, EventDispatcher):
         self.register_event_type("on_finish")
         Clock.schedule_once(lambda x: self._update())
 
-
     def add_widget(self, widget, index=0, canvas=None):
         if issubclass(widget.__class__, OnboardingItem):
             self.ids.carousel.add_widget(widget)
@@ -32,11 +31,11 @@ class PreGameScreen(MDScreen,ThemableBehavior, BoxLayout, EventDispatcher):
             super().add_widget(widget, index=index, canvas=canvas)
 
     def _on_finish_dispatch(self):
-        print("OnboardingItemnboardingItem.num_jump")
         self.dispatch("on_finish")
 
     def on_finish(self, *args):
-        pass
+        self.on_size()
+        self._update()
 
     def reset(self):
         return self.ids.carousel.reset()
