@@ -28,19 +28,22 @@
             spacing:dp(15)
             pos_hint: {"center_x": .8, "center_y": .5}
             MDIconButton:
-                #action1 should fire for this button
                 id: wrong_answer
                 icon: "close-thick"
-
+                on_release:
+                    on_release: root.wrong_answer()
 
             MDIconButton:
-                #action2 should fire for this button
                 id:jump_answer
-                icon: "arrow-u-down-right"
+                icon: "redo"
+                disable: False if root.jump_enabled else True
+                on_release:
+                    on_release: root.jump_answer()
 
             MDIconButton:
-                #action3 should fire for this button
                 id: ok_answer
                 icon: "check-bold"
+                on_release:
+                    on_release: root.ok_answer()
 
 

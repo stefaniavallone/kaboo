@@ -1,20 +1,23 @@
+import datetime
+
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
+
+from uix.components.button_group import ButtonGroup
 
 Builder.load_file("uix/components/kv/onboarding_item.kv")
 
 class OnboardingItem(BoxLayout):
-    num_choise = ""
-    num_jump = ""
-    num_round = ""
+    info_game = {"num":'',"jump":'',"round":''};
 
     def button_state(self, group, text):
-        if group == 'num':
-            self.num_choise = text
-            print(self.num_choise)
-        elif group == 'jump':
-            self.num_jump = text
-            print(self.num_jump)
+        if group == 'round':
+            date_time = datetime.datetime.strptime(text, "%M:%S")
+            a_timedelta = date_time - datetime.datetime(1900, 1, 1)
+            seconds = a_timedelta.total_seconds()
+            self.info_game[group] = 30
         else:
-            self.num_round = text
-            print(self.num_round)
+            self.info_game[group] = text
+
+    def get_info_game(self):
+        return self.info_game
