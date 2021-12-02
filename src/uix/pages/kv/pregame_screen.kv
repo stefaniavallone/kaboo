@@ -3,7 +3,6 @@
 
 <PreGameScreen>
     orientation: 'vertical'
-
     Carousel:
         min_move:root.min_move
         anim_type: root.anim_type
@@ -70,11 +69,7 @@
 
         MDFlatButton:
             text: 'Play'
-            on_release:
-                root.manager.transition.direction = 'left'
-                root.manager.current = 'game'
-            disabled: False if root.play_button else True
-            opacity: 1 if root.play_button else 0
+            on_release: root.on_finish()
             text_color: root.circles_color if root.circles_color else root.theme_cls.primary_color
             pos_hint: {'right': .95, 'center_y': .5}
 

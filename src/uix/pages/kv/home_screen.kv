@@ -26,9 +26,7 @@
                 text:"Easy"
                 subtext:"play"
                 items_count:"33 Cards"
-                on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'pregame'
+                on_release: root.choise_level("Easy")
 
             ElementCard:
                 md_bg_color:255/255,69/255,86/255,1
@@ -36,9 +34,7 @@
                 text:"Medium"
                 subtext:"play"
                 items_count:"45 Cards"
-                on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'pregame'
+                on_release: root.choise_level("Medium")
 
             ElementCard:
                 md_bg_color:69/255,55/255,255/255,1
@@ -46,9 +42,8 @@
                 text:"Hard"
                 subtext:"play"
                 items_count:"56 cards"
-                on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'pregame'
+                on_release: root.choise_level("Hard")
+
 
         MDGridLayout:
             size_hint_y: .100

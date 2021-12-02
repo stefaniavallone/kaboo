@@ -4,13 +4,13 @@ from kivy.metrics import dp
 from kivy.properties import NumericProperty, BooleanProperty, StringProperty, ListProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivymd.theming import ThemableBehavior
+from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
 
 from uix.components.onboarding_item import OnboardingItem
 
 class PreGameScreen(MDScreen,ThemableBehavior, BoxLayout, EventDispatcher):
     circles_size = NumericProperty(dp(20))
-    play_button = BooleanProperty(True)
     min_move = NumericProperty(0.05)
     anim_type = StringProperty("out_quad")
     anim_move_duration = NumericProperty(0.2)
@@ -21,6 +21,7 @@ class PreGameScreen(MDScreen,ThemableBehavior, BoxLayout, EventDispatcher):
 
     def __init__(self, **kwargs):
         super(PreGameScreen, self).__init__(**kwargs)
+
         self.register_event_type("on_finish")
         Clock.schedule_once(lambda x: self._update())
 
@@ -30,15 +31,19 @@ class PreGameScreen(MDScreen,ThemableBehavior, BoxLayout, EventDispatcher):
         else:
             super().add_widget(widget, index=index, canvas=canvas)
 
-    def _on_finish_dispatch(self):
-        self.dispatch("on_finish")
+    def on_finish(self):
+        self.item = OnboardingItem()
+        info_game = self.item.get_info_game()
+        if int(info_game['num']) > 0 and int(info_game['jump']) > 0 and int(info_game['round']) > 0:
+            self.manager.transition.direction = 'left'
+            self.manager.current = 'game'
+        else:
+            self.dialog = MDDialog(
+                text="If you want to start the game you complete all",
+                radius=[20, 7, 20, 7]
+            )
+            self.dialog.open()
 
-    def on_finish(self, *args):
-        self.on_size()
-        self._update()
-
-    def reset(self):
-        return self.ids.carousel.reset()
 
     def on_size(self, *args):
         self.ids.carousel.size = self.size

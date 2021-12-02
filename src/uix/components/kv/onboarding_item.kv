@@ -7,7 +7,8 @@
     text_button_two: ""
     text_button_three: ""
     group_name: ""
-
+    id: boarding
+    circles_size: dp(15)
     MDFloatLayout:
 
         Image:
@@ -22,7 +23,6 @@
             pos_hint: {"center_x": .5, "top": .5}
             spacing: dp(20)
             size_hint_x: .7
-
             canvas.before:
                 Color:
                     rgba: app.theme_cls.bg_light
