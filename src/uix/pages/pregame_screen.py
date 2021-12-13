@@ -33,11 +33,12 @@ class PreGameScreen(MDScreen,ThemableBehavior, BoxLayout, EventDispatcher):
 
     def on_finish(self):
         self.item = OnboardingItem()
-        info_game = self.item.get_info_game()
-        if int(info_game['num']) > 0 and int(info_game['jump']) > 0 and int(info_game['round']) > 0:
-            self.manager.transition.direction = 'left'
-            self.manager.current = 'game'
-        else:
+        info_game = self.item.info_game
+        try:
+            if len(info_game['num']) > 0 and int(info_game['jump']) > 0 and int(info_game['round']) > 0:
+                self.manager.transition.direction = 'left'
+                self.manager.current = 'game'
+        except:
             self.dialog = MDDialog(
                 text="If you want to start the game you complete all",
                 radius=[20, 7, 20, 7]
