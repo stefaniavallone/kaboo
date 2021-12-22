@@ -9,9 +9,14 @@
             MDIconButton:
                 icon: "chevron-left"
                 md_bg_color: app.theme_cls.primary_color
+                theme_text_color: "Custom"
                 on_release:
                     root.manager.transition.direction = 'right'
                     root.manager.current = 'home'
+            MDToolbar:
+                elevation: 10
+                title: "History"
+                anchor_title: "center"
         MDBoxLayout:
             orientation: "vertical"
             padding:dp(2)

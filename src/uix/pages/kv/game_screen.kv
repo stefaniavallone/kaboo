@@ -1,6 +1,7 @@
 <GameScreen>
     MDBoxLayout:
         orientation: "vertical"
+
         MDBoxLayout:
             size_hint_y:.10
             padding:dp(10)
@@ -10,12 +11,25 @@
                 id: info
 
         MDBoxLayout:
-            id: container
+            orientation: "vertical"
+            MDBoxLayout:
+                id: container
+                text:""
+                subtext:""
+
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: .75, .75
+        pos_hint: {"center_x": .5, "center_y": .5}
+        MDBoxLayout:
+            id: restart_game
             text:""
             subtext:""
 
     MDBoxLayout:
         orientation: "vertical"
+        size_hint: .75, .75
+        pos_hint: {"center_x": .5, "center_y": .5}
         MDBoxLayout:
             id: end_game
             text:""

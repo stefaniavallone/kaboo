@@ -1,9 +1,7 @@
 #:import OnboardingItem uix.components.onboarding_item
-#:import Carousel uix.components.carousel
 
 <PreGameScreen>
-    orientation: 'vertical'
-    Carousel:
+    MDCarousel:
         min_move:root.min_move
         anim_type: root.anim_type
         anim_move_duration: root.anim_move_duration
@@ -42,7 +40,6 @@
     FloatLayout:
         id: rounded_box
         size_hint_y: None
-        height: circles_box.y+ circles_box.height*2
         canvas.before:
             Color:
                 rgba: root.bottom_bar_color if root.bottom_bar_color else app.theme_cls.bg_dark
@@ -51,25 +48,19 @@
                 pos: self.pos
                 size: self.size
                 radius: root.bottom_bar_radius
-        Widget:
-            id: ghost_circle
-            size_hint: None, None
-            canvas.before:
-                Color:
-                    rgba: root.circles_color if root.circles_color else root.theme_cls.primary_color
-                Ellipse:
-                    pos: self.pos
-                    size: self.size
-        BoxLayout:
-            id: circles_box
-            pos: rounded_box.width/2-self.width/2 , rounded_box.height/2-self.height/2
-            size_hint: None,None
-            size: self.minimum_width , root.circles_size
-            spacing: root.circles_size/2
 
         MDFlatButton:
             text: 'Play'
             on_release: root.on_finish()
             text_color: root.circles_color if root.circles_color else root.theme_cls.primary_color
             pos_hint: {'right': .95, 'center_y': .5}
+
+        MDIconButton:
+            icon: "chevron-left"
+            md_bg_color: app.theme_cls.primary_color
+            theme_text_color: "Custom"
+            pos_hint: {'right': .20, 'center_y': .5}
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'home'
 

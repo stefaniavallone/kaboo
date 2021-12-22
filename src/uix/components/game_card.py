@@ -6,7 +6,11 @@ Builder.load_file("uix/components/kv/game_card.kv")
 class GameCard(MDCard):
     text = StringProperty()
     subtext = StringProperty()
-    jump_enabled =  BooleanProperty(True)
+    close_thick = StringProperty()
+    redo = StringProperty()
+    check_bold = StringProperty()
+    text_restart = StringProperty("")
+    restart = BooleanProperty(False)
     info_round = {"wrong": 0, "jump": '', "ok": 0, "update": False}
     points_game = {}
 
@@ -22,10 +26,9 @@ class GameCard(MDCard):
 
     def jump_answer(self):
         self.info_round['update'] = True
-        if int(self.info_round['jump']) > 0:
-            self.info_round['jump'] = int(self.info_round['jump']) - 1
-        else:
-            self.jump_enabled = False
+        self.info_round['jump'] = int(self.info_round['jump']) - 1
+        if int(self.info_round['jump']) < 1 :
+           self.ids.jump_answer.__setattr__('disabled', True)
         print(self.info_round['jump'])
         return self.info_round['jump']
 
@@ -38,4 +41,3 @@ class GameCard(MDCard):
         except:
             self.points_game.__setitem__(players,value)
 
-        print(self.points_game)

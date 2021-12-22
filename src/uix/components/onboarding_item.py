@@ -15,7 +15,7 @@ class OnboardingItem(BoxLayout):
             date_time = datetime.datetime.strptime(text, "%M:%S")
             a_timedelta = date_time - datetime.datetime(1900, 1, 1)
             seconds = a_timedelta.total_seconds()
-            self.info_game.__setitem__(group, 10)
+            self.info_game.__setitem__(group, 1)
         elif group == 'num':
             players = []
             colors = []
@@ -24,6 +24,5 @@ class OnboardingItem(BoxLayout):
                 colors.append(self.colors_players[i-1])
             self.info_game.__setitem__(group, players)
             self.info_game.__setitem__("color_player", colors)
-
         else:
             self.info_game.__setitem__(group, text)

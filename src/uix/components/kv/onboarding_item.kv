@@ -8,7 +8,6 @@
     text_button_three: ""
     group_name: ""
     id: boarding
-    circles_size: dp(15)
     MDFloatLayout:
 
         Image:
@@ -24,8 +23,6 @@
             spacing: dp(20)
             size_hint_x: .7
             canvas.before:
-                Color:
-                    rgba: app.theme_cls.bg_light
                 RoundedRectangle:
                     pos: self.pos
                     size: self.size
@@ -35,7 +32,6 @@
                 bold: True
                 size_hint_y: None
                 height: self.texture_size[1]
-                theme_text_color: "Primary"
                 font_style: "H6"
                 halign: "center"
                 valign: "center"
@@ -43,7 +39,6 @@
             MDLabel:
                 size_hint_y: None
                 height: self.texture_size[1]
-                theme_text_color: "Primary"
                 font_style: "Body1"
                 halign: "center"
                 valign: "center"
@@ -57,14 +52,17 @@
                 ButtonGroup:
                     text: root.text_button_one
                     group: root.group_name
+                    theme_text_color: "Custom"
                     on_release: root.button_state(root.group_name, root.text_button_one)
                 ButtonGroup:
                     text: root.text_button_two
                     group: root.group_name
+                    theme_text_color: "Custom"
                     on_release: root.button_state(root.group_name, root.text_button_two)
                 ButtonGroup:
                     text: root.text_button_three
                     group: root.group_name
+                    theme_text_color: "Custom"
                     on_release: root.button_state(root.group_name, root.text_button_three)
 
 

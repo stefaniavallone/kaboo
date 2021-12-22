@@ -1,14 +1,11 @@
 <GameCard>:
 
     MDBoxLayout:
-        size_hint: .5, .50
-        radius:dp(25)
-        ripple_behavior: False
+        orientation: "vertical"
+        size_hint: .50, .50
+        pos_hint: {"center_x": .5, "center_y": .5}
         text:""
         subtext:''
-        padding:dp(15)
-        orientation:'vertical'
-        pos_hint: {"center_x": .5, "center_y": .5}
         MDBoxLayout:
             orientation:'vertical'
             spacing:dp(15)
@@ -22,25 +19,22 @@
                 text:root.subtext
 
         MDGridLayout:
-            size_hint_y: .50
+            id: button_game
+            size_hint_y: .20
             cols:3
             spacing:dp(15)
             pos_hint: {"center_x": .8, "center_y": .5}
             MDIconButton:
                 id: wrong_answer
-                icon: "close-thick"
-                on_release:
-                    on_release: root.wrong_answer()
+                icon: root.close_thick
+                on_release: root.wrong_answer()
 
             MDIconButton:
                 id:jump_answer
                 icon: "redo"
-                disable: False if root.jump_enabled else True
-                on_release:
-                    on_release: root.jump_answer()
+                on_release: root.jump_answer()
 
             MDIconButton:
                 id: ok_answer
-                icon: "check-bold"
-                on_release:
-                    on_release: root.ok_answer()
+                icon: root.check_bold
+                on_release: root.ok_answer()

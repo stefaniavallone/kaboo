@@ -1,4 +1,3 @@
-from kivy.clock import Clock
 from kivy.event import EventDispatcher
 from kivy.metrics import dp
 from kivy.properties import NumericProperty, BooleanProperty, StringProperty, ListProperty
@@ -21,9 +20,7 @@ class PreGameScreen(MDScreen,ThemableBehavior, BoxLayout, EventDispatcher):
 
     def __init__(self, **kwargs):
         super(PreGameScreen, self).__init__(**kwargs)
-
         self.register_event_type("on_finish")
-        Clock.schedule_once(lambda x: self._update())
 
     def add_widget(self, widget, index=0, canvas=None):
         if issubclass(widget.__class__, OnboardingItem):
@@ -44,10 +41,3 @@ class PreGameScreen(MDScreen,ThemableBehavior, BoxLayout, EventDispatcher):
                 radius=[20, 7, 20, 7]
             )
             self.dialog.open()
-
-
-    def on_size(self, *args):
-        self.ids.carousel.size = self.size
-
-    def _update(self):
-        self.ids.ghost_circle.size = [self.circles_size, self.circles_size]
