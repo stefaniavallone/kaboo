@@ -1,0 +1,40 @@
+<GameCard>:
+
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: .50, .50
+        pos_hint: {"center_x": .5, "center_y": .5}
+        text:""
+        subtext:''
+        MDBoxLayout:
+            orientation:'vertical'
+            spacing:dp(15)
+            MDLabel:
+                halign:"center"
+                text:root.text
+                font_style:"H6"
+            MDLabel:
+                halign:"center"
+                font_style:"Caption"
+                text:root.subtext
+
+        MDGridLayout:
+            id: button_game
+            size_hint_y: .20
+            cols:3
+            spacing:dp(15)
+            pos_hint: {"center_x": .8, "center_y": .5}
+            MDIconButton:
+                id: wrong_answer
+                icon: root.close_thick
+                on_release: root.wrong_answer()
+
+            MDIconButton:
+                id:jump_answer
+                icon: "redo"
+                on_release: root.jump_answer()
+
+            MDIconButton:
+                id: ok_answer
+                icon: root.check_bold
+                on_release: root.ok_answer()

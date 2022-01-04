@@ -7,7 +7,7 @@ from kivymd.uix.screen import MDScreen
 
 class HomeScreen(MDScreen):
     rate_us_dialog = None
-
+    level_game = ""
     def show_rate_us_dialog(self):
         if not self.rate_us_dialog:
             self.rate_us_dialog = MDDialog(
@@ -26,4 +26,10 @@ class HomeScreen(MDScreen):
     def go_to_play_store(self, inst):
         webbrowser.open("market://details?id=com.amazon.mp3")
         self.rate_us_dialog.dismiss()
+
+    def choise_level(self, text):
+        self.level_game = text
+        self.manager.element = self.level_game
+        self.manager.transition.direction = 'left'
+        self.manager.current = 'pregame'
 

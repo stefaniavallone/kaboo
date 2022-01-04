@@ -1,0 +1,68 @@
+#:import ButtonGroup uix.components.button_group
+<OnboardingItem>:
+    source: ""
+    text: ""
+    title: ""
+    text_button_one: ""
+    text_button_two: ""
+    text_button_three: ""
+    group_name: ""
+    id: boarding
+    MDFloatLayout:
+
+        Image:
+            source: root.source
+            pos_hint: {"center_x": .5, "y": .6}
+            size_hint: .4, .3
+
+        MDBoxLayout:
+            orientation: "vertical"
+            padding: dp(10)
+            adaptive_height: True
+            pos_hint: {"center_x": .5, "top": .5}
+            spacing: dp(20)
+            size_hint_x: .7
+            canvas.before:
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+
+            MDLabel:
+                text: root.title
+                bold: True
+                size_hint_y: None
+                height: self.texture_size[1]
+                font_style: "H6"
+                halign: "center"
+                valign: "center"
+
+            MDLabel:
+                size_hint_y: None
+                height: self.texture_size[1]
+                font_style: "Body1"
+                halign: "center"
+                valign: "center"
+                text: root.text
+
+            MDBoxLayout:
+                id: text_box_button
+                orientation: "horizontal"
+                adaptive_size: True
+                pos_hint: {"center_x": .5, "center_y": .5}
+                ButtonGroup:
+                    text: root.text_button_one
+                    group: root.group_name
+                    theme_text_color: "Custom"
+                    on_release: root.button_state(root.group_name, root.text_button_one)
+                ButtonGroup:
+                    text: root.text_button_two
+                    group: root.group_name
+                    theme_text_color: "Custom"
+                    on_release: root.button_state(root.group_name, root.text_button_two)
+                ButtonGroup:
+                    text: root.text_button_three
+                    group: root.group_name
+                    theme_text_color: "Custom"
+                    on_release: root.button_state(root.group_name, root.text_button_three)
+
+

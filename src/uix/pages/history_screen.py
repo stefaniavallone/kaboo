@@ -1,36 +1,63 @@
-from kivy.lang import Builder
+import json
+
 from kivymd.uix.datatables import MDDataTable
+from kivymd.uix.dialog import MDDialog
+from kivymd.uix.list import OneLineAvatarListItem
 from kivymd.uix.screen import MDScreen
 from kivy.metrics import dp
+
+class Item(OneLineAvatarListItem):
+    divider = None
+
 
 
 class HistoryScreen(MDScreen):
     data_tables = None
+    point_dialog = None
+
+    histories = None
     def on_enter(self):
         self.load_data()
 
     def load_data(self):
         if not self.data_tables:
+            with open("../assets/resources/points.json") as histories_file:
+                self.histories = json.load(histories_file)
             self.data_tables = MDDataTable(
-                #background_color_header=get_color_from_hex("#65275d"),
-                #background_color_cell=get_color_from_hex("#451938"),
-                use_pagination = True,
+                use_pagination=False if len(self.histories) < 10 else True,
+                pos_hint={'center_x': 0.5, 'center_y': 0.5},
+                size_hint=(0.9, 0.6),
+                rows_num=10,
+                pagination_menu_pos="center",
+                background_color=[1, 0, 0, .5],
                 column_data=[
-                    ("No.", dp(15)),
-                    ("Column 1", dp(15)),
-                    ("[color=#52251B]Column 2[/color]", dp(15)),
-                    ("Column 3", dp(15))
+                    ("[color=#C042B8]N°[/color]", dp(5)),
+                    ("[color=#C042B8]Day[/color]", dp(20)),
+                    ("[color=#C042B8]Level[/color]", dp(15)),
+                    ("[color=#C042B8]Players[/color]", dp(15))
                 ],
                 row_data=[
                     (
-                        f"{i + 1}",
-                        "[color=#297B50]1[/color]",
-                        "[color=#C552A1]2[/color]",
-                        "[color=#6C9331]3[/color]"
+                        history['id'],
+                        "[color=#297B50]" + history['day'] + "[/color]",
+                        "[color=#6C9331]" + history['level'] + "[/color]",
+                        "[color=#C552A1]" + str(history['players'][0]['num']) + "[/color]",
                     )
-                    for i in range(50)
+                    for history in self.histories
                 ],
             )
+
+            self.data_tables.bind(on_row_press=self.on_row_press)
             self.ids.container.add_widget(self.data_tables)
 
+    def on_row_press(self, instance_table, instance_cell_row):
+        index = instance_table.row_data[int(instance_cell_row.index/4)][0]-1
+        players = self.histories[index]["players"][0]
 
+        listItems = [Item(text="Point player " + str(i) + "= [color=#C042B8]" + str(players['' "player" + str(i) + '']) + "[/color]") for i in range(1, players["num"]+1)]
+        self.point_dialog = MDDialog(
+            title="Players Point",
+            type="simple",
+            items=listItems
+        )
+        self.point_dialog.open()

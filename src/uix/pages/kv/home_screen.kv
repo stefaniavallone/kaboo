@@ -1,28 +1,24 @@
+#:import ElementCard uix.components.element_card
+#:import TooltipMDIconButton uix.components.tooltip_MDIcon_button
 <HomeScreen>
     MDBoxLayout:
         orientation: "vertical"
 
         MDBoxLayout:
-            size_hint_y:.25
+            size_hint_y: .25
+            pos_hint: {"center_x": .5, "center_y": .5}
             padding:dp(25)
             MDBoxLayout:
                 orientation:"vertical"
                 MDLabel:
                     text:"KTaboo"
                     font_style:"H4"
-                MDBoxLayout:
-                    adaptive_size:True
-                    spacing:dp(10)
-                    MDLabel:
-                        text:"Home"
-                        text_size:None,None
-                        adaptive_width:True
-                    MDIcon:
-                        icon:'chevron-down'
+                    halign: "center"
 
         MDGridLayout:
-            size_hint_y:.75
-            cols:2
+            size_hint: .75, .75
+            pos_hint: {"center_x": .5, "center_y": .5}
+            cols:1
             padding:[dp(15),dp(15),dp(15),dp(35)]
             spacing:dp(15)
             ElementCard:
@@ -31,9 +27,7 @@
                 text:"Easy"
                 subtext:"play"
                 items_count:"33 Cards"
-                on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'game'
+                on_release: root.choise_level("Easy")
 
             ElementCard:
                 md_bg_color:255/255,69/255,86/255,1
@@ -41,9 +35,7 @@
                 text:"Medium"
                 subtext:"play"
                 items_count:"45 Cards"
-                on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'game'
+                on_release: root.choise_level("Medium")
 
             ElementCard:
                 md_bg_color:69/255,55/255,255/255,1
@@ -51,68 +43,50 @@
                 text:"Hard"
                 subtext:"play"
                 items_count:"56 cards"
-                on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'game'
+                on_release: root.choise_level("Hard")
 
         MDGridLayout:
-            size_hint_y:.100
+            size_hint_y: .100
+            pos_hint: {"center_x": .5, "center_y": .5}
             cols:4
             padding:[dp(60),dp(15),dp(10),dp(80)]
             spacing:dp(15)
-            MDIconButton:
+            TooltipMDIconButton:
                 icon: "trophy"
+                tooltip_text: "Trophy"
                 md_bg_color: app.theme_cls.primary_color
+                theme_text_color: "Custom"
+                pos_hint: {"center_x": .5, "center_y": .5}
                 on_release:
                     root.manager.transition.direction = 'left'
                     root.manager.current = 'trophies'
 
-            MDIconButton:
+            TooltipMDIconButton:
                 id: history
                 icon: "book"
+                tooltip_text: "History"
                 md_bg_color: app.theme_cls.primary_color
+                theme_text_color: "Custom"
+                pos_hint: {"center_x": .5, "center_y": .5}
                 on_release:
                     root.manager.transition.direction = 'left'
                     root.manager.current = 'history'
 
-            MDIconButton:
+            TooltipMDIconButton:
                 icon: "star"
+                tooltip_text: "Star"
+                pos_hint: {"center_x": .5, "center_y": .5}
                 md_bg_color: app.theme_cls.primary_color
+                theme_text_color: "Custom"
                 on_release: root.show_rate_us_dialog()
 
-            MDIconButton:
+            TooltipMDIconButton:
                 id: settings
                 icon: "menu"
+                tooltip_text: "Settings"
+                pos_hint: {"center_x": .5, "center_y": .5}
                 md_bg_color: app.theme_cls.primary_color
+                theme_text_color: "Custom"
                 on_release:
                     root.manager.transition.direction = 'left'
                     root.manager.current = 'settings'
-
-
-<ElementCard@MDCard>:
-    md_bg_color:69/255,55/255,86/255,1
-    padding:dp(15)
-    spacing:dp(15)
-    radius:dp(25)
-    ripple_behavior: True
-    image:''
-    text:""
-    items_count:""
-    subtext:''
-
-    orientation:'vertical'
-    Image:
-        source:root.image
-    MDBoxLayout:
-        orientation:'vertical'
-        MDLabel:
-            halign:"center"
-            text:root.text
-            font_style:"H6"
-        MDLabel:
-            halign:"center"
-            font_style:"Caption"
-            text:root.subtext
-        MDLabel:
-            halign:"center"
-            text:root.items_count

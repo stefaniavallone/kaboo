@@ -1,0 +1,66 @@
+#:import OnboardingItem uix.components.onboarding_item
+
+<PreGameScreen>
+    MDCarousel:
+        min_move:root.min_move
+        anim_type: root.anim_type
+        anim_move_duration: root.anim_move_duration
+        id: carousel
+
+    OnboardingItem:
+        source: "../assets/images/players.png"
+        text:
+            "Select the number of players, each player will be associated with a color that will identify the team"
+        title:"Players number"
+        text_button_one: "2"
+        text_button_two: "3"
+        text_button_three: "4"
+        group_name: "num"
+
+    OnboardingItem:
+        source: "../assets/images/darts.png"
+        text:
+            "Select the number of jumps each player will be able to make"
+        title:"Jumps limit"
+        text_button_one: "3"
+        text_button_two: "5"
+        text_button_three: "10"
+        group_name: "jump"
+
+    OnboardingItem:
+        source: "../assets/images/time.jpg"
+        text:
+            "Select the time for each round"
+        title:"Round time"
+        text_button_one: "2:00"
+        text_button_two: "3:00"
+        text_button_three: "5:00"
+        group_name: "round"
+
+    FloatLayout:
+        id: rounded_box
+        size_hint_y: None
+        canvas.before:
+            Color:
+                rgba: root.bottom_bar_color if root.bottom_bar_color else app.theme_cls.bg_dark
+                a: 1 if root.show_bottom_bar else 0
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: root.bottom_bar_radius
+
+        MDFlatButton:
+            text: 'Play'
+            on_release: root.on_finish()
+            text_color: root.circles_color if root.circles_color else root.theme_cls.primary_color
+            pos_hint: {'right': .95, 'center_y': .5}
+
+        MDIconButton:
+            icon: "chevron-left"
+            md_bg_color: app.theme_cls.primary_color
+            theme_text_color: "Custom"
+            pos_hint: {'right': .20, 'center_y': .5}
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'home'
+
