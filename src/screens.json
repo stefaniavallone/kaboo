@@ -1,4 +1,9 @@
 {
+    "gamesettings": {
+        "import": "from uix.pages.gamesettings_screen import GameSettingsScreen",
+        "kv": "uix/pages/kv/gamesettings_screen.kv",
+        "object": "GameSettingsScreen()"
+    },
     "home": {
         "import": "from uix.pages.home_screen import HomeScreen",
         "kv": "uix/pages/kv/home_screen.kv",

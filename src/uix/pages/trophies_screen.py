@@ -10,12 +10,13 @@ class TrophiesScreen(MDScreen):
     def on_enter(self):
         self.load_trophies()
 
-    def load(self):
+    def load_trophies(self):
         with open("../assets/resources/trophies.json") as trophies_file:
             trophies = json.load(trophies_file)
         for trophy in trophies:
-            self.root.ids.container.add_widget(
-                OneLineAvatarIconListItem(text=trophy['points'])
+            self.ids.trophies_list.add_widget(
+                OneLineAvatarIconListItem(text=trophy['points'],
+                                          icon=trophy['icon'])
             )
 
 

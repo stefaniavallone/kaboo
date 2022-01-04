@@ -17,11 +17,19 @@ class LiveApp(MDApp, HotReloaderApp):
     DEBUG = 1  # To enable Hot Reload
 
     # *.kv files to watch
-    #KV_FILES = [os.path.join(KV_FOLDER, i) for i in os.listdir(KV_FOLDER)]
+    KV_FILES = [os.path.join(KV_FOLDER, i) for i in os.listdir(KV_FOLDER)]
 
     # Class to watch from *.py files
     # You need to register the *.py files in uix/pages/*.py
-    CLASSES = get_screens_package("uix/pages")
+    #CLASSES = get_screens_package("uix/pages")
+    CLASSES = {
+        "Root": "uix.pages.root",
+        "HomeScreen": "uix.pages.home_screen",
+        "GameScreen": "uix.pages.game_screen",
+        "TrophiesScreen": "uix.pages.trophies_screen",
+        "HistoryScreen": "uix.pages.history_screen",
+        "SettingsScreen": "uix.pages.settings_screen",
+    }
 
     # Auto Reloader Path
     AUTORELOADER_PATHS = [

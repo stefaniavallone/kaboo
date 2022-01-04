@@ -6,7 +6,7 @@ class SettingsScreen(MDScreen):
 
     sounds_on = False
     notifications_on = False
-    theme_dark_on = False
+    theme_dark_on = True
 
     def toggle_sounds(self):
         self.sounds_on = not self.sounds_on
