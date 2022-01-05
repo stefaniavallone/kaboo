@@ -54,6 +54,9 @@
 	{
 		"word": "Piano",
 		"forbidden" : ["music", "instrument", "key", "pedal", "grand"]
+	},
+	{
+		"word": "",
+		"forbidden" : []
 	}
-	
 ]

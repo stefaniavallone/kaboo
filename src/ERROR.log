@@ -7,28 +7,16 @@ Traceback (most recent call last):
     EventLoop.mainloop()
   File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 335, in mainloop
     self.idle()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 379, in idle
-    self.dispatch_input()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 330, in dispatch_input
-    post_dispatch_input(*pop(0))
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 299, in post_dispatch_input
-    wid.dispatch('on_touch_up', me)
-  File "kivy\_event.pyx", line 731, in kivy._event.EventDispatcher.dispatch
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 296, in on_touch_up
-    return super().on_touch_up(touch)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\button.py", line 981, in on_touch_up
-    return super().on_touch_up(touch)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\uix\behaviors\button.py", line 179, in on_touch_up
-    self.dispatch('on_release')
-  File "kivy\_event.pyx", line 727, in kivy._event.EventDispatcher.dispatch
-  File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
-  File "kivy\_event.pyx", line 1191, in kivy._event.EventObservers._dispatch
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 57, in custom_callback
-    exec(__kvlang__.co_value, idmap)
-  File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\game_screen.kv", line 60, in <module>
-    on_release: root.jump_request()
-  File ".\uix\pages\game_screen.py", line 74, in jump_request
-    self.ids.container.ids.swiper.next()
-  File ".\uix\components\static_swiper.py", line 11, in next
-    if current_index < len(self.get_items) - 1:
-TypeError: object of type 'method' has no len()
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 375, in idle
+    Clock.tick()
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\clock.py", line 733, in tick
+    self.post_idle(ts, self.idle())
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\clock.py", line 776, in post_idle
+    self._process_events()
+  File "kivy\_clock.pyx", line 616, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 645, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
+  File ".\uix\components\timer.py", line 17, in update
+    self.seconds = self.seconds - self.interval
+TypeError: unsupported operand type(s) for -: 'str' and 'float'

@@ -17,24 +17,16 @@ from kivymd.uix.button import MDIconButton
 from src.app_status import AppStatus
 
 from uix.components.element_card import ElementCard
-from uix.components.game_card import GameCard
+
 
 
 class GameScreen(MDScreen):
-    game_card = None
-    text = StringProperty()
-    subtext = StringProperty()
-    current_player = ""
-    num_round = 0
-    jump = 0
-    interval_clock = None
-    trophies = ""
 
     def __init__(self, **kw):
         super().__init__(**kw)
     
     def on_enter(self, *args):
-        self.round_time = AppStatus.get("game.round_time", default_value=5)
+        self.round_time = AppStatus.get("game.round_time", default_value=25)
         self.num_players = AppStatus.get("game.num_players", default_value=2)
         self.num_jumps = AppStatus.get("game.num_jumps", default_value=5)
         self.game_level = AppStatus.get("game.level", default_value="easy")
@@ -47,9 +39,11 @@ class GameScreen(MDScreen):
     def load_game(self):
         with open(f"../assets/resources/game_levels/{self.game_level}.json") as game_file:
             elements = json.load(game_file)
-            for element in elements:
+            for i, element in enumerate(elements):
                 self.ids.container.add_card(element["word"], element["forbidden"])
-
+                #self.ids.container.ids.swiper.children[0].children[i].children[0].ids.word.text = element["word"] # = add_card(element["word"], element["forbidden"])
+                #self.ids.container.ids.swiper.children[0].children[i].children[0].ids.forbidden.text = "\n".join(element["forbidden"])
+                
     def play_round(self):
         Logger.debug(f"Playing round {self.current_round+1} for player {self.current_player+1}")
         self.ids.remaining_jumps.text = str(self.num_jumps)
@@ -73,8 +67,6 @@ class GameScreen(MDScreen):
                 self.ids.jump_button.disabled = True
             self.ids.container.ids.swiper.next()
 
-        
-    
     def finish_round(self):
         AppStatus.set(f"game.rounds.{self.current_round}.{self.current_player}", int(self.ids.player_points.text))
         AppStatus.set("game.current_player", self.current_player + 1)
