@@ -6,23 +6,26 @@ from kivymd.uix.list import OneLineAvatarListItem
 from kivymd.uix.screen import MDScreen
 from kivy.metrics import dp
 
+
 class Item(OneLineAvatarListItem):
     divider = None
 
 
-
 class HistoryScreen(MDScreen):
     data_tables = None
-    point_dialog = None
+    game_stats_dialog = None
 
-    histories = None
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        if not self.data_tables:
+            with open("../assets/resources/points.json") as histories_file:
+                self.histories = json.load(histories_file)
+
     def on_enter(self):
         self.load_data()
 
     def load_data(self):
         if not self.data_tables:
-            with open("../assets/resources/points.json") as histories_file:
-                self.histories = json.load(histories_file)
             self.data_tables = MDDataTable(
                 use_pagination=False if len(self.histories) < 10 else True,
                 pos_hint={'center_x': 0.5, 'center_y': 0.5},
@@ -51,13 +54,13 @@ class HistoryScreen(MDScreen):
             self.ids.container.add_widget(self.data_tables)
 
     def on_row_press(self, instance_table, instance_cell_row):
-        index = instance_table.row_data[int(instance_cell_row.index/4)][0]-1
+        index = instance_table.row_data[int(instance_cell_row.index/4)][0] - 1
         players = self.histories[index]["players"][0]
 
-        listItems = [Item(text="Point player " + str(i) + "= [color=#C042B8]" + str(players['' "player" + str(i) + '']) + "[/color]") for i in range(1, players["num"]+1)]
-        self.point_dialog = MDDialog(
+        items = [Item(text=f"Player {i+1}: [color=#C042B8]{players[f'player{i+1}']} points[/color]") for i in range(players["num"])]
+        self.game_stats_dialog = MDDialog(
             title="Players Point",
             type="simple",
-            items=listItems
+            items=items
         )
-        self.point_dialog.open()
+        self.game_stats_dialog.open()

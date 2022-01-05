@@ -1,4 +1,5 @@
 #:import ButtonGroup uix.components.button_group
+
 <OnboardingItem>:
     source: ""
     text: ""
@@ -8,8 +9,8 @@
     text_button_three: ""
     group_name: ""
     id: boarding
-    MDFloatLayout:
 
+    MDFloatLayout:
         Image:
             source: root.source
             pos_hint: {"center_x": .5, "y": .6}
@@ -53,16 +54,16 @@
                     text: root.text_button_one
                     group: root.group_name
                     theme_text_color: "Custom"
-                    on_release: root.button_state(root.group_name, root.text_button_one)
+                    on_release: root.callback(root.text_button_one)
                 ButtonGroup:
                     text: root.text_button_two
                     group: root.group_name
                     theme_text_color: "Custom"
-                    on_release: root.button_state(root.group_name, root.text_button_two)
+                    on_release: root.callback(root.text_button_two)
                 ButtonGroup:
                     text: root.text_button_three
                     group: root.group_name
                     theme_text_color: "Custom"
-                    on_release: root.button_state(root.group_name, root.text_button_three)
+                    on_release: root.callback(root.text_button_three)
 
 

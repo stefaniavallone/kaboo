@@ -2,13 +2,18 @@ import datetime
 
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
-
+from kivy.properties import ObjectProperty
 Builder.load_file("uix/components/kv/onboarding_item.kv")
+
 
 class OnboardingItem(BoxLayout):
     info_game = {}
     colors_players = [[1, 0, 0, 1], [0, 1, 0, 1], [1, 1, 0, 1], [0, 0, 1, 1]]
     view_play_button = False
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.callback = None
 
     def button_state(self, group, text):
         if group == 'round':

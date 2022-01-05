@@ -1,9 +1,4 @@
 {
-    "gamesettings": {
-        "import": "from uix.pages.gamesettings_screen import GameSettingsScreen",
-        "kv": "uix/pages/kv/gamesettings_screen.kv",
-        "object": "GameSettingsScreen()"
-    },
     "home": {
         "import": "from uix.pages.home_screen import HomeScreen",
         "kv": "uix/pages/kv/home_screen.kv",
@@ -33,6 +28,21 @@
         "import": "from uix.pages.pregame_screen import PreGameScreen",
         "kv": "uix/pages/kv/pregame_screen.kv",
         "object": "PreGameScreen()"
+    },
+    "game_settings_num_players": {
+        "import": "from uix.pages.game_settings_num_players_screen import GameSettingsNumPlayersScreen",
+        "kv": "uix/pages/kv/game_settings_num_players_screen.kv",
+        "object": "GameSettingsNumPlayersScreen()"
+    },
+    "game_settings_round_time": {
+        "import": "from uix.pages.game_settings_round_time_screen import GameSettingsRoundTimeScreen",
+        "kv": "uix/pages/kv/game_settings_round_time_screen.kv",
+        "object": "GameSettingsRoundTimeScreen()"
+    },
+    "game_settings_num_jumps": {
+        "import": "from uix.pages.game_settings_num_jumps_screen import GameSettingsNumJumpsScreen",
+        "kv": "uix/pages/kv/game_settings_num_jumps_screen.kv",
+        "object": "GameSettingsNumJumpsScreen()"
     }
 }
 

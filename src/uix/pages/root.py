@@ -6,6 +6,8 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
 
+from utils.class_loader import import_and_create_screens
+
 
 Builder.load_file("uix/pages/kv/root.kv")
 
@@ -39,14 +41,14 @@ class Root(ScreenManager):
                         * Unneeded Commas
                         * Comments
         """
-        with open("screens.json") as f:
-            screens = json.load(f)
+
+        screens = import_and_create_screens("uix/pages")
 
         for screen_name in screens.keys():
             screen_details = screens[screen_name]
             Builder.load_file(screen_details["kv"])  # You must import kv before
             exec(screen_details["import"])  # executing imports
-            screen_object = eval(screen_details["object"])  # calling it
+            screen_object = screen_details["object"]() #eval(screen_details["object"])  # calling it
 
             screen_object.name = screen_name  # giving the name of the screen
             self.add_widget(

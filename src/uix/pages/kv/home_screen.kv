@@ -27,7 +27,7 @@
                 text:"Easy"
                 subtext:"play"
                 items_count:"33 Cards"
-                on_release: root.choise_level("Easy")
+                on_release: root.set_game_level("easy")
 
             ElementCard:
                 md_bg_color:255/255,69/255,86/255,1
@@ -35,7 +35,7 @@
                 text:"Medium"
                 subtext:"play"
                 items_count:"45 Cards"
-                on_release: root.choise_level("Medium")
+                on_release: root.set_game_level("medium")
 
             ElementCard:
                 md_bg_color:69/255,55/255,255/255,1
@@ -43,20 +43,18 @@
                 text:"Hard"
                 subtext:"play"
                 items_count:"56 cards"
-                on_release: root.choise_level("Hard")
-
-        MDGridLayout:
-            size_hint_y: .100
+                on_release: root.set_game_level("hard")
+          
+        MDBoxLayout:
+            spacing: "10dp"
+            padding: [dp(10), dp(10), dp(10), dp(10)]
+            adaptive_size: True
             pos_hint: {"center_x": .5, "center_y": .5}
-            cols:4
-            padding:[dp(60),dp(15),dp(10),dp(80)]
-            spacing:dp(15)
             TooltipMDIconButton:
                 icon: "trophy"
                 tooltip_text: "Trophy"
                 md_bg_color: app.theme_cls.primary_color
                 theme_text_color: "Custom"
-                pos_hint: {"center_x": .5, "center_y": .5}
                 on_release:
                     root.manager.transition.direction = 'left'
                     root.manager.current = 'trophies'
@@ -67,7 +65,6 @@
                 tooltip_text: "History"
                 md_bg_color: app.theme_cls.primary_color
                 theme_text_color: "Custom"
-                pos_hint: {"center_x": .5, "center_y": .5}
                 on_release:
                     root.manager.transition.direction = 'left'
                     root.manager.current = 'history'
@@ -84,7 +81,6 @@
                 id: settings
                 icon: "menu"
                 tooltip_text: "Settings"
-                pos_hint: {"center_x": .5, "center_y": .5}
                 md_bg_color: app.theme_cls.primary_color
                 theme_text_color: "Custom"
                 on_release:

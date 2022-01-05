@@ -7,6 +7,7 @@ from uix.components.list_item_checkbox import ListItemWithCheckbox
 
 class TrophiesScreen(MDScreen):
     trophies_list = None
+    
     def on_enter(self):
         self.load_trophies()
 

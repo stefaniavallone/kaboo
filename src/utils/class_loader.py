@@ -1,5 +1,6 @@
 import inspect
 import os
+import collections
 import pkgutil
 from importlib import import_module
 from pathlib import Path
@@ -15,8 +16,20 @@ def folder_walker(package_path):
     return folders
 
 
+
+def move_element(odict, thekey, newpos):
+    odict[thekey] = odict.pop(thekey)
+    i = 0
+    for key, value in odict.items():
+        if key != thekey and i >= newpos:
+            odict[key] = odict.pop(key)
+        i += 1
+    return odict
+
+
 def import_and_create_screens(package_path):
-    pages = dict()
+    package_path = package_path.replace("\\", "/")
+    screens = dict()
     for f in folder_walker(package_path):
         for (_, name, _) in pkgutil.iter_modules([Path(f)]):
             imported_module = import_module("." + name,
@@ -33,23 +46,26 @@ def import_and_create_screens(package_path):
 
                     class_name = attribute.__name__
                     file_path = os.path.join(f, name).replace("\\", "/")
-                    import_file = f"from {file_path} import {class_name}"
+                    import_path = file_path.replace("/", ".")
+                    import_file = f"from {import_path} import {class_name}"
                     kv_file = f"{os.path.join(f, 'kv', name)}.kv".replace("\\", "/")
-                    pages[class_name] = {
+                    module_name = file_path.split("/")[-1].split("_screen")[0]
+                    screens[module_name] = {
                         "import": import_file,
                         "object": attribute,
                         "kv": kv_file,
+                        "class_name": class_name,
                         "path": file_path
                     }
-    return pages
+    move_element(screens, "game", 0)
+    return screens
 
 
-def get_screens_package(package_path):
-    screens = import_and_create_screens(package_path)
-    screens_package = dict()
-    for screen_name, screen_details in screens.items():
-        screens_package[screen_name] = screen_details["path"].replace("/", ".")
-    return screens_package
-
+def get_screens_map(screens):
+    screens_map = dict()
+    for screen in screens.values():
+        screens_map[screen["class_name"]] = screen["path"].replace("/", ".")
+    return screens_map
+        
 
 

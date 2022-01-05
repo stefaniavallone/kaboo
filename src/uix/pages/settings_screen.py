@@ -1,7 +1,6 @@
 from kivymd.uix.screen import MDScreen
 
 
-
 class SettingsScreen(MDScreen):
 
     sounds_on = False
@@ -19,4 +18,6 @@ class SettingsScreen(MDScreen):
         app.theme_cls.theme_style = "Dark" if self.theme_dark_on else "Light"
 
 
-
+    def to_home(self, inst):
+        self.manager.transition.direction = 'right'
+        self.manager.current = 'home'

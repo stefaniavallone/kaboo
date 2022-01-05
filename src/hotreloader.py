@@ -1,11 +1,9 @@
 import os
 
-from base_app import initialize_app
-from utils.class_loader import get_screens_package
+from base_app import BaseApp
+from utils.class_loader import import_and_create_screens, get_screens_map
 from utils.env import setup_env
 from kaki.app import App as HotReloaderApp
-
-from kivymd.app import MDApp
 
 from uix.pages.root import Root
 
@@ -13,7 +11,7 @@ from uix.pages.root import Root
 KV_FOLDER = os.path.join(os.getcwd(), "uix", "pages", "kv")
 
 
-class LiveApp(MDApp, HotReloaderApp):
+class LiveApp(BaseApp, HotReloaderApp):
     DEBUG = 1  # To enable Hot Reload
 
     # *.kv files to watch
@@ -21,15 +19,7 @@ class LiveApp(MDApp, HotReloaderApp):
 
     # Class to watch from *.py files
     # You need to register the *.py files in uix/pages/*.py
-    #CLASSES = get_screens_package("uix/pages")
-    CLASSES = {
-        "Root": "uix.pages.root",
-        "HomeScreen": "uix.pages.home_screen",
-        "GameScreen": "uix.pages.game_screen",
-        "TrophiesScreen": "uix.pages.trophies_screen",
-        "HistoryScreen": "uix.pages.history_screen",
-        "SettingsScreen": "uix.pages.settings_screen",
-    }
+    CLASSES = get_screens_map(import_and_create_screens("uix/pages"))
 
     # Auto Reloader Path
     AUTORELOADER_PATHS = [
@@ -38,7 +28,7 @@ class LiveApp(MDApp, HotReloaderApp):
 
     def __init__(self, **kwargs):
         super(LiveApp, self).__init__(**kwargs)
-        initialize_app(self)
+        #initialize_app(self)
 
     def build_app(self):
         return Root()

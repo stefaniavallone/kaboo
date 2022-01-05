@@ -1,0 +1,17 @@
+#:import ElementCard uix.components.element_card
+<GameEndScreen>
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: .75, .75
+        pos_hint: {"center_x": .5, "center_y": .5}
+        MDBoxLayout:
+            text:""
+            subtext:""
+            ElementCard:
+                md_bg_color:55/255,255/255,86/255,1
+                image: "../assets/images/the_end.png"
+                text: "Winner is "
+                subtext: "subtext"
+                on_release: root.back_home()
+                
+

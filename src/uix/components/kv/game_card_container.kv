@@ -1,0 +1,17 @@
+#:import StaticSwiper uix.components.static_swiper
+
+<GameCardContainer>:
+
+    MDBoxLayout:
+        orientation: "vertical"
+        pos_hint: {"center_x": .5, "center_y": .5}
+
+        StaticSwiper:
+            id: swiper
+            swipe_on_scroll: False
+            padding: dp(20)
+            size_hint_y: None
+            height: root.height
+            width_mult: 1.3
+
+            

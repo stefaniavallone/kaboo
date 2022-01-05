@@ -1,43 +1,12 @@
 from kivy.lang import Builder
-from kivy.properties import StringProperty, BooleanProperty
-from kivymd.uix.card import MDCard
+from kivymd.uix.swiper import MDSwiperItem
 
 Builder.load_file("uix/components/kv/game_card.kv")
-class GameCard(MDCard):
-    text = StringProperty()
-    subtext = StringProperty()
-    close_thick = StringProperty()
-    redo = StringProperty()
-    check_bold = StringProperty()
-    text_restart = StringProperty("")
-    restart = BooleanProperty(False)
-    info_round = {"wrong": 0, "jump": '', "ok": 0, "update": False}
-    points_game = {}
 
-    def wrong_answer(self):
-        self.info_round['update'] = True
-        self.info_round['wrong'] += 1
-        print(self.info_round['wrong'])
 
-    def ok_answer(self):
-        self.info_round['update'] = True
-        self.info_round['ok'] += 1
-        print(self.info_round['ok'])
+class GameCard(MDSwiperItem):
+    
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
-    def jump_answer(self):
-        self.info_round['update'] = True
-        self.info_round['jump'] = int(self.info_round['jump']) - 1
-        if int(self.info_round['jump']) < 1 :
-           self.ids.jump_answer.__setattr__('disabled', True)
-        print(self.info_round['jump'])
-        return self.info_round['jump']
-
-    def calculate_points(self, players, info_round):
-        value = info_round['ok'] - info_round['wrong'] + int(info_round['jump'])
-        try:
-            self.point = value + self.points_game[players]
-            self.points_game[players] = self.point
-            self.points_game.__setitem__(players, self.point)
-        except:
-            self.points_game.__setitem__(players,value)
 

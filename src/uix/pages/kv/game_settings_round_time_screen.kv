@@ -1,0 +1,17 @@
+#:import OnboardingItem uix.components.onboarding_item
+
+<GameSettingsRoundTimeScreen>
+
+    OnboardingItem:
+        source: "../assets/images/time.jpg"
+        text:
+            "Select the time for each round"
+        title:"Round time"
+        text_button_one: "0:20"
+        text_button_two: "3:00"
+        text_button_three: "5:00"
+        group_name: "round"
+        callback: root.set_round_time
+       
+
+

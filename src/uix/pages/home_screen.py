@@ -4,10 +4,13 @@ from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
 
+from app_status import AppStatus
+
 
 class HomeScreen(MDScreen):
+    HOME = True
     rate_us_dialog = None
-    level_game = ""
+
     def show_rate_us_dialog(self):
         if not self.rate_us_dialog:
             self.rate_us_dialog = MDDialog(
@@ -27,9 +30,8 @@ class HomeScreen(MDScreen):
         webbrowser.open("market://details?id=com.amazon.mp3")
         self.rate_us_dialog.dismiss()
 
-    def choise_level(self, text):
-        self.level_game = text
-        self.manager.element = self.level_game
+    def set_game_level(self, text):
+        AppStatus.set("game.level", text)
         self.manager.transition.direction = 'left'
-        self.manager.current = 'pregame'
+        self.manager.current = 'game_settings_num_players'
 

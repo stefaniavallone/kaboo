@@ -1,37 +1,83 @@
+#:import Timer uix.components.timer
+#:import AutoScaleLabel uix.components.autoscale_label
+#:import GameCardContainer uix.components.game_card_container
+
 <GameScreen>
     MDBoxLayout:
         orientation: "vertical"
 
         MDBoxLayout:
-            size_hint_y:.10
-            padding:dp(10)
+            size_hint_y: .10
+            padding: dp(10)
             orientation: "horizontal"
 
             MDBoxLayout:
-                id: info
+                AutoScaleLabel:
+                    id: remaining_jumps
+                    text: "0"
+                    adaptive_size: True
+                    font_style: "H4"
+                    halign: "left"
+                MDIconButton:
+                    icon: "redo"
+
+                Timer:
+                    id: timer
+                    format: "%M:%S"
+                    font_style: "H4"
+                    halign: "center"
+                    on_finish: root.finish_round()
+
+                MDIconButton:
+                    icon: "checkbox-marked-circle-outline"
+                AutoScaleLabel:
+                    id: player_points
+                    adaptive_size: True
+                    text: "0"
+                    font_style: "H4"
+                    halign: "right"
 
         MDBoxLayout:
             orientation: "vertical"
             MDBoxLayout:
-                id: container
-                text:""
-                subtext:""
+                GameCardContainer:
+                    id: container
 
-    MDBoxLayout:
-        orientation: "vertical"
-        size_hint: .75, .75
-        pos_hint: {"center_x": .5, "center_y": .5}
         MDBoxLayout:
-            id: restart_game
-            text:""
-            subtext:""
+            id: game_buttons
+            padding: [dp(10), dp(10), dp(10), dp(10)]
+            spacing: dp(20)
+            adaptive_size: True
+            pos_hint: {"center_x": .5, "center_y": .5}
+            MDIconButton:
+                id: wrong_button
+                icon: "close-thick"
+                on_release: root.wrong_answer()
 
-    MDBoxLayout:
-        orientation: "vertical"
-        size_hint: .75, .75
-        pos_hint: {"center_x": .5, "center_y": .5}
-        MDBoxLayout:
-            id: end_game
-            text:""
-            subtext:""
+            MDIconButton:
+                id: jump_button
+                icon: "redo"
+                on_release: root.jump_request()
+
+            MDIconButton:
+                id: right_button
+                icon: "check-bold"
+                on_release: root.right_answer()
+    # MDBoxLayout:
+    #     orientation: "vertical"
+    #     size_hint: .75, .75
+    #     pos_hint: {"center_x": .5, "center_y": .5}
+    #     MDBoxLayout:
+    #         id: restart_game
+    #         text:""
+    #         subtext:""
+
+    # MDBoxLayout:
+    #     orientation: "vertical"
+    #     size_hint: .75, .75
+    #     pos_hint: {"center_x": .5, "center_y": .5}
+    #     MDBoxLayout:
+    #         id: end_game
+    #         text:""
+    #         subtext:""
 

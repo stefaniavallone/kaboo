@@ -6,17 +6,18 @@
             padding:dp(10)
             #md_bg_color: 255/255, 25/255, 25/255,  1
             orientation: "horizontal"
-            MDIconButton:
-                icon: "chevron-left"
-                md_bg_color: app.theme_cls.primary_color
-                theme_text_color: "Custom"
-                on_release:
-                    root.manager.transition.direction = 'right'
-                    root.manager.current = 'home'
             MDToolbar:
                 elevation: 10
                 title: "Settings"
                 anchor_title: "center"
+                left_action_items: [["chevron-left", root.to_home]]
+                MDIconButton:
+                    icon: "chevron-left"
+                    theme_text_color: "Custom"
+                    on_release:
+                        root.manager.transition.direction = 'right'
+                        root.manager.current = 'home'
+
         MDGridLayout:
             id: settings
             cols:2
