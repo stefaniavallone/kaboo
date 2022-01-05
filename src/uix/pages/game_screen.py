@@ -22,10 +22,12 @@ from uix.components.element_card import ElementCard
 
 class GameScreen(MDScreen):
 
+    COLORS = [(1, 0, 0, 1), (0, 1, 0, 1), (1, 1, 0, 1), (0, 0, 1, 1)]
+
     def __init__(self, **kw):
         super().__init__(**kw)
     
-    def on_enter(self, *args):
+    def on_pre_enter(self, *args):
         self.round_time = AppStatus.get("game.round_time", default_value=25)
         self.num_players = AppStatus.get("game.num_players", default_value=2)
         self.num_jumps = AppStatus.get("game.num_jumps", default_value=5)
@@ -38,26 +40,28 @@ class GameScreen(MDScreen):
     
     def load_game(self):
         with open(f"../assets/resources/game_levels/{self.game_level}.json") as game_file:
-            elements = json.load(game_file)
-            for i, element in enumerate(elements):
-                self.ids.container.add_card(element["word"], element["forbidden"])
-                #self.ids.container.ids.swiper.children[0].children[i].children[0].ids.word.text = element["word"] # = add_card(element["word"], element["forbidden"])
-                #self.ids.container.ids.swiper.children[0].children[i].children[0].ids.forbidden.text = "\n".join(element["forbidden"])
+            self.elements = json.load(game_file) + [{"word": "", "forbidden": []}]  # add another empty for graphic reasons
+        self.elem_idx = 0
+        for element in self.elements[:2]:
+            self.ids.card_container.add_card(element["word"], element["forbidden"])
+            self.elem_idx = self.elem_idx + 1
                 
     def play_round(self):
         Logger.debug(f"Playing round {self.current_round+1} for player {self.current_player+1}")
         self.ids.remaining_jumps.text = str(self.num_jumps)
+        self.ids.jump_button.disabled = False
+        self.ids.container.md_bg_color = self.COLORS[self.current_player]
         self.ids.player_points.text = "0"
         self.ids.timer.seconds = self.round_time
         self.ids.timer.start()
                 
     def wrong_answer(self):
         self.ids.player_points.text = str(int(self.ids.player_points.text) - 1)
-        self.ids.container.ids.swiper.next()
+        self.next_card()
         
     def right_answer(self):
         self.ids.player_points.text = str(int(self.ids.player_points.text) + 1)
-        self.ids.container.ids.swiper.next()
+        self.next_card()
         
     def jump_request(self):
         if int(self.ids.remaining_jumps.text) > 0:
@@ -65,7 +69,16 @@ class GameScreen(MDScreen):
             self.ids.remaining_jumps.text = str(value - 1)
             if value - 1 == 0:
                 self.ids.jump_button.disabled = True
-            self.ids.container.ids.swiper.next()
+            self.next_card()
+
+    def next_card(self):
+        if self.elem_idx < len(self.elements):
+            self.ids.card_container.ids.swiper.next()
+            self.ids.card_container.add_card(self.elements[self.elem_idx]["word"], 
+                                             self.elements[self.elem_idx]["forbidden"])
+            self.elem_idx = self.elem_idx + 1
+        else:
+            self.ids.card_container.ids.swiper.next()
 
     def finish_round(self):
         AppStatus.set(f"game.rounds.{self.current_round}.{self.current_player}", int(self.ids.player_points.text))

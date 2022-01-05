@@ -38,10 +38,12 @@
                     halign: "right"
 
         MDBoxLayout:
+            id: container
             orientation: "vertical"
+            md_bg_color: 1,0,0,1
             MDBoxLayout:
                 GameCardContainer:
-                    id: container
+                    id: card_container
 
         MDBoxLayout:
             id: game_buttons
@@ -63,21 +65,4 @@
                 id: right_button
                 icon: "check-bold"
                 on_release: root.right_answer()
-    # MDBoxLayout:
-    #     orientation: "vertical"
-    #     size_hint: .75, .75
-    #     pos_hint: {"center_x": .5, "center_y": .5}
-    #     MDBoxLayout:
-    #         id: restart_game
-    #         text:""
-    #         subtext:""
-
-    # MDBoxLayout:
-    #     orientation: "vertical"
-    #     size_hint: .75, .75
-    #     pos_hint: {"center_x": .5, "center_y": .5}
-    #     MDBoxLayout:
-    #         id: end_game
-    #         text:""
-    #         subtext:""
-
+   
