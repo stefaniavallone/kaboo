@@ -13,7 +13,7 @@ package.domain = org.kgames
 source.dir = ./src
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,kv,png,jpg,jpeg,atlas,ttf,json
+source.include_exts = py,kv,png,jpg,jpeg,atlas,ttf,json,wav
 
 # (list) List of inclusions using pattern matching
 source.include_patterns = assets/*,images/*.png
@@ -36,11 +36,11 @@ version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.0.0,kivymd==0.104.2,plyer==2.0.0,sdl2_ttf==2.0.15,pillow,android
+requirements = python3,kivy==2.0.0,kivymd==0.104.2,plyer==2.0.0,sdl2_ttf==2.0.15,pillow,android,python-for-android
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
-# requirements.source.kivy = ../../kivy
+# requirements.source.kivy = ../../kivy,
 
 # (list) Garden requirements
 #garden_requirements =

@@ -5,6 +5,7 @@ import re
 import time
 from random import randint
 from types import SimpleNamespace
+from kivy.core.audio import SoundLoader
 
 from kivy.clock import Clock
 from kivy.logger import Logger
@@ -15,6 +16,7 @@ from kivymd.uix.label import MDLabel
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.button import MDIconButton
 from src.app_status import AppStatus
+from src.utils.sound_player import SoundPlayer
 
 from uix.components.element_card import ElementCard
 
@@ -25,6 +27,7 @@ class GameScreen(MDScreen):
     COLORS = [(1, 0, 0, 1), (0, 1, 0, 1), (1, 1, 0, 1), (0, 0, 1, 1)]
 
     def __init__(self, **kw):
+        self.sound = None
         super().__init__(**kw)
     
     def on_pre_enter(self, *args):
@@ -34,9 +37,13 @@ class GameScreen(MDScreen):
         self.game_level = AppStatus.get("game.level", default_value="easy")
         self.current_round = AppStatus.get("game.current_round", default_value=0)
         self.current_player = AppStatus.get("game.current_player", default_value=0)
-
+        self.sound = SoundPlayer('../assets/sounds/ukulele.mp3', True, 0.2)
+        self.right_notification = SoundPlayer('../assets/sounds/right-notification.wav')
+        self.wrong_notification = SoundPlayer('../assets/sounds/wrong-notification.wav')
+        self.jump_notification = SoundPlayer('../assets/sounds/jump-notification.wav')
         self.load_game()
         self.play_round()
+        self.sound.play()
     
     def load_game(self):
         with open(f"../assets/resources/game_levels/{self.game_level}.json") as game_file:
@@ -54,17 +61,20 @@ class GameScreen(MDScreen):
         self.ids.player_points.text = "0"
         self.ids.timer.seconds = self.round_time
         self.ids.timer.start()
-                
+ 
     def wrong_answer(self):
+        self.wrong_notification.play()
         self.ids.player_points.text = str(int(self.ids.player_points.text) - 1)
         self.next_card()
         
     def right_answer(self):
+        self.right_notification.play()
         self.ids.player_points.text = str(int(self.ids.player_points.text) + 1)
         self.next_card()
         
     def jump_request(self):
         if int(self.ids.remaining_jumps.text) > 0:
+            self.jump_notification.play()
             value = int(self.ids.remaining_jumps.text)
             self.ids.remaining_jumps.text = str(value - 1)
             if value - 1 == 0:
@@ -80,6 +90,7 @@ class GameScreen(MDScreen):
         else:
             self.ids.card_container.ids.swiper.next()
 
+    
     def finish_round(self):
         AppStatus.set(f"game.rounds.{self.current_round}.{self.current_player}", int(self.ids.player_points.text))
         AppStatus.set("game.current_player", self.current_player + 1)
@@ -87,6 +98,8 @@ class GameScreen(MDScreen):
             AppStatus.set("game.current_player", 0)
             AppStatus.set("game.current_round", self.current_round + 1)
             if self.current_round == 1:
+                if self.sound:
+                    self.sound.stop()
                 self.manager.transition.direction = 'right'
                 self.manager.current = 'game_end'
             else:

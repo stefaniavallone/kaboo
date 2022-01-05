@@ -1,17 +1,14 @@
 from kivymd.uix.screen import MDScreen
-
+from app_status import AppStatus
 
 class SettingsScreen(MDScreen):
 
-    sounds_on = False
-    notifications_on = False
-    theme_dark_on = True
+    sounds_on = True
+    theme_dark_on = False
 
     def toggle_sounds(self):
         self.sounds_on = not self.sounds_on
-
-    def toggle_notifications(self):
-        self.sounds_on = not self.notifications_on
+        AppStatus.set("game.sound", self.sounds_on)
 
     def toggle_dark_theme(self, app):
         self.theme_dark_on = not self.theme_dark_on
