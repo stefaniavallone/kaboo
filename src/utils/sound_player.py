@@ -13,3 +13,8 @@ class SoundPlayer:
         if setting_sound:
             self.sound.seek(seconds)
             self.sound.play()
+
+    def stop(self, restart=True):
+        if restart:
+            self.sound.seek(0)
+        self.sound.stop()

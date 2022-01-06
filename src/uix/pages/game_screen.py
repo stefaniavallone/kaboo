@@ -37,13 +37,13 @@ class GameScreen(MDScreen):
         self.game_level = AppStatus.get("game.level", default_value="easy")
         self.current_round = AppStatus.get("game.current_round", default_value=0)
         self.current_player = AppStatus.get("game.current_player", default_value=0)
-        self.sound = SoundPlayer('../assets/sounds/ukulele.mp3', True, 0.2)
+        self.background_music = SoundPlayer('../assets/sounds/ukulele.mp3', True, 0.2)
         self.right_notification = SoundPlayer('../assets/sounds/right-notification.wav')
         self.wrong_notification = SoundPlayer('../assets/sounds/wrong-notification.wav')
         self.jump_notification = SoundPlayer('../assets/sounds/jump-notification.wav')
         self.load_game()
         self.play_round()
-        self.sound.play()
+        self.background_music.play()
     
     def load_game(self):
         with open(f"../assets/resources/game_levels/{self.game_level}.json") as game_file:
@@ -109,7 +109,9 @@ class GameScreen(MDScreen):
             self.manager.transition.direction = 'right'
             self.manager.current = 'game_pre'
 
-
+    def on_pre_leave(self, *args):
+        self.background_music.stop()
+        
     # def calculate_round_point(self):
     #     num_player = len(self.item.info_game['num'])
     #     points = {'num': num_player}

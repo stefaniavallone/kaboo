@@ -2,12 +2,23 @@
 #:import StoryCard uix.components.page
 
 <AScreen>:
-    MDBoxLayout:
-        md_bg_color: 1,0,0,1
+    MDRelativeLayout:
+        md_bg_color: 1,1,1,1
         Page:
+            id: page
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            size_hint_y: 0.7
+            size_hint_x: None
+            width: self.parent.width * 0.8
             name: "Sophie Cess"
             avatar: "../assets/images/darts.png"
             story: "../assets/images/story.png"
+        MDFillRoundFlatButton:
+            pos_hint: {"center_x": 0.5, "y": 0.08}
+            text: "Confirm"
+            size_hint: None, None
+            width: page.width
+            md_bg_color: 0.8, 0.2, 0.3, 1
         # StoryCard:
         #     name: "Sophie Cess"
         #     avatar: "../assets/images/darts.png"

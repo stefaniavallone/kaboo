@@ -1,6 +1,5 @@
 <Page>
     size_hint_y: 0.8
-    size_hint_x: 1 
     # size_hint: None, None
     # size: "228dp", "288dp"
 
@@ -16,9 +15,10 @@
             mipmap: True
     
     MDCard:
-        id: avatar
+        id: label
         size_hint: None, None
-        size: "56dp", "56dp"
+        height: "56dp"
+        width: card.width * 0.8
         radius: 28
         x: card.width / 2 - self.width / 2
         y: card.height - self.height / 2
