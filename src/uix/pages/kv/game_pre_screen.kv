@@ -1,12 +1,50 @@
 #:import MD3Card uix.components.md3card
 <GamePreScreen>
     MDBoxLayout:
-        adaptive_size: True
         pos_hint: {"center_x": .5, "center_y": .5}
-        MD3Card:
-            padding: 16
+        padding: [dp(20), dp(20), dp(20), dp(80)] 
+        MDCard:
             text: "Start"
             md_bg_color: app.theme_cls.primary_color
             radius: dp(25)
-            size_hint: None, None
-            on_release: root.to_game()
+            MDGridLayout:
+                cols: 2
+                spacing: "2dp"
+                MDLabel:
+                    pos_hint: {"center_x": .6, "center_y": .8}
+                    text: "Num Players:"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .8}
+                    text: "3"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .6, "center_y": .7}
+                    text: "Num Jumps:"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .7}
+                    text: "2"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .6, "center_y": .6}
+                    text: "Round Time:"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: "0.20"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    text: "It's player1 turn"
+                    halign:"center"
+    MDBottomAppBar:
+        MDToolbar:
+            title: ""
+            icon: "play"
+            tooltip_text: "Start"
+            type: "bottom"
+            on_action_button: root.to_game()
+
+
+                
