@@ -13,6 +13,7 @@
             source: root.story
             radius: [32, ]
             mipmap: True
+            opacity: 0.5
     
     MDCard:
         id: label
@@ -23,22 +24,28 @@
         x: card.width / 2 - self.width / 2
         y: card.height - self.height / 2
         elevation: 18
+        MDIconButton:
+            icon: "chevron-left"
+            theme_text_color: "Custom"
+            pos_hint: {'right': .20, 'center_y': .5}
+            on_release: root.callback()
+                
         MDLabel:
-            text: "SETTINGS"
+            text: root.text
             theme_text_color: "Custom"
             text_color: 0.1, 0.1, 0.1, 1
             halign: "center"
-        # FitImage:
-        #     source: root.avatar
-        #     radius: [28, ]
-        #     mipmap: True
+        FitImage:
+            source: root.avatar
+            radius: [36, 36, 0, 0, ]
+            mipmap: True
 
-    FitImage:
-        size_hint: None, None
-        size: "188dp", "112dp"
-        source: "../assets/images/black-shadow.png"
-        radius: [8, 8, 28, 28]
-        mipmap: True
+    # FitImage:
+    #     size_hint: None, None
+    #     size: "188dp", "112dp"
+    #     source: "../assets/images/black-shadow.png"
+    #     radius: [8, 8, 28, 28]
+    #     mipmap: True
     
     MDLabel: 
         text: root.name

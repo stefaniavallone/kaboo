@@ -1,40 +1,34 @@
+#:import StoryCard uix.components.story_card
+#:import StoryCard uix.components.page
 <SettingsScreen>
-    MDBoxLayout:
-        orientation: "vertical"
-        MDBoxLayout:
-            size_hint_y:.10
-            padding:dp(10)
-            #md_bg_color: 255/255, 25/255, 25/255,  1
-            orientation: "horizontal"
-            MDToolbar:
-                elevation: 10
-                title: "Settings"
-                anchor_title: "center"
-                left_action_items: [["chevron-left", root.to_home]]
-                MDIconButton:
-                    icon: "chevron-left"
-                    theme_text_color: "Custom"
-                    on_release:
-                        root.manager.transition.direction = 'right'
-                        root.manager.current = 'home'
+    MDRelativeLayout:
+        md_bg_color: 1,1,1,1
+        Page:
+            text: "SETTINGS"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            size_hint_y: 0.9
+            size_hint_x: None
+            width: self.parent.width * 0.8
+            avatar: "../assets/images/darts.png"
+            story: "../assets/images/story.png"
+            callback: root.to_home
+            MDGridLayout:
+                id: settings
+                cols:2
+                padding:[dp(15),dp(30),dp(15),dp(35)]
+                size: root.width * 0.8, root.height * 0.8
+                row_default_height: 50
+                row_force_default: True
+                MDLabel:
+                    text: "Sounds"
+                MDSwitch:
+                    widget_style: "ios"
+                    active: root.sounds_on
+                    on_active: root.toggle_sounds()
+                MDLabel:
+                    text: "Enable Dark Theme"
+                MDSwitch:
+                    widget_style: "ios"
+                    active: root.theme_dark_on
+                    on_active: root.toggle_dark_theme(app)
 
-        MDGridLayout:
-            id: settings
-            cols:2
-            padding:[dp(15),dp(15),dp(15),dp(35)]
-            size: root.width * 0.8, root.height * 0.8
-            row_default_height: 50
-            row_force_default: True
-
-            MDLabel:
-                text: "Sounds"
-            MDSwitch:
-                widget_style: "ios"
-                active: root.sounds_on
-                on_active: root.toggle_sounds()
-            MDLabel:
-                text: "Enable Dark Theme"
-            MDSwitch:
-                widget_style: "ios"
-                active: root.theme_dark_on
-                on_active: root.toggle_dark_theme(app)

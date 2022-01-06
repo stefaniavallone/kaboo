@@ -1,99 +1,44 @@
 Traceback (most recent call last):
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 242, in create_handler
-    return eval(value, idmap), bound_list
-  File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\a_screen.kv", line 11, in <module>
-    width: self.parent * 0.6
-TypeError: unsupported operand type(s) for *: 'MDBoxLayout' and 'float'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 697, in _apply_rule
-    rctx['ids'])
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 247, in create_handler
-    cause=tb)
-kivy.lang.builder.BuilderException: Parser: File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\a_screen.kv", line 11:
-...
-      9:            size_hint_y: 0.3
-     10:            size_hint_x: None
->>   11:            width: self.parent * 0.6
-     12:            name: "Sophie Cess"
-     13:            avatar: "../assets/images/darts.png"
-...
-TypeError: unsupported operand type(s) for *: 'MDBoxLayout' and 'float'
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 242, in create_handler
-    return eval(value, idmap), bound_list
-  File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\a_screen.kv", line 11, in <module>
-    width: self.parent * 0.6
-
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "./main.py", line 32, in <module>
     BaseApp().run()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\app.py", line 955, in run
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\app.py", line 950, in run
     runTouchApp()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 570, in runTouchApp
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 582, in runTouchApp
     EventLoop.mainloop()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 335, in mainloop
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 347, in mainloop
     self.idle()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 375, in idle
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 387, in idle
     Clock.tick()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\clock.py", line 733, in tick
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\clock.py", line 733, in tick
     self.post_idle(ts, self.idle())
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\clock.py", line 776, in post_idle
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\clock.py", line 776, in post_idle
     self._process_events()
   File "kivy\_clock.pyx", line 616, in kivy._clock.CyClockBase._process_events
   File "kivy\_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
   File "kivy\_clock.pyx", line 645, in kivy._clock.CyClockBase._process_events
   File "kivy\_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
-  File ".\uix\pages\root.py", line 51, in add_screens
-    screen_object = screen_details["object"]() #eval(screen_details["object"])  # calling it
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\uix\relativelayout.py", line 274, in __init__
-    super(RelativeLayout, self).__init__(**kw)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\uix\floatlayout.py", line 65, in __init__
-    super(FloatLayout, self).__init__(**kwargs)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\uix\layout.py", line 76, in __init__
-    super(Layout, self).__init__(**kwargs)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\behaviors\backgroundcolor_behavior.py", line 220, in __init__
-    super().__init__(**kwargs)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\behaviors\backgroundcolor_behavior.py", line 178, in __init__
-    super().__init__(**kwarg)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\behaviors\elevation.py", line 847, in __init__
-    super().__init__(**kwargs)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\uix\widget.py", line 361, in __init__
-    rule_children=rule_children)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\uix\widget.py", line 465, in apply_class_lang_rules
-    rule_children=rule_children)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 543, in apply
-    rule_children=rule_children)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 712, in _apply_rule
-    e), cause=tb)
-kivy.lang.builder.BuilderException: Parser: File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\a_screen.kv", line 11:
-...
-      9:            size_hint_y: 0.3
-     10:            size_hint_x: None
->>   11:            width: self.parent * 0.6
-     12:            name: "Sophie Cess"
-     13:            avatar: "../assets/images/darts.png"
-...
-BuilderException: Parser: File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\a_screen.kv", line 11:
-...
-      9:            size_hint_y: 0.3
-     10:            size_hint_x: None
->>   11:            width: self.parent * 0.6
-     12:            name: "Sophie Cess"
-     13:            avatar: "../assets/images/darts.png"
-...
-TypeError: unsupported operand type(s) for *: 'MDBoxLayout' and 'float'
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 242, in create_handler
-    return eval(value, idmap), bound_list
-  File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\a_screen.kv", line 11, in <module>
-    width: self.parent * 0.6
-
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 697, in _apply_rule
-    rctx['ids'])
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 247, in create_handler
-    cause=tb)
-
+  File ".\uix\pages\root.py", line 49, in add_screens
+    Builder.load_file(screen_details["kv"])  # You must import kv before
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 306, in load_file
+    return self.load_string(data, **kwargs)
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 373, in load_string
+    parser = Parser(content=string, filename=fn)
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 402, in __init__
+    self.parse(content)
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 515, in parse
+    rule.precompile()
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 264, in precompile
+    x.precompile()
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 264, in precompile
+    x.precompile()
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 264, in precompile
+    x.precompile()
+  [Previous line repeated 1 more time]
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 260, in precompile
+    x.precompile()
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 187, in precompile
+    self.co_value = compile(value, self.ctx.filename or '<string>', mode)
+  File "C:\Users\eavaste\Desktop\App\ktaboo\src\uix\pages\kv\game_screen.kv", line 23
+    5dp
+      ^
+SyntaxError: unexpected EOF while parsing

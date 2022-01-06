@@ -8,14 +8,24 @@ from uix.components.element_card import ElementCard
 
 
 class GameEndScreen(MDScreen):
-
+    round_time = StringProperty()
+    num_players = StringProperty()
+    num_jumps = StringProperty()
+    game_level = StringProperty()
+    current_round = StringProperty()
+    current_player = StringProperty()
+    points = StringProperty()
     def __init__(self, **kw):
         super().__init__(**kw)
     
     def on_pre_enter(self, *args):
-        # compute points
-        # save results
-        pass
+        self.round_time = str(AppStatus.get("game.round_time", default_value="25"))
+        self.num_players = str(AppStatus.get("game.num_players", default_value="2"))
+        self.num_jumps = str(AppStatus.get("game.num_jumps", default_value="5"))
+        self.game_level = AppStatus.get("game.level", default_value="easy")
+        self.current_round = str(AppStatus.get("game.current_round", default_value="0"))
+        self.current_player = str(AppStatus.get("game.current_player", default_value="Players1"))
+        self.points = str(AppStatus.get(f"game.rounds.{self.current_round}.{self.current_player}", default_value="0"))
 
     def back_home(self, inst):
         self.manager.transition.direction = 'right'

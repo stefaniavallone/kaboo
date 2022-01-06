@@ -15,6 +15,6 @@ class SettingsScreen(MDScreen):
         app.theme_cls.theme_style = "Dark" if self.theme_dark_on else "Light"
 
 
-    def to_home(self, inst):
+    def to_home(self):
         self.manager.transition.direction = 'right'
         self.manager.current = 'home'

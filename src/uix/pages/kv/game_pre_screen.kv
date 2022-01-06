@@ -1,22 +1,40 @@
-#:import MD3Card uix.components.md3card
-<GamePreScreen>
-    MDBoxLayout:
-        pos_hint: {"center_x": .5, "center_y": .5}
-        padding: [dp(20), dp(20), dp(20), dp(80)] 
-        MDCard:
-            text: "Start"
-            md_bg_color: app.theme_cls.primary_color
-            radius: dp(25)
+#:import StoryCard uix.components.story_card
+#:import StoryCard uix.components.page
+
+<GamePreScreen>:
+    MDRelativeLayout:
+        md_bg_color: 1,1,1,1
+        Page:
+            text: "GAME SETTING"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            size_hint_y: 0.9
+            size_hint_x: None
+            width: self.parent.width * 0.8
+            avatar: "../assets/images/darts.png"
+            story: "../assets/images/story.png"
+            callback: root.to_home
             MDGridLayout:
-                cols: 2
-                spacing: "2dp"
+                id: settings
+                cols:2
+                padding:[dp(15),dp(30),dp(15),dp(35)]
+                size: root.width * 0.8, root.height * 0.8
+                row_default_height: 50
+                row_force_default: True
+                MDLabel:
+                    pos_hint: {"center_x": .6, "center_y": .8}
+                    text: "Game Level:"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .8}
+                    text: root.game_level
+                    halign:"center"
                 MDLabel:
                     pos_hint: {"center_x": .6, "center_y": .8}
                     text: "Num Players:"
                     halign:"center"
                 MDLabel:
                     pos_hint: {"center_x": .4, "center_y": .8}
-                    text: "3"
+                    text: root.num_players
                     halign:"center"
                 MDLabel:
                     pos_hint: {"center_x": .6, "center_y": .7}
@@ -24,7 +42,7 @@
                     halign:"center"
                 MDLabel:
                     pos_hint: {"center_x": .4, "center_y": .7}
-                    text: "2"
+                    text: root.num_jumps
                     halign:"center"
                 MDLabel:
                     pos_hint: {"center_x": .6, "center_y": .6}
@@ -32,19 +50,39 @@
                     halign:"center"
                 MDLabel:
                     pos_hint: {"center_x": .4, "center_y": .6}
-                    text: "0.20"
+                    text: root.round_time
                     halign:"center"
                 MDLabel:
-                    pos_hint: {"center_x": .5, "center_y": .5}
-                    text: "It's player1 turn"
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: "It's turn of " 
                     halign:"center"
-    MDBottomAppBar:
-        MDToolbar:
-            title: ""
-            icon: "play"
-            tooltip_text: "Start"
-            type: "bottom"
-            on_action_button: root.to_game()
-
-
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: root.current_player 
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: "Points: " 
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: root.points
+                    halign:"center"
+            
+                MDFillRoundFlatButton:
+                    pos_hint: {"center_x": 0.5, "y": 0.08}
+                    text: "Reset"
+                    size_hint: None, None
+                    # width: page.width
+                    md_bg_color: 0.8, 0.2, 0.3, 1
+                    on_release: root.reset()
+                    
+                MDFillRoundFlatButton:
+                    pos_hint: {"center_x": 0.5, "y": 0.08}
+                    text: "Confirm"
+                    size_hint: None, None
+                    # width: page.width
+                    md_bg_color: 0.8, 0.2, 0.3, 1
+                    on_release: root.to_game()
+                
                 

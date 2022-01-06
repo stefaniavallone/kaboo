@@ -15,7 +15,7 @@ from kivymd.uix.dialog import MDDialog
 from kivymd.uix.label import MDLabel
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.button import MDIconButton
-from src.app_status import AppStatus
+from app_status import AppStatus
 from src.utils.sound_player import SoundPlayer
 
 from uix.components.element_card import ElementCard

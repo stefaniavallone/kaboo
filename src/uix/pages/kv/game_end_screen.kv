@@ -1,17 +1,70 @@
-#:import ElementCard uix.components.element_card
-<GameEndScreen>
-    MDBoxLayout:
-        orientation: "vertical"
-        size_hint: .75, .75
-        pos_hint: {"center_x": .5, "center_y": .5}
-        MDBoxLayout:
-            text:""
-            subtext:""
-            ElementCard:
-                md_bg_color:55/255,255/255,86/255,1
-                image: "../assets/images/the_end.png"
-                text: "Winner is "
-                subtext: "subtext"
-                on_release: root.back_home()
-                
+#:import StoryCard uix.components.story_card
+#:import StoryCard uix.components.page
 
+<GameEndScreen>:
+    MDRelativeLayout:
+        md_bg_color: 1,1,1,1
+        Page:
+            text: "THE END"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            size_hint_y: 0.9
+            size_hint_x: None
+            width: self.parent.width * 0.8
+            avatar: "../assets/images/darts.png"
+            story: "../assets/images/story.png"
+            callback: root.back_home
+            MDGridLayout:
+                id: settings
+                cols:2
+                padding:[dp(15),dp(30),dp(15),dp(35)]
+                size: root.width * 0.8, root.height * 0.8
+                row_default_height: 50
+                row_force_default: True
+                MDLabel:
+                    pos_hint: {"center_x": .6, "center_y": .8}
+                    text: "Game Level:"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .8}
+                    text: root.game_level
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .6, "center_y": .8}
+                    text: "Num Players:"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .8}
+                    text: root.num_players
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .6, "center_y": .7}
+                    text: "Num Jumps:"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .7}
+                    text: root.num_jumps
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .6, "center_y": .6}
+                    text: "Round Time:"
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: root.round_time
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: "It's turn of " 
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: root.current_player 
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: "Points: " 
+                    halign:"center"
+                MDLabel:
+                    pos_hint: {"center_x": .4, "center_y": .6}
+                    text: root.points
+                    halign:"center"

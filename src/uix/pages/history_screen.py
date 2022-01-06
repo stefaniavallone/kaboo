@@ -22,17 +22,17 @@ class HistoryScreen(MDScreen):
                 self.histories = json.load(histories_file)
 
     def on_enter(self):
-        self.load_data()
+        self.build()
 
-    def load_data(self):
+    def build(self):
         if not self.data_tables:
             self.data_tables = MDDataTable(
                 use_pagination=False if len(self.histories) < 10 else True,
                 pos_hint={'center_x': 0.5, 'center_y': 0.5},
-                size_hint=(0.9, 0.6),
                 rows_num=10,
                 pagination_menu_pos="center",
-                background_color=[1, 0, 0, .5],
+                # background_color=[1, 0, 0, .5],
+                opacity=1,
                 column_data=[
                     ("[color=#C042B8]N°[/color]", dp(5)),
                     ("[color=#C042B8]Day[/color]", dp(20)),
@@ -64,3 +64,7 @@ class HistoryScreen(MDScreen):
             items=items
         )
         self.game_stats_dialog.open()
+    
+    def to_home(self):
+        self.manager.transition.direction = 'right'
+        self.manager.current = 'home'
