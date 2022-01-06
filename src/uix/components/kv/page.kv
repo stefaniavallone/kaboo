@@ -1,0 +1,50 @@
+<Page>
+    size_hint_y: 0.8
+    size_hint_x: 1 
+    # size_hint: None, None
+    # size: "228dp", "288dp"
+
+    MDCard:
+        id: card
+        size_hint: 1, 1
+        #size: "188dp", "252dp"
+        radius: 32
+        elevation: 18
+        FitImage:
+            source: root.story
+            radius: [32, ]
+            mipmap: True
+    
+    MDCard:
+        id: avatar
+        size_hint: None, None
+        size: "56dp", "56dp"
+        radius: 28
+        x: card.width / 2 - self.width / 2
+        y: card.height - self.height / 2
+        elevation: 18
+        MDLabel:
+            text: "SETTINGS"
+            theme_text_color: "Custom"
+            text_color: 0.1, 0.1, 0.1, 1
+            halign: "center"
+        # FitImage:
+        #     source: root.avatar
+        #     radius: [28, ]
+        #     mipmap: True
+
+    FitImage:
+        size_hint: None, None
+        size: "188dp", "112dp"
+        source: "../assets/images/black-shadow.png"
+        radius: [8, 8, 28, 28]
+        mipmap: True
+    
+    MDLabel: 
+        text: root.name
+        adaptive_size: True
+        theme_text_color: "Custom"
+        text_color: 1, 1, 1, 1
+        #font_name: "../assets/font/SourceSansPro-Bold.otf"
+        x: card.width / 2 - self.width / 2
+        y: "12dp"

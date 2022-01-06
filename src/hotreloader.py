@@ -28,7 +28,6 @@ class LiveApp(BaseApp, HotReloaderApp):
 
     def __init__(self, **kwargs):
         super(LiveApp, self).__init__(**kwargs)
-        #initialize_app(self)
 
     def build_app(self):
         return Root()

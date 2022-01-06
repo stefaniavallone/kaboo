@@ -1,30 +1,11 @@
 import inspect
 import os
-import collections
 import pkgutil
 from importlib import import_module
 from pathlib import Path
 
 from kivy.uix.screenmanager import ScreenManager
 from kivymd.uix.screen import MDScreen
-
-
-def folder_walker(package_path):
-    folders = [os.path.join(package_path, o) for o in os.listdir(package_path)
-               if os.path.isdir(os.path.join(package_path, o))]
-    folders = [package_path] + [f.replace("\\", "/") for f in folders]
-    return folders
-
-
-
-def move_element(odict, thekey, newpos):
-    odict[thekey] = odict.pop(thekey)
-    i = 0
-    for key, value in odict.items():
-        if key != thekey and i >= newpos:
-            odict[key] = odict.pop(key)
-        i += 1
-    return odict
 
 
 def import_and_create_screens(package_path):
@@ -57,7 +38,7 @@ def import_and_create_screens(package_path):
                         "class_name": class_name,
                         "path": file_path
                     }
-    move_element(screens, "home", 0)
+    #move_element(screens, "home", 0)
     return screens
 
 
@@ -67,5 +48,24 @@ def get_screens_map(screens):
         screens_map[screen["class_name"]] = screen["path"].replace("/", ".")
     return screens_map
         
+
+
+## Utils
+def folder_walker(package_path):
+    folders = [os.path.join(package_path, o) for o in os.listdir(package_path)
+               if os.path.isdir(os.path.join(package_path, o))]
+    folders = [package_path] + [f.replace("\\", "/") for f in folders]
+    return folders
+
+
+def move_element(odict, thekey, newpos):
+    odict[thekey] = odict.pop(thekey)
+    i = 0
+    for key, value in odict.items():
+        if key != thekey and i >= newpos:
+            odict[key] = odict.pop(key)
+        i += 1
+    return odict
+
 
 

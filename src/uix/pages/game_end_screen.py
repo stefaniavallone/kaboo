@@ -11,20 +11,11 @@ class GameEndScreen(MDScreen):
 
     def __init__(self, **kw):
         super().__init__(**kw)
- 
-    # def end_game(self, entry, subtext):
-    #     Clock.unschedule(self.interval_clock)
-    #     self.write_on_file(entry)
-    #     self.ids.container.clear_widgets()
-    #     points = [int(s) for s in subtext.split() if s.isdigit()]
-
-    #     end = ElementCard(
-    #         image="../assets/images/the_end.png",
-    #         text="Winner is ",
-    #         subtext=subtext,
-    #         on_release=self.back_home
-    #     )
-    #     self.ids.end_game.add_widget(end)
+    
+    def on_pre_enter(self, *args):
+        # compute points
+        # save results
+        pass
 
     def back_home(self, inst):
         self.manager.transition.direction = 'right'
