@@ -1,44 +1,30 @@
 Traceback (most recent call last):
   File "./main.py", line 32, in <module>
     BaseApp().run()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\app.py", line 950, in run
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\app.py", line 955, in run
     runTouchApp()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 582, in runTouchApp
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 570, in runTouchApp
     EventLoop.mainloop()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 347, in mainloop
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 335, in mainloop
     self.idle()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 387, in idle
-    Clock.tick()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\clock.py", line 733, in tick
-    self.post_idle(ts, self.idle())
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\clock.py", line 776, in post_idle
-    self._process_events()
-  File "kivy\_clock.pyx", line 616, in kivy._clock.CyClockBase._process_events
-  File "kivy\_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
-  File "kivy\_clock.pyx", line 645, in kivy._clock.CyClockBase._process_events
-  File "kivy\_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
-  File ".\uix\pages\root.py", line 49, in add_screens
-    Builder.load_file(screen_details["kv"])  # You must import kv before
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 306, in load_file
-    return self.load_string(data, **kwargs)
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 373, in load_string
-    parser = Parser(content=string, filename=fn)
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 402, in __init__
-    self.parse(content)
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 515, in parse
-    rule.precompile()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 264, in precompile
-    x.precompile()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 264, in precompile
-    x.precompile()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 264, in precompile
-    x.precompile()
-  [Previous line repeated 1 more time]
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 260, in precompile
-    x.precompile()
-  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\parser.py", line 187, in precompile
-    self.co_value = compile(value, self.ctx.filename or '<string>', mode)
-  File "C:\Users\eavaste\Desktop\App\ktaboo\src\uix\pages\kv\game_screen.kv", line 23
-    5dp
-      ^
-SyntaxError: unexpected EOF while parsing
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 379, in idle
+    self.dispatch_input()
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 330, in dispatch_input
+    post_dispatch_input(*pop(0))
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 299, in post_dispatch_input
+    wid.dispatch('on_touch_up', me)
+  File "kivy\_event.pyx", line 731, in kivy._event.EventDispatcher.dispatch
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 296, in on_touch_up
+    return super().on_touch_up(touch)
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\button.py", line 981, in on_touch_up
+    return super().on_touch_up(touch)
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\uix\behaviors\button.py", line 179, in on_touch_up
+    self.dispatch('on_release')
+  File "kivy\_event.pyx", line 727, in kivy._event.EventDispatcher.dispatch
+  File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1191, in kivy._event.EventObservers._dispatch
+  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 57, in custom_callback
+    exec(__kvlang__.co_value, idmap)
+  File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\game_screen.kv", line 52, in <module>
+    on_release: root.to_home()
+TypeError: to_home() missing 1 required positional argument: 'inst'

@@ -29,6 +29,10 @@ class BaseApp(MDApp):
 
     def initialize_status(self):
         self.status = AppStatus()
+    
+    def go_to_screen(self, screen, direction="left"):
+        self.manager.transition.direction = direction
+        self.manager.current = screen
 
     def build(self):
         return Root()

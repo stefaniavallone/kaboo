@@ -10,12 +10,7 @@ class Page(MDRelativeLayout):
     avatar = StringProperty()
     story = StringProperty()
     name = StringProperty()
-    to_home = StringProperty()
 
     def __init__(self, **kw):
         super().__init__(**kw)
         self.callback = None
-
-    # def on_parent(self, *args):
-    #     if not self.avatar:
-    #         self.remove_widget(self.ids.avatar)

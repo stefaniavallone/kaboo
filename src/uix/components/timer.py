@@ -11,10 +11,17 @@ class Timer(MDLabel):
         self.seconds = kwargs.get("seconds", 60)
         self.interval = kwargs.get("interval", 0.05)
         self.running = False
+        self.last_seconds = kwargs.get("last_seconds", 10)
+        if self.last_seconds > self.seconds:
+            self.last_seconds = self.seconds
         self.register_event_type('on_finish')
+        self.register_event_type('on_last_seconds')
     
     def update(self, dt):
         self.seconds = self.seconds - self.interval
+        if self.seconds <= self.last_seconds:
+            self.dispatch('on_last_seconds')
+            self.last_seconds = -1 # to avoid the dispatching of a new event
         if self.seconds < 0:
             self.seconds = 0
             self.dispatch('on_finish')
@@ -32,4 +39,7 @@ class Timer(MDLabel):
             Clock.unschedule(self.update)
     
     def on_finish(self):
+        pass
+
+    def on_last_seconds(self):
         pass
