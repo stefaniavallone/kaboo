@@ -1,8 +1,24 @@
 #:import StoryCard uix.components.story_card
 #:import StoryCard uix.components.page
+<Row@RecycleKVIDsDataViewBehavior+BoxLayout>:
+    value: ''
+    icon: ''
+    MDIcon:
+        icon: root.icon
+    Label:
+        id: name
+    Label:
+        text: root.value
+    MDCheckbox:
+        size_hint: None, None
+        size: "48dp", "48dp"
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        disabled: True
+
 <TrophiesScreen>
     MDRelativeLayout:
         md_bg_color: 1,1,1,1
+        rv: rv
         Page:
             text: "TROPHIES"
             pos_hint: {"center_x": 0.5, "center_y": 0.5}
@@ -12,11 +28,19 @@
             avatar: "../assets/images/darts.png"
             story: "../assets/images/story.png"
             callback: root.to_home
-            MDBoxLayout:
-                orientation: "vertical"
-                size_hint_x: 1
-                pos_hint: {}
-                padding:[dp(0),dp(30),dp(0),dp(0)]
-                ScrollView:
-                    MDList:
-                        id: trophies_list
+                
+            RecycleView:
+                id: rv
+                scroll_type: ['bars', 'content']
+                scroll_wheel_distance: dp(50)
+                bar_width: dp(10)
+                viewclass: 'Row'
+                RecycleBoxLayout:
+                    padding: "30dp", "45dp", "15dp", "20dp"
+                    default_size: None, dp(30)
+                    default_size_hint: 1, None
+                    size_hint_y: None
+                    height: self.minimum_height
+                    # add this so you can scroll
+                    row_default_height: 100
+                    orientation: 'vertical'

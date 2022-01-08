@@ -1,30 +1,42 @@
 import json
 
-from kivymd.uix.screen import MDScreen
-from app_status import AppStatus
+from random import sample, randint
+from string import ascii_lowercase
 
-from uix.components.list_item_checkbox import ListItemWithCheckbox
+from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
+from kivymd.uix.screen import MDScreen
 
 
 class TrophiesScreen(MDScreen):
-    trophies_list = None
-
     def on_pre_enter(self):
         with open("../assets/resources/trophies.json") as trophies_file:
             trophies = json.load(trophies_file)
-        AppStatus.set("trophy.trophies", trophies)
-
-    def on_enter(self, *args): 
-        trophies = AppStatus.get("trophy.trophies", default_value=dict())
-        for trophy in trophies:
-                self.trophies_list = ListItemWithCheckbox(text=trophy['points'],
-                                     secondary_text=trophy['name'],
-                                     icon=trophy['icon'])
-
-                self.ids.trophies_list.add_widget(self.trophies_list)
-
-    
+        self.ids.rv.data = [
+            {'name.text': trophy['points'],
+             'value': trophy['name'],
+             'icon': trophy['icon']}
+            for trophy in trophies]
+            
     def to_home(self):
         self.manager.transition.direction = 'right'
         self.manager.current = 'home'
+    # def sort(self):
+    #     self.rv.data = sorted(self.rv.data, key=lambda x: x['name.text'])
+
+    # def clear(self):
+    #     self.rv.data = []
+
+    # def insert(self, value):
+    #     self.rv.data.insert(0, {
+    #         'name.text': value or 'default value', 'value': 'unknown'})
+
+    # def update(self, value):
+    #     if self.rv.data:
+    #         self.rv.data[0]['name.text'] = value or 'default new value'
+    #         self.rv.refresh_from_data()
+
+    # def remove(self):
+    #     if self.rv.data:
+    #         self.rv.data.pop(0)
 

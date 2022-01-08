@@ -1,5 +1,15 @@
 #:import StoryCard uix.components.story_card
 #:import StoryCard uix.components.page
+
+<CustomLabel@Label>:
+    bcolor: (1,1,1,1)
+    canvas.before:
+        Color:
+            rgba: root.bcolor
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
 <HistoryScreen>
     MDRelativeLayout:
         md_bg_color: 1,1,1,1
@@ -12,11 +22,19 @@
             avatar: "../assets/images/darts.png"
             story: "../assets/images/story.png"
             callback: root.to_home
-            MDBoxLayout:
-                orientation: "vertical"
-                padding:dp(2)
-                id: container
-                table_header: ''
+
+            RecycleView:
+                viewclass: 'CustomLabel'
+                id: table_floor
+                RecycleGridLayout:
+                    padding: "30dp", "45dp", "15dp", "20dp"
+                    id: table_floor_layout
+                    cols: 5
+                    default_size: (None,250)
+                    default_size_hint: (1,None)
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: 5
 
 
 

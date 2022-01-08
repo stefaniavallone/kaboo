@@ -38,7 +38,7 @@ def import_and_create_screens(package_path):
                         "class_name": class_name,
                         "path": file_path
                     }
-    #move_element(screens, "home", 0)
+    move_element(screens, "home", 0)
     return screens
 
 
