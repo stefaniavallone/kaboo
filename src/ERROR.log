@@ -7,24 +7,36 @@ Traceback (most recent call last):
     EventLoop.mainloop()
   File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 335, in mainloop
     self.idle()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 379, in idle
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 391, in idle
     self.dispatch_input()
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 330, in dispatch_input
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 342, in dispatch_input
     post_dispatch_input(*pop(0))
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\base.py", line 299, in post_dispatch_input
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\base.py", line 308, in post_dispatch_input
     wid.dispatch('on_touch_up', me)
-  File "kivy\_event.pyx", line 731, in kivy._event.EventDispatcher.dispatch
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 296, in on_touch_up
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 296, in on_touch_up
     return super().on_touch_up(touch)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivymd\uix\button.py", line 981, in on_touch_up
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivymd\uix\button.py", line 981, in on_touch_up
     return super().on_touch_up(touch)
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\uix\behaviors\button.py", line 179, in on_touch_up
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\uix\behaviors\button.py", line 179, in on_touch_up
     self.dispatch('on_release')
-  File "kivy\_event.pyx", line 727, in kivy._event.EventDispatcher.dispatch
-  File "kivy\_event.pyx", line 1307, in kivy._event.EventObservers.dispatch
-  File "kivy\_event.pyx", line 1191, in kivy._event.EventObservers._dispatch
-  File "c:\Users\CrispoGio\gioelecrispo\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 57, in custom_callback
+  File "kivy\_event.pyx", line 705, in kivy._event.EventDispatcher.dispatch
+  File "kivy\_event.pyx", line 1248, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1132, in kivy._event.EventObservers._dispatch
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\lang\builder.py", line 57, in custom_callback
     exec(__kvlang__.co_value, idmap)
-  File "C:\Users\CrispoGio\gioelecrispo\ktaboo\src\uix\pages\kv\game_screen.kv", line 52, in <module>
-    on_release: root.to_home()
-TypeError: to_home() missing 1 required positional argument: 'inst'
+  File "C:\Users\eavaste\Desktop\App\ktaboo\src\uix\pages\kv\home_screen.kv", line 70, in <module>
+    root.manager.current = 'history'
+  File "kivy\properties.pyx", line 498, in kivy.properties.Property.__set__
+  File "kivy\properties.pyx", line 545, in kivy.properties.Property.set
+  File "kivy\properties.pyx", line 600, in kivy.properties.Property.dispatch
+  File "kivy\_event.pyx", line 1248, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1154, in kivy._event.EventObservers._dispatch
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\uix\screenmanager.py", line 1056, in on_current
+    self.transition.start(self)
+  File "c:\Users\eavaste\Desktop\App\ktaboo\venv\lib\site-packages\kivy\uix\screenmanager.py", line 377, in start
+    self.screen_in.dispatch('on_pre_enter')
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File ".\uix\pages\history_screen.py", line 36, in on_pre_enter
+    self.table_data.bind(on_row_press=self.on_row_press)
+AttributeError: 'HistoryScreen' object has no attribute 'table_data'
