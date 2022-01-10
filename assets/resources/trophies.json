@@ -1,14 +1,53 @@
 [
-  {
-    "image": "../assets/darts.png",
-    "name": "3 wrong answer",
-    "description": "You 3 wrong answert",
-    "obtained": true
-  },
-  {
-    "image": "../assets/darts.png",
-    "name": "10 jump answer",
-    "description": "10 jump wrong answert",
-    "obtained": false
-  }
+    {
+        "name": "5 points",
+        "description": "You scored 5 points",
+        "image": "../assets/images/trophies/trophy_5points.png",
+        "obtained": true,
+        "points": 5
+    },
+    {
+        "name": "25 points",
+        "description": "You scored 25 points",
+        "image": "../assets/images/trophies/trophy_25points.png",
+        "obtained": true,
+        "points": 25
+    },
+    {
+        "name": "50 points",
+        "description": "You scored 50 points",
+        "image": "../assets/images/trophies/trophy_50points.png",
+        "obtained": false,
+        "points": 50
+    },
+    {
+        "name": "250 points",
+        "description": "You scored 250 points",
+        "image": "../assets/images/trophies/trophy_250points.png",
+        "obtained": false,
+        "points": 250
+    },
+    {
+        "name": "500 points",
+        "description": "You scored 500 points",
+        "image": "../assets/images/trophies/trophy_500points.png",
+        "obtained": false,
+        "points": 500
+    },
+    {
+        "name": "5 wrong answers",
+        "description": "You wrong 5 answers",
+        "image": "../assets/images/trophies/trophy_5wrongs.png",
+        "obtained": true,
+        "action_type": "wrong",
+        "action_count": 5
+    },
+    {
+        "name": "50 wrong answers",
+        "description": "You wrong 50 answers",
+        "image": "../assets/images/trophies/trophy_50wrongs.png",
+        "obtained": false,
+        "action_type": "wrong",
+        "action_count": 50
+    }
 ]

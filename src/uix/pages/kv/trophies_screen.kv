@@ -26,17 +26,17 @@
             callback: root.to_home
                 
             RecycleView:
-                id: rv
-                scroll_type: ['bars', 'content']
-                scroll_wheel_distance: dp(50)
-                bar_width: dp(10)
-                viewclass: 'Row'
+                id: list_trophies
+                scroll_type: ['bars']
+                scroll_wheel_distance: dp(10)
+                bar_width: dp(5)
+                viewclass: 'ListItemWithCheckbox'
                 RecycleBoxLayout:
-                    padding: "30dp", "45dp", "15dp", "20dp"
-                    default_size: None, dp(30)
+                    default_size: None, dp(50)
                     default_size_hint: 1, None
                     size_hint_y: None
-                    height: self.minimum_height
+                    spacing: dp(10)
+                    height: self.minimum_height + 80
                     # add this so you can scroll
-                    row_default_height: 100
+                    row_default_height: 300
                     orientation: 'vertical'

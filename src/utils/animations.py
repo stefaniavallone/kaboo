@@ -12,4 +12,3 @@ class Animations:
             opacity=1,
             duration=0.3)
         animate.start(widget)
-

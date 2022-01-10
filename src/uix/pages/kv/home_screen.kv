@@ -10,12 +10,10 @@
             padding:dp(25)
             MDBoxLayout:
                 orientation:"vertical"
-                Image:
-                    source: '../assets/images/Kaboo.png'
-                    keep_ratio: False
-                    allow_stretch: True
+                FitImage:
+                    source: '../assets/images/logo.png'
+                    keep_ratio: True
                     opacity: 0.8
-                    size_hint: 0.3, 0.4
                     pos_hint: {'center_x': 0.5, 'center_y': 0.75}
 
         MDGridLayout:

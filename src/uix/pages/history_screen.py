@@ -16,7 +16,7 @@ class HistoryScreen(MDScreen):
 
         self.ids.table_floor.data = [
             {'date': str(history['date']),
-             'image': '../asserts/images/level'+history['level']+'png',
+             'image': f'../assets/images/levels/{history["level"]}.png',
              'players': str(len(history['players_points'])),
              'winner': history['winner'],
              'score': str(history['score']),
@@ -27,14 +27,14 @@ class HistoryScreen(MDScreen):
 
     def show_details(self, players_points, players, date):
         list_items = [Item(text=f" Player {i+1}: [color=#C042B8]{players_points[f'p{i}']} points[/color]") for i in range(int(players))]
-        self.game_stats_dialog = MDDialog(
+        game_stats_dialog = MDDialog(
             title="Players Point",
             type="simple",
             text = "Date: "+ date,
             items=list_items,
             radius=[20, 7, 20, 7]
         )
-        self.game_stats_dialog.open()
+        game_stats_dialog.open()
     
     def to_home(self):
         self.manager.transition.direction = 'right'
