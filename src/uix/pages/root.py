@@ -4,7 +4,7 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager
 
-from utils.kiva.class_loader import import_and_create_screens
+from utils.setup.class_loader import import_and_create_screens
 
 
 Builder.load_file("uix/pages/kv/root.kv")

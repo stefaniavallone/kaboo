@@ -1,8 +1,8 @@
 import os
 
 from base_app import BaseApp
-from utils.kiva.class_loader import import_and_create_screens, get_screens_map
-from utils.kiva.env import setup_env
+from utils.setup.class_loader import import_and_create_screens, get_screens_map
+from utils.setup.env import setup_env
 from kaki.app import App as HotReloaderApp
 
 from uix.pages.root import Root

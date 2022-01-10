@@ -8,7 +8,7 @@ root_dir = os.path.split(os.path.abspath(sys.argv[0]))[0]
 sys.path.insert(0, os.path.join(root_dir, "utils"))
 
 from base_app import BaseApp
-from utils.kiva.env import setup_env
+from utils.setup.env import setup_env
 
 """
 Registering factories from factory.json.
