@@ -10,16 +10,15 @@ class HistoryScreen(MDScreen):
             histories = json.load(histories_file)
 
         table_data = []
-        table_data.append({'text':'N°','size_hint_y':None,'height':30,'color':'#C042B8'})
         table_data.append({'text':'Day','size_hint_y':None,'height':30,'color':'#C042B8'})
         table_data.append({'text':'Level','size_hint_y':None,'height':30,'color':'#C042B8'})
         # table_data.append({'text':'Players','size_hint_y':None,'height':30,'color':'#C042B8'})
         self.columns = len(table_data)
-        column_titles = ['id', 'day', 'level']
+        column_titles = ['day', 'level']
 
         for history in histories:
             for y in column_titles:
-                table_data.append({'text':str(history[y]),'size_hint_y':None,'height':20,'bcolor':(.06,.25,.50,1)})
+                table_data.append({'text':history[y],'size_hint_y':None,'height':20,'bcolor':(.06,.25,.50,1)})
 
         self.ids.table_floor_layout.cols = self.columns #define value of cols to the value of self.columns
         self.ids.table_floor.data = table_data

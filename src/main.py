@@ -2,16 +2,13 @@ import os
 import sys
 import traceback
 
-from kivy import Logger
-from kivy.factory import Factory
-
 __version__ = "0.0.1"
 
 root_dir = os.path.split(os.path.abspath(sys.argv[0]))[0]
 sys.path.insert(0, os.path.join(root_dir, "utils"))
 
 from base_app import BaseApp
-from utils.env import setup_env
+from utils.kiva.env import setup_env
 
 """
 Registering factories from factory.json.

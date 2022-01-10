@@ -2,15 +2,17 @@ import json
 from random import shuffle
 
 from kivy.logger import Logger
+from kivymd.uix.button import MDFlatButton
+from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
 from app_status import AppStatus
-from src.utils.sound_player import SoundPlayer
-
+from utils.sound_player import SoundPlayer
 
 
 class GameScreen(MDScreen):
 
     COLORS = [(1, 0, 0, 1), (0, 1, 0, 1), (1, 1, 0, 1), (0, 0, 1, 1)]
+    confirm_exit_dialog = None
 
     def __init__(self, **kw):
         super().__init__(**kw)
@@ -40,8 +42,7 @@ class GameScreen(MDScreen):
         for element in self.elements[:2]:
             self.ids.card_container.add_card(element["word"], element["forbidden"])
             self.elem_idx = self.elem_idx + 1
-      
-                
+
     def play_round(self):
         Logger.debug(f"Playing round {self.current_round+1} for player {self.current_player+1}")
         self.ids.remaining_jumps.text = str(self.num_jumps)
@@ -82,7 +83,6 @@ class GameScreen(MDScreen):
             self.elem_idx = self.elem_idx + 1
         else:
             self.ids.card_container.ids.swiper.next()
-
     
     def finish_round(self):
         self.background_music.stop()
@@ -103,15 +103,26 @@ class GameScreen(MDScreen):
             self.manager.transition.direction = 'right'
             self.manager.current = 'game_pre'
 
-    def confirm_exit(self): 
+    def confirm_exit(self):
+
+        if not self.confirm_exit_dialog:
+            content = MDFlatButton(text="aaaa", md_bg_color=(1,0,0,1),
+                                   on_release=self.to_home)
+            self.confirm_exit_dialog = MDDialog(
+                type="custom",
+                radius=[20, 7, 20, 7],
+                auto_dismiss=False,
+                size_hint=(.7, .6),
+                content_cls=content
+            )
+        self.confirm_exit_dialog.open()
+
+    def to_home(self, inst):
         self.background_music.stop()
         self.clock_sound.stop()
-        self.ids.timer.stop() 
-
-    def to_home(self):
-        self.confirm_exit()
-        self.manager.transition.direction = 'right'
-        self.manager.current = 'home'
+        self.ids.timer.stop()
+        self.confirm_exit_dialog.dismiss()
+        self.go_to_screen('home', direction='right')
  
     
 

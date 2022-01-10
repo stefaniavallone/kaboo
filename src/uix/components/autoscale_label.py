@@ -10,6 +10,10 @@
 
 from kivy.properties import BooleanProperty
 from kivymd.uix.label import MDLabel
+from kivy.lang import Builder
+
+Builder.load_file("uix/components/kv/autoscale_label.kv")
+
 
 __all__ = ("AutoScaleLabel",)
 

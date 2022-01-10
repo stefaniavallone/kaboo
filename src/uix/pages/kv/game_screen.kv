@@ -3,6 +3,7 @@
 #:import GameCardContainer uix.components.game_card_container
 
 <GameScreen>
+
     MDBoxLayout:
         orientation: "vertical"
 
@@ -49,7 +50,7 @@
                     pos_hint: {"x": .375, "center_y": .5}
                     icon: "home"
                     padding: 0
-                    on_release: root.to_home()
+                    on_release: root.confirm_exit()
 
                 MDIconButton:
                     pos_hint: {"x": .525, "center_y": .5}
@@ -85,4 +86,4 @@
                 id: right_button
                 icon: "check-bold"
                 on_release: root.right_answer()
-   
+

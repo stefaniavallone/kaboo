@@ -1,11 +1,14 @@
 from types import SimpleNamespace
+from typing import Any
+
 from kivy.app import App
 from kivy.logger import Logger
 
 
 class AppStatus(SimpleNamespace):
 
-    def __init__(self) -> None:
+    def __init__(self, **kwargs: Any) -> None:
+        super().__init__(**kwargs)
         self.game_started = False
             
     @staticmethod
@@ -29,7 +32,6 @@ class AppStatus(SimpleNamespace):
             value = getattr(obj, name_part, default_value)
             obj = value
         return value
-
 
     def __repr__(self) -> str:
         return self.__dict__

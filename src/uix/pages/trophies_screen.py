@@ -13,7 +13,7 @@ class TrophiesScreen(MDScreen):
         with open("../assets/resources/trophies.json") as trophies_file:
             trophies = json.load(trophies_file)
         self.ids.rv.data = [
-            {'name.text': trophy['points'],
+            {'name': trophy['points'],
              'value': trophy['name'],
              'icon': trophy['icon']}
             for trophy in trophies]

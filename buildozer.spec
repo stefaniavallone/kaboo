@@ -35,12 +35,12 @@ version.regex = __version__ = ['"](.*)['"]
 version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
+# comma separated e.g. requirements = sqlite3,kiva
 requirements = python3,kivy==2.0.0,kivymd==0.104.2,plyer==2.0.0,sdl2_ttf==2.0.15,pillow,android,python-for-android
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
-# requirements.source.kivy = ../../kivy,
+# requirements.source.kiva = ../../kiva,
 
 # (list) Garden requirements
 #garden_requirements =
@@ -229,8 +229,8 @@ android.archs = armeabi-v7a, arm64-v8a
 # Python for android (p4a) specific
 #
 
-# (str) python-for-android fork to use, defaults to upstream (kivy)
-#p4a.fork = kivy
+# (str) python-for-android fork to use, defaults to upstream (kiva)
+#p4a.fork = kiva
 
 # (str) python-for-android branch to use, defaults to master
 p4a.branch = develop
@@ -255,8 +255,8 @@ p4a.branch = develop
 # iOS specific
 #
 
-# (str) Path to a custom kivy-ios folder
-#ios.kivy_ios_dir = ../kivy-ios
+# (str) Path to a custom kiva-ios folder
+#ios.kivy_ios_dir = ../kiva-ios
 # Alternately, specify the URL and branch of a git checkout:
 ios.kivy_ios_url = https://github.com/kivy/kivy-ios
 ios.kivy_ios_branch = master

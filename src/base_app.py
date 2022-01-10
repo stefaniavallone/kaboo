@@ -1,6 +1,4 @@
 from kivy.core.window import Window
-from kivy.uix.button import Button
-from kivy.uix.screenmanager import Screen, ScreenManager
 from kivymd.app import MDApp
 from app_status import AppStatus
 
@@ -13,26 +11,35 @@ class BaseApp(MDApp):
         self.initialize_app()
         self.initialize_status()
     
-    def initialize_app(app):
+    def initialize_app(self):
         Window.soft_input_mode = "below_target"
-        app.title = "KTaboo"
+        self.title = "Kaboo"
         
-        app.theme_cls.material_style = "M3"
+        self.theme_cls.material_style = "M3"
         
-        app.theme_cls.primary_palette = "Blue"
-        app.theme_cls.primary_hue = "500"
+        self.theme_cls.primary_palette = "Blue"
+        self.theme_cls.primary_hue = "500"
 
-        app.theme_cls.accent_palette = "Amber"
-        app.theme_cls.accent_hue = "500"
+        self.theme_cls.accent_palette = "Amber"
+        self.theme_cls.accent_hue = "500"
 
-        app.theme_cls.theme_style = "Light"
+        self.theme_cls.theme_style = "Light"
+        self.font_name = "../assets/fonts/TheNautigal-Bold.ttf"
 
     def initialize_status(self):
         self.status = AppStatus()
-    
-    def go_to_screen(self, screen, direction="left"):
-        self.manager.transition.direction = direction
-        self.manager.current = screen
 
     def build(self):
+        from kivy.core.text import LabelBase
+        from kivymd.font_definitions import theme_font_styles
+        LabelBase.register(
+            name="JetBrainsMono",
+            fn_regular="../assets/fonts/TheNautigal-Bold.ttf")
+        theme_font_styles.append('JetBrainsMono')
+        self.theme_cls.font_styles["JetBrainsMono"] = [
+            "JetBrainsMono",
+            16,
+            False,
+            0.15,
+            ]
         return Root()

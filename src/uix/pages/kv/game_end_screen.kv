@@ -52,7 +52,6 @@
                     pos_hint: {"center_x": .4, "center_y": .6}
                     text: root.round_time
                     halign:"center"
-
                 MDLabel:
                     pos_hint: {"center_x": .4, "center_y": .6}
                     text: "Points: " 
@@ -61,3 +60,7 @@
                     pos_hint: {"center_x": .4, "center_y": .6}
                     text: root.points
                     halign:"center"
+        MDCarousel:
+            size_hint: 0.8, 0.5
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            id: trophy_carousel

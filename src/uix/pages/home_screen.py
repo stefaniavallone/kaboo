@@ -1,8 +1,10 @@
 import json
 import webbrowser
+from kivy.core.text import Label
 
 from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
+from kivymd.uix.label import MDLabel
 from kivymd.uix.screen import MDScreen
 
 from app_status import AppStatus
@@ -11,7 +13,7 @@ from app_status import AppStatus
 class HomeScreen(MDScreen):
     HOME = True
     rate_us_dialog = None
-
+    
     def show_rate_us_dialog(self):
         if not self.rate_us_dialog:
             self.rate_us_dialog = MDDialog(
