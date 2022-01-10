@@ -1,14 +1,19 @@
 #:import StoryCard uix.components.story_card
 #:import StoryCard uix.components.page
+#:import HistoryItem uix.components.history_item
 
-<CustomLabel@Label>:
-    bcolor: (1,1,1,1)
-    canvas.before:
-        Color:
-            rgba: root.bcolor
-        Rectangle:
-            size: self.size
-            pos: self.pos
+<HistoryItem@RecycleKVIDsDataViewBehavior+MDBoxLayout>:
+    winner: ''
+    date: ''
+    players: ''
+    text: root.winner
+    secondary_text: root.date
+    text_color: 1, 1, 1, 1
+    bold: True
+    secondary_text_color: 1, 1, 1, 1 
+    score: root.players
+    on_press: root.details(root.players_points, root.players, root.date)
+    size_hint_y: None
 
 <HistoryScreen>
     MDRelativeLayout:
@@ -22,19 +27,21 @@
             avatar: "../assets/images/darts.png"
             story: "../assets/images/story.png"
             callback: root.to_home
-
             RecycleView:
-                viewclass: 'CustomLabel'
+                viewclass: 'HistoryItem'
                 id: table_floor
-                RecycleGridLayout:
-                    padding: "30dp", "45dp", "15dp", "20dp"
+                scroll_type: ['bars']
+                scroll_wheel_distance: dp(10)
+                bar_width: dp(5)
+                RecycleBoxLayout:
                     id: table_floor_layout
-                    cols: 5
-                    default_size: (None,250)
-                    default_size_hint: (1,None)
+                    default_size: None, dp(50)
+                    default_size_hint: 1, None
                     size_hint_y: None
-                    height: self.minimum_height
-                    spacing: 5
-
+                    spacing: dp(10)
+                    height: self.minimum_height + 80
+                    # add this so you can scroll
+                    row_default_height: 300
+                    orientation: 'vertical'
 
 

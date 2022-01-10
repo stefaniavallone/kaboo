@@ -1,24 +1,20 @@
 #:import StoryCard uix.components.story_card
 #:import StoryCard uix.components.page
-<Row@RecycleKVIDsDataViewBehavior+BoxLayout>:
-    value: ''
-    icon: ''
-    MDIcon:
-        icon: root.icon
-    Label:
-        id: name
-    Label:
-        text: root.value
-    MDCheckbox:
-        size_hint: None, None
-        size: "48dp", "48dp"
-        pos_hint: {'center_x': .5, 'center_y': .5}
-        disabled: True
+#:import ListItemWithCheckbox uix.components.list_item_checkbox
+
+<ListItemWithCheckbox@RecycleKVIDsDataViewBehavior+MDBoxLayout>:
+    name: ''
+    image: ''
+    description: ''
+    text: root.description
+    secondary_text: root.name
+    image: root.image
+    obtained: root.obtained
+    size_hint_y: None
 
 <TrophiesScreen>
     MDRelativeLayout:
         md_bg_color: 1,1,1,1
-        rv: rv
         Page:
             text: "TROPHIES"
             pos_hint: {"center_x": 0.5, "center_y": 0.5}
@@ -30,17 +26,18 @@
             callback: root.to_home
                 
             RecycleView:
-                id: rv
-                scroll_type: ['bars', 'content']
-                scroll_wheel_distance: dp(50)
-                bar_width: dp(10)
-                viewclass: 'Row'
+                id: list_trophies
+                scroll_type: ['bars']
+                scroll_wheel_distance: dp(10)
+                bar_width: dp(5)
+                viewclass: 'ListItemWithCheckbox'
                 RecycleBoxLayout:
-                    padding: "30dp", "45dp", "15dp", "20dp"
-                    default_size: None, dp(30)
+                    default_size: None, dp(50)
                     default_size_hint: 1, None
                     size_hint_y: None
-                    height: self.minimum_height
+                    spacing: dp(10)
+                    height: self.minimum_height + 80
                     # add this so you can scroll
-                    row_default_height: 100
+                    row_default_height: 300
                     orientation: 'vertical'
+                
