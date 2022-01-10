@@ -12,10 +12,10 @@ class TrophiesScreen(MDScreen):
     def on_pre_enter(self):
         with open("../assets/resources/trophies.json") as trophies_file:
             trophies = json.load(trophies_file)
-        self.ids.rv.data = [
-            {'name': trophy['points'],
-             'value': trophy['name'],
-             'icon': trophy['icon']}
+        self.ids.list_trophies.data = [
+            {'name': trophy['name'],
+             'description': trophy['description'],
+             'obtained': trophy['obtained']}
             for trophy in trophies]
             
     def to_home(self):

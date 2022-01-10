@@ -1,24 +1,20 @@
 #:import StoryCard uix.components.story_card
 #:import StoryCard uix.components.page
-<Row@RecycleKVIDsDataViewBehavior+BoxLayout>:
+#:import ListItemWithCheckbox uix.components.list_item_checkbox
+
+<ListItemWithCheckbox@RecycleKVIDsDataViewBehavior+MDBoxLayout>:
     name: ''
-    value: ''
-    icon: ''
-    MDIcon:
-        icon: root.icon
-    Label:
-        text: root.name
-    Label:
-        text: root.value
-    MDCheckbox:
-        size_hint: None, None
-        size: "48dp", "48dp"
-        pos_hint: {'center_x': .5, 'center_y': .5}
-        disabled: True
+    image: ''
+    description: ''
+    text: root.description
+    secondary_text: root.name
+    image: root.image
+    obtained: root.obtained
+    size_hint_y: None
 
 <TrophiesScreen>
     MDRelativeLayout:
-        rv: rv
+        md_bg_color: 1,1,1,1
         Page:
             text: "TROPHIES"
             pos_hint: {"center_x": 0.5, "center_y": 0.5}

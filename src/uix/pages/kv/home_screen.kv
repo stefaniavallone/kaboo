@@ -1,6 +1,5 @@
 #:import ElementCard uix.components.element_card
 #:import TooltipMDIconButton uix.components.tooltip_MDIcon_button
-
 <HomeScreen>
     MDBoxLayout:
         orientation: "vertical"
@@ -11,10 +10,13 @@
             padding:dp(25)
             MDBoxLayout:
                 orientation:"vertical"
-                MDLabel:
-                    text:"Kaboo"
-                    font_style:"H4"
-                    halign: "center"
+                Image:
+                    source: '../assets/images/Kaboo.png'
+                    keep_ratio: False
+                    allow_stretch: True
+                    opacity: 0.8
+                    size_hint: 0.3, 0.4
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.75}
 
         MDGridLayout:
             size_hint: .75, .75
