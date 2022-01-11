@@ -1,11 +1,14 @@
 from kivy.properties import StringProperty
+from kivy.uix.modalview import ModalView
 from kivymd.uix.screen import MDScreen
 
 from logic.score import compute_points, best_player, update_score_history
 from logic.trophies_checker import check_trophies
 from src.app_status import AppStatus
+from uix.components.custom_modal import CustomModal
 from uix.components.element_card import ElementCard
 from uix import animations
+from uix.components.story_card import StoryCard
 
 
 class GameEndScreen(MDScreen):
@@ -39,48 +42,29 @@ class GameEndScreen(MDScreen):
         new_trophies = check_trophies(self.score_history)
         self.trophies_list = new_trophies.values()
         for trophy in self.trophies_list:
-            e = ElementCard()
+            e = CustomModal()
+            e._size_hint = (0.6, 0.3)
             e.text = trophy.name
             e.subtext = trophy.description
             e.image = trophy.image
-            e.elevation=0
+            e.elevation = 0
             e.md_bg_color = (255/255, 241/255, 115/255, 1)
-            self.ids.trophy_carousel.add_widget(e)
-        animations.pop_up(self.ids.trophy_carousel)
-        # layout.add_widget(trophy_carousel)
-        # if not self.trophy_dialog:
-        #     self.trophy_dialog = MDDialog(
-        #         type="custom",
-        #         radius=[20, 7, 20, 7],
-        #         size_hint=(None, None),
-        #         width=self.width * 0.8,
-        #         height=self.height * 0.6,
-        #         content_cls=layout
-        #     )
-        # self.trophy_dialog.open()
-        # self.counter = 0
-        # if len(self.trophies_list) > 0:
-        #     self.make_dialog(self.trophies_list[self.counter])
-
-    # def make_dialog(self, trophy):
-    #
-    #     if self.trophy_dialog:
-    #         self.trophy_dialog.dismiss()
-    #         self.counter = self.counter + 1
-    #     if self.counter < len(self.trophies_list) - 1:
-    #         if not self.trophy_dialog:
-    #             self.trophy_dialog = MDDialog(
-    #                 text=trophy.name,
-    #                 radius=[20, 7, 20, 7],
-    #                 size_hint=(.7, .6),
-    #                 buttons=[
-    #                     MDFlatButton(text="ok", on_release=lambda inst: self.make_dialog(self.make_dialog(self.trophies_list[self.counter])))
-    #                 ]
-    #             )
-    #         else:
-    #             self.trophy_dialog.text=trophy.name
-    #
-    #         self.trophy_dialog.open()
+            #self.ids.trophy_carousel.add_widget(e)
+        #animations.pop_up(self.ids.trophy_carousel)
+        view = ModalView(size_hint=(0.7, 0.4),
+                         auto_dismiss=True,
+                         background_color=[0,0,0,0])
+        e = CustomModal()
+        e.image = "../assets/images/trophies/trophy_5points.png"
+        e.text = "aaaaaaa"
+        e.elevation = 0
+        e.md_bg_color = (255 / 255, 241 / 255, 115 / 255, 1)
+        e.subtext = "bbbbbbbbbbbbbb"
+        #self.add_widget(e)
+        view.add_widget(CustomModal(image="../assets/images/trophies/trophy_5points.png",
+                                  text="asdasdsadsa", subtext="asdsadas",
+                                    bg_color=(255 / 255, 241 / 255, 115 / 255, 1)))
+        view.open()
 
     def back_home(self, inst=None):
         self.manager.transition.direction = 'right'

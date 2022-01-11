@@ -3,7 +3,7 @@
         "name": "5 points",
         "description": "You scored 5 points",
         "image": "../assets/images/trophies/trophy_5points.png",
-        "obtained": true,
+        "obtained": false,
         "points": 5
     },
     {

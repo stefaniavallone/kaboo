@@ -1,0 +1,57 @@
+<CustomModal>:
+    image: ''
+    text: ''
+    subtext: ''
+    bg_color: 0,0,0,0
+
+    MDCard:
+        id: card
+        radius: 32
+        elevation: 18
+        padding: dp(15)
+        #spacing: dp(15)
+        md_bg_color: root.bg_color
+        MDBoxLayout:
+            id: container
+            padding: dp(30)
+            orientation: 'vertical'
+            Image:
+                source: root.image
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    halign: "center"
+                    text: root.text
+                    font_style: "H6"
+                MDLabel:
+                    halign: "center"
+                    font_style: "Caption"
+                    text: root.subtext
+            MDBoxLayout:
+                id: buttons
+                orientation: 'horizontal'
+                MDFlatButton:
+                    text: root.text
+
+    MDCard:
+        id: close
+        elevation: 0
+        x: card.width*0.85 - self.width / 2
+        y: card.height - self.height / 2
+        size_hint: None, None
+        size: 48, 48
+        radius: 24
+        MDIconButton:
+            icon: "close"
+            md_bg_color: 0.9,0.1,0.1,1
+            background_normal: 'normal.png'
+            background_down: 'down.png'
+            border: 30,30,30,30
+
+
+
+
+
+
+
+

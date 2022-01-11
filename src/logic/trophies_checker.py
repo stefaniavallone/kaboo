@@ -98,8 +98,8 @@ def check_trophies(score_history):
     not_obtained_trophies_names = set([t["name"] for t in saved_trophies if not t["obtained"]])
     for name, trophy in trophies.items():
         trophy.check(score_history)
-    with open(filename, "w") as file:
-        file.write(json.dumps([vars(t) for t in trophies.values()], indent=4))
+    #with open(filename, "w") as file:
+    #    file.write(json.dumps([vars(t) for t in trophies.values()], indent=4))
     obtained_trophies_names = set([t.name for t in trophies.values() if t.obtained])
     new_trophies_names = obtained_trophies_names.intersection(not_obtained_trophies_names)
     return { n: t for n, t in trophies.items() if n in new_trophies_names }
