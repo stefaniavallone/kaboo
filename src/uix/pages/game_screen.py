@@ -133,10 +133,12 @@ class GameScreen(MDScreen):
                 buttons=[
                     MDFillRoundFlatButton(text="Back to Home".upper(),
                                            md_bg_color=(1, 0, 0, 1),
-                                           on_release=self.to_home),
+                                          width="100dp", size_hint_x=None,
+                                          on_release=self.to_home),
                     MDFillRoundFlatButton(text="Cancel".upper(),
-                                           md_bg_color=(0, 0.2, 0.9, 1),
-                                           on_release=self.to_home)
+                                          width="100dp", size_hint_x=None,
+                                          md_bg_color=(0, 0.2, 0.9, 1),
+                                          on_release=self.to_home)
                 ]
         )
         if not self.confirm_exit_dialog:
