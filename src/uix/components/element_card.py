@@ -1,8 +1,8 @@
 from kivy.lang import Builder
-from kivymd.uix.card import MDCard
+from uix.base_components.kmd_card import KMDCard
 
 Builder.load_file("uix/components/kv/element_card.kv")
 
 
-class ElementCard(MDCard):
+class ElementCard(KMDCard):
     pass

@@ -1,10 +1,13 @@
+#:import KMDCard uix.base_components.kmd_card
+#:import KMDIconButton uix.base_components.kmd_icon_button
+
 <CustomModal>:
     image: ''
     text: ''
     subtext: ''
-    bg_color: 0,0,0,0
+    bg_color: 1,1,1,1
 
-    MDCard:
+    KMDCard:
         id: card
         radius: 32
         elevation: 18
@@ -13,7 +16,7 @@
         md_bg_color: root.bg_color
         MDBoxLayout:
             id: container
-            padding: dp(30)
+            padding: [dp(10), dp(30), dp(10), dp(30)]
             orientation: 'vertical'
             Image:
                 source: root.image
@@ -27,26 +30,27 @@
                     halign: "center"
                     font_style: "Caption"
                     text: root.subtext
-            MDBoxLayout:
-                id: buttons
-                orientation: 'horizontal'
-                MDFlatButton:
-                    text: root.text
+    MDBoxLayout:
+        id: buttons_container
+        orientation: 'vertical'
+        spacing: dp(5)
+        x: card.width / 2 - self.width / 2
+        y: -self.height / 2
+        size_hint_x: None
+        width: root.width*0.8
+        adaptive_size: True
 
-    MDCard:
-        id: close
+    KMDCard:
+        id: close_button
         elevation: 0
         x: card.width*0.85 - self.width / 2
         y: card.height - self.height / 2
         size_hint: None, None
         size: 48, 48
         radius: 24
-        MDIconButton:
+        KMDIconButton:
             icon: "close"
             md_bg_color: 0.9,0.1,0.1,1
-            background_normal: 'normal.png'
-            background_down: 'down.png'
-            border: 30,30,30,30
 
 
 

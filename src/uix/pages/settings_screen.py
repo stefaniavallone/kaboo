@@ -8,7 +8,7 @@ class SettingsScreen(MDScreen):
 
     def toggle_sounds(self):
         self.sounds_on = not self.sounds_on
-        AppStatus.set("game.sound", self.sounds_on)
+        AppStatus.setv("game.sound", self.sounds_on)
 
     def toggle_dark_theme(self, app):
         self.theme_dark_on = not self.theme_dark_on

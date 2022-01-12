@@ -25,12 +25,12 @@ class GameEndScreen(MDScreen):
     
     def on_pre_enter(self, *args):
         G = {'r0': {'p0': {'points': 0, 'actions': []}, 'p1': {'points': 6, 'actions': ['right', 'right', 'right', 'right', 'right', 'right']}}, 'r1': {'p0': {'points': 4, 'actions': ['jump', 'jump', 'jump', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}, 'p1': {'points': 21, 'actions': ['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}}}
-        game_rounds = AppStatus.get("game.rounds", default_value=G)
+        game_rounds = AppStatus.getv("game.rounds", default_value=G)
 
-        self.round_time = str(AppStatus.get("game.round_time", default_value=25))
-        self.num_players = str(AppStatus.get("game.num_players", default_value=2))
-        self.num_jumps = str(AppStatus.get("game.num_jumps", default_value=5))
-        self.game_level = AppStatus.get("game.level", default_value="easy")
+        self.round_time = str(AppStatus.getv("game.round_time", default_value=25))
+        self.num_players = str(AppStatus.getv("game.num_players", default_value=2))
+        self.num_jumps = str(AppStatus.getv("game.num_jumps", default_value=5))
+        self.game_level = AppStatus.getv("game.level", default_value="easy")
         
         players_points = compute_points(game_rounds)
         best_player_index, score = best_player(players_points)
@@ -54,15 +54,8 @@ class GameEndScreen(MDScreen):
         view = ModalView(size_hint=(0.7, 0.4),
                          auto_dismiss=True,
                          background_color=[0,0,0,0])
-        e = CustomModal()
-        e.image = "../assets/images/trophies/trophy_5points.png"
-        e.text = "aaaaaaa"
-        e.elevation = 0
-        e.md_bg_color = (255 / 255, 241 / 255, 115 / 255, 1)
-        e.subtext = "bbbbbbbbbbbbbb"
-        #self.add_widget(e)
         view.add_widget(CustomModal(image="../assets/images/trophies/trophy_5points.png",
-                                  text="asdasdsadsa", subtext="asdsadas",
+                                    text="asdasdsadsa", subtext="asdsadas",
                                     bg_color=(255 / 255, 241 / 255, 115 / 255, 1)))
         view.open()
 

@@ -34,7 +34,7 @@ class HomeScreen(MDScreen):
         self.rate_us_dialog.dismiss()
 
     def set_game_level(self, text):
-        AppStatus.set("game.level", text)
+        AppStatus.setv("game.level", text)
         self.manager.transition.direction = 'left'
         self.manager.current = 'game_settings_num_players'
 

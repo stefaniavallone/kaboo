@@ -9,7 +9,7 @@ class SoundPlayer:
         self.sound.volume = volume
 
     def play(self, seconds=0):
-        setting_sound = AppStatus.get("game.sound", default_value=True)
+        setting_sound = AppStatus.getv("game.sound", default_value=True)
         if setting_sound:
             self.sound.seek(seconds)
             self.sound.play()
