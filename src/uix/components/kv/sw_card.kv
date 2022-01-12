@@ -1,4 +1,6 @@
 <SWCard>:
+    text: "WORD"
+    forbidden: "forbidden1\nforbidden2\nforbidden3\nforbidden4"
     MDBoxLayout:
         padding: [dp(0), dp(20), dp(0), dp(20)] 
         MDCard:
@@ -8,12 +10,13 @@
                 spacing: dp(15)
                 MDLabel:
                     id: word 
-                    text: "WORD"
+                    text: root.text
                     halign: "center"
-                    font_style: "H6"
+                    bold: True
+                    font_style: "H5"
                 MDLabel:
                     id: forbidden
                     halign:"center"
-                    text: "forbidden1\nforbidden2\nforbidden3\nforbidden4"
-                    font_style:"H6"
+                    text: root.forbidden
+                    font_style: "Body1"
                 

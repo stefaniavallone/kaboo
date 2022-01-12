@@ -27,10 +27,8 @@ if __name__ == "__main__":
 
     try:
         BaseApp().run()
-    except Exception:
+    except Exception as e:
         error = traceback.format_exc()
-
-        with open("ERROR.log", "w") as error_file:
-            error_file.write(error)
-
+        #with open("ERROR.log", "w") as error_file:
+        #    error_file.write(error)
         print(error)

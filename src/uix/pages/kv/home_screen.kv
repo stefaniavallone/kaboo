@@ -4,17 +4,20 @@
     MDBoxLayout:
         orientation: "vertical"
 
-        MDBoxLayout:
+        MDRelativeLayout:
+            id: logo_container
             size_hint_y: .25
-            pos_hint: {"center_x": .5, "center_y": .5}
             padding:dp(25)
             MDBoxLayout:
                 orientation:"vertical"
-                FitImage:
+                Image:
                     source: '../assets/images/logo.png'
                     keep_ratio: True
-                    opacity: 0.8
-                    pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+                    opacity: 1
+                    size_hint_y: None
+                    height: logo_container.height - dp(20)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+
 
         MDGridLayout:
             size_hint: .75, .75

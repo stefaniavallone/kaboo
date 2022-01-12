@@ -11,9 +11,7 @@ class GameCardContainer(BoxLayout):
         super().__init__(**kwargs)
 
     def add_card(self, word, forbidden):
-        gc = SWCard()
-        gc.ids.word.text = word
-        gc.ids.forbidden.text = "\n".join(forbidden)
+        gc = SWCard(text=word, forbidden="\n".join(forbidden))
         self.ids.swiper.add_widget(gc)
         
 
