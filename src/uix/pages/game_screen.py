@@ -15,13 +15,13 @@ class GameScreen(MDScreen):
     confirm_exit_dialog = None
 
     def __init__(self, **kw):
+        super().__init__(**kw)
         self.right_notification = SoundPlayer(
             '../assets/sounds/right-notification.wav')
         self.wrong_notification = SoundPlayer(
             '../assets/sounds/wrong-notification.wav')
         self.jump_notification = SoundPlayer(
             '../assets/sounds/jump-notification.wav')
-        super().__init__(**kw)
         self.app = App.get_running_app()
 
     def on_pre_enter(self, *args):
