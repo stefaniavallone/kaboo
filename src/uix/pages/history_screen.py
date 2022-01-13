@@ -27,6 +27,8 @@ class HistoryScreen(MDScreen):
              'details': self.show_details,
              'text_color': color
              })
+        
+        table_data = sorted(table_data, key=lambda x: x['date'], reverse=True)
         self.ids.table_floor.data = table_data
 
     def show_details(self, players_points, players, date):
