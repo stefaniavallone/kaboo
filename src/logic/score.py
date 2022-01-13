@@ -27,7 +27,6 @@ def update_score_history(level, game_rounds, players_points):
             "players_points": players_points
         }
         data.append(game)
-    # TODO: remove comments when "points.json" model is fixed
-    #with open(filename, "w") as file:
-    #    file.write(json.dumps(data, indent=4))
+    with open(filename, "w") as file:
+        file.write(json.dumps(data, indent=4))
     return data

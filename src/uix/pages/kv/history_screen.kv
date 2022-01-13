@@ -6,13 +6,16 @@
     winner: ''
     date: ''
     players: ''
+    text_color: ''
+    spacing: [dp(10), dp(30), dp(10), dp(30)]
     text: root.winner
+    theme_text_color:"Custom"
+    text_color: root.text_color
     secondary_text: root.date
-    text_color: 1, 1, 1, 1
-    bold: True
-    secondary_text_color: 1, 1, 1, 1 
+    theme_secondary_text_color:"Custom"
+    secondary_text_color: 0.1, 0.1, 0.1, 1 
     score: root.players
-    on_press: root.details(root.players_points, root.players, root.date)
+    on_release: root.details(root.players_points, root.players, root.date)
     size_hint_y: None
 
 <HistoryScreen>

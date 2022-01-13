@@ -10,6 +10,7 @@ class TrophiesScreen(MDScreen):
         self.ids.list_trophies.data = [
             {'name': trophy['name'],
              'description': trophy['description'],
+             'image': trophy['image'],
              'obtained': trophy['obtained']}
             for trophy in trophies]
             

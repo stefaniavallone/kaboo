@@ -1,11 +1,11 @@
 <Timer>
-    padding: 16
-    size_hint: None, None
-    size: "200dp", "100dp"
+    MDBoxLayout:
+        padding: dp(16)
+        size_hint: None, None
+        size: "200dp", "100dp"
 
-    MDLabel:
-        id: label
-        font_name: "../assets/fonts/TheNautigal-Bold" 
-        text: root.text
-        color: 0,0,0,0
-    
+        MDLabel:
+            id: label
+            color: 0,0,0,0
+            halign: "center"
+            text: root.text
