@@ -8,7 +8,6 @@ from kivymd.uix.screen import MDScreen
 from uix.components.custom_modal import CustomModal
 from kivy.app import App
 from logic.game import PLAYERS_COLORS
-from utils.sound_player import SoundPlayer
 
 
 class GameScreen(MDScreen):
@@ -16,12 +15,6 @@ class GameScreen(MDScreen):
 
     def __init__(self, **kw):
         super().__init__(**kw)
-        self.right_notification = SoundPlayer(
-            '../assets/sounds/right-notification.wav')
-        self.wrong_notification = SoundPlayer(
-            '../assets/sounds/wrong-notification.wav')
-        self.jump_notification = SoundPlayer(
-            '../assets/sounds/jump-notification.wav')
         self.app = App.get_running_app()
 
     def on_pre_enter(self, *args):
@@ -35,8 +28,13 @@ class GameScreen(MDScreen):
                                              default_value=0)
         self.background_music = self.app.sound_manager.add_sound('../assets/sounds/ukulele.mp3',
                                             True, 0.2)
-        self.clock_sound = SoundPlayer('../assets/sounds/clock-ticking.mp3')
-        
+        self.clock_sound = self.app.sound_manager.add_sound('../assets/sounds/clock-ticking.mp3')
+        self.right_notification = self.app.sound_manager.add_sound(
+            '../assets/sounds/right-notification.wav')
+        self.wrong_notification = self.app.sound_manager.add_sound(
+            '../assets/sounds/wrong-notification.wav')
+        self.jump_notification = self.app.sound_manager.add_sound(
+            '../assets/sounds/jump-notification.wav')
         self.load_game()
         self.play_round()
         self.background_music.play()
@@ -104,7 +102,6 @@ class GameScreen(MDScreen):
             self.ids.card_container.ids.swiper.next()
 
     def finish_round(self):
-        self.clock_sound.stop()
         self.app.status.setv(
             f"game.rounds.r{self.current_round}.p{self.current_player}.points",
             int(self.ids.player_points.text))
@@ -128,6 +125,8 @@ class GameScreen(MDScreen):
     def on_pre_leave(self, *args):
         if self.confirm_exit_dialog:
             self.confirm_exit_dialog.dismiss()
+        self.background_music.stop()
+        self.clock_sound.stop()
 
     def confirm_exit(self):
         self.clock_sound.stop()
