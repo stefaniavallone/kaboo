@@ -1,24 +1,6 @@
 #:import StaticSwiper uix.components.static_swiper
 #:import SWCard uix.components.sw_card
 
-# <GameCard@MDSwiperItem>:
-#     MDBoxLayout:
-#         padding: [dp(0), dp(20), dp(0), dp(20)] 
-#         MDCard:
-#             radius: [20,]
-#             MDBoxLayout:
-#                 orientation:'vertical'
-#                 spacing: dp(15)
-#                 MDLabel:
-#                     id: word 
-#                     text: "WORD"
-#                     halign: "center"
-#                     font_style: "H6"
-#                 MDLabel:
-#                     id: forbidden 
-#                     text: "forbidden1\nforbidden2\nforbidden3\nforbidden4"
-#                     halign: "center"
-#                     font_style: "Caption"
 
 <GameCardContainer>:
 
@@ -29,8 +11,7 @@
         StaticSwiper:
             id: swiper
             swipe_on_scroll: False
-            padding: dp(20)
+            padding: [dp(20), dp(40), dp(20), dp(40)]
             size_hint_y: None
             height: root.height
             width_mult: 1.3
-       

@@ -2,87 +2,105 @@
 #:import StoryCard uix.components.page
 
 <GamePreScreen>:
-    MDRelativeLayout:
+    title: ''
+    image: ''
+    MDBoxLayout:
         md_bg_color: 1,1,1,1
-        Page:
-            text: "GAME SETTING"
-            pos_hint: {"center_x": 0.5, "center_y": 0.5}
-            size_hint_y: 0.9
-            size_hint_x: None
-            width: self.parent.width * 0.8
-            avatar: "../assets/images/darts.png"
-            story: "../assets/images/story.png"
-            callback: root.to_home
-            MDGridLayout:
-                id: settings
-                cols:2
-                padding:[dp(15),dp(30),dp(15),dp(35)]
-                size: root.width * 0.8, root.height * 0.8
-                row_default_height: 50
-                row_force_default: True
-                MDLabel:
-                    pos_hint: {"center_x": .6, "center_y": .8}
-                    text: "Game Level:"
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .8}
-                    text: root.game_level
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .6, "center_y": .8}
-                    text: "Num Players:"
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .8}
-                    text: root.num_players
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .6, "center_y": .7}
-                    text: "Num Jumps:"
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .7}
-                    text: root.num_jumps
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .6, "center_y": .6}
-                    text: "Round Time:"
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .6}
-                    text: root.round_time
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .6}
-                    text: "It's turn of " 
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .6}
-                    text: root.current_player 
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .6}
-                    text: "Points: " 
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .6}
-                    text: root.points
-                    halign:"center"
-            
-                MDFillRoundFlatButton:
-                    pos_hint: {"center_x": 0.5, "y": 0.08}
-                    text: "Reset"
-                    size_hint: None, None
-                    # width: page.width
-                    md_bg_color: 0.8, 0.2, 0.3, 1
-                    on_release: root.reset()
-                    
-                MDFillRoundFlatButton:
-                    pos_hint: {"center_x": 0.5, "y": 0.08}
-                    text: "Confirm"
-                    size_hint: None, None
-                    # width: page.width
-                    md_bg_color: 0.8, 0.2, 0.3, 1
-                    on_release: root.to_game()
+        orientation: "vertical"
+        id: logo_container
+        padding:dp(25)
+        Image:
+            source: root.image
+            pos_hint: {"center_x": .5, "center_y": 0.8}
+            size_hint: .6, .6
+            keep_ratio: True
+            opacity: 1
+            #size_hint_y: None
+            #height: logo_container.height - dp(20)
+
+        MDBoxLayout:
+            pos_hint: {"center_x": .5, "y": .6}
+            orientation: "vertical"
+            padding: dp(10)
+            adaptive_height: True
+            spacing: dp(20)
+            size_hint_x: .7
+            canvas.before:
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+
+            MDLabel:
+                text: root.title
+                bold: True
+                size_hint_y: None
+                height: self.texture_size[1]
+                font_style: "H6"
+                halign: "center"
+                valign: "center"
+
+        MDGridLayout:
+            pos_hint: {"center_x": .5, "center_y": .08}
+            cols:2
+            #padding:[dp(15),dp(30),dp(15),dp(35)]
+            #size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+            MDLabel:
+                pos_hint: {"center_x": .6, "center_y": .8}
+                text: "Game Level:"
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .8}
+                text: root.game_level
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .6, "center_y": .8}
+                text: "Num Players:"
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .8}
+                text: root.num_players
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .6, "center_y": .7}
+                text: "Num Jumps:"
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .7}
+                text: root.num_jumps
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .6, "center_y": .6}
+                text: "Round Time:"
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .6}
+                text: root.round_time
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .6}
+                text: "Points: "
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .6}
+                text: root.points
+                halign:"center"
+
+        MDBoxLayout:
+            orientation: "vertical"
+            spacing: "10dp"
+            padding: [dp(10), dp(10), dp(10), dp(10)]
+            adaptive_size: True
+            pos_hint: {"center_x": .5, "center_y": .5}
+            pos_hint: {"center_x": 0.5, "y": 0.08}
+            MDFillRoundFlatButton:
+                text: "Back to Home"
+                md_bg_color: 0.8, 0.2, 0.3, 1
+                on_release: root.to_game()
+            MDFillRoundFlatButton:
+                text: "PLAY"
+                md_bg_color: 0.1, 0.2, 0.8, 1
+                on_release: root.to_game()
                 
                 

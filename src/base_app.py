@@ -4,6 +4,7 @@ from kivymd.app import MDApp
 from app_status import AppStatus
 
 from uix.pages.root import Root
+from utils.sound_manager import SoundManager
 
 
 class BaseApp(MDApp):
@@ -16,6 +17,8 @@ class BaseApp(MDApp):
         self.initialize_app()
         self.set_font(fonts_path, font_name)
         self.initialize_status()
+        self.sound_manager = SoundManager()
+        self.status.attach(self.sound_manager)
     
     def initialize_app(self):
         Window.soft_input_mode = "below_target"

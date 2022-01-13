@@ -1,13 +1,14 @@
 from kivymd.uix.screen import MDScreen
-from app_status import AppStatus
+from kivy.app import App
 
 
 class GameSettingsNumJumpsScreen(MDScreen):
 
     def __init__(self, **kw):
         super().__init__(**kw)
+        self.app = App.get_running_app()
         
     def set_num_jumps(self, value):
-        AppStatus.setv("game.num_jumps", int(value))
+        self.app.status.setv("game.num_jumps", int(value))
         self.manager.transition.direction = 'left'
         self.manager.current = 'game_settings_round_time'

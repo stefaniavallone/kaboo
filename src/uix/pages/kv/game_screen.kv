@@ -53,10 +53,11 @@
                     on_release: root.confirm_exit()
 
                 MDIconButton:
+                    id: sound_button
                     pos_hint: {"x": .525, "center_y": .5}
                     icon: "volume-off"
                     padding: 0
-
+                    on_release: root.toggle_sounds()
 
         MDBoxLayout:
             id: container
