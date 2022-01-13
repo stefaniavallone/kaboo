@@ -119,5 +119,166 @@
         "winner": "Team 2",
         "score": 30,
         "rounds": {}
+    },
+    {
+        "level": "easy",
+        "date": "2022-01-13",
+        "rounds": {
+            "r0": {
+                "p0": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p1": {
+                    "points": 0,
+                    "actions": []
+                }
+            },
+            "r1": {
+                "p0": {
+                    "points": 7,
+                    "actions": [
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right"
+                    ]
+                },
+                "p1": {
+                    "points": 0,
+                    "actions": []
+                }
+            }
+        },
+        "players_points": {
+            "p0": 7,
+            "p1": 0
+        }
+    },
+    {
+        "level": "easy",
+        "date": "2022-01-13",
+        "rounds": {
+            "r0": {
+                "p0": {
+                    "points": 1,
+                    "actions": [
+                        "right"
+                    ]
+                },
+                "p1": {
+                    "points": -1,
+                    "actions": [
+                        "wrong"
+                    ]
+                }
+            },
+            "r1": {
+                "p0": {
+                    "points": 2,
+                    "actions": [
+                        "right",
+                        "right"
+                    ]
+                },
+                "p1": {
+                    "points": -1,
+                    "actions": [
+                        "wrong"
+                    ]
+                }
+            }
+        },
+        "players_points": {
+            "p0": 3,
+            "p1": -2
+        }
+    },
+    {
+        "level": "easy",
+        "date": "2022-01-13",
+        "rounds": {
+            "r0": {
+                "p0": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p1": {
+                    "points": 0,
+                    "actions": []
+                }
+            },
+            "r1": {
+                "p0": {
+                    "points": 35,
+                    "actions": [
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right"
+                    ]
+                },
+                "p1": {
+                    "points": -12,
+                    "actions": [
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "jump",
+                        "jump",
+                        "jump",
+                        "jump",
+                        "jump",
+                        "wrong"
+                    ]
+                }
+            }
+        },
+        "players_points": {
+            "p0": 35,
+            "p1": -12
+        }
     }
 ]

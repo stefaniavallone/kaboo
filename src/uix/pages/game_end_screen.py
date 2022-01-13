@@ -39,14 +39,11 @@ class GameEndScreen(MDScreen):
     def on_enter(self, *args):
         new_trophies = check_trophies(self.score_history)
         self.trophies_list = new_trophies.values()
-        for trophy in self.trophies_list:
-            e = CustomModal()
-            e._size_hint = (0.6, 0.3)
-            e.text = trophy.name
-            e.subtext = trophy.description
-            e.image = trophy.image
-            e.elevation = 0
-            e.md_bg_color = (255/255, 241/255, 115/255, 1)
+        # for trophy in self.trophies_list:
+        #     e = CustomModal(text=trophy.name, subtext=trophy.description,
+        #                     image=trophy.image, bg_color=(255/255, 241/255, 115/255, 1))
+        #     e._size_hint = (0.6, 0.3)
+        #     e.elevation = 0
             #self.ids.trophy_carousel.add_widget(e)
         #animations.pop_up(self.ids.trophy_carousel)
         view = ModalView(size_hint=(0.7, 0.4),
