@@ -27,9 +27,7 @@ class HistoryScreen(MDScreen):
              'details': self.show_details,
              'text_color': color
              })
-        
-        table_data = sorted(table_data, key=lambda x: x['date'], reverse=True)
-        self.ids.table_floor.data = table_data
+        self.ids.table_floor.data = table_data[::-1]
 
     def show_details(self, players_points, players, date):
         list_items = [Item(text=f" Player {i+1}: [color=#C042B8]{players_points[f'p{i}']} points[/color]") for i in range(int(players))]
