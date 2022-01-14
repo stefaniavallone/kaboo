@@ -2,6 +2,8 @@ from kivymd.uix.screen import MDScreen
 from kivy.properties import StringProperty
 from kivy.app import App
 
+from logic.game import PLAYERS_COLORS
+
 
 class GamePreScreen(MDScreen):
     round_time = StringProperty()
@@ -27,6 +29,7 @@ class GamePreScreen(MDScreen):
         self.points = str(self.app.status.getv(f"game.rounds.{str(self.current_round)}.{str(self.current_player)}", default_value="0"))
         self.image = f"../assets/images/pregame/your_turn_{str(curr_player)}.png"
         self.title = f"It's {self.current_player}'s turn!"
+        self.ids.play_button.md_bg_color = PLAYERS_COLORS[curr_player]
 
     def to_game(self):
         self.manager.transition.direction = 'left'

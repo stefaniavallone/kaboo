@@ -2120,5 +2120,40 @@
             "p2": 0,
             "p3": 0
         }
+    },
+    {
+        "level": "easy",
+        "date": "2022-01-14",
+        "rounds": {
+            "r0": {
+                "p0": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p1": {
+                    "points": 0,
+                    "actions": []
+                }
+            },
+            "r1": {
+                "p0": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p1": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p2": {
+                    "points": 0,
+                    "actions": []
+                }
+            }
+        },
+        "players_points": {
+            "p0": 0,
+            "p1": 0,
+            "p2": 0
+        }
     }
 ]

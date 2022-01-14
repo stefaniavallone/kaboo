@@ -93,10 +93,11 @@
             pos_hint: {"center_x": 0.5, "y": 0.1}
             KMDFillRoundFlatButton:
                 text: "Back to Home"
-                md_bg_color: 0.8, 0.2, 0.3, 1
+                md_bg_color: 0.3, 0.3, 0.3, 1
                 radius: [10, 10, 10, 10]
                 on_release: root.to_home()
             KMDFillRoundFlatButton:
+                id: play_button
                 text: "PLAY"
                 md_bg_color: 0.1, 0.2, 0.8, 1
                 radius: [10, 10, 10, 10]

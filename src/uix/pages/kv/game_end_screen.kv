@@ -97,18 +97,17 @@
             spacing: "10dp"
             padding: [dp(10), dp(10), dp(10), dp(10)]
             adaptive_size: True
-            pos_hint: {"center_x": .5, "center_y": .5}
             pos_hint: {"center_x": 0.5, "y": 0.1}
             KMDFillRoundFlatButton:
                 text: "Back to Home"
-                md_bg_color: 0.8, 0.2, 0.3, 1
+                md_bg_color: 0.3, 0.3, 0.3, 1
                 radius: [10, 10, 10, 10]
                 on_release: root.to_home()
 
     FloatLayout:
         canvas.before:
             Color:
-                rgba: 0.3,0.3,1,0
+                rgba: 0, 0, 0, 0
             Rectangle:
                 pos: self.pos
                 size: self.size
