@@ -33,6 +33,8 @@ class BaseApp(MDApp):
         self.theme_cls.accent_palette = "Amber"
         self.theme_cls.accent_hue = "500"
 
+        #self.theme_cls.error_color = (219/255, 28/255, 7/255, 1)
+        self.theme_cls.success_color = (8/255, 153/255, 17/255, 1)
         self.theme_cls.theme_style = "Light"
 
     def _set_font(self, fonts_path, font_name):

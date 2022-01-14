@@ -1,5 +1,4 @@
-#:import StoryCard uix.components.story_card
-#:import StoryCard uix.components.page
+#:import KMDFillRoundFlatButton uix.base_components.kmd_fill_round_flat_button
 
 <GamePreScreen>:
     title: ''
@@ -41,8 +40,7 @@
         MDGridLayout:
             pos_hint: {"center_x": .5, "center_y": .08}
             cols:2
-            #padding:[dp(15),dp(30),dp(15),dp(35)]
-            #size: root.width * 0.8, root.height * 0.8
+            padding:[dp(15),dp(30),dp(15),dp(35)]
             row_default_height: 50
             row_force_default: True
             MDLabel:
@@ -93,13 +91,15 @@
             adaptive_size: True
             pos_hint: {"center_x": .5, "center_y": .5}
             pos_hint: {"center_x": 0.5, "y": 0.1}
-            MDFillRoundFlatButton:
+            KMDFillRoundFlatButton:
                 text: "Back to Home"
                 md_bg_color: 0.8, 0.2, 0.3, 1
+                radius: [10, 10, 10, 10]
                 on_release: root.to_home()
-            MDFillRoundFlatButton:
+            KMDFillRoundFlatButton:
                 text: "PLAY"
                 md_bg_color: 0.1, 0.2, 0.8, 1
+                radius: [10, 10, 10, 10]
                 on_release: root.to_game()
                 
                 

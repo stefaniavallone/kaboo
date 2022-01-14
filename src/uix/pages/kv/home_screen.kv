@@ -1,5 +1,6 @@
 #:import ElementCard uix.components.element_card
-#:import KMDIconButton uix.base_components.kmd_icon_button
+#:import KMDIconSquaredButton uix.base_components.kmd_icon_squared_button
+#:import KMDFlatButton uix.base_components.kmd_flat_button
 
 <HomeScreen>
     MDBoxLayout:
@@ -54,7 +55,7 @@
             padding: [dp(10), dp(10), dp(10), dp(10)]
             adaptive_size: True
             pos_hint: {"center_x": .5, "center_y": .5}
-            KMDIconButton:
+            KMDIconSquaredButton:
                 icon: "trophy"
                 tooltip_text: "Trophy"
                 md_bg_color: app.theme_cls.primary_color
@@ -63,7 +64,7 @@
                     root.manager.transition.direction = 'left'
                     root.manager.current = 'trophies'
 
-            KMDIconButton:
+            KMDIconSquaredButton:
                 id: history
                 icon: "book"
                 tooltip_text: "History"
@@ -73,7 +74,7 @@
                     root.manager.transition.direction = 'left'
                     root.manager.current = 'history'
 
-            KMDIconButton:
+            KMDIconSquaredButton:
                 icon: "star"
                 tooltip_text: "Star"
                 pos_hint: {"center_x": .5, "center_y": .5}
@@ -81,7 +82,7 @@
                 theme_text_color: "Custom"
                 on_release: root.show_rate_us_dialog()
 
-            KMDIconButton:
+            KMDIconSquaredButton:
                 id: settings
                 icon: "menu"
                 tooltip_text: "Settings"

@@ -1,6 +1,6 @@
-#:import StoryCard uix.components.story_card
-#:import StoryCard uix.components.page
 #:import ConfettiRain uix.components.confetti_rain
+#:import KMDFillRoundFlatButton uix.base_components.kmd_fill_round_flat_button
+
 
 <GameEndScreen>:
     title: 'You win!'
@@ -99,9 +99,10 @@
             adaptive_size: True
             pos_hint: {"center_x": .5, "center_y": .5}
             pos_hint: {"center_x": 0.5, "y": 0.1}
-            MDFillRoundFlatButton:
+            KMDFillRoundFlatButton:
                 text: "Back to Home"
                 md_bg_color: 0.8, 0.2, 0.3, 1
+                radius: [10, 10, 10, 10]
                 on_release: root.to_home()
 
     FloatLayout:

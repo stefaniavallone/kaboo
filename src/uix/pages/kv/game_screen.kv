@@ -1,20 +1,22 @@
 #:import Timer uix.components.timer
-#:import AutoScaleLabel uix.components.autoscale_label
 #:import GameCardContainer uix.components.game_card_container
+#:import KMDIconSquaredButton uix.base_components.kmd_icon_squared_button
+
 
 <GameScreen>
 
     MDBoxLayout:
         orientation: "vertical"
+        id: container
 
         MDBoxLayout:
             size_hint_y: .20
             orientation: "vertical"
 
             MDBoxLayout:
-                md_bg_color: 0,1,0,1
+                md_bg_color: 1,1,1,1
                 padding: dp(10)
-                AutoScaleLabel:
+                MDLabel:
                     id: remaining_jumps
                     text: "0"
                     adaptive_size: True
@@ -37,54 +39,60 @@
                 MDIconButton:
                     icon: "checkbox-marked-circle-outline"
                     padding: 5
-                AutoScaleLabel:
+                MDLabel:
                     id: player_points
                     adaptive_size: True
                     text: "0"
                     width: 40
                     font_style: "H4"
                     halign: "right"
-            
+
             MDRelativeLayout:
-                MDIconButton:
+                id: controls_buttons
+                KMDIconSquaredButton:
                     pos_hint: {"x": .375, "center_y": .5}
                     icon: "home"
                     padding: 0
+                    md_bg_color: 0.9, 0.9, 0.9, 1
                     on_release: root.confirm_exit()
 
-                MDIconButton:
+                KMDIconSquaredButton:
                     id: sound_button
                     pos_hint: {"x": .525, "center_y": .5}
                     icon: "volume-off"
                     padding: 0
+                    md_bg_color: 0.9, 0.9, 0.9, 1
                     on_release: root.toggle_sounds()
 
         MDBoxLayout:
-            id: container
             orientation: "vertical"
-            md_bg_color: 1,0,0,1
+            md_bg_color: 0,0,0,0
             MDBoxLayout:
                 GameCardContainer:
                     id: card_container
 
-        MDBoxLayout:
-            id: game_buttons
-            padding: [dp(10), dp(10), dp(10), dp(10)]
-            spacing: dp(20)
-            adaptive_size: True
-            pos_hint: {"center_x": .5, "center_y": .5}
-            MDIconButton:
-                id: wrong_button
-                icon: "close-thick"
-                on_release: root.wrong_answer()
+            MDBoxLayout:
+                id: game_buttons
+                #md_bg_color: 1,1,1,0.3
+                padding: [dp(10), dp(10), dp(10), dp(10)]
+                spacing: dp(20)
+                adaptive_size: True
+                pos_hint: {"center_x": .5, "center_y": .5}
+                KMDIconSquaredButton:
+                    id: wrong_button
+                    icon: "close-thick"
+                    md_bg_color: app.theme_cls.error_color
+                    on_release: root.wrong_answer()
 
-            MDIconButton:
-                id: jump_button
-                icon: "redo"
-                on_release: root.jump_request()
+                KMDIconSquaredButton:
+                    id: jump_button
+                    icon: "redo"
+                    md_bg_color: 0.9, 0.9, 0.9, 1
+                    on_release: root.jump_request()
 
-            MDIconButton:
-                id: right_button
-                icon: "check-bold"
-                on_release: root.right_answer()
+                KMDIconSquaredButton:
+                    id: right_button
+                    icon: "check-bold"
+                    md_bg_color: app.theme_cls.success_color
+                    on_release: root.right_answer()
 

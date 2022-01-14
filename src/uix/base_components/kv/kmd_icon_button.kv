@@ -1,7 +1,14 @@
 <KMDIconButton@MDIconButton>:
     canvas.before:
         Color:
-            rgba: self.md_bg_color[0], self.md_bg_color[1], self.md_bg_color[2], 0.4
-        Ellipse:
+            rgba: self.md_bg_color[0]*0.6, self.md_bg_color[1]*0.6, self.md_bg_color[2]*0.6, 1
+        RoundedRectangle:
             pos: self.pos[0], self.pos[1] - 5
             size: self.size[0], self.size[1]
+            radius: self._radius, self._radius, self._radius, self._radius
+        Color:
+            rgba: self.md_bg_color
+        RoundedRectangle:
+            pos: self.pos[0], self.pos[1]
+            size: self.size[0], self.size[1]
+            radius: self._radius, self._radius, self._radius, self._radius
