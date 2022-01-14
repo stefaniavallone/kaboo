@@ -2,7 +2,6 @@
 #:import StoryCard uix.components.page
 <SettingsScreen>
     MDRelativeLayout:
-    
         Page:
             text: "SETTINGS"
             pos_hint: {"center_x": 0.5, "center_y": 0.5}
@@ -12,6 +11,7 @@
             avatar: "../assets/images/darts.png"
             story: "../assets/images/story.png"
             callback: root.to_home
+            icon: "menu"
             MDGridLayout:
                 id: settings
                 cols:2
@@ -31,4 +31,46 @@
                     widget_style: "ios"
                     active: root.theme_dark_on
                     on_active: root.toggle_dark_theme(app)
+            
+            MDBoxLayout:
+                orientation: 'vertical'
+                spacing: dp(5)
+                size_hint_x: None
+                width: root.width*0.8
+                adaptive_size: True
+                MDLabel:
+                    text: "How to play"
+                    font_style: "H6"
+                    spacing: dp(5)
+                OneLineAvatarIconListItem:
+                    text: "Goal"
+                    halign: "center"
+                    on_release:root.how_to_play("Goal","Kaboo is a team game in which players describe words to their teammates without mentioning any of the words listed. The team that guesses the most words wins!")
+                    IconLeftWidget:
+                        icon: "plus-circle"
+                OneLineAvatarIconListItem:
+                    text: "Role"
+                    halign: "center"
+                    on_release:root.how_to_play("Role","In each turn, one team guesses and the other watches. In the team that guesses, the Prompter best describes the word on paper, while the teammates guess what it is. Teams alternate roles at each turn.")
+                    IconLeftWidget:
+                        icon: "plus-circle"
+                OneLineAvatarIconListItem:
+                    text: "Jump"
+                    halign: "center"
+                    on_release:root.how_to_play("Jump","If the Prompter is locked, you can press the Step button to switch to the next word. Be careful: the step can only be used for the number of jumps required!")
+                    IconLeftWidget:
+                        icon: "plus-circle"
+                OneLineAvatarIconListItem:
+                    text: "Wrong"
+                    halign: "center"
+                    on_release:root.how_to_play("Wrong", "If the Prompter breaks any of the rules, the team watching must accept that the Prompter must mark the answer as wrong and move on to the next word.")
+                    IconLeftWidget:
+                        icon: "plus-circle"
+                OneLineAvatarIconListItem:
+                    text: "Winner"
+                    halign: "center"
+                    on_release:root.how_to_play("Winner","At the end of the game, the winning team is the one with the most points!")
+                    IconLeftWidget:
+                        icon: "plus-circle"
+                
 

@@ -1,6 +1,7 @@
 import json
 
-from kivymd.uix.dialog import MDDialog
+from kivy.uix.modalview import ModalView
+from src.uix.components.modal_history import ModalHistory
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.list import OneLineAvatarListItem
 from logic.game import PLAYERS_COLORS
@@ -31,14 +32,26 @@ class HistoryScreen(MDScreen):
 
     def show_details(self, players_points, players, date):
         list_items = [Item(text=f" Player {i+1}: [color=#C042B8]{players_points[f'p{i}']} points[/color]") for i in range(int(players))]
-        game_stats_dialog = MDDialog(
-            title="Players Point",
-            type="simple",
-            text = "Date: "+ date,
-            items=list_items,
-            radius=[20, 7, 20, 7]
+        # game_stats_dialog = MDDialog(
+        #     title="Players Point",
+        #     type="simple",
+        #     text = "Date: "+ date,
+        #     items=list_items,
+        #     radius=[20, 7, 20, 7]
+        # )
+        # game_stats_dialog.open()
+        
+        modal = ModalHistory(
+            text_date="Date:", 
+            subtext_date=date,
+            text_player="Player Points:", 
+            subtext_player="item"
         )
-        game_stats_dialog.open()
+        self.history_dialog = ModalView(size_hint=(0.7, 0.4),
+                                        auto_dismiss=True,
+                                        background_color=[0, 0, 0, 0])
+        self.history_dialog.add_widget(modal)
+        self.history_dialog.open()
     
     def to_home(self):
         self.manager.transition.direction = 'right'

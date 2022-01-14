@@ -10,7 +10,7 @@ class Page(MDRelativeLayout):
     avatar = StringProperty()
     story = StringProperty()
     name = StringProperty()
-
+    icon = StringProperty()
     def __init__(self, **kw):
         super().__init__(**kw)
         self.callback = None
