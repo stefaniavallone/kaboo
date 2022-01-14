@@ -5,6 +5,9 @@ from kivy.logger import Logger
 from kivy.uix.modalview import ModalView
 from kivymd.uix.button import MDFillRoundFlatButton
 from kivymd.uix.screen import MDScreen
+
+from uix.base_components.kmd_fill_round_flat_button import \
+    KMDFillRoundFlatButton
 from uix.components.custom_modal import CustomModal
 from kivy.app import App
 from logic.game import PLAYERS_COLORS
@@ -138,14 +141,16 @@ class GameScreen(MDScreen):
                 subtext="You will lose game progress.",
                 closable=False,
                 buttons=[
-                    MDFillRoundFlatButton(text="Back to Home".upper(),
+                    KMDFillRoundFlatButton(text="Cancel".upper(),
+                                           radius=[10, 10, 10, 10],
+                                           width="100dp", size_hint_x=None,
+                                           md_bg_color=(0, 0.2, 0.9, 1),
+                                           on_release=self.cancel),
+                    KMDFillRoundFlatButton(text="Back to Home".upper(),
                                            md_bg_color=(1, 0, 0, 1),
+                                           radius=[10, 10, 10, 10],
                                           width="100dp", size_hint_x=None,
                                           on_release=self.to_home),
-                    MDFillRoundFlatButton(text="Cancel".upper(),
-                                           width="100dp", size_hint_x=None,
-                                          md_bg_color=(0, 0.2, 0.9, 1),
-                                          on_release=self.cancel)
                 ]
         )
         if not self.confirm_exit_dialog:
