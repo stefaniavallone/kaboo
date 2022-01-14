@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = Ktaboo
+title = Kaboo
 
 # (str) Package name
-package.name = ktaboo
+package.name = kaboo
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.kgames
+package.domain = org.kames
 
 # (str) Source code where the main.py live
 source.dir = ./src
@@ -46,7 +46,7 @@ requirements = python3,kivy==2.0.0,kivymd==0.104.2,plyer==2.0.0,sdl2_ttf==2.0.15
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = ./assets/appicon.png
+presplash.filename = ./assets/splash.png
 
 # (str) Icon of the application
 icon.filename = ./assets/appicon.png
@@ -82,7 +82,7 @@ fullscreen = 1
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-#android.presplash_color = #FFFFFF
+android.presplash_color = #FFFFFF
 
 # (list) Permissions
 android.permissions = INTERNET,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE

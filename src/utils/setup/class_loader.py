@@ -57,7 +57,7 @@ def import_and_create_screens(package_path):
                         "class_name": class_name,
                         "path": file_path
                     }
-    screens = move_element(screens, "game_pre", 0)
+    screens = move_element(screens, "game_end", 0)
     return screens
 
 

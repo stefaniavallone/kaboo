@@ -39,6 +39,7 @@ class Timer(MDLabel):
     def stop(self):
         if self.running:
             self.running = False
+            self._last_seconds_event_fired = False
             Clock.unschedule(self.update)
     
     def on_finish(self):

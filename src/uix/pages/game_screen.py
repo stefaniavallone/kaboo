@@ -156,8 +156,8 @@ class GameScreen(MDScreen):
         self.confirm_exit_dialog.open()
 
     def cancel(self, inst):
-        if self.ids.timer.seconds <= 10:
-            self.clock_sound.play()
+        #if self.ids.timer.seconds <= 10:
+        #    self.clock_sound.play()
         self.ids.timer.start()
         self.confirm_exit_dialog.dismiss()
 

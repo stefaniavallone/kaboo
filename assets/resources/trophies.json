@@ -17,21 +17,21 @@
         "name": "50 points",
         "description": "You scored 50 points",
         "image": "../assets/images/trophies/trophy_50points.png",
-        "obtained": false,
+        "obtained": true,
         "points": 50
     },
     {
         "name": "250 points",
         "description": "You scored 250 points",
         "image": "../assets/images/trophies/trophy_250points.png",
-        "obtained": false,
+        "obtained": true,
         "points": 250
     },
     {
         "name": "500 points",
         "description": "You scored 500 points",
         "image": "../assets/images/trophies/trophy_500points.png",
-        "obtained": false,
+        "obtained": true,
         "points": 500
     },
     {
@@ -46,7 +46,7 @@
         "name": "25 wrong answers",
         "description": "You wrong 25 answers",
         "image": "../assets/images/trophies/trophy_25wrongs.png",
-        "obtained": false,
+        "obtained": true,
         "action_type": "wrong",
         "action_count": 25
     },
@@ -54,7 +54,7 @@
         "name": "50 wrong answers",
         "description": "You wrong 50 answers",
         "image": "../assets/images/trophies/trophy_50wrongs.png",
-        "obtained": false,
+        "obtained": true,
         "action_type": "wrong",
         "action_count": 50
     },
@@ -126,7 +126,7 @@
         "name": "25 game Easy",
         "description": "You played 25 games with difficult \"Easy\"",
         "image": "../assets/images/trophies/trophy_25easy.png",
-        "obtained": false,
+        "obtained": true,
         "level": "easy",
         "level_count": 25
     },

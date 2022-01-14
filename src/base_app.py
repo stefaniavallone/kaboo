@@ -9,22 +9,24 @@ from utils.sound_manager import SoundManager
 
 class BaseApp(MDApp):
 
-
     def __init__(self, **kwargs):
         super(BaseApp, self).__init__(**kwargs)
-        fonts_path = "../assets/fonts/Montserrat/"
-        font_name = "Montserrat"
         self.initialize_app()
-        self.set_font(fonts_path, font_name)
-        self.initialize_status()
+        self.status = AppStatus()
         self.sound_manager = SoundManager()
         self.status.attach(self.sound_manager)
     
     def initialize_app(self):
         Window.soft_input_mode = "below_target"
+        fonts_path = "../assets/fonts/Montserrat/"
+        font_name = "Montserrat"
         self.title = "Kaboo"
+        self._set_theme()
+        self._set_font(fonts_path, font_name)
+
+    def _set_theme(self):
         self.theme_cls.material_style = "M3"
-        
+
         self.theme_cls.primary_palette = "Blue"
         self.theme_cls.primary_hue = "500"
 
@@ -33,10 +35,7 @@ class BaseApp(MDApp):
 
         self.theme_cls.theme_style = "Light"
 
-    def initialize_status(self):
-        self.status = AppStatus()
-
-    def set_font(self, fonts_path, font_name):
+    def _set_font(self, fonts_path, font_name):
         fonts = [
             {
                 "name": f"{font_name}",
