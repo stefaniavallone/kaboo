@@ -13,6 +13,7 @@ class HomeScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
+        self.background_sound = app.sound_manager.get_sound("../assets/sounds/cute.mp3")
     
     def show_rate_us_dialog(self):
         if not self.rate_us_dialog:

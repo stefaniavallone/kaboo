@@ -7,7 +7,7 @@ class SoundManager(dict, Observer):
     def __init__(self):
         super().__init__()
 
-    def add_sound(self, path, loop=False, volume=1):
+    def get_sound(self, path, loop=False, volume=1):
         if path not in self:
             sp = SoundPlayer(path, loop, volume)
             self[path] = sp
