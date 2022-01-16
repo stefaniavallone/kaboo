@@ -1,11 +1,22 @@
 #:import StoryCard uix.components.story_card
 #:import StoryCard uix.components.page
+
+
 <SettingsScreen>
-    MDRelativeLayout:
+    FitImage:
+        size_hint: None, None
+        size: root.size
+        source: "../assets/images/background.png"
+        allow_stretch: True
+
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: dp(60)
+        padding: [root.width*0.1, root.height*0.1, root.width*0.1, root.height*0.05]
         Page:
             text: "SETTINGS"
-            pos_hint: {"center_x": 0.5, "center_y": 0.5}
-            size_hint_y: 0.9
+            #pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            size_hint_y: 0.2
             size_hint_x: None
             width: self.parent.width * 0.8
             avatar: "../assets/images/darts.png"
@@ -22,8 +33,9 @@
                 MDLabel:
                     text: "Sounds"
                 MDSwitch:
+                    id: sound_switch
                     widget_style: "ios"
-                    active: root.sounds_on
+                    active: True
                     on_active: root.toggle_sounds()
                 MDLabel:
                     text: "Enable Dark Theme"
@@ -31,17 +43,20 @@
                     widget_style: "ios"
                     active: root.theme_dark_on
                     on_active: root.toggle_dark_theme(app)
-            
+
+        Page:
+            text: "TUTORIAL"
+            #pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            size_hint_y: 0.5
+            size_hint_x: None
+            width: self.parent.width * 0.8
+            callback: root.to_home
             MDBoxLayout:
                 orientation: 'vertical'
                 spacing: dp(5)
                 size_hint_x: None
                 width: root.width*0.8
                 adaptive_size: True
-                MDLabel:
-                    text: "How to play"
-                    font_style: "H6"
-                    spacing: dp(5)
                 OneLineAvatarIconListItem:
                     text: "Goal"
                     halign: "center"
@@ -73,4 +88,17 @@
                     IconLeftWidget:
                         icon: "plus-circle"
                 
+        MDCard:
+            radius: [20, 20, 20, 20]
+            size_hint_y: 0.1
+            size_hint_x: None
+            width: self.parent.width * 0.8
+            ripple_behavior: True
+            #on_release:
+            MDRelativeLayout:
+                MDLabel:
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    halign: "center"
+                    text: "Terms and Policy"
+
 

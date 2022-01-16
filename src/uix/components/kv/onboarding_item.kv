@@ -8,17 +8,21 @@
     text_button_one: ""
     text_button_two: ""
     text_button_three: ""
+    text_button_four: ""
     group_name: ""
     id: boarding
 
     MDRelativeLayout:
+        orientation: "vertical"
+        padding:dp(25)
         Image:
             source: root.source
-            pos_hint: {"center_x": .5, "y": .6}
-            size_hint: .4, .3
+            pos_hint: {"center_x": .5, "center_y": .75}
+            size_hint: .8, .8
+            keep_ratio: True
 
         MDBoxLayout:
-            pos_hint: {"center_x": .5, "y": .4}
+            pos_hint: {"center_x": .5, "center_y": .4}
             orientation: "vertical"
             padding: dp(10)
             adaptive_height: True
@@ -50,7 +54,7 @@
             id: text_box_button
             cols: 2
             adaptive_size: True
-            pos_hint: {"center_x": .5, "y": .2}
+            pos_hint: {"center_x": .5, "center_y": .15}
             spacing: dp(10)
 
             KMDFillRoundFlatButton:
@@ -72,10 +76,8 @@
                 radius: [10, 10, 10, 10]
                 on_release: root.callback(root.text_button_three)
             KMDFillRoundFlatButton:
-                text: root.text_button_one
+                text: root.text_button_four
                 group: root.group_name
                 theme_text_color: "Custom"
                 radius: [10, 10, 10, 10]
-                on_release: root.callback(root.text_button_one)
-
-
+                on_release: root.callback(root.text_button_four)

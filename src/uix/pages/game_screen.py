@@ -3,7 +3,6 @@ from random import shuffle
 
 from kivy.logger import Logger
 from kivy.uix.modalview import ModalView
-from kivymd.uix.button import MDFillRoundFlatButton
 from kivymd.uix.screen import MDScreen
 
 from uix.base_components.kmd_fill_round_flat_button import \
@@ -19,6 +18,17 @@ class GameScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
+        self.app_background_music = self.app.sound_manager.get_sound(
+            "../assets/sounds/cute.mp3")
+        self.game_background_music = self.app.sound_manager.get_sound('../assets/sounds/ukulele.mp3',
+                                            True, 0.2)
+        self.clock_sound = self.app.sound_manager.get_sound('../assets/sounds/clock-ticking.mp3')
+        self.right_notification = self.app.sound_manager.get_sound(
+            '../assets/sounds/right-notification.wav')
+        self.wrong_notification = self.app.sound_manager.get_sound(
+            '../assets/sounds/wrong-notification.wav')
+        self.jump_notification = self.app.sound_manager.get_sound(
+            '../assets/sounds/jump-notification.wav')
 
     def on_pre_enter(self, *args):
         self.round_time = self.app.status.getv("game.round_time", default_value=15)
@@ -29,24 +39,21 @@ class GameScreen(MDScreen):
                                             default_value=0)
         self.current_player = self.app.status.getv("game.current_player",
                                              default_value=0)
-        self.background_music = self.app.sound_manager.add_sound('../assets/sounds/ukulele.mp3',
-                                            True, 0.2)
-        self.clock_sound = self.app.sound_manager.add_sound('../assets/sounds/clock-ticking.mp3')
-        self.right_notification = self.app.sound_manager.add_sound(
-            '../assets/sounds/right-notification.wav')
-        self.wrong_notification = self.app.sound_manager.add_sound(
-            '../assets/sounds/wrong-notification.wav')
-        self.jump_notification = self.app.sound_manager.add_sound(
-            '../assets/sounds/jump-notification.wav')
+
         self.load_game()
         self.play_round()
-        self.background_music.play()
+        self.app_background_music.stop()
+        self.game_background_music.play()
+
+        sounds_on = self.app.status.getv("game.sound", default_value=True)
+        self._set_sound_icon(sounds_on)
+
+    def _set_sound_icon(self, sounds_on):
+        self.ids.sound_button.icon = "volume-off" if sounds_on else "volume-high"
 
     def toggle_sounds(self):
         sounds_on = self.app.status.getv("game.sound", default_value=True)
-        self.ids.sound_button.icon = "volume-high" if sounds_on else "volume-off"
-        if not sounds_on:
-            self.background_music.play(restart=True)  # restart game music when button is pressed
+        self._set_sound_icon(not sounds_on)
         self.app.status.setv("game.sound", not sounds_on)
 
     def load_game(self):
@@ -128,7 +135,7 @@ class GameScreen(MDScreen):
     def on_pre_leave(self, *args):
         if self.confirm_exit_dialog:
             self.confirm_exit_dialog.dismiss()
-        self.background_music.stop()
+        self.game_background_music.stop()
         self.clock_sound.stop()
 
     def confirm_exit(self):
@@ -146,7 +153,7 @@ class GameScreen(MDScreen):
                                            width="100dp", size_hint_x=None,
                                            md_bg_color=(0, 0.2, 0.9, 1),
                                            on_release=self.cancel),
-                    KMDFillRoundFlatButton(text="Back to Home".upper(),
+                    KMDFillRoundFlatButton(text="Back Home".upper(),
                                            md_bg_color=(1, 0, 0, 1),
                                            radius=[10, 10, 10, 10],
                                           width="100dp", size_hint_x=None,
@@ -155,19 +162,17 @@ class GameScreen(MDScreen):
         )
         if not self.confirm_exit_dialog:
             self.confirm_exit_dialog = ModalView(size_hint=(0.7, 0.4),
-                                                 auto_dismiss=True,
+                                                 auto_dismiss=False,
                                                  background_color=[0, 0, 0, 0])
             self.confirm_exit_dialog.add_widget(e)
         self.confirm_exit_dialog.open()
 
     def cancel(self, inst):
-        #if self.ids.timer.seconds <= 10:
-        #    self.clock_sound.play()
         self.ids.timer.start()
         self.confirm_exit_dialog.dismiss()
 
     def to_home(self, inst):
-        self.background_music.stop()
+        self.game_background_music.stop()
         self.clock_sound.stop()
         self.ids.timer.stop()
         self.confirm_exit_dialog.dismiss()

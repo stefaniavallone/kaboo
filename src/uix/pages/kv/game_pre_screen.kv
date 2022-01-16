@@ -1,4 +1,6 @@
 #:import KMDFillRoundFlatButton uix.base_components.kmd_fill_round_flat_button
+#:import KMDCard uix.base_components.kmd_card
+
 
 <GamePreScreen>:
     title: ''
@@ -9,15 +11,12 @@
         padding:dp(25)
         Image:
             source: root.image
-            pos_hint: {"center_x": .5, "center_y": 0.8}
-            size_hint: .6, .6
+            pos_hint: {"center_x": .5, "center_y": 0.75}
+            size_hint: .7, .7
             keep_ratio: True
-            opacity: 1
-            #size_hint_y: None
-            #height: logo_container.height - dp(20)
 
         MDBoxLayout:
-            pos_hint: {"center_x": .5, "y": .6}
+            pos_hint: {"center_x": .5, "y": .55}
             orientation: "vertical"
             padding: dp(10)
             adaptive_height: True
@@ -89,18 +88,29 @@
             spacing: "10dp"
             padding: [dp(10), dp(10), dp(10), dp(10)]
             adaptive_size: True
-            pos_hint: {"center_x": .5, "center_y": .5}
             pos_hint: {"center_x": 0.5, "y": 0.1}
             KMDFillRoundFlatButton:
-                text: "Back to Home"
+                text: "Back Home"
                 md_bg_color: 0.3, 0.3, 0.3, 1
                 radius: [10, 10, 10, 10]
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 on_release: root.to_home()
-            KMDFillRoundFlatButton:
+
+            KMDCard:
                 id: play_button
-                text: "PLAY"
                 md_bg_color: 0.1, 0.2, 0.8, 1
                 radius: [10, 10, 10, 10]
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 on_release: root.to_game()
+                size_hint: None, None
+                width: root.width * 0.5
+                height: root.height * 0.1
+                MDLabel:
+                    halign: "center"
+                    text: "PLAY"
+                    bold: True
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 1
+
                 
                 

@@ -5,4 +5,6 @@ Builder.load_file("uix/base_components/kv/kmd_card.kv")
 
 
 class KMDCard(MDCard):
-    pass
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)

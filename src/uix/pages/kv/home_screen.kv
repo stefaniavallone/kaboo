@@ -3,9 +3,14 @@
 #:import KMDFlatButton uix.base_components.kmd_flat_button
 
 <HomeScreen>
+    FitImage:
+        size_hint: None, None
+        size: root.size
+        source: "../assets/images/home_background2.png"
+        opacity: 0.75
+
     MDBoxLayout:
         orientation: "vertical"
-
         MDRelativeLayout:
             id: logo_container
             size_hint_y: .25
@@ -27,7 +32,7 @@
             padding:[dp(15),dp(15),dp(15),dp(35)]
             spacing:dp(15)
             ElementCard:
-                md_bg_color:55/255,200/255,86/255,1
+                md_bg_color: 210/255, 158/255, 0/255, 1
                 image:"../assets/images/darts.png"
                 text:"Easy"
                 subtext:"play"
@@ -35,7 +40,7 @@
                 on_release: root.set_game_level("easy")
 
             ElementCard:
-                md_bg_color:255/255,69/255,86/255,1
+                md_bg_color: 205/255, 92/255, 0/255, 1
                 image:"../assets/images/darts2.png"
                 text:"Medium"
                 subtext:"play"
@@ -43,8 +48,8 @@
                 on_release: root.set_game_level("medium")
 
             ElementCard:
-                md_bg_color:69/255,55/255,255/255,1
-                image:"../assets/images/darts3.png"
+                md_bg_color: 130/255, 95/255, 30/255, 1
+                image: "../assets/images/darts3.png"
                 text:"Hard"
                 subtext:"play"
                 items_count:"56 cards"
@@ -58,7 +63,8 @@
             KMDIconSquaredButton:
                 icon: "trophy"
                 tooltip_text: "Trophy"
-                md_bg_color: app.theme_cls.primary_color
+                #md_bg_color: 83.9/255, 37.6/255, 0/255, 1
+                md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
                     root.manager.transition.direction = 'left'
@@ -68,7 +74,8 @@
                 id: history
                 icon: "book"
                 tooltip_text: "History"
-                md_bg_color: app.theme_cls.primary_color
+                #md_bg_color: 83.9/255, 37.6/255, 0/255, 1
+                md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
                     root.manager.transition.direction = 'left'
@@ -78,7 +85,8 @@
                 icon: "star"
                 tooltip_text: "Star"
                 pos_hint: {"center_x": .5, "center_y": .5}
-                md_bg_color: app.theme_cls.primary_color
+                #md_bg_color: 83.9/255, 37.6/255, 0/255, 1
+                md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release: root.show_rate_us_dialog()
 
@@ -86,7 +94,8 @@
                 id: settings
                 icon: "menu"
                 tooltip_text: "Settings"
-                md_bg_color: app.theme_cls.primary_color
+                #md_bg_color: 83.9/255, 37.6/255, 0/255, 1
+                md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
                     root.manager.transition.direction = 'left'

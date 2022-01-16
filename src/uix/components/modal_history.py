@@ -5,8 +5,10 @@ from kivymd.uix.relativelayout import MDRelativeLayout
 
 Builder.load_file("uix/components/kv/modal_history.kv")
 
+
 class Item(OneLineAvatarListItem):
             divider = None
+
 
 class ModalHistory(MDRelativeLayout):
 

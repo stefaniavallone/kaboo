@@ -8,13 +8,14 @@
     MDBoxLayout:
         orientation: "vertical"
         id: container
+        padding: [0, 0, 0, dp(20)]
 
         MDBoxLayout:
             size_hint_y: .20
             orientation: "vertical"
 
             MDBoxLayout:
-                md_bg_color: 1,1,1,1
+                md_bg_color: 1, 1, 1, 1
                 padding: dp(10)
                 MDLabel:
                     id: remaining_jumps
@@ -53,52 +54,60 @@
                     radius: [0, 0, 20, 20]
                     size_hint_x: 0.3
                     pos_hint: {"center_x": .5, "center_y": .5}
-                    MDBoxLayout:
-                        spacing: dp(20)
-                        padding: dp(20)
-                    MDIconButton:
-                        #pos_hint: {"x": .375, "center_y": .5}
-                        icon: "home"
-                        padding: 0
-                        #md_bg_color: 0.9, 0.9, 0.9, 1
-                        on_release: root.confirm_exit()
+                    MDRelativeLayout:
+                        MDBoxLayout:
+                            spacing: dp(10)
+                            adaptive_size: True
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            MDIconButton:
+                                icon: "home"
+                                padding: 0
+                                on_release: root.confirm_exit()
 
-                    MDIconButton:
-                        id: sound_button
-                        #pos_hint: {"x": .525, "center_y": .5}
-                        icon: "volume-off"
-                        padding: 0
-                        #md_bg_color: 0.9, 0.9, 0.9, 1
-                        on_release: root.toggle_sounds()
+                            MDIconButton:
+                                id: sound_button
+                                icon: "volume-off"
+                                padding: 0
+                                on_release: root.toggle_sounds()
 
         MDBoxLayout:
             orientation: "vertical"
-            md_bg_color: 0,0,0,0
+            md_bg_color: 0, 0, 0, 0
             MDBoxLayout:
                 GameCardContainer:
                     id: card_container
 
-            MDBoxLayout:
-                id: game_buttons
+        MDRelativeLayout:
+            id: game_buttons
+            size_hint_y: 0.15
+            size_hint_x: 0.70
+            pos_hint: {"center_x": .5, "center_y": .5}
+            padding: dp(20)
+            MDCard:
+                radius: [25, 25, 25, 25]
                 padding: [dp(10), dp(10), dp(10), dp(10)]
-                spacing: dp(20)
-                adaptive_size: True
                 pos_hint: {"center_x": .5, "center_y": .5}
-                KMDIconSquaredButton:
-                    id: wrong_button
-                    icon: "close-thick"
-                    md_bg_color: app.theme_cls.error_color
-                    on_release: root.wrong_answer()
+                md_bg_color: 1, 1, 1, 0.4
+                MDRelativeLayout:
+                    MDBoxLayout:
+                        spacing: dp(20)
+                        adaptive_size: True
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        KMDIconSquaredButton:
+                            id: wrong_button
+                            icon: "close-thick"
+                            md_bg_color: app.theme_cls.error_color
+                            on_release: root.wrong_answer()
 
-                KMDIconSquaredButton:
-                    id: jump_button
-                    icon: "redo"
-                    md_bg_color: 0.9, 0.9, 0.9, 1
-                    on_release: root.jump_request()
+                        KMDIconSquaredButton:
+                            id: jump_button
+                            icon: "redo"
+                            md_bg_color: 0.9, 0.9, 0.9, 1
+                            on_release: root.jump_request()
 
-                KMDIconSquaredButton:
-                    id: right_button
-                    icon: "check-bold"
-                    md_bg_color: app.theme_cls.success_color
-                    on_release: root.right_answer()
+                        KMDIconSquaredButton:
+                            id: right_button
+                            icon: "check-bold"
+                            md_bg_color: app.theme_cls.success_color
+                            on_release: root.right_answer()
 

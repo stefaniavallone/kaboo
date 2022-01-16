@@ -10,6 +10,7 @@ class SoundPlayer:
         self.sound.loop = loop
         self.sound.volume = volume
         self._prev_volume = volume
+        self._is_playing = False
 
     def off(self):
         self.sound.volume = 0
@@ -20,7 +21,10 @@ class SoundPlayer:
     def play(self, restart=True):
         if restart:
             self.sound.seek(0)
-        self.sound.play()
+            self._is_playing = False
+        if not self._is_playing:
+            self.sound.play()
+        self._is_playing = True
 
     def pause(self):
         self.stop(restart=False)
@@ -29,4 +33,5 @@ class SoundPlayer:
         if restart:
             self.sound.seek(0)
         self.sound.stop()
+        self._is_playing = False
 

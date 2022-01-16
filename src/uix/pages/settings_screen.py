@@ -3,21 +3,25 @@ from kivymd.uix.screen import MDScreen
 from kivy.app import App
 
 
+
 class SettingsScreen(MDScreen):
-    sounds_on = True
+
     theme_dark_on = False
 
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
-        self.sounds_on = self.app.status.getv("game.sound", default_value=True)
+        #self.app.status.attach(self)
 
-    def on_pre_enter(self, *args):
-        self.sounds_on = self.app.status.getv("game.sound", default_value=True)
+    #def on_pre_enter(self, *args):
+    #    sounds_on = self.app.status.getv("game.sound", default_value=True)
+    #    self.ids.sound_switch.active = sounds_on
+
 
     def toggle_sounds(self):
-        self.sounds_on = not self.sounds_on
-        self.app.status.setv("game.sound", self.sounds_on)
+        sounds_on = self.app.status.getv("game.sound", default_value=True)
+        self.ids.sound_switch.active = not sounds_on
+        self.app.status.setv("game.sound", not sounds_on)
 
     def toggle_dark_theme(self, app):
         self.theme_dark_on = not self.theme_dark_on
@@ -41,7 +45,6 @@ class SettingsScreen(MDScreen):
             radius=[20, 7, 20, 7]
         )
         how_to_play_dialog.open()
-
 
     def to_home(self):
         self.manager.transition.direction = 'right'

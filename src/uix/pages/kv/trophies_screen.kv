@@ -13,8 +13,12 @@
     size_hint_y: None
 
 <TrophiesScreen>
+    FitImage:
+        size_hint: None, None
+        size: root.size
+        source: "../assets/images/background.png"
+        allow_stretch: True
     MDRelativeLayout:
-        md_bg_color: 1,1,1,1
         Page:
             text: "TROPHIES"
             pos_hint: {"center_x": 0.5, "center_y": 0.5}
