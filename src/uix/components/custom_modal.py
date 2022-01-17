@@ -22,6 +22,7 @@ class CustomModal(MDRelativeLayout):
         self.closable = closable
         self.buttons = buttons
         Clock.schedule_once(self._late_init)
+        self.register_event_type('on_close')
 
     def _late_init(self, inst):
         if not self.closable:
@@ -32,3 +33,6 @@ class CustomModal(MDRelativeLayout):
             self.ids.buttons_container.y = -self.height - dp(20)
         for button in self.buttons:
             self.ids.buttons_container.add_widget(button)
+
+    def on_close(self):
+        print("aa")

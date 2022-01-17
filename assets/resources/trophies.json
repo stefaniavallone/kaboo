@@ -62,7 +62,7 @@
         "name": "250 wrong answers",
         "description": "You wrong 250 answers",
         "image": "../assets/images/trophies/trophy_250wrongs.png",
-        "obtained": false,
+        "obtained": true,
         "action_type": "wrong",
         "action_count": 250
     },

@@ -51,13 +51,17 @@ class GameEndScreen(MDScreen):
         #     e.elevation = 0
             #self.ids.trophy_carousel.add_widget(e)
         #animations.pop_up(self.ids.trophy_carousel)
-        view = ModalView(size_hint=(0.7, 0.4),
+        self.view = ModalView(size_hint=(0.7, 0.4),
                          auto_dismiss=True,
                          background_color=[0,0,0,0])
-        view.add_widget(CustomModal(image="../assets/images/trophies/trophy_5points.png",
+        self.view.add_widget(CustomModal(image="../assets/images/trophies/trophy_5points.png",
                                     text="asdasdsadsa", subtext="asdsadas",
+                                    on_close=self.cancel,
                                     bg_color=(255 / 255, 241 / 255, 115 / 255, 1)))
-        view.open()
+        self.view.open()
+
+    def cancel(self, inst):
+        self.view.dismiss()
 
     def to_home(self, inst=None):
         self.manager.transition.direction = 'right'

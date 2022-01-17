@@ -1,5 +1,4 @@
-#:import StoryCard uix.components.story_card
-#:import StoryCard uix.components.page
+#:import Page uix.components.page
 
 
 <SettingsScreen>
@@ -23,26 +22,27 @@
             story: "../assets/images/story.png"
             callback: root.to_home
             icon: "menu"
-            MDGridLayout:
-                id: settings
-                cols:2
-                padding:[dp(15),dp(30),dp(15),dp(35)]
-                size: root.width * 0.8, root.height * 0.8
-                row_default_height: 50
-                row_force_default: True
-                MDLabel:
-                    text: "Sounds"
-                MDSwitch:
-                    id: sound_switch
-                    widget_style: "ios"
-                    active: True
-                    on_active: root.toggle_sounds()
-                MDLabel:
-                    text: "Enable Dark Theme"
-                MDSwitch:
-                    widget_style: "ios"
-                    active: root.theme_dark_on
-                    on_active: root.toggle_dark_theme(app)
+            MDBoxLayout:
+                padding: 25, 40, 25, 35
+                MDGridLayout:
+                    id: settings
+                    cols:2
+                    size: root.width * 0.8, root.height * 0.8
+                    row_default_height: 40
+                    row_force_default: True
+                    MDLabel:
+                        text: "Sounds"
+                    MDSwitch:
+                        id: sound_switch
+                        widget_style: "ios"
+                        active: True
+                        on_active: root.toggle_sounds()
+                    MDLabel:
+                        text: "Enable Dark Theme"
+                    MDSwitch:
+                        widget_style: "ios"
+                        active: root.theme_dark_on
+                        on_active: root.toggle_dark_theme(app)
 
         Page:
             text: "TUTORIAL"
@@ -51,6 +51,7 @@
             size_hint_x: None
             width: self.parent.width * 0.8
             callback: root.to_home
+            padding: [0, 40, 0, 0]
             MDBoxLayout:
                 orientation: 'vertical'
                 spacing: dp(5)

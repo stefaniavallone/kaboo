@@ -44,9 +44,10 @@ class GameScreen(MDScreen):
         self.play_round()
         self.app_background_music.stop()
         self.game_background_music.play()
-
         sounds_on = self.app.status.getv("game.sound", default_value=True)
         self._set_sound_icon(sounds_on)
+        if self.num_jumps == 0:
+            self.ids.jump_button.disabled = True
 
     def _set_sound_icon(self, sounds_on):
         self.ids.sound_button.icon = "volume-off" if sounds_on else "volume-high"
@@ -176,4 +177,5 @@ class GameScreen(MDScreen):
         self.clock_sound.stop()
         self.ids.timer.stop()
         self.confirm_exit_dialog.dismiss()
+        self.app.status.setv("game.current_player", 0)
         self.go_to_screen('home', direction='right')

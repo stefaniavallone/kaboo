@@ -1,59 +1,118 @@
 [
 	{
-		"word": "Food",
-		"forbidden" : ["eat", "mouth", "hungry", "full", "delicious"]
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
 	},
 	{
-		"word": "Music",
-		"forbidden" : ["listen", "song", "instrument", "play", "hear"]
+		"word": "marry",
+		"forbidden" : ["wedding", "knot", "ring", "groom", "bride"]
 	},
 	{
-		"word": "Fish",
-		"forbidden" : ["swim", "food", "ocean", "lake", "river"]
+		"word": "me",
+		"forbidden" : ["not", "you", "I", "myself", "person"]
 	},
 	{
-		"word": "Physics",
-		"forbidden" : ["study", "science", "gravity", "force", "move"]
+		"word": "cafe",
+		"forbidden" : ["food", "snack", "coffee", "drink", "eat"]
 	},
 	{
-		"word": "Java",
-		"forbidden" : ["coffee", "language", "drink", "oracle", "hot"]
+		"word": "television",
+		"forbidden" : ["watch", "cartoon", "drama", "channel", "tv"]
 	},
 	{
-		"word": "Money",
-		"forbidden" : ["wealth", "job", "pay", "buy", "sell"]
+		"word": "soccer",
+		"forbidden" : ["ball", "black & white", "round", "play", "sport"]
 	},
 	{
-		"word": "Shotgun",
-		"forbidden" : ["weapon", "pump", "zombie", "barrel", "bullet"]
+		"word": "violin",
+		"forbidden" : ["strings", "orchestra", "wood", "music", "instrument"]
 	},
 	{
-		"word": "Rice",
-		"forbidden" : ["chinese", "field", "university", "grain", "food"]
+		"word": "boot",
+		"forbidden" : ["water", "sea", "ship", "captain", "transport"]
 	},
 	{
-		"word": "Cellphone",
-		"forbidden" : ["call", "mobile", "pocket", "internet", "ear"]
+		"word": "father",
+		"forbidden" : ["parent", "husband", "man", "family", "work"]
 	},
 	{
-		"word": "Peanut Butter",
-		"forbidden" : ["bread", "sandwich", "jam", "jelly", "brown"]
+		"word": "rain",
+		"forbidden" : ["precipitation", "water", "sky", "wet", "drops"]
 	},
 	{
-		"word": "Ketchup",
-		"forbidden" : ["fries", "tomato", "sauce", "condiment", "dip"]
+		"word": "you",
+		"forbidden" : ["joker", "circus", "red nose", "Mc Donalds", "make-up"]
 	},
 	{
-		"word": "Pikachu",
-		"forbidden" : ["Pokemon", "Ash", "mouse", "rat", "electric"]
+		"word": "IPod",
+		"forbidden" : ["music player", "mp3", "Apple", "IPad", "Iphone"]
 	},
 	{
-		"word": "Swimming",
-		"forbidden" : ["water", "pool", "lake", "ocean", "suit"]
+		"word": "lipstick",
+		"forbidden" : ["red", "lips", "purse", "women", "beautiflu"]
 	},
 	{
-		"word": "Piano",
-		"forbidden" : ["music", "instrument", "key", "pedal", "grand"]
+		"word": "fear",
+		"forbidden" : ["phobia", "scare", "taboo", "terror", "spiders"]
+	},
+	{
+		"word": "sea",
+		"forbidden" : ["blue", "sky", "water", "ship", "ocean"]
+	},
+	{
+		"word": "chicken",
+		"forbidden" : ["food", "egg", "KFC", "fried", "rooster"]
+	},
+	{
+		"word": "napkin",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "diamond",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "bee",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "honey",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "husband",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
+	},
+	{
+		"word": "you",
+		"forbidden" : ["me", "him", "I", "not", "her"]
 	}
-	
 ]

@@ -36,6 +36,7 @@ class GamePreScreen(MDScreen):
         self.manager.current = 'game'
 
     def to_home(self):
+        self.app.status.setv("game.current_player", 0)
         self.manager.transition.direction = 'right'
         self.manager.current = 'home'
     

@@ -12,17 +12,13 @@ class SettingsScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
-        #self.app.status.attach(self)
 
-    #def on_pre_enter(self, *args):
-    #    sounds_on = self.app.status.getv("game.sound", default_value=True)
-    #    self.ids.sound_switch.active = sounds_on
-
+    def on_pre_enter(self, *args):
+        sounds_on = self.app.status.getv("game.sound", default_value=True)
+        self.ids.sound_switch.active = sounds_on
 
     def toggle_sounds(self):
-        sounds_on = self.app.status.getv("game.sound", default_value=True)
-        self.ids.sound_switch.active = not sounds_on
-        self.app.status.setv("game.sound", not sounds_on)
+        self.app.status.setv("game.sound", self.ids.sound_switch.active)
 
     def toggle_dark_theme(self, app):
         self.theme_dark_on = not self.theme_dark_on

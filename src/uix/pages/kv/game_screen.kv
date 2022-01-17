@@ -15,38 +15,38 @@
             orientation: "vertical"
 
             MDBoxLayout:
-                md_bg_color: 1, 1, 1, 1
-                padding: dp(10)
-                MDLabel:
-                    id: remaining_jumps
-                    text: "0"
-                    adaptive_size: True
-                    font_style: "H4"
-                    width: 40
-                    halign: "left"
-                MDIconButton:
-                    icon: "redo"
-                    padding: 5
+                MDCard:
+                    padding: dp(10)
+                    MDLabel:
+                        id: remaining_jumps
+                        text: "0"
+                        adaptive_size: True
+                        font_style: "H4"
+                        width: 40
+                        halign: "left"
+                    MDIconButton:
+                        icon: "redo"
+                        padding: 5
 
-                Timer:
-                    id: timer
-                    format: "%M:%S"
-                    font_style: "H4"
-                    halign: "center"
-                    last_seconds: 10
-                    on_finish: root.finish_round()
-                    on_last_seconds: root.clock_sound.play()
+                    Timer:
+                        id: timer
+                        format: "%M:%S"
+                        font_style: "H4"
+                        halign: "center"
+                        last_seconds: 10
+                        on_finish: root.finish_round()
+                        on_last_seconds: root.clock_sound.play()
 
-                MDIconButton:
-                    icon: "checkbox-marked-circle-outline"
-                    padding: 5
-                MDLabel:
-                    id: player_points
-                    adaptive_size: True
-                    text: "0"
-                    width: 40
-                    font_style: "H4"
-                    halign: "right"
+                    MDIconButton:
+                        icon: "checkbox-marked-circle-outline"
+                        padding: 5
+                    MDLabel:
+                        id: player_points
+                        adaptive_size: True
+                        text: "0"
+                        width: 40
+                        font_style: "H4"
+                        halign: "right"
 
             MDRelativeLayout:
                 id: controls_buttons
@@ -87,7 +87,6 @@
                 radius: [25, 25, 25, 25]
                 padding: [dp(10), dp(10), dp(10), dp(10)]
                 pos_hint: {"center_x": .5, "center_y": .5}
-                md_bg_color: 1, 1, 1, 0.4
                 MDRelativeLayout:
                     MDBoxLayout:
                         spacing: dp(20)
@@ -102,7 +101,7 @@
                         KMDIconSquaredButton:
                             id: jump_button
                             icon: "redo"
-                            md_bg_color: 0.9, 0.9, 0.9, 1
+                            md_bg_color: 0.6, 0.6, 0.6, 1
                             on_release: root.jump_request()
 
                         KMDIconSquaredButton:
