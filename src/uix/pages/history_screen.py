@@ -1,13 +1,15 @@
 import json
 
-from kivy.uix.modalview import ModalView
-from src.uix.components.modal_history import ModalHistory
+from src.uix.components.modal_scroll import ModalScroll
 from kivymd.uix.screen import MDScreen
-from kivymd.uix.list import OneLineAvatarListItem
+from kivymd.uix.list import OneLineAvatarListItem, TwoLineListItem
+from kivy.properties import StringProperty
 from logic.game import PLAYERS_COLORS
 from logic.score import best_player
+from kivy.uix.modalview import ModalView
 
 class Item(OneLineAvatarListItem):
+    name= StringProperty()
     divider = None
 
 class HistoryScreen(MDScreen):
@@ -31,27 +33,17 @@ class HistoryScreen(MDScreen):
         self.ids.table_floor.data = table_data[::-1]
 
     def show_details(self, players_points, players, date):
-        list_items = [Item(text=f" Player {i+1}: [color=#C042B8]{players_points[f'p{i}']} points[/color]") for i in range(int(players))]
-        # game_stats_dialog = MDDialog(
-        #     title="Players Point",
-        #     type="simple",
-        #     text = "Date: "+ date,
-        #     items=list_items,
-        #     radius=[20, 7, 20, 7]
-        # )
-        # game_stats_dialog.open()
+        list_items = dict()
+        for i in range(int(players)):
+            list_items[f'Player {i+1}'] = players_points[f'p{i}']
+        self.dialog = ModalScroll(text= f'History to {date}')
+        self.dialog.add_item(list_items, TwoLineListItem)
         
-        modal = ModalHistory(
-            text_date="Date:", 
-            subtext_date=date,
-            text_player="Player Points:", 
-            subtext_player="item"
-        )
-        self.history_dialog = ModalView(size_hint=(0.7, 0.4),
-                                        auto_dismiss=True,
-                                        background_color=[0, 0, 0, 0])
-        self.history_dialog.add_widget(modal)
-        self.history_dialog.open()
+        self.confirm_exit_dialog = ModalView(size_hint=(0.7, 0.4),
+                                                auto_dismiss=True,
+                                                background_color=[0, 0, 0, 0])
+        self.confirm_exit_dialog.add_widget(self.dialog)
+        self.confirm_exit_dialog.open()
     
     def to_home(self):
         self.manager.transition.direction = 'right'
