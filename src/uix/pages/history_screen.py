@@ -35,8 +35,8 @@ class HistoryScreen(MDScreen):
     def show_details(self, players_points, players, date):
         list_items = dict()
         for i in range(int(players)):
-            list_items[f'Player {i+1}'] = players_points[f'p{i}']
-        self.dialog = ModalScroll(text= f'History to {date}')
+            list_items[f'Team {i+1}'] = players_points[f'p{i}']
+        self.dialog = ModalScroll(text= f'History of {date}')
         self.dialog.add_item(list_items, TwoLineListItem)
         
         self.confirm_exit_dialog = ModalView(size_hint=(0.7, 0.4),
