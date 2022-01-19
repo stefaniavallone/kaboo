@@ -1,6 +1,6 @@
 import json
 
-from uix.components.modal_scroll import ModalScroll
+from src.uix.components.modal_scroll import ModalScroll
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.list import OneLineAvatarListItem, TwoLineListItem
 from kivy.properties import StringProperty

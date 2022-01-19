@@ -41,7 +41,6 @@ class SettingsScreen(MDScreen):
             title=title,
             type="custom",
             text=text,
-            size_hint=(0.7, 1),
             radius=[20, 7, 20, 7]
         )
         how_to_play_dialog.open()
