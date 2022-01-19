@@ -5,9 +5,11 @@ from kivymd.uix.list import OneLineAvatarIconListItem
 from kivy.properties import ObjectProperty, StringProperty
 Builder.load_file("uix/components/kv/modal_scroll.kv")
 
+
 class ModalScroll(MDRelativeLayout):
-    item_list=ObjectProperty()
-    text=StringProperty()
+    item_list = ObjectProperty()
+    text = StringProperty()
+
     def add_item(self, elements, type):
         for key, value in elements.items():
             if type == OneLineAvatarIconListItem:

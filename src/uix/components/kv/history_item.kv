@@ -1,8 +1,22 @@
-
 <HistoryItem>:
+    players: ''
+    #text_color: ''
 
-    ImageLeft:
-        source: root.image
+    spacing: [dp(10), dp(30)]
+    text: self.winner
+    theme_text_color: "Custom"
+    text_color: root.text_color
 
-    LabelRight:
+    secondary_text: self.date
+    theme_secondary_text_color: "Custom"
+    secondary_text_color: 0.1, 0.1, 0.1, 1
+
+    score: root.players
+    on_release: root.details(root.players_points, root.players, self.date)
+    size_hint_y: None
+
+    LeftImage:
+        icon: root.image
+
+    RightLabel:
         text: root.score

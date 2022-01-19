@@ -1,46 +1,40 @@
 #:import StoryCard uix.components.story_card
 #:import StoryCard uix.components.page
-#:import ListItemWithCheckbox uix.components.list_item_checkbox
+#:import ListItemWithCheckbox uix.base_components.list_item_with_checkbox
 
-<ListItemWithCheckbox@RecycleKVIDsDataViewBehavior+MDBoxLayout>:
-    name: ''
-    image: ''
-    description: ''
-    text: root.name
-    secondary_text: root.description
-    image: root.image
-    obtained: root.obtained
-    size_hint_y: None
 
 <TrophiesScreen>
+
     FitImage:
         size_hint: None, None
         size: root.size
         source: "../assets/images/background.png"
         allow_stretch: True
+
     MDRelativeLayout:
         Page:
             text: "TROPHIES"
-            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            pos_hint: {"center_x": 0.5, "center_y": 0.485}
             size_hint_y: 0.9
             size_hint_x: None
             width: self.parent.width * 0.8
-            avatar: "../assets/images/darts.png"
-            story: "../assets/images/story.png"
+            label_bg_color: 219/255, 164/255, 24/255, 1
             callback: root.to_home
-            icon: "trophy"    
-            RecycleView:
-                id: list_trophies
-                scroll_type: ['bars']
-                scroll_wheel_distance: dp(10)
-                bar_width: dp(5)
-                viewclass: 'ListItemWithCheckbox'
-                RecycleBoxLayout:
-                    default_size: None, dp(50)
-                    default_size_hint: 1, None
-                    size_hint_y: None
-                    spacing: dp(10)
-                    height: self.minimum_height + 80
-                    # add this so you can scroll
-                    row_default_height: 300
-                    orientation: 'vertical'
+            icon: "trophy"
+
+            BoxLayout:
+                size_hint_y: None
+                height: root.height - 120
+                RecycleView:
+                    id: list_trophies
+                    viewclass: 'ListItemWithCheckbox'
+                    scroll_type: ['bars']
+                    scroll_wheel_distance: dp(30)
+                    bar_width: dp(5)
+                    RecycleBoxLayout:
+                        default_size: None, dp(70)
+                        default_size_hint: 1, None
+                        size_hint_y: None
+                        height: self.minimum_height
+                        #row_default_height: 300 # add this so you can scroll
+                        orientation: 'vertical'

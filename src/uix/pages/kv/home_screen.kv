@@ -6,8 +6,8 @@
     FitImage:
         size_hint: None, None
         size: root.size
-        source: "../assets/images/home_background2.png"
-        opacity: 0.75
+        source: "../assets/images/home_background.png"
+        #opacity: 0.75
 
     MDBoxLayout:
         orientation: "vertical"
@@ -61,9 +61,9 @@
             adaptive_size: True
             pos_hint: {"center_x": .5, "center_y": .5}
             KMDIconSquaredButton:
-                icon: "trophy"
+                icon: "../assets/images/icons/trophy.png"  #"trophy"
                 tooltip_text: "Trophy"
-                #md_bg_color: 83.9/255, 37.6/255, 0/255, 1
+                #md_bg_color: 210/255, 158/255, 0/255, 1
                 md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
@@ -72,9 +72,9 @@
 
             KMDIconSquaredButton:
                 id: history
-                icon: "book"
+                icon: "../assets/images/icons/to-do-list.png"  #"book"
                 tooltip_text: "History"
-                #md_bg_color: 83.9/255, 37.6/255, 0/255, 1
+                #md_bg_color: 210/255, 158/255, 0/255, 1
                 md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
@@ -82,20 +82,21 @@
                     root.manager.current = 'history'
 
             KMDIconSquaredButton:
-                icon: "star"
-                tooltip_text: "Star"
+                icon: "../assets/images/icons/value.png"  #"Star"
+                tooltip_text: "History"
                 pos_hint: {"center_x": .5, "center_y": .5}
-                #md_bg_color: 83.9/255, 37.6/255, 0/255, 1
-                md_bg_color: 0.9, 0.9, 0.9, 1
+                md_bg_color: 150/255, 128/255, 100/255, 1
+                #md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release: root.show_rate_us_dialog()
 
             KMDIconSquaredButton:
                 id: settings
-                icon: "menu"
+                icon: "../assets/images/icons/list.png"  #"menu"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 tooltip_text: "Settings"
-                #md_bg_color: 83.9/255, 37.6/255, 0/255, 1
-                md_bg_color: 0.9, 0.9, 0.9, 1
+                md_bg_color: 210/255, 158/255, 0/255, 1
+                #md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
                     root.manager.transition.direction = 'left'

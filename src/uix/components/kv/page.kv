@@ -1,21 +1,18 @@
 <Page>
     size_hint_y: 0.8
+    #label_bg_color: self.md_bg_color
+    #label_text_color: 1, 1, 1, 1
+    #card_bg_color: self.md_bg_color
 
     MDCard:
         id: card
         size_hint: 1, 1
-        #size: "188dp", "252dp"
         radius: 32
         elevation: 18
-        FitImage:
-            source: root.story
-            radius: [32, ]
-            mipmap: True
-            opacity: 0.5
 
 
     MDCard:
-        id: label
+        id: card_label
         size_hint: None, None
         height: "56dp"
         width: card.width * 0.8
@@ -23,33 +20,30 @@
         x: card.width / 2 - self.width / 2
         y: card.height - self.height / 2
         elevation: 18
-        MDIconButton:
-            icon: "chevron-left"
-            theme_text_color: "Custom"
-            pos_hint: {'right': .20, 'center_y': .5}
-            on_release: root.callback()
-                
-        MDLabel:
-            text: root.text
-            halign: "center"
-            
-        MDIcon:
-            icon: root.icon
-            radius: [36, 36, 0, 0, ]
-            mipmap: True
+        md_bg_color: root.label_bg_color
+        MDBoxLayout:
+            id: label_container
+            padding: [0, 0, 15, 0]
+            MDIconButton:
+                icon: "chevron-left"
+                theme_text_color: "Custom"
+                halign: "left"
+                text_color: root.label_text_color
+                pos_hint: {'right': .20, 'center_y': .5}
+                on_release: root.callback()
 
-    # FitImage:
-    #     size_hint: None, None
-    #     size: "188dp", "112dp"
-    #     source: "../assets/images/background.jpg"
-    #     radius: [8, 8, 28, 28]
-    #     mipmap: True
-    
-    MDLabel: 
-        text: root.name
-        adaptive_size: True
-        theme_text_color: "Custom"
-        text_color: 1, 1, 1, 1
-        #font_name: "../assets/font/SourceSansPro-Bold.otf"
-        x: card.width / 2 - self.width / 2
-        y: "12dp"
+            MDLabel:
+                text: root.text
+                theme_text_color: "Custom"
+                text_color: root.label_text_color
+                halign: "left"
+                bold: True
+                size_hint_x: None
+                width: label_container.width*0.5
+
+            MDIcon:
+                icon: root.icon
+                halign: "right"
+                theme_text_color: "Custom"
+                text_color: root.label_text_color
+                mipmap: True

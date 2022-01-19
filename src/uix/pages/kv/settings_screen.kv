@@ -18,8 +18,7 @@
             size_hint_y: 0.2
             size_hint_x: None
             width: self.parent.width * 0.8
-            avatar: "../assets/images/darts.png"
-            story: "../assets/images/story.png"
+            label_bg_color: 171/255, 75/255, 0/255, 1
             callback: root.to_home
             icon: "menu"
             MDBoxLayout:
@@ -51,12 +50,14 @@
             size_hint_x: None
             width: self.parent.width * 0.8
             callback: root.to_home
-            padding: [0, 40, 0, 0]
+            icon: "message-question-outline"
+            label_bg_color: 26/255, 28/255, 31/255, 1
+
             MDBoxLayout:
+                padding: [0, 30, 0, 0]
                 orientation: 'vertical'
-                spacing: dp(5)
-                size_hint_x: None
-                width: root.width*0.8
+                size_hint: None, None
+                width: root.width
                 adaptive_size: True
                 OneLineAvatarIconListItem:
                     text: "Goal"

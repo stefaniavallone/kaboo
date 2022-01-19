@@ -2,21 +2,6 @@
 #:import StoryCard uix.components.page
 #:import HistoryItem uix.components.history_item
 
-<HistoryItem@RecycleKVIDsDataViewBehavior+MDBoxLayout>:
-    winner: ''
-    date: ''
-    players: ''
-    text_color: ''
-    spacing: [dp(10), dp(30), dp(10), dp(30)]
-    text: root.winner
-    theme_text_color:"Custom"
-    text_color: root.text_color
-    secondary_text: root.date
-    theme_secondary_text_color:"Custom"
-    secondary_text_color: 0.1, 0.1, 0.1, 1 
-    score: root.players
-    on_release: root.details(root.players_points, root.players, root.date)
-    size_hint_y: None
 
 <HistoryScreen>
     FitImage:
@@ -24,32 +9,34 @@
         size: root.size
         source: "../assets/images/background.png"
         allow_stretch: True
+
     MDRelativeLayout:
         Page:
             text: "HISTORY"
-            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            pos_hint: {"center_x": 0.5, "center_y": 0.485}
             size_hint_y: 0.9
             size_hint_x: None
             width: self.parent.width * 0.8
-            avatar: "../assets/images/darts.png"
-            story: "../assets/images/story.png"
+            label_bg_color: 0/255, 66/255, 153/255, 1
             callback: root.to_home
             icon: "book"
-            RecycleView:
-                viewclass: 'HistoryItem'
-                id: table_floor
-                scroll_type: ['bars']
-                scroll_wheel_distance: dp(10)
-                bar_width: dp(5)
-                RecycleBoxLayout:
-                    id: table_floor_layout
-                    default_size: None, dp(50)
-                    default_size_hint: 1, None
-                    size_hint_y: None
-                    spacing: dp(10)
-                    height: self.minimum_height + 80
-                    # add this so you can scroll
-                    row_default_height: 300
-                    orientation: 'vertical'
+
+            BoxLayout:
+                size_hint_y: None
+                height: root.height - 120
+                RecycleView:
+                    id: table_floor
+                    viewclass: 'HistoryItem'
+                    scroll_type: ['bars']
+                    scroll_wheel_distance: dp(30)
+                    bar_width: dp(5)
+                    RecycleBoxLayout:
+                        id: table_floor_layout
+                        default_size: None, dp(70)
+                        default_size_hint: 1, None
+                        size_hint_y: None
+                        height: self.minimum_height
+                        # row_default_height: 300 # add this so you can scroll
+                        orientation: 'vertical'
 
 
