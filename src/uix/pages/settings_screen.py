@@ -1,10 +1,9 @@
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
 from kivy.app import App
-from uix.components.modal_scroll import ModalScroll
-from kivy.uix.modalview import ModalView
-from kivymd.uix.list import OneLineAvatarIconListItem
-
+from kivy.metrics import dp
+from kivy.uix.label  import Label
+from kivy.factory import Factory
 
 class SettingsScreen(MDScreen):
     term_policy_dialog = None
@@ -46,16 +45,22 @@ class SettingsScreen(MDScreen):
         how_to_play_dialog.open()
 
     def infomations(self):
-        if not self.term_policy_dialog:
-            license = dict()
-            license['0'] = 'Freepik.com'
-            dialog = ModalScroll(text='Term and Policy')
-            dialog.add_item(license, OneLineAvatarIconListItem)
-            self.term_policy_dialog = ModalView(size_hint=(0.7, 0.4),
-                                                auto_dismiss=True,
-                                                background_color=[0, 0, 0, 0])
-            self.term_policy_dialog.add_widget(dialog)
-        self.term_policy_dialog.open()
+        dialog = Factory.KDialog()
+        dialog.ids.label_dialog.text= '\n[b][color=ff3333]SOUNDS[/color][/b]\n\n\
+• Game Background music "ukulele.mp3" from "www.bensound.com" (Royalty Free Music)\n\n\
+• Game ticking clock sound clock-ticking.mp3" from "www.fesliyanstudios.com" (Royalty Free Music)\n\n\
+• Game sound "jump-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n\
+• Game sound "right-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n\
+• Game sound "wrong-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n\
+• Game sound "10 second applause" of Mike Koenig from "www.SoundBible.com" (Royalty Free Music)\n\n\n\
+[b][color=ff3333]IMAGES[/color][/b]\n\n\
+• It\'s you turn image from "https://www.freepik.com/vectors/people" People vector created by freepik - www.freepik.com\n\n\
+• "Winner" image from "https://it.freepik.com/vettori/affari" Affari vettore creata da jcomp - it.freepik.com\n\n\
+• "Trophies" icons and images from "https://www.flaticon.com/free-icons/trophy" title="trophy icons">Trophy icons created by Aficons studio - Flaticon\n\n\
+• "Background" image from "https://www.freepik.com/vectors/background" Background vector created by starline - www.freepik.com\n\n\
+• "Home Background" image from "https://www.freepik.com/photos/background"Background photo created by freepik - www.freepik.com'
+       
+        dialog.open()
 
     def to_home(self):
         self.manager.transition.direction = 'right'

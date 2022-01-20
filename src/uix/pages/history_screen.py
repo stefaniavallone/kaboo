@@ -41,7 +41,7 @@ class HistoryScreen(MDScreen):
         self.dialog = ModalScroll(text=f'History of {date}')
         self.dialog.add_item(list_items, TwoLineListItem)
         
-        self.confirm_exit_dialog = ModalView(size_hint=(0.7, 0.8),
+        self.confirm_exit_dialog = ModalView(size_hint=(0.7, 0.5),
                                              auto_dismiss=True,
                                              background_color=[0, 0, 0, 0])
         self.confirm_exit_dialog.add_widget(self.dialog)

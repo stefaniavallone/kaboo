@@ -15,12 +15,8 @@ class ListItemWithCheckbox(TwoLineAvatarIconListItem,
     name = StringProperty()
     description = StringProperty()
     image = StringProperty()
-    obtained = BooleanProperty()
+    icon = StringProperty()
 
 
 class LeftImage(ILeftBodyTouch, MDIcon):
     """Custom left container"""
-
-
-class RightCheckbox(IRightBodyTouch, MDCheckbox):
-    """Custom right container."""

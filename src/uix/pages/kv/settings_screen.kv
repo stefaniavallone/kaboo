@@ -1,5 +1,20 @@
 #:import Page uix.components.page
 
+<KDialog@Popup>
+    id:pop
+    size_hint: 1, 0.7
+    auto_dismiss: True
+    title: 'Terms & Policy'
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+        Label:
+            id: label_dialog
+            text: '' * 1000
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+            markup: True
 
 <SettingsScreen>
     FitImage:

@@ -1,7 +1,7 @@
 import webbrowser
 from kivy.lang import Builder
 from kivymd.uix.relativelayout import MDRelativeLayout
-from kivymd.uix.list import OneLineAvatarIconListItem
+from kivymd.uix.list import OneLineListItem
 from kivy.properties import ObjectProperty, StringProperty
 Builder.load_file("uix/components/kv/modal_scroll.kv")
 
@@ -12,7 +12,7 @@ class ModalScroll(MDRelativeLayout):
 
     def add_item(self, elements, type):
         for key, value in elements.items():
-            if type == OneLineAvatarIconListItem:
+            if type == OneLineListItem:
                 self.ids.item_list.add_widget(
                     type(text=f'{value}'
                     )

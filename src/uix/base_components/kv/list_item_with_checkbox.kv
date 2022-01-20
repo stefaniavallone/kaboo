@@ -1,12 +1,11 @@
-<ListItemWithCheckbox>:
 
-    text: self.name
-    secondary_text: self.description
+<ListItemWithCheckbox>:
+    text: self.name * 1000
+    secondary_text: self.description * 1000
+    on_release: root.details(root.name, root.description, root.image)
 
     LeftImage:
         icon: root.image
 
-    RightCheckbox:
-        active: root.obtained
-        disabled: True
-
+    IconRightWidget:
+        icon: root.icon
