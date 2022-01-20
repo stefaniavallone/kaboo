@@ -1,8 +1,10 @@
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
+from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
 from kivy.metrics import dp
-from kivy.uix.label  import Label
+from kivy.uix.label import Label
+from kivy.uix.scrollview  import ScrollView
 from kivy.factory import Factory
 
 class SettingsScreen(MDScreen):
@@ -45,23 +47,20 @@ class SettingsScreen(MDScreen):
         how_to_play_dialog.open()
 
     def infomations(self):
-        dialog = Factory.KDialog()
-        dialog.ids.label_dialog.text= '\n[b][color=ff3333]SOUNDS[/color][/b]\n\n\
-• Game Background music "ukulele.mp3" from "www.bensound.com" (Royalty Free Music)\n\n\
-• Game ticking clock sound clock-ticking.mp3" from "www.fesliyanstudios.com" (Royalty Free Music)\n\n\
-• Game sound "jump-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n\
-• Game sound "right-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n\
-• Game sound "wrong-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n\
-• Game sound "10 second applause" of Mike Koenig from "www.SoundBible.com" (Royalty Free Music)\n\n\n\
-[b][color=ff3333]IMAGES[/color][/b]\n\n\
-• It\'s you turn image from "https://www.freepik.com/vectors/people" People vector created by freepik - www.freepik.com\n\n\
-• "Winner" image from "https://it.freepik.com/vettori/affari" Affari vettore creata da jcomp - it.freepik.com\n\n\
-• "Trophies" icons and images from "https://www.flaticon.com/free-icons/trophy" title="trophy icons">Trophy icons created by Aficons studio - Flaticon\n\n\
-• "Background" image from "https://www.freepik.com/vectors/background" Background vector created by starline - www.freepik.com\n\n\
-• "Home Background" image from "https://www.freepik.com/photos/background"Background photo created by freepik - www.freepik.com'
-       
-        dialog.open()
+        if not self.term_policy_dialog:
+            self.term_policy_dialog = MDDialog(
+                title="Terms & Policy:",
+                type="custom",
+                content_cls=TextTermsPolicy(),
+                radius=[20, 7, 20, 7]
+            )
+
+        self.term_policy_dialog.open()
 
     def to_home(self):
         self.manager.transition.direction = 'right'
         self.manager.current = 'home'
+
+
+class TextTermsPolicy(BoxLayout):
+    pass
