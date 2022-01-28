@@ -1,6 +1,6 @@
 import json
 
-from src.uix.components.modal_scroll import ModalScroll
+from uix.components.modal_scroll import ModalScroll
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.list import OneLineAvatarListItem, TwoLineListItem
 from kivy.properties import StringProperty
@@ -16,7 +16,7 @@ class Item(OneLineAvatarListItem):
 
 class HistoryScreen(MDScreen):
     def on_pre_enter(self, *args):
-        with open("../assets/resources/points.json") as histories_file:
+        with open("assets/resources/points.json") as histories_file:
             self.histories = json.load(histories_file)
 
         table_data = list()
@@ -24,7 +24,7 @@ class HistoryScreen(MDScreen):
             winner, score = best_player(history['players_points'])
             color = PLAYERS_COLORS[int(winner[1])]
             table_data.append({'date': str(history['date']),
-             'image': f'../assets/images/levels/{history["level"]}.png',
+             'image': f'assets/images/levels/{history["level"]}.png',
              'players': str(len(history['players_points'])),
              'winner': 'Team ' + str(int(winner[1]) + 1),
              'score': str(score),

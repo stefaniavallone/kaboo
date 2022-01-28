@@ -17,7 +17,7 @@ def best_player(player_points):
 
 
 def update_score_history(level, game_rounds, players_points):
-    filename = '../assets/resources/points.json'
+    filename = 'assets/resources/points.json'
     with open(filename, "r") as file:
         data = json.load(file)
         game = {

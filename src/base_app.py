@@ -18,7 +18,7 @@ class BaseApp(MDApp):
     
     def initialize_app(self):
         Window.soft_input_mode = "below_target"
-        fonts_path = "../assets/fonts/Montserrat/"
+        fonts_path = "assets/fonts/Montserrat/"
         font_name = "Montserrat"
         self.title = "Kaboo"
         self._set_theme()

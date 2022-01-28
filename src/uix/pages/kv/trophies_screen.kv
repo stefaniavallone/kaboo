@@ -8,7 +8,7 @@
     FitImage:
         size_hint: None, None
         size: root.size
-        source: "../assets/images/background.png"
+        source: "assets/images/background.png"
         allow_stretch: True
 
     MDRelativeLayout:
@@ -24,7 +24,7 @@
 
             BoxLayout:
                 size_hint_y: None
-                height: root.height - 120
+                height: root.height * 0.85
                 RecycleView:
                     id: list_trophies
                     viewclass: 'ListItemWithCheckbox'

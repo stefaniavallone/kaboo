@@ -22,7 +22,7 @@ class GameEndScreen(MDScreen):
         super().__init__(**kw)
         self.app = App.get_running_app()
         self.applause_sound = self.app.sound_manager.get_sound(
-            '../assets/sounds/applause.wav')
+            'assets/sounds/applause.wav')
     
     def on_pre_enter(self, *args):
         G = {'r0': {'p0': {'points': 0, 'actions': []}, 'p1': {'points': 6, 'actions': ['right', 'right', 'right', 'right', 'right', 'right']}}, 'r1': {'p0': {'points': 34, 'actions': ['jump', 'jump', 'jump', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}, 'p1': {'points': 21, 'actions': ['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}}}
@@ -37,7 +37,7 @@ class GameEndScreen(MDScreen):
         best_player_index, score = best_player(players_points)
         self.ids.winner_card.md_bg_color = PLAYERS_COLORS[int(best_player_index[1])]
         self.points = str(score)
-        self.winner = f"Team {best_player_index}"
+        self.winner = f"Team {best_player_index} wins!"
         self.score_history = update_score_history(self.game_level, game_rounds, players_points)
         self.applause_sound.play()
 
@@ -54,7 +54,7 @@ class GameEndScreen(MDScreen):
         self.view = ModalView(size_hint=(0.7, 0.4),
                          auto_dismiss=True,
                          background_color=[0,0,0,0])
-        self.view.add_widget(CustomModal(image="../assets/images/trophies/trophy_5points.png",
+        self.view.add_widget(CustomModal(image="assets/images/trophies/trophy_5points.png",
                                     text="asdasdsadsa", subtext="asdsadas",
                                     on_close=self.cancel,
                                     bg_color=(255 / 255, 241 / 255, 115 / 255, 1)))

@@ -13,16 +13,16 @@ package.domain = org.kames
 source.dir = ./src
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,kv,png,jpg,jpeg,atlas,ttf,json,wav
+source.include_exts = py,kv,png,jpg,jpeg,atlas,ttf,json,wav,mp3,ogg
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/*,images/*.png
+source.include_patterns = assets/*
 
 # (list) Source files to exclude (let empty to not exclude anything)
-source.exclude_exts = spec, log, pyc
+source.exclude_exts = spec, log, pyc, sh
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-source.exclude_dirs = tests, bin
+source.exclude_dirs = tests, bin, venv, design_utils
 
 # (list) List of exclusions using pattern matching
 #source.exclude_patterns = license,images/*/*.jpg
@@ -46,10 +46,10 @@ requirements = python3,kivy==2.0.0,kivymd==0.104.2,plyer==2.0.0,sdl2_ttf==2.0.15
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = ./assets/splash.png
+presplash.filename = %(source.dir)s/assets/splash.png
 
 # (str) Icon of the application
-icon.filename = ./assets/appicon.png
+icon.filename = %(source.dir)s/assets/appicon.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait

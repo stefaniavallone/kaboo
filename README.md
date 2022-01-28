@@ -15,3 +15,10 @@ Then you can
 docker run --volume "<absolute_path>":/home/user/hostcwd buildozer appclean
 docker run --volume "<absolute_path>":/home/user/hostcwd buildozer android debug # choose (debug|release) 
 ```
+
+
+# Debug with android
+```bash
+adb devices  # ensures the device is connected and appears in the list
+adb logcat | findstr com.kames.kaboo  # or python
+```

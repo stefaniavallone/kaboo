@@ -7,7 +7,7 @@ from uix.components.custom_modal import CustomModal
 class TrophiesScreen(MDScreen):
 
     def on_pre_enter(self):
-        with open("../assets/resources/trophies.json") as trophies_file:
+        with open("assets/resources/trophies.json") as trophies_file:
             self.trophies = json.load(trophies_file)
 
         list_trophies = list()

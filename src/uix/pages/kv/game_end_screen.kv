@@ -3,8 +3,8 @@
 
 
 <GameEndScreen>:
-    title: 'You win!'
-    image: '../assets/images/winner.png'
+    title: root.winner
+    image: 'assets/images/endgame/winner.png'
 
     MDBoxLayout:
         orientation: "vertical"
@@ -12,7 +12,7 @@
             id: winner_card
             md_bg_color: 1,0,0,1
             radius: [0, 0, 30, 30]
-            padding:dp(25)
+            padding: dp(25)
             MDBoxLayout:
                 orientation: "vertical"
                 Image:

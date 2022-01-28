@@ -22,11 +22,11 @@
                         text: "0"
                         adaptive_size: True
                         font_style: "H4"
-                        width: 40
+                        width: dp(40)
                         halign: "left"
                     MDIconButton:
                         icon: "redo"
-                        padding: 5
+                        padding: dp(5)
 
                     Timer:
                         id: timer
@@ -39,19 +39,19 @@
 
                     MDIconButton:
                         icon: "checkbox-marked-circle-outline"
-                        padding: 5
+                        padding: dp(5)
                     MDLabel:
                         id: player_points
                         adaptive_size: True
                         text: "0"
-                        width: 40
+                        width: dp(40)
                         font_style: "H4"
                         halign: "right"
 
             MDRelativeLayout:
                 id: controls_buttons
                 MDCard:
-                    radius: [0, 0, 20, 20]
+                    radius: [0, 0, dp(20), dp(20)]
                     size_hint_x: 0.3
                     pos_hint: {"center_x": .5, "center_y": .5}
                     MDRelativeLayout:
@@ -84,7 +84,7 @@
             pos_hint: {"center_x": .5, "center_y": .5}
             padding: dp(20)
             MDCard:
-                radius: [25, 25, 25, 25]
+                radius: [dp(25), dp(25), dp(25), dp(25)]
                 padding: [dp(10), dp(10), dp(10), dp(10)]
                 pos_hint: {"center_x": .5, "center_y": .5}
                 MDRelativeLayout:

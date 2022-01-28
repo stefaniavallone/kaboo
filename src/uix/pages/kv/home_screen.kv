@@ -6,7 +6,7 @@
     FitImage:
         size_hint: None, None
         size: root.size
-        source: "../assets/images/home_background.png"
+        source: "assets/images/home/home_background.png"
         #opacity: 0.75
 
     MDBoxLayout:
@@ -14,11 +14,11 @@
         MDRelativeLayout:
             id: logo_container
             size_hint_y: .25
-            padding:dp(25)
+            padding: dp(25)
             MDBoxLayout:
                 orientation:"vertical"
                 Image:
-                    source: '../assets/images/logo.png'
+                    source: 'assets/images/home/logo.png'
                     keep_ratio: True
                     opacity: 1
                     size_hint_y: None
@@ -33,7 +33,7 @@
             spacing:dp(15)
             ElementCard:
                 md_bg_color: 210/255, 158/255, 0/255, 1
-                image:"../assets/images/darts.png"
+                image:"assets/images/home/darts_easy.png"
                 text:"Easy"
                 subtext:"play"
                 items_count:"33 Cards"
@@ -41,7 +41,7 @@
 
             ElementCard:
                 md_bg_color: 205/255, 92/255, 0/255, 1
-                image:"../assets/images/darts2.png"
+                image:"assets/images/home/darts_medium.png"
                 text:"Medium"
                 subtext:"play"
                 items_count:"45 Cards"
@@ -49,7 +49,7 @@
 
             ElementCard:
                 md_bg_color: 130/255, 95/255, 30/255, 1
-                image: "../assets/images/darts3.png"
+                image: "assets/images/home/darts_hard.png"
                 text:"Hard"
                 subtext:"play"
                 items_count:"56 cards"
@@ -61,7 +61,7 @@
             adaptive_size: True
             pos_hint: {"center_x": .5, "center_y": .5}
             KMDIconSquaredButton:
-                icon: "../assets/images/icons/trophy.png"  #"trophy"
+                icon: "assets/images/icons/trophy.png"  #"trophy"
                 tooltip_text: "Trophy"
                 #md_bg_color: 210/255, 158/255, 0/255, 1
                 md_bg_color: 0.9, 0.9, 0.9, 1
@@ -72,7 +72,7 @@
 
             KMDIconSquaredButton:
                 id: history
-                icon: "../assets/images/icons/to-do-list.png"  #"book"
+                icon: "assets/images/icons/to-do-list.png"  #"book"
                 tooltip_text: "History"
                 #md_bg_color: 210/255, 158/255, 0/255, 1
                 md_bg_color: 0.9, 0.9, 0.9, 1
@@ -82,7 +82,7 @@
                     root.manager.current = 'history'
 
             KMDIconSquaredButton:
-                icon: "../assets/images/icons/value.png"  #"Star"
+                icon: "assets/images/icons/value.png"  #"Star"
                 tooltip_text: "History"
                 pos_hint: {"center_x": .5, "center_y": .5}
                 md_bg_color: 150/255, 128/255, 100/255, 1
@@ -92,7 +92,7 @@
 
             KMDIconSquaredButton:
                 id: settings
-                icon: "../assets/images/icons/list.png"  #"menu"
+                icon: "assets/images/icons/list.png"  #"menu"
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 tooltip_text: "Settings"
                 md_bg_color: 210/255, 158/255, 0/255, 1

@@ -7,7 +7,7 @@
     MDCard:
         id: card
         size_hint: 1, 1
-        radius: 32
+        radius: dp(32)
         elevation: 18
 
 
@@ -16,14 +16,14 @@
         size_hint: None, None
         height: "56dp"
         width: card.width * 0.8
-        radius: 28
+        radius: dp(28)
         x: card.width / 2 - self.width / 2
         y: card.height - self.height / 2
         elevation: 18
         md_bg_color: root.label_bg_color
         MDBoxLayout:
             id: label_container
-            padding: [0, 0, 15, 0]
+            padding: [0, 0, dp(15), 0]
             MDIconButton:
                 icon: "chevron-left"
                 theme_text_color: "Custom"

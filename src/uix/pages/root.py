@@ -57,6 +57,7 @@ class Root(ScreenManager):
     def keyboard(self, window, key, *args):
         if key == 27 and self.current != "home":
             self.current = "home"
-            return True  # key event consumed by app
-        else:
-            return False  # key event passed to Android
+
+        #else:
+        #    return False  # key event passed to Android
+        return True  # key event consumed by app

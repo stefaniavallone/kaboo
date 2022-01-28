@@ -1,26 +1,40 @@
 #:import Page uix.components.page
 
-<KDialog@Popup>
+
+<KDialog@ModalView>
     id:pop
-    size_hint: 1, 0.7
+    size_hint: 0.9, 0.7
     auto_dismiss: True
-    title: 'Terms & Policy'
-    ScrollView:
-        do_scroll_x: False
-        do_scroll_y: True
-        Label:
-            id: label_dialog
-            text: '' * 1000
-            text_size: self.width, None
-            size_hint: 1, None
-            height: self.texture_size[1]
-            markup: True
+    #title: 'Terms & Policy'
+    MDCard:
+        radius: [dp(20), dp(7), dp(20), dp(7)]
+        padding: [dp(10), dp(20), dp(10), dp(20)]
+        MDBoxLayout:
+            padding: dp(20)
+            orientation: "vertical"
+            MDLabel:
+                size_hint_y: 0.1
+                font_style: "H6"
+                bold: True
+                text: 'Terms & Policy'
+            ScrollView:
+                padding: 0, dp(10), 0, 0
+                do_scroll_x: False
+                do_scroll_y: True
+                MDLabel:
+                    id: label_dialog
+                    #text: '' * 1000
+                    text_size: self.width, None
+                    size_hint: 1, None
+                    height: self.texture_size[1]
+                    markup: True
+
 
 <SettingsScreen>
     FitImage:
         size_hint: None, None
         size: root.size
-        source: "../assets/images/background.png"
+        source: "assets/images/background.png"
         allow_stretch: True
 
     MDBoxLayout:
@@ -30,33 +44,54 @@
         Page:
             text: "SETTINGS"
             #pos_hint: {"center_x": 0.5, "center_y": 0.5}
-            size_hint_y: 0.2
+            size_hint_y: 0.15
             size_hint_x: None
             width: self.parent.width * 0.8
             label_bg_color: 171/255, 75/255, 0/255, 1
             callback: root.to_home
             icon: "menu"
             MDBoxLayout:
-                padding: 25, 40, 25, 35
-                MDGridLayout:
+                padding: dp(25), dp(40), dp(25), dp(35)
+                spacing: dp(20)
+                size_hint_y: None
+                height: self.parent.height * 0.85
+                MDBoxLayout:
                     id: settings
-                    cols:2
-                    size: root.width * 0.8, root.height * 0.8
-                    row_default_height: 40
-                    row_force_default: True
-                    MDLabel:
-                        text: "Sounds"
-                    MDSwitch:
-                        id: sound_switch
-                        widget_style: "ios"
-                        active: True
-                        on_active: root.toggle_sounds()
-                    MDLabel:
-                        text: "Enable Dark Theme"
-                    MDSwitch:
-                        widget_style: "ios"
-                        active: root.theme_dark_on
-                        on_active: root.toggle_dark_theme(app)
+                    orientation: 'vertical'
+                    MDBoxLayout:
+                        MDLabel:
+                            text: "Sounds"
+                        MDSwitch:
+                            id: sound_switch
+                            widget_style: "ios"
+                            active: True
+                            on_active: root.toggle_sounds()
+                    MDBoxLayout:
+                        MDLabel:
+                            text: "Enable Dark Theme"
+                        MDSwitch:
+                            widget_style: "ios"
+                            active: root.theme_dark_on
+                            on_active: root.toggle_dark_theme(app)
+                #MDGridLayout:
+                #    id: settings
+                #    cols:2
+                #    size: root.width * 0.8, root.height * 0.8
+                #    row_default_height: 40
+                #    row_force_default: True
+                #    MDLabel:
+                #        text: "Sounds"
+                #    MDSwitch:
+                #        id: sound_switch
+                #        widget_style: "ios"
+                #        active: True
+                #        on_active: root.toggle_sounds()
+                #    MDLabel:
+                #        text: "Enable Dark Theme"
+                #    MDSwitch:
+                #        widget_style: "ios"
+                #        active: root.theme_dark_on
+                #        on_active: root.toggle_dark_theme(app)
 
         Page:
             text: "TUTORIAL"
@@ -69,7 +104,7 @@
             label_bg_color: 26/255, 28/255, 31/255, 1
 
             MDBoxLayout:
-                padding: [0, 30, 0, 0]
+                padding: [0, dp(30), 0, 0]
                 orientation: 'vertical'
                 size_hint: None, None
                 width: root.width
@@ -111,7 +146,7 @@
             size_hint_x: None
             width: self.parent.width * 0.8
             ripple_behavior: True
-            on_release: root.infomations()
+            on_release: root.informations()
             MDRelativeLayout:
                 MDLabel:
                     pos_hint: {"center_x": 0.5, "center_y": 0.5}

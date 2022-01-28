@@ -19,16 +19,16 @@ class GameScreen(MDScreen):
         super().__init__(**kw)
         self.app = App.get_running_app()
         self.app_background_music = self.app.sound_manager.get_sound(
-            "../assets/sounds/cute.mp3")
-        self.game_background_music = self.app.sound_manager.get_sound('../assets/sounds/ukulele.mp3',
+            "assets/sounds/cute.ogg")
+        self.game_background_music = self.app.sound_manager.get_sound('assets/sounds/ukulele.ogg',
                                             True, 0.2)
-        self.clock_sound = self.app.sound_manager.get_sound('../assets/sounds/clock-ticking.mp3')
+        self.clock_sound = self.app.sound_manager.get_sound('assets/sounds/clock-ticking.ogg')
         self.right_notification = self.app.sound_manager.get_sound(
-            '../assets/sounds/right-notification.wav')
+            'assets/sounds/right-notification.wav')
         self.wrong_notification = self.app.sound_manager.get_sound(
-            '../assets/sounds/wrong-notification.wav')
+            'assets/sounds/wrong-notification.wav')
         self.jump_notification = self.app.sound_manager.get_sound(
-            '../assets/sounds/jump-notification.wav')
+            'assets/sounds/jump-notification.wav')
 
     def on_pre_enter(self, *args):
         self.round_time = self.app.status.getv("game.round_time", default_value=15)
@@ -58,7 +58,7 @@ class GameScreen(MDScreen):
         self.app.status.setv("game.sound", not sounds_on)
 
     def load_game(self):
-        with open(f"../assets/resources/game_levels/{self.game_level}.json") as game_file:
+        with open(f"assets/resources/game_levels/{self.game_level}.json") as game_file:
             game_elements = json.load(game_file)
             shuffle(game_elements)
             self.elements = game_elements + [{"word": "",
@@ -143,7 +143,7 @@ class GameScreen(MDScreen):
         self.clock_sound.stop()
         self.ids.timer.stop()
         e = CustomModal(
-                image="../assets/images/trophies/trophy_5points.png",
+                image="assets/images/go_home.png",
                 bg_color=(1, 1, 1, 1),
                 text="Are you sure?", 
                 subtext="You will lose game progress.",

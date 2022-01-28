@@ -13,7 +13,7 @@ class HomeScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
-        self.app_background_music = self.app.sound_manager.get_sound("../assets/sounds/cute.mp3", loop=True, volume=0.2)
+        self.app_background_music = self.app.sound_manager.get_sound("assets/sounds/cute.ogg", loop=True, volume=0.2)
 
     def on_pre_enter(self, *args):
         self.app_background_music.play(restart=False)
