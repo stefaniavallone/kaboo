@@ -1,16 +1,18 @@
 #:import Page uix.components.page
+#:import app_content_strings uix.constants.app_content_strings
 
 <TextTermsPolicy>
     orientation: "vertical"
-    spacing: "12dp"
+    spacing: dp(12)
     size_hint_y: None
     height: "450dp"
+    padding: [dp(10), dp(20), dp(10), dp(20)]
     ScrollView:
         do_scroll_x: False
         do_scroll_y: True
         MDLabel:
             id: label_dialog
-            text: '\n[b][color=ff3333]SOUNDS[/color][/b]\n\n• Game Background music "ukulele.mp3" from "www.bensound.com" (Royalty Free Music)\n\n• Game ticking clock sound clock-ticking.mp3" from "www.fesliyanstudios.com" (Royalty Free Music)\n\n• Game sound "jump-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n• Game sound "right-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n• Game sound "wrong-notification.wav" from "www.tunetank.com" (Royalty Free Music)\n\n• Game sound "10 second applause" of Mike Koenig from "www.SoundBible.com" (Royalty Free Music)\n\n\n[b][color=ff3333]IMAGES[/color][/b]\n\n• It is you turn image from "https://www.freepik.com/vectors/people" People vector created by freepik - www.freepik.com\n\n• "Winner" image from "https://it.freepik.com/vettori/affari" Affari vettore creata da jcomp - it.freepik.com\n\n• "Trophies" icons and images from "https://www.flaticon.com/free-icons/trophy" title="trophy icons">Trophy icons created by Aficons studio - Flaticon\n\n• "Background" image from "https://www.freepik.com/vectors/background" Background vector created by starline - www.freepik.com\n\n• "Home Background" image from "https://www.freepik.com/photos/background"Background photo created by freepik - www.freepik.com'
+            text: app_content_strings["terms_and_policies"]
             text_size: self.width, None
             size_hint: 1, None
             height: self.texture_size[1]
@@ -20,7 +22,7 @@
     FitImage:
         size_hint: None, None
         size: root.size
-        source: "../assets/images/background.png"
+        source: "assets/images/background.png"
         allow_stretch: True
 
     MDBoxLayout:
@@ -30,19 +32,19 @@
         Page:
             text: "SETTINGS"
             #pos_hint: {"center_x": 0.5, "center_y": 0.5}
-            size_hint_y: 0.2
+            size_hint_y: 0.15
             size_hint_x: None
             width: self.parent.width * 0.8
             label_bg_color: 171/255, 75/255, 0/255, 1
             callback: root.to_home
             icon: "menu"
             MDBoxLayout:
-                padding: 25, 40, 25, 35
+                padding: [dp(25), dp(40), dp(25), dp(35)]
                 MDGridLayout:
                     id: settings
                     cols:2
                     size: root.width * 0.8, root.height * 0.8
-                    row_default_height: 40
+                    row_default_height: dp(40)
                     row_force_default: True
                     MDLabel:
                         text: "Sounds"
@@ -69,7 +71,7 @@
             label_bg_color: 26/255, 28/255, 31/255, 1
 
             MDBoxLayout:
-                padding: [0, 30, 0, 0]
+                padding: [0, dp(30), 0, 0]
                 orientation: 'vertical'
                 size_hint: None, None
                 width: root.width
@@ -106,12 +108,12 @@
                         icon: "plus-circle"
                 
         MDCard:
-            radius: [20, 20, 20, 20]
+            radius: [dp(20), dp(20), dp(20), dp(20)]
             size_hint_y: 0.1
             size_hint_x: None
             width: self.parent.width * 0.8
             ripple_behavior: True
-            on_release: root.infomations()
+            on_release: root.informations()
             MDRelativeLayout:
                 MDLabel:
                     pos_hint: {"center_x": 0.5, "center_y": 0.5}
