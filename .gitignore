@@ -1,12 +1,13 @@
 # IDE
 .idea
 
-# Project files e librarie
+# Project files and libraries
 venv/
 bin/
 lib/
 lib64/
 design_utils/
+backup/
 keystores/
 
 # Byte-compiled / optimized / DLL files
