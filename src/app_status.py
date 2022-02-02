@@ -1,4 +1,3 @@
-from types import SimpleNamespace
 from typing import Any
 from utils.dp.observer import ConcreteSubject
 

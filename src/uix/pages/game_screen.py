@@ -1,6 +1,8 @@
 import json
 from random import shuffle
 
+from kivmob import TestIds
+from kivy.clock import Clock
 from kivy.logger import Logger
 from kivy.uix.modalview import ModalView
 from kivymd.uix.screen import MDScreen
@@ -18,19 +20,13 @@ class GameScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
-        self.app_background_music = self.app.sound_manager.get_sound(
-            "assets/sounds/cute.ogg")
-        self.game_background_music = self.app.sound_manager.get_sound('assets/sounds/ukulele.ogg',
-                                            True, 0.2)
-        self.clock_sound = self.app.sound_manager.get_sound('assets/sounds/clock-ticking.ogg')
-        self.right_notification = self.app.sound_manager.get_sound(
-            'assets/sounds/right-notification.wav')
-        self.wrong_notification = self.app.sound_manager.get_sound(
-            'assets/sounds/wrong-notification.wav')
-        self.jump_notification = self.app.sound_manager.get_sound(
-            'assets/sounds/jump-notification.wav')
+
+    def on_resume(self):
+        self.app.ads.request_interstitial()
 
     def on_pre_enter(self, *args):
+        self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
+        self.app.ads.request_interstitial()
         self.round_time = self.app.status.getv("game.round_time", default_value=15)
         self.num_players = self.app.status.getv("game.num_players", default_value=2)
         self.num_jumps = self.app.status.getv("game.num_jumps", default_value=5)
@@ -40,17 +36,34 @@ class GameScreen(MDScreen):
         self.current_player = self.app.status.getv("game.current_player",
                                              default_value=0)
 
+        Clock.schedule_once(self.load_music)
         self.load_game()
         self.play_round()
-        self.app_background_music.stop()
-        self.game_background_music.play()
         sounds_on = self.app.status.getv("game.sound", default_value=True)
         self._set_sound_icon(sounds_on)
         if self.num_jumps == 0:
             self.ids.jump_button.disabled = True
 
+    def load_music(self, *args):
+        self.app_background_music = self.app.sound_manager.get_sound(
+            "assets/sounds/cute.ogg")
+        self.game_background_music = self.app.sound_manager.get_sound(
+            'assets/sounds/ukulele.ogg',
+            True, 0.2)
+        self.clock_sound = self.app.sound_manager.get_sound(
+            'assets/sounds/clock-ticking.ogg')
+        self.right_notification = self.app.sound_manager.get_sound(
+            'assets/sounds/right-notification.wav')
+        self.wrong_notification = self.app.sound_manager.get_sound(
+            'assets/sounds/wrong-notification.wav')
+        self.jump_notification = self.app.sound_manager.get_sound(
+            'assets/sounds/jump-notification.wav')
+        self.app_background_music.stop()
+        self.game_background_music.play()
+
     def _set_sound_icon(self, sounds_on):
-        self.ids.sound_button.icon = "volume-off" if sounds_on else "volume-high"
+        self.ids.sound_button.icon = "assets/images/icons/volume-off.png" \
+            if sounds_on else "assets/images/icons/volume-high.png"
 
     def toggle_sounds(self):
         sounds_on = self.app.status.getv("game.sound", default_value=True)
@@ -124,14 +137,11 @@ class GameScreen(MDScreen):
             self.app.status.setv("game.current_player", 0)
             self.app.status.setv("game.current_round", self.current_round + 1)
             if self.current_round == 1:
-                self.manager.transition.direction = 'right'
-                self.manager.current = 'game_end'
+                self.manager.go_to_screen('game_end', direction='right')
             else:
-                self.manager.transition.direction = 'right'
-                self.manager.current = 'game_pre'
+                self.manager.go_to_screen('game_pre', direction='right')
         else:
-            self.manager.transition.direction = 'right'
-            self.manager.current = 'game_pre'
+            self.manager.go_to_screen('game_pre', direction='right')
 
     def on_pre_leave(self, *args):
         if self.confirm_exit_dialog:
@@ -178,4 +188,4 @@ class GameScreen(MDScreen):
         self.ids.timer.stop()
         self.confirm_exit_dialog.dismiss()
         self.app.status.setv("game.current_player", 0)
-        self.go_to_screen('home', direction='right')
+        self.manager.go_to_screen('home', direction='right')

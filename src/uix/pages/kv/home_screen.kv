@@ -4,6 +4,7 @@
 
 <HomeScreen>
     FitImage:
+        id: background_image
         size_hint: None, None
         size: root.size
         source: "assets/images/home/home_background.png"
@@ -35,7 +36,7 @@
                 md_bg_color: 210/255, 158/255, 0/255, 1
                 image:"assets/images/home/darts_easy.png"
                 text:"Easy"
-                subtext:"play"
+                #subtext:"play"
                 items_count:"33 Cards"
                 on_release: root.set_game_level("easy")
 
@@ -43,7 +44,7 @@
                 md_bg_color: 205/255, 92/255, 0/255, 1
                 image:"assets/images/home/darts_medium.png"
                 text:"Medium"
-                subtext:"play"
+                #subtext:"play"
                 items_count:"45 Cards"
                 on_release: root.set_game_level("medium")
 
@@ -51,53 +52,48 @@
                 md_bg_color: 130/255, 95/255, 30/255, 1
                 image: "assets/images/home/darts_hard.png"
                 text:"Hard"
-                subtext:"play"
+                #subtext:"play"
                 items_count:"56 cards"
                 on_release: root.set_game_level("hard")
-          
+
         MDBoxLayout:
             spacing: "10dp"
             padding: [dp(10), dp(10), dp(10), dp(10)]
             adaptive_size: True
             pos_hint: {"center_x": .5, "center_y": .5}
             KMDIconSquaredButton:
-                icon: "assets/images/icons/trophy.png"  #"trophy"
+                icon: "assets/images/icons/trophy.png"
                 tooltip_text: "Trophy"
                 #md_bg_color: 210/255, 158/255, 0/255, 1
                 md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'trophies'
+                    root.manager.go_to_screen('trophies', direction='left')
 
             KMDIconSquaredButton:
                 id: history
-                icon: "assets/images/icons/to-do-list.png"  #"book"
+                icon: "assets/images/icons/to-do-list.png"
                 tooltip_text: "History"
                 #md_bg_color: 210/255, 158/255, 0/255, 1
                 md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'history'
+                    root.manager.go_to_screen('history', direction='left')
 
             KMDIconSquaredButton:
-                icon: "assets/images/icons/value.png"  #"Star"
+                icon: "assets/images/icons/value.png"
                 tooltip_text: "History"
                 pos_hint: {"center_x": .5, "center_y": .5}
-                md_bg_color: 150/255, 128/255, 100/255, 1
-                #md_bg_color: 0.9, 0.9, 0.9, 1
+                md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release: root.show_rate_us_dialog()
 
             KMDIconSquaredButton:
                 id: settings
-                icon: "assets/images/icons/list.png"  #"menu"
+                icon: "assets/images/icons/list.png"
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 tooltip_text: "Settings"
-                md_bg_color: 210/255, 158/255, 0/255, 1
-                #md_bg_color: 0.9, 0.9, 0.9, 1
+                md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:
-                    root.manager.transition.direction = 'left'
-                    root.manager.current = 'settings'
+                    root.manager.go_to_screen('settings', direction='left')

@@ -10,5 +10,4 @@ class GameSettingsNumPlayersScreen(MDScreen):
 
     def set_num_players(self, value):
         self.app.status.setv("game.num_players", int(value))
-        self.manager.transition.direction = 'left'
-        self.manager.current = 'game_settings_num_jumps'
+        self.manager.go_to_screen('game_settings_num_jumps', direction='left')

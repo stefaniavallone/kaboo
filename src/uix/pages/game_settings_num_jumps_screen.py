@@ -10,5 +10,4 @@ class GameSettingsNumJumpsScreen(MDScreen):
         
     def set_num_jumps(self, value):
         self.app.status.setv("game.num_jumps", int(value))
-        self.manager.transition.direction = 'left'
-        self.manager.current = 'game_settings_round_time'
+        self.manager.go_to_screen('game_settings_round_time', direction='left')

@@ -1,11 +1,13 @@
 from utils.dp.observer import Observer, Subject
-from utils.sound_player import SoundPlayer
+from utils.sound.sound_player import SoundPlayer
+from utils.translation.internationalization import i18n
 
 
 class SoundManager(dict, Observer):
 
     def __init__(self):
         super().__init__()
+        print(i18n._("MAMMT"))
 
     def get_sound(self, path, loop=False, volume=1):
         if path not in self:

@@ -36,7 +36,7 @@ version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,setup
-requirements = python3,kivy==2.0.0,kivymd==0.104.2,plyer==2.0.0,sdl2_ttf==2.0.15,pillow,android,python-for-android
+requirements = python3,kivy==2.0.0,kivymd==0.104.2,plyer==2.0.0,sdl2_ttf==2.0.15,pillow,android,python-for-android,kivmob==2.0
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -85,10 +85,10 @@ fullscreen = 1
 android.presplash_color = #FFFFFF
 
 # (list) Permissions
-android.permissions = INTERNET,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
+android.permissions = INTERNET,ACCESS_NETWORK_STATE,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
 
 # (int) Target Android API, should be as high as possible.
-#android.api = 30
+android.api = 30
 
 # (int) Minimum API your APK will support.
 #android.minapi = 30
@@ -156,7 +156,7 @@ android.accept_sdk_license = True
 
 # (list) Gradle dependencies to add (currently works only with sdl2_gradle
 # bootstrap)
-#android.gradle_dependencies =
+android.gradle_dependencies = 'com.google.firebase:firebase-ads:10.2.0'
 
 # (list) add java compile options
 # this can for example be necessary when importing certain java libraries using the 'android.gradle_dependencies' option
@@ -203,7 +203,7 @@ android.accept_sdk_license = True
 #android.wakelock = False
 
 # (list) Android application meta-data to set (key=value format)
-#android.meta_data =
+android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-3940256099942544~3347511713
 
 # (list) Android library project to add (will be added in the
 # project.properties automatically.)
@@ -220,6 +220,10 @@ android.accept_sdk_license = True
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 android.archs = armeabi-v7a, arm64-v8a
+
+# (str) The Android release artifact type, choices: apk, aab
+android.release_artifact = aab
+
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing

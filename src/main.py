@@ -10,17 +10,6 @@ sys.path.insert(0, os.path.join(root_dir, "utils"))
 from base_app import BaseApp
 from utils.setup.env import setup_env
 
-"""
-Registering factories from factory.json.
-"""
-# r = Factory.register
-#
-# with open("factory_registers.json") as fd:
-#     custom_widgets = json.load(fd)
-#     for module, _classes in custom_widgets.items():
-#         for _class in _classes:
-#             r(_class, module=module)
-
 
 if __name__ == "__main__":
     setup_env()
@@ -29,6 +18,4 @@ if __name__ == "__main__":
         BaseApp().run()
     except Exception as e:
         error = traceback.format_exc()
-        #with open("ERROR.log", "w") as error_file:
-        #    error_file.write(error)
         print(error)

@@ -1,0 +1,149 @@
+[
+    {
+        "name": "5 points",
+        "description": "You scored 5 points",
+        "image": "assets/images/trophies/trophy_5points.png",
+        "obtained": true,
+        "points": 5
+    },
+    {
+        "name": "25 points",
+        "description": "You scored 25 points",
+        "image": "assets/images/trophies/trophy_25points.png",
+        "obtained": true,
+        "points": 25
+    },
+    {
+        "name": "50 points",
+        "description": "You scored 50 points",
+        "image": "assets/images/trophies/trophy_50points.png",
+        "obtained": true,
+        "points": 50
+    },
+    {
+        "name": "250 points",
+        "description": "You scored 250 points",
+        "image": "assets/images/trophies/trophy_250points.png",
+        "obtained": true,
+        "points": 250
+    },
+    {
+        "name": "500 points",
+        "description": "You scored 500 points",
+        "image": "assets/images/trophies/trophy_500points.png",
+        "obtained": true,
+        "points": 500
+    },
+    {
+        "name": "5 wrong answers",
+        "description": "You wrong 5 answers",
+        "image": "assets/images/trophies/trophy_5wrongs.png",
+        "obtained": true,
+        "action_type": "wrong",
+        "action_count": 5
+    },
+    {
+        "name": "25 wrong answers",
+        "description": "You wrong 25 answers",
+        "image": "assets/images/trophies/trophy_25wrongs.png",
+        "obtained": true,
+        "action_type": "wrong",
+        "action_count": 25
+    },
+    {
+        "name": "50 wrong answers",
+        "description": "You wrong 50 answers",
+        "image": "assets/images/trophies/trophy_50wrongs.png",
+        "obtained": true,
+        "action_type": "wrong",
+        "action_count": 50
+    },
+    {
+        "name": "250 wrong answers",
+        "description": "You wrong 250 answers",
+        "image": "assets/images/trophies/trophy_250wrongs.png",
+        "obtained": true,
+        "action_type": "wrong",
+        "action_count": 250
+    },
+    {
+        "name": "500 wrong answers",
+        "description": "You wrong 500 answers",
+        "image": "assets/images/trophies/trophy_500wrongs.png",
+        "obtained": true,
+        "action_type": "wrong",
+        "action_count": 500
+    },
+    {
+        "name": "1 game Easy",
+        "description": "You played 1 game with difficult \"Easy\"",
+        "image": "assets/images/trophies/trophy_1easy.png",
+        "obtained": true,
+        "level": "easy",
+        "level_count": 1
+    },
+    {
+        "name": "1 game Medium",
+        "description": "You played 1 game with difficult \"Medium\"",
+        "image": "assets/images/trophies/trophy_1medium.png",
+        "obtained": false,
+        "level": "medium",
+        "level_count": 1
+    },
+    {
+        "name": "1 game Difficult",
+        "description": "You played 1 game with difficult \"Difficult\"",
+        "image": "assets/images/trophies/trophy_1difficult.png",
+        "obtained": false,
+        "level": "difficult",
+        "level_count": 1
+    },
+    {
+        "name": "5 games Easy",
+        "description": "You played 5 games with difficult \"Easy\"",
+        "image": "assets/images/trophies/trophy_5easy.png",
+        "obtained": true,
+        "level": "easy",
+        "level_count": 5
+    },
+    {
+        "name": "1 game Medium",
+        "description": "You played 5 games with difficult \"Medium\"",
+        "image": "assets/images/trophies/trophy_5medium.png",
+        "obtained": false,
+        "level": "medium",
+        "level_count": 5
+    },
+    {
+        "name": "5 games Difficult",
+        "description": "You played 5 games with difficult \"Difficult\"",
+        "image": "assets/images/trophies/trophy_5difficult.png",
+        "obtained": false,
+        "level": "difficult",
+        "level_count": 5
+    },
+    {
+        "name": "25 game Easy",
+        "description": "You played 25 games with difficult \"Easy\"",
+        "image": "assets/images/trophies/trophy_25easy.png",
+        "obtained": true,
+        "level": "easy",
+        "level_count": 25
+    },
+    {
+        "name": "25 game Medium",
+        "description": "You played 25 games with difficult \"Medium\"",
+        "image": "assets/images/trophies/trophy_25medium.png",
+        "obtained": false,
+        "level": "medium",
+        "level_count": 25
+    },
+    {
+        "name": "25 game Difficult",
+        "description": "You played 25 games with difficult \"Difficult\"",
+        "image": "assets/images/trophies/trophy_25difficult.png",
+        "obtained": false,
+        "level": "difficult",
+        "level_count": 25
+    }
+]

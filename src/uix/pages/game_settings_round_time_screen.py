@@ -13,6 +13,5 @@ class GameSettingsRoundTimeScreen(MDScreen):
         m, s = value.split(':')
         seconds = int(datetime.timedelta(minutes=int(m), seconds=int(s)).total_seconds())
         self.app.status.setv("game.round_time", seconds)
-        self.manager.transition.direction = 'left'
-        self.manager.current = 'game_pre'
+        self.manager.go_to_screen('game_pre', direction='left')
 

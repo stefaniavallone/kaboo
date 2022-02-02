@@ -1,5 +1,7 @@
 import webbrowser
 
+from kivmob import TestIds
+from kivy.clock import Clock
 from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
@@ -13,9 +15,13 @@ class HomeScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
-        self.app_background_music = self.app.sound_manager.get_sound("assets/sounds/cute.ogg", loop=True, volume=0.2)
 
-    def on_pre_enter(self, *args):
+    def on_enter(self, *args):
+        Clock.schedule_once(self.load_music)
+
+    def load_music(self, *args):
+        self.app_background_music = self.app.sound_manager.get_sound(
+            "assets/sounds/cute.ogg", loop=True, volume=0.2)
         self.app_background_music.play(restart=False)
 
     def show_rate_us_dialog(self):
@@ -34,11 +40,10 @@ class HomeScreen(MDScreen):
         self.rate_us_dialog.open()
 
     def go_to_play_store(self, inst):
-        webbrowser.open("market://details?id=com.amazon.mp3")
+        webbrowser.open("market://details?id=org.kames.kaboo")
         self.rate_us_dialog.dismiss()
 
     def set_game_level(self, text):
         self.app.status.setv("game.level", text)
-        self.manager.transition.direction = 'left'
-        self.manager.current = 'game_settings_num_players'
+        self.manager.go_to_screen('game_settings_num_players')
 

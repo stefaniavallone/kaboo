@@ -59,8 +59,7 @@ class SettingsScreen(MDScreen):
         self.term_policy_dialog.open()
 
     def to_home(self):
-        self.manager.transition.direction = 'right'
-        self.manager.current = 'home'
+        self.manager.go_to_screen('home', direction='right')
 
 
 class TextTermsPolicy(BoxLayout):

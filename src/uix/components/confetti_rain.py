@@ -32,9 +32,18 @@ class ConfettiRain(FloatLayout):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        Clock.schedule_once(self._update)
+        self.running = False
+
+    def start(self):
+        if not self.running:
+            self.running = True
+            Clock.schedule_once(self._update)
+
+    def stop(self):
+        self.running = False
 
     def add_item(self, count):
+        print("ADD_ITEMMMMMMM")
         for x in range(count):
             color = [randint(0, 255)/255, randint(0, 255)/255, randint(0, 255)/255, 1]
             item = ConfettiItem(
@@ -43,8 +52,8 @@ class ConfettiRain(FloatLayout):
                     randint(*self.size_range)
                 ],
                 pos=[
-                    randint(0, self.width),
-                    randint(int(self.height * 0.9), self.height)
+                    randint(0, int(self.width)),
+                    randint(int(self.height * 0.9), int(self.height))
                 ],
                 color=color
             )
@@ -67,7 +76,8 @@ class ConfettiRain(FloatLayout):
         Clock.schedule_once(lambda x: self.remove_widget(item), final_time)
 
         # add new
-        Clock.schedule_once(lambda x: self.add_item(1), final_time)
+        if self.running:
+            Clock.schedule_once(lambda x: self.add_item(1), final_time)
 
         fade_time = final_time - randint(*self.time_before_fade)
         Clock.schedule_once(lambda x: self._fade_out(item, fade_time),

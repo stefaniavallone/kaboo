@@ -5,6 +5,7 @@ from kivymd.uix.screen import MDScreen
 from logic.game import PLAYERS_COLORS
 from logic.score import compute_points, best_player, update_score_history
 from logic.trophies_checker import check_trophies
+from uix.components.confetti_rain import ConfettiRain
 from uix.components.custom_modal import CustomModal
 from kivy.app import App
 
@@ -41,8 +42,12 @@ class GameEndScreen(MDScreen):
         self.score_history = update_score_history(self.game_level, game_rounds, players_points)
         self.applause_sound.play()
 
+    def on_leave(self, *args):
+        self.ids.confetti_rain.stop()
+
     def on_enter(self, *args):
         new_trophies = check_trophies(self.score_history)
+        self.ids.confetti_rain.start()
         self.trophies_list = new_trophies.values()
         # for trophy in self.trophies_list:
         #     e = CustomModal(text=trophy.name, subtext=trophy.description,
@@ -64,8 +69,7 @@ class GameEndScreen(MDScreen):
         self.view.dismiss()
 
     def to_home(self, inst=None):
-        self.manager.transition.direction = 'right'
-        self.manager.current = 'home'
+        self.manager.go_to_screen('home', direction='right')
 
     def on_pre_leave(self, *args):
         self.applause_sound.stop()

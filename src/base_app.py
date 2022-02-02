@@ -1,10 +1,11 @@
+from kivmob import KivMob, TestIds
 from kivy.core.text import LabelBase
 from kivy.core.window import Window
 from kivymd.app import MDApp
 from app_status import AppStatus
 
 from uix.pages.root import Root
-from utils.sound_manager import SoundManager
+from utils.sound.sound_manager import SoundManager
 
 
 class BaseApp(MDApp):
@@ -12,6 +13,7 @@ class BaseApp(MDApp):
     def __init__(self, **kwargs):
         super(BaseApp, self).__init__(**kwargs)
         self.initialize_app()
+        self.ads = KivMob(TestIds.APP)
         self.status = AppStatus()
         self.sound_manager = SoundManager()
         self.status.attach(self.sound_manager)

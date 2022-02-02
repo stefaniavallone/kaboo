@@ -7,6 +7,7 @@ bin/
 lib/
 lib64/
 design_utils/
+keystores/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -32,14 +32,8 @@ class GamePreScreen(MDScreen):
         self.ids.play_button.md_bg_color = PLAYERS_COLORS[curr_player]
 
     def to_game(self):
-        self.manager.transition.direction = 'left'
-        self.manager.current = 'game'
+        self.manager.go_to_screen('game', direction='left')
 
     def to_home(self):
         self.app.status.setv("game.current_player", 0)
-        self.manager.transition.direction = 'right'
-        self.manager.current = 'home'
-    
-    def reset(self):
-        self.manager.transition.direction = 'right'
-        self.manager.current = 'game_settings_num_players'
+        self.manager.go_to_screen('home', direction='right')

@@ -38,6 +38,5 @@ class TrophiesScreen(MDScreen):
         self.view.dismiss()
 
     def to_home(self):
-        self.manager.transition.direction = 'right'
-        self.manager.current = 'home'
+        self.manager.go_to_screen('home', direction='right')
 
