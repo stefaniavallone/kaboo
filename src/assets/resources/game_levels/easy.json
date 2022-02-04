@@ -1,58 +1,617 @@
 [
-	{
-		"word": "Food",
-		"forbidden" : ["eat", "mouth", "hungry", "full", "delicious"]
-	},
-	{
-		"word": "Music",
-		"forbidden" : ["listen", "song", "instrument", "play", "hear"]
-	},
-	{
-		"word": "Fish",
-		"forbidden" : ["swim", "food", "ocean", "lake", "river"]
-	},
-	{
-		"word": "Physics",
-		"forbidden" : ["study", "science", "gravity", "force", "move"]
-	},
-	{
-		"word": "Java",
-		"forbidden" : ["coffee", "language", "drink", "oracle", "hot"]
-	},
-	{
-		"word": "Money",
-		"forbidden" : ["wealth", "job", "pay", "buy", "sell"]
-	},
-	{
-		"word": "Shotgun",
-		"forbidden" : ["weapon", "pump", "zombie", "barrel", "bullet"]
-	},
-	{
-		"word": "Rice",
-		"forbidden" : ["chinese", "field", "university", "grain", "food"]
-	},
-	{
-		"word": "Cellphone",
-		"forbidden" : ["call", "mobile", "pocket", "internet", "ear"]
-	},
-	{
-		"word": "Peanut Butter",
-		"forbidden" : ["bread", "sandwich", "jam", "jelly", "brown"]
-	},
-	{
-		"word": "Ketchup",
-		"forbidden" : ["fries", "tomato", "sauce", "condiment", "dip"]
-	},
-	{
-		"word": "Pikachu",
-		"forbidden" : ["Pokemon", "Ash", "mouse", "rat", "electric"]
-	},
-	{
-		"word": "Swimming",
-		"forbidden" : ["water", "pool", "lake", "ocean", "suit"]
-	},
-	{
-		"word": "Piano",
-		"forbidden" : ["music", "instrument", "key", "pedal", "grand"]
-	}
+    {
+        "word": "Car",
+        "forbidden": [
+            "driver",
+            "ride",
+            "transport",
+            "fast",
+            "travel"
+        ]
+    },
+    {
+        "word": "Dragonfly",
+        "forbidden": [
+            "red",
+            "wings",
+            "Insect",
+            "Fly",
+            "dragon"
+        ]
+    },
+    {
+        "word": "Snowflake",
+        "forbidden": [
+            "cold",
+            "winter",
+            "flower",
+            "snow",
+            "fall"
+        ]
+    },
+    {
+        "word": "Hungry",
+        "forbidden": [
+            "feeling",
+            "eat",
+            "food",
+            "breakfast",
+            "meal"
+        ]
+    },
+    {
+        "word": "Duck",
+        "forbidden": [
+            "bird",
+            "yellow",
+            "chicken",
+            "quack",
+            "food"
+        ]
+    },
+    {
+        "word": "Pillow",
+        "forbidden": [
+            "head",
+            "sleep",
+            "soft",
+            "bed",
+            "blanket"
+        ]
+    },
+    {
+        "word": "Dance",
+        "forbidden": [
+            "Shoes",
+            "Romantic",
+            "Music",
+            "Sing",
+            "Town Square"
+        ]
+    },
+    {
+        "word": "Blanket",
+        "forbidden": [
+            "Warm",
+            "Bed",
+            "Pillow",
+            "Soft",
+            "Cold"
+        ]
+    },
+    {
+        "word": "Soccer",
+        "forbidden": [
+            "Ball",
+            "world Cup",
+            "Black",
+            "Sport",
+            "Team"
+        ]
+    },
+    {
+        "word": "Cheese",
+        "forbidden": [
+            "Yellow",
+            "White",
+            "Pizza",
+            "Food",
+            "Italy"
+        ]
+    },
+    {
+        "word": "Snail",
+        "forbidden": [
+            "Round",
+            "Slow",
+            "River",
+            "Eat",
+            "Animal"
+        ]
+    },
+    {
+        "word": "Husband",
+        "forbidden": [
+            "Wife",
+            "Ring",
+            "Marry",
+            "Man",
+            "Friend"
+        ]
+    },
+    {
+        "word": "Underwear",
+        "forbidden": [
+            "Small",
+            "Clothing",
+            "Every Day",
+            "Secret",
+            "Under"
+        ]
+    },
+    {
+        "word": "Girlfriend",
+        "forbidden": [
+            "Boyfriend",
+            "Beautiful",
+            "Flowers",
+            "Date",
+            "Female"
+        ]
+    },
+    {
+        "word": "Giraffe",
+        "forbidden": [
+            "Tall",
+            "Africa",
+            "Neck",
+            "Long",
+            "Yellow"
+        ]
+    },
+    {
+        "word": "Camera",
+        "forbidden": [
+            "Photos",
+            "Pictures",
+            "Snapshot",
+            "Travel",
+            "Memories"
+        ]
+    },
+    {
+        "word": "Slippers",
+        "forbidden": [
+            "Warm",
+            "Feet",
+            "Winter",
+            "House",
+            "Soft"
+        ]
+    },
+    {
+        "word": "Comb",
+        "forbidden": [
+            "Brush",
+            "Hair",
+            "Smooth",
+            "Small",
+            "Beautiful"
+        ]
+    },
+    {
+        "word": "Hamburger",
+        "forbidden": [
+            "America",
+            "Beef",
+            "Bread",
+            "McDonalds",
+            "Unhealthy"
+        ]
+    },
+    {
+        "word": "Polar Bear",
+        "forbidden": [
+            "cold",
+            "Winter",
+            "Alaska",
+            "White",
+            "Snow"
+        ]
+    },
+    {
+        "word": "Penguin",
+        "forbidden": [
+            "Bird",
+            "Fly",
+            "Animal",
+            "Black",
+            "White"
+        ]
+    },
+    {
+        "word": "Glasses",
+        "forbidden": [
+            "Eyes",
+            "See",
+            "Contacts",
+            "Wear",
+            "Face"
+        ]
+    },
+    {
+        "word": "Popcorn",
+        "forbidden": [
+            "Kernel",
+            "Butter",
+            "Sweet",
+            "Microwave",
+            "Snack Food"
+        ]
+    },
+    {
+        "word": "Speech",
+        "forbidden": [
+            "Give",
+            "Speak",
+            "Important",
+            "Audience",
+            "Nervous"
+        ]
+    },
+    {
+        "word": "Furious",
+        "forbidden": [
+            "Angry",
+            "Red Face",
+            "Hurt",
+            "Rage",
+            "Violent"
+        ]
+    },
+    {
+        "word": "Chicken Leg",
+        "forbidden": [
+            "Bird",
+            "Body",
+            "Eat",
+            "Food",
+            "KFC"
+        ]
+    },
+    {
+        "word": "Toilet",
+        "forbidden": [
+            "Washroom",
+            "WC",
+            "Pee",
+            "Poop",
+            "Bathroom"
+        ]
+    },
+    {
+        "word": "Wish",
+        "forbidden": [
+            "Want",
+            "Desire",
+            "Hope",
+            "Dream",
+            "Long For"
+        ]
+    },
+    {
+        "word": "Exercise",
+        "forbidden": [
+            "Want",
+            "Desire",
+            "Hope",
+            "Dream",
+            "Long For",
+            "Run",
+            "Sports",
+            "Healthy",
+            "Daily",
+            "Morning"
+        ]
+    },
+    {
+        "word": "Crown",
+        "forbidden": [
+            "Head",
+            "Gold",
+            "King",
+            "Queen",
+            "Jewels"
+        ]
+    },
+    {
+        "word": "Princess",
+        "forbidden": [
+            "Prince",
+            "Queen",
+            "Daughter",
+            "Royal",
+            "Castle"
+        ]
+    },
+    {
+        "word": "Internet",
+        "forbidden": [
+            "Computer",
+            "Surf",
+            "Web",
+            "Net",
+            "Technology"
+        ]
+    },
+    {
+        "word": "Jacket",
+        "forbidden": [
+            "Coat",
+            "Warm",
+            "Clothes",
+            "Sleeves",
+            "Zipper"
+        ]
+    },
+    {
+        "word": "Shower",
+        "forbidden": [
+            "Rain",
+            "Clean",
+            "Water",
+            "Every Day",
+            "Bath"
+        ]
+    },
+    {
+        "word": "Wind",
+        "forbidden": [
+            "Blow",
+            "Autumn",
+            "Invisible",
+            "Trees",
+            "Kite"
+        ]
+    },
+    {
+        "word": "Church",
+        "forbidden": [
+            "Sing",
+            "Building",
+            "Cross",
+            "God",
+            "Speaker"
+        ]
+    },
+    {
+        "word": "Police",
+        "forbidden": [
+            "Uniform",
+            "Safety",
+            "Peace",
+            "Protect",
+            "Siren"
+        ]
+    },
+    {
+        "word": "Freezer",
+        "forbidden": [
+            "Cold",
+            "Refrigerator",
+            "Ice",
+            "Food",
+            "Kitchen"
+        ]
+    },
+    {
+        "word": "Straw",
+        "forbidden": [
+            "Hollow",
+            "Horses",
+            "Farm",
+            "Drink",
+            "Suck"
+        ]
+    },
+    {
+        "word": "Leaf",
+        "forbidden": [
+            "Tree",
+            "Green",
+            "Fall",
+            "Plant",
+            "Page"
+        ]
+    },
+    {
+        "word": "Noun",
+        "forbidden": [
+            "Verb",
+            "Speech",
+            "Adjective",
+            "PERSON",
+            "Place"
+        ]
+    },
+    {
+        "word": "Taxi",
+        "forbidden": [
+            "Car",
+            "Public",
+            "Transport",
+            "Fare",
+            "City"
+        ]
+    },
+    {
+        "word": "Witch",
+        "forbidden": [
+            "Broom",
+            "Green",
+            "Magic",
+            "Halloween",
+            "Powers"
+        ]
+    },
+    {
+        "word": "Fork",
+        "forbidden": [
+            "Spoon",
+            "Knife",
+            "Eat",
+            "Prongs",
+            "Divide"
+        ]
+    },
+    {
+        "word": "Food",
+        "forbidden": [
+            "eat",
+            "mouth",
+            "hungry",
+            "full",
+            "delicious"
+        ]
+    },
+    {
+        "word": "Music",
+        "forbidden": [
+            "listen",
+            "song",
+            "instrument",
+            "play",
+            "hear"
+        ]
+    },
+    {
+        "word": "Fish",
+        "forbidden": [
+            "swim",
+            "food",
+            "ocean",
+            "lake",
+            "river"
+        ]
+    },
+    {
+        "word": "Physics",
+        "forbidden": [
+            "study",
+            "science",
+            "gravity",
+            "force",
+            "move"
+        ]
+    },
+    {
+        "word": "Java",
+        "forbidden": [
+            "coffee",
+            "language",
+            "drink",
+            "oracle",
+            "hot"
+        ]
+    },
+    {
+        "word": "Money",
+        "forbidden": [
+            "wealth",
+            "job",
+            "pay",
+            "buy",
+            "sell"
+        ]
+    },
+    {
+        "word": "Shotgun",
+        "forbidden": [
+            "weapon",
+            "pump",
+            "zombie",
+            "barrel",
+            "bullet"
+        ]
+    },
+    {
+        "word": "Rice",
+        "forbidden": [
+            "chinese",
+            "field",
+            "university",
+            "grain",
+            "food"
+        ]
+    },
+    {
+        "word": "Cellphone",
+        "forbidden": [
+            "call",
+            "mobile",
+            "pocket",
+            "internet",
+            "ear"
+        ]
+    },
+    {
+        "word": "Peanut Butter",
+        "forbidden": [
+            "bread",
+            "sandwich",
+            "jam",
+            "jelly",
+            "brown"
+        ]
+    },
+    {
+        "word": "Ketchup",
+        "forbidden": [
+            "fries",
+            "tomato",
+            "sauce",
+            "condiment",
+            "dip"
+        ]
+    },
+    {
+        "word": "Pikachu",
+        "forbidden": [
+            "Pokemon",
+            "Ash",
+            "mouse",
+            "rat",
+            "electric"
+        ]
+    },
+    {
+        "word": "Swimming",
+        "forbidden": [
+            "water",
+            "pool",
+            "lake",
+            "ocean",
+            "suit"
+        ]
+    },
+    {
+        "word": "Piano",
+        "forbidden": [
+            "music",
+            "instrument",
+            "key",
+            "pedal",
+            "grand"
+        ]
+    },
+    {
+        "word": "Advice",
+        "forbidden": [
+            "Guide",
+            "Wise",
+            "Recommend",
+            "What to do",
+            "Help"
+        ]
+    },
+    {
+        "word": "Director",
+        "forbidden": [
+            "Movie",
+            "Producer",
+            "In Charge",
+            "Supervise",
+            "Set"
+        ]
+    },
+    {
+        "word": "Continent",
+        "forbidden": [
+            "Ocean",
+            "Asia",
+            "Land",
+            "Seven",
+            "Earth"
+        ]
+    }
 ]

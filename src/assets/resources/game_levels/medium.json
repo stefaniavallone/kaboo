@@ -1,118 +1,612 @@
 [
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "marry",
-		"forbidden" : ["wedding", "knot", "ring", "groom", "bride"]
-	},
-	{
-		"word": "me",
-		"forbidden" : ["not", "you", "I", "myself", "person"]
-	},
-	{
-		"word": "cafe",
-		"forbidden" : ["food", "snack", "coffee", "drink", "eat"]
-	},
-	{
-		"word": "television",
-		"forbidden" : ["watch", "cartoon", "drama", "channel", "tv"]
-	},
-	{
-		"word": "soccer",
-		"forbidden" : ["ball", "black & white", "round", "play", "sport"]
-	},
-	{
-		"word": "violin",
-		"forbidden" : ["strings", "orchestra", "wood", "music", "instrument"]
-	},
-	{
-		"word": "boot",
-		"forbidden" : ["water", "sea", "ship", "captain", "transport"]
-	},
-	{
-		"word": "father",
-		"forbidden" : ["parent", "husband", "man", "family", "work"]
-	},
-	{
-		"word": "rain",
-		"forbidden" : ["precipitation", "water", "sky", "wet", "drops"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["joker", "circus", "red nose", "Mc Donalds", "make-up"]
-	},
-	{
-		"word": "IPod",
-		"forbidden" : ["music player", "mp3", "Apple", "IPad", "Iphone"]
-	},
-	{
-		"word": "lipstick",
-		"forbidden" : ["red", "lips", "purse", "women", "beautiflu"]
-	},
-	{
-		"word": "fear",
-		"forbidden" : ["phobia", "scare", "taboo", "terror", "spiders"]
-	},
-	{
-		"word": "sea",
-		"forbidden" : ["blue", "sky", "water", "ship", "ocean"]
-	},
-	{
-		"word": "chicken",
-		"forbidden" : ["food", "egg", "KFC", "fried", "rooster"]
-	},
-	{
-		"word": "napkin",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "diamond",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "bee",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "honey",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "husband",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	},
-	{
-		"word": "you",
-		"forbidden" : ["me", "him", "I", "not", "her"]
-	}
+    {
+        "word": "Dinosaur",
+        "forbidden": [
+            "Big",
+            "Animal",
+            "Extinct",
+            "Long Ago",
+            "Reptile"
+        ]
+    },
+    {
+        "word": "Japan",
+        "forbidden": [
+            "Country",
+            "Asia",
+            "Cherry Blossom",
+            "Sushi",
+            "Tokyo"
+        ]
+    },
+    {
+        "word": "New York",
+        "forbidden": [
+            "City",
+            "America",
+            "Big Apple",
+            "Statue of Liberty",
+            "Manhattan"
+        ]
+    },
+    {
+        "word": "Shanghai",
+        "forbidden": [
+            "Modern",
+            "Big",
+            "China",
+            "Expo",
+            "Famous"
+        ]
+    },
+    {
+        "word": "Michael Jackson",
+        "forbidden": [
+            "Dance",
+            "Thriller",
+            "Strange",
+            "Famous",
+            "Singer"
+        ]
+    },
+    {
+        "word": "Bench",
+        "forbidden": [
+            "Sit",
+            "Wooden",
+            "Chair",
+            "Long",
+            "Park"
+        ]
+    },
+    {
+        "word": "Ice Cream",
+        "forbidden": [
+            "Cold",
+            "Summer",
+            "Sweet",
+            "Snack",
+            "Cone"
+        ]
+    },
+    {
+        "word": "Foreigner",
+        "forbidden": [
+            "Teacher",
+            "Different",
+            "Outside",
+            "Country",
+            "Travel"
+        ]
+    },
+    {
+        "word": "Boots",
+        "forbidden": [
+            "Winter",
+            "Shoes",
+            "Warm",
+            "Fashion",
+            "Snow"
+        ]
+    },
+    {
+        "word": "plane ticket",
+        "forbidden": [
+            "Expensive",
+            "Flight",
+            "Travel",
+            "Paper",
+            "Seat"
+        ]
+    },
+    {
+        "word": "Turkey",
+        "forbidden": [
+            "bird",
+            "Holiday",
+            "thanksgiving",
+            "Big",
+            "Tired"
+        ]
+    },
+    {
+        "word": "Soy Sauce",
+        "forbidden": [
+            "Chinese",
+            "Liquid",
+            "Brown",
+            "Cooking",
+            "Salty"
+        ]
+    },
+    {
+        "word": "Yoga Teacher",
+        "forbidden": [
+            "Exercise",
+            "Instructor",
+            "Master",
+            "Chinese",
+            "Help"
+        ]
+    },
+    {
+        "word": "Carry",
+        "forbidden": [
+            "Hold",
+            "Pick Up",
+            "Move",
+            "Transport",
+            "Support"
+        ]
+    },
+    {
+        "word": "Blossom",
+        "forbidden": [
+            "Flower",
+            "Young",
+            "Bud",
+            "Spring",
+            "Bloom"
+        ]
+    },
+    {
+        "word": "Broom",
+        "forbidden": [
+            "Sweep",
+            "Floor",
+            "Witch",
+            "Wooden",
+            "Dust"
+        ]
+    },
+    {
+        "word": "Parade",
+        "forbidden": [
+            "Line",
+            "Crowd",
+            "Floats",
+            "Gather",
+            "Holiday"
+        ]
+    },
+    {
+        "word": "Fashion",
+        "forbidden": [
+            "Clothes",
+            "Model",
+            "Girls",
+            "Look",
+            "Magazine"
+        ]
+    },
+    {
+        "word": "Wedding Dress",
+        "forbidden": [
+            "White",
+            "married",
+            "Clothes",
+            "SPECIAL",
+            "Girls"
+        ]
+    },
+    {
+        "word": "Kung Fu Panda",
+        "forbidden": [
+            "Movie",
+            "China",
+            "Noodles",
+            "Children",
+            "famous"
+        ]
+    },
+    {
+        "word": "Marker",
+        "forbidden": [
+            "Write",
+            "Draw",
+            "Colors",
+            "Children",
+            "Art"
+        ]
+    },
+    {
+        "word": "Trash Can",
+        "forbidden": [
+            "Rubbish",
+            "Barrel",
+            "Worthless",
+            "Ruin",
+            "Old"
+        ]
+    },
+    {
+        "word": "Snowman",
+        "forbidden": [
+            "Three",
+            "Children",
+            "Make",
+            "Winter",
+            "Outside"
+        ]
+    },
+    {
+        "word": "Wings",
+        "forbidden": [
+            "Bird",
+            "Chicken",
+            "Fly",
+            "Arms",
+            "Feathers"
+        ]
+    },
+    {
+        "word": "Jealousy",
+        "forbidden": [
+            "Envy",
+            "Emotion",
+            "Compare",
+            "Green",
+            "Achieve"
+        ]
+    },
+    {
+        "word": "Pilot",
+        "forbidden": [
+            "Fly",
+            "Plane",
+            "Helicopter",
+            "Man",
+            "Travel"
+        ]
+    },
+    {
+        "word": "Lawyer",
+        "forbidden": [
+            "Argue",
+            "Defend",
+            "Law",
+            "Client",
+            "Crime"
+        ]
+    },
+    {
+        "word": "Hair Salon",
+        "forbidden": [
+            "Style",
+            "Dye",
+            "Wash",
+            "Cut",
+            "Barber"
+        ]
+    },
+    {
+        "word": "Picture Frame",
+        "forbidden": [
+            "Photo",
+            "Memory",
+            "Wood",
+            "Glass",
+            "Home"
+        ]
+    },
+    {
+        "word": "Purse",
+        "forbidden": [
+            "Leather",
+            "Bag",
+            "Money",
+            "Woman",
+            "Carry"
+        ]
+    },
+    {
+        "word": "Makeup",
+        "forbidden": [
+            "Face",
+            "Mascara",
+            "Lipstick",
+            "Girls",
+            "Beautiful"
+        ]
+    },
+    {
+        "word": "Alligator",
+        "forbidden": [
+            "Crocodile",
+            "Florida",
+            "Green",
+            "Animal",
+            "Teeth"
+        ]
+    },
+    {
+        "word": "Worry",
+        "forbidden": [
+            "Nervous",
+            "Anxiety",
+            "Stress",
+            "Scared",
+            "Trouble"
+        ]
+    },
+    {
+        "word": "Moose",
+        "forbidden": [
+            "Animal",
+            "Mammal",
+            "Forest",
+            "Antlers",
+            "Hunting"
+        ]
+    },
+    {
+        "word": "Bridge",
+        "forbidden": [
+            "Cross",
+            "River",
+            "Build",
+            "Over",
+            "Connect"
+        ]
+    },
+    {
+        "word": "Nervous",
+        "forbidden": [
+            "Anxious",
+            "Test",
+            "Difficulty",
+            "Pressure",
+            "Scared"
+        ]
+    },
+    {
+        "word": "Camel",
+        "forbidden": [
+            "Humps",
+            "Desert",
+            "Animal",
+            "Water",
+            "Cigarette"
+        ]
+    },
+    {
+        "word": "License",
+        "forbidden": [
+            "Driver",
+            "Car",
+            "Card",
+            "Permit",
+            "Allow"
+        ]
+    },
+    {
+        "word": "Liberty",
+        "forbidden": [
+            "Freedom",
+            "Statue",
+            "Power",
+            "Choose",
+            "Decide"
+        ]
+    },
+    {
+        "word": "Shout",
+        "forbidden": [
+            "Yell",
+            "Loud",
+            "Speak",
+            "Angry",
+            "Danger"
+        ]
+    },
+    {
+        "word": "Monster",
+        "forbidden": [
+            "Scary",
+            "Green",
+            "Alien",
+            "Zombie",
+            "Create"
+        ]
+    },
+    {
+        "word": "Wheelchair",
+        "forbidden": [
+            "Cripple",
+            "Handicapped",
+            "Legs",
+            "Old",
+            "Elderly"
+        ]
+    },
+    {
+        "word": "Tornado",
+        "forbidden": [
+            "Storm",
+            "Dorothy",
+            "Swirl",
+            "Wind",
+            "Blow"
+        ]
+    },
+    {
+        "word": "Glove",
+        "forbidden": [
+            "Hand",
+            "Cold",
+            "Winter",
+            "Disposable",
+            "Mitten"
+        ]
+    },
+    {
+        "word": "Midterm",
+        "forbidden": [
+            "Test",
+            "Exam",
+            "Half",
+            "Final",
+            "School"
+        ]
+    },
+    {
+        "word": "Daisy",
+        "forbidden": [
+            "White",
+            "Yellow",
+            "Flower",
+            "Duck",
+            "Field"
+        ]
+    },
+    {
+        "word": "Curtain",
+        "forbidden": [
+            "Red",
+            "Window",
+            "Light",
+            "Cloth",
+            "Play"
+        ]
+    },
+    {
+        "word": "Firecracker",
+        "forbidden": [
+            "Explode",
+            "Loud",
+            "Red",
+            "Light",
+            "Holiday"
+        ]
+    },
+    {
+        "word": "Monkey",
+        "forbidden": [
+            "Swing",
+            "Banana",
+            "Zoo",
+            "Brown",
+            "Animal"
+        ]
+    },
+    {
+        "word": "Shark",
+        "forbidden": [
+            "Swim",
+            "Teeth",
+            "Dangerous",
+            "Ocean",
+            "Sea"
+        ]
+    },
+    {
+        "word": "Egg Roll",
+        "forbidden": [
+            "Spring",
+            "Vegetable",
+            "Round",
+            "China",
+            "Food"
+        ]
+    },
+    {
+        "word": "Headache",
+        "forbidden": [
+            "Pound",
+            "Beat",
+            "Medicine",
+            "Sick",
+            "Rush"
+        ]
+    },
+    {
+        "word": "Prisoner",
+        "forbidden": [
+            "jail",
+            "Convict",
+            "Murder",
+            "Crime",
+            "bad"
+        ]
+    },
+    {
+        "word": "Caterpillar",
+        "forbidden": [
+            "Crawl",
+            "Insect",
+            "Legs",
+            "Tree",
+            "Butterfly"
+        ]
+    },
+    {
+        "word": "Paris",
+        "forbidden": [
+            "Romance",
+            "Shopping",
+            "Eiffel",
+            "Tower",
+            "French"
+        ]
+    },
+    {
+        "word": "Exchange Student",
+        "forbidden": [
+            "Travel",
+            "Study",
+            "Abroad",
+            "Experience",
+            "Foreign"
+        ]
+    },
+    {
+        "word": "London Student",
+        "forbidden": [
+            "Big Ben",
+            "England",
+            "Europe",
+            "Capital",
+            "U.K."
+        ]
+    },
+    {
+        "word": "Nan She Shan",
+        "forbidden": [
+            "Mountain",
+            "Yizhou",
+            "Climb",
+            "Snake",
+            "South"
+        ]
+    },
+    {
+        "word": "Toothbrush",
+        "forbidden": [
+            "Teeth",
+            "Paste",
+            "Clean",
+            "Hygiene",
+            "Rub"
+        ]
+    },
+    {
+        "word": "Chemistry",
+        "forbidden": [
+            "Physics",
+            "Chemicals",
+            "School",
+            "Science",
+            "Subject"
+        ]
+    },
+    {
+        "word": "Cookbook",
+        "forbidden": [
+            "Food",
+            "How To",
+            "Kitchen",
+            "Manual",
+            "Guide"
+        ]
+    }
 ]
