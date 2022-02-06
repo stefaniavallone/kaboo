@@ -7,7 +7,6 @@ class SoundManager(dict, Observer):
 
     def __init__(self):
         super().__init__()
-        print(i18n._("MAMMT"))
 
     def get_sound(self, path, loop=False, volume=1):
         if path not in self:

@@ -1,9 +1,16 @@
+import json
 import os
 import platform
 import sys
 from kivy.core.window import Window
 from kivy.logger import LOG_LEVELS, Logger
 import kivy
+
+
+def create_file_if_not_exist(file_path):
+    if not os.path.exists(file_path):
+        with open(file_path, "w") as file:
+            file.write(json.dumps([]))
 
 
 def setup_env():
@@ -26,3 +33,10 @@ def setup_env():
         
         request_permissions([Permission.READ_EXTERNAL_STORAGE,
                              Permission.WRITE_EXTERNAL_STORAGE])
+
+    create_file_if_not_exist("assets/resources/points.json")
+    create_file_if_not_exist("assets/resources/trophies.json")
+
+
+
+

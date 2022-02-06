@@ -13,14 +13,12 @@ class TrophiesScreen(MDScreen):
         list_trophies = list()
 
         for trophy in self.trophies:
-            icon = "close-circle-multiple"
-            if trophy['obtained']:
-                icon = "checkbox-multiple-marked-circle"
             list_trophies.append({
                 'name': trophy['name'],
                 'description': trophy['description'],
                 'image': trophy['image'],
-                'icon': icon,
+                'icon': "checkbox-multiple-marked-circle" if trophy["obtained"]
+                else "", #"close-circle-multiple"
                 'details': self.show_details})
         self.ids.list_trophies.data = list_trophies
 
@@ -34,7 +32,7 @@ class TrophiesScreen(MDScreen):
                                     bg_color=(255 / 255, 241 / 255, 115 / 255, 1)))
         self.view.open()
 
-    def cancel(self, inst):
+    def cancel(self, inst=None):
         self.view.dismiss()
 
     def to_home(self):

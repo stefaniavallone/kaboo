@@ -65,7 +65,7 @@ class GameEndScreen(MDScreen):
                                     bg_color=(255 / 255, 241 / 255, 115 / 255, 1)))
         self.view.open()
 
-    def cancel(self, inst):
+    def cancel(self, inst=None):
         self.view.dismiss()
 
     def to_home(self, inst=None):

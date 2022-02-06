@@ -18,6 +18,7 @@
             MDBoxLayout:
                 orientation: 'vertical'
                 MDLabel:
+                    size_hint_y: 0.25
                     halign: "center"
                     text: root.text
                     font_style: "H6"
@@ -28,7 +29,7 @@
     KMDCard:
         id: close_button
         elevation: 0
-        x: card.width*0.85 - self.width / 2
+        x: card.width - dp(40) - self.width / 2
         y: card.height - self.height / 2
         size_hint: None, None
         size: 48, 48
@@ -37,4 +38,4 @@
             icon: "close"
             icon_color: "#ffffff"
             md_bg_color: 0.9, 0.1, 0.1, 1
-            radius: [dp(20), dp(20), dp(20), dp(20)]
+            _radius: dp(24)

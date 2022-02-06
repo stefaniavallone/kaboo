@@ -14,18 +14,18 @@ class CustomModal(MDRelativeLayout):
     text = StringProperty()
     subtext = StringProperty()
 
-    def __init__(self, image, text, subtext, bg_color, closable=True, buttons=[], **kw):
+    def __init__(self, image, text, subtext, bg_color, on_close=None, buttons=[], **kw):
         super().__init__(**kw)
         self.image = image
         self.text = text
         self.subtext = subtext
-        self.closable = closable
+        self.on_close = on_close
         self.buttons = buttons
         Clock.schedule_once(self._late_init)
         self.register_event_type('on_close')
 
     def _late_init(self, inst):
-        if not self.closable:
+        if self.on_close is None:
             self.remove_widget(self.ids.close_button)
         if len(self.buttons) == 0:
             self.remove_widget(self.ids.buttons_container)
@@ -33,6 +33,3 @@ class CustomModal(MDRelativeLayout):
             self.ids.buttons_container.y = -self.height - dp(20)
         for button in self.buttons:
             self.ids.buttons_container.add_widget(button)
-
-    def on_close(self):
-        print("aa")
