@@ -12,22 +12,20 @@
     group_name: ""
     id: boarding
 
-    MDRelativeLayout:
+    MDBoxLayout:
         orientation: "vertical"
         padding: dp(25)
         Image:
             source: root.source
-            pos_hint: {"center_x": .5, "center_y": .75}
-            size_hint: .8, .8
+            pos_hint: {"center_x": .5, "center_y": 0.75}
+            size_hint: .8, .5
             keep_ratio: True
 
         MDBoxLayout:
-            pos_hint: {"center_x": .5, "center_y": .4}
+            pos_hint: {"center_x": .5, "y": .5}
             orientation: "vertical"
-            padding: dp(10)
             adaptive_height: True
-            spacing: dp(20)
-            size_hint_x: .7
+            size_hint:  0.7, .5
             canvas.before:
                 RoundedRectangle:
                     pos: self.pos
@@ -36,14 +34,13 @@
             MDLabel:
                 text: root.title
                 bold: True
-                size_hint_y: None
+                size_hint_y: 0.2
                 height: self.texture_size[1]
                 font_style: "H6"
                 halign: "center"
                 valign: "center"
 
             MDLabel:
-                size_hint_y: None
                 height: self.texture_size[1]
                 font_style: "Body1"
                 halign: "center"
@@ -52,11 +49,15 @@
 
         MDGridLayout:
             id: text_box_button
-            cols: 2
-            adaptive_size: True
             pos_hint: {"center_x": .5, "center_y": .15}
+            cols:2
+            padding: dp(10)
             spacing: dp(10)
-
+            row_default_height: dp(50)
+            row_force_default: True
+            size_hint_y: None
+            adaptive_size: True
+            height: self.minimum_height
             KMDFillRoundFlatButton:
                 text: root.text_button_one
                 theme_text_color: "Custom"
