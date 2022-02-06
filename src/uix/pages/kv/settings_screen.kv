@@ -30,21 +30,25 @@
         spacing: dp(60)
         padding: [root.width*0.1, root.height*0.1, root.width*0.1, root.height*0.05]
         Page:
+            id: settings_container
             text: "SETTINGS"
             #pos_hint: {"center_x": 0.5, "center_y": 0.5}
-            size_hint_y: 0.15
+            size_hint_y: 0.25
             size_hint_x: None
             width: self.parent.width * 0.8
             label_bg_color: 171/255, 75/255, 0/255, 1
             callback: root.to_home
             icon: "menu"
             MDBoxLayout:
+                orientation: "vertical"
                 padding: [dp(25), dp(40), dp(25), dp(35)]
+
+
                 MDGridLayout:
                     id: settings
                     cols:2
                     size: root.width * 0.8, root.height * 0.8
-                    row_default_height: dp(40)
+                    row_default_height: dp(30)
                     row_force_default: True
                     MDLabel:
                         text: "Sounds"
@@ -59,10 +63,14 @@
                         widget_style: "ios"
                         active: root.theme_dark_on
                         on_active: root.toggle_dark_theme(app)
+                    MDIconButton:
+                        icon: "assets/images/languages/english.png"
+                    MDIconButton:
+                        icon: "assets/images/languages/italian.png"
+
 
         Page:
             text: "TUTORIAL"
-            #pos_hint: {"center_x": 0.5, "center_y": 0.5}
             size_hint_y: 0.5
             size_hint_x: None
             width: self.parent.width * 0.8

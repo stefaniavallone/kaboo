@@ -49,7 +49,7 @@ class GameEndScreen(MDScreen):
         new_trophies = check_trophies(self.score_history)
         self.ids.confetti_rain.start()
         self.trophies_list = new_trophies.values()
-        # for trophy in self.trophies_list:
+        #for trophy in self.trophies_list:
         #     e = CustomModal(text=trophy.name, subtext=trophy.description,
         #                     image=trophy.image, bg_color=(255/255, 241/255, 115/255, 1))
         #     e._size_hint = (0.6, 0.3)

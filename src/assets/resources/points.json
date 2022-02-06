@@ -5790,5 +5790,147 @@
             "p0": 34,
             "p1": 27
         }
+    },
+    {
+        "level": "easy",
+        "date": "2022-02-02",
+        "rounds": {
+            "r0": {
+                "p0": {
+                    "points": 11,
+                    "actions": [
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "wrong",
+                        "right",
+                        "wrong",
+                        "jump",
+                        "jump",
+                        "jump"
+                    ]
+                },
+                "p1": {
+                    "points": 7,
+                    "actions": [
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "wrong"
+                    ]
+                }
+            },
+            "r1": {
+                "p0": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p1": {
+                    "points": 0,
+                    "actions": []
+                }
+            }
+        },
+        "players_points": {
+            "p0": 11,
+            "p1": 7
+        }
+    },
+    {
+        "level": "easy",
+        "date": "2022-02-03",
+        "rounds": {
+            "r0": {
+                "p0": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p1": {
+                    "points": 6,
+                    "actions": [
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right"
+                    ]
+                }
+            },
+            "r1": {
+                "p0": {
+                    "points": 34,
+                    "actions": [
+                        "jump",
+                        "jump",
+                        "jump",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right"
+                    ]
+                },
+                "p1": {
+                    "points": 21,
+                    "actions": [
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right"
+                    ]
+                }
+            }
+        },
+        "players_points": {
+            "p0": 34,
+            "p1": 27
+        }
     }
 ]

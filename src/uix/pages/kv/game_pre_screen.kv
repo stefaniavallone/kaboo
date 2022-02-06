@@ -35,74 +35,71 @@
                 font_style: "H6"
                 halign: "center"
                 valign: "center"
-                
-            MDGridLayout:
-                pos_hint: {"center_x": .5, "center_y": .08}
-                cols:2
-                padding:[dp(15),dp(30),dp(15),dp(35)]
-                spacing: dp(10)
-                row_default_height: dp(50)
-                row_force_default: True
-                size_hint_y: None
-                height: self.minimum_height
-                MDLabel:
-                    pos_hint: {"center_x": .6, "center_y": .8}
-                    text: "Game Level:"
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .8}
-                    text: root.game_level
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .6, "center_y": .8}
-                    text: "Num Players:"
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .8}
-                    text: root.num_players
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .6, "center_y": .7}
-                    text: "Num Jumps:"
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .7}
-                    text: root.num_jumps
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .6, "center_y": .6}
-                    text: "Round Time:"
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .6}
-                    text: root.round_time
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .6}
-                    text: "Points: "
-                    halign:"center"
-                MDLabel:
-                    pos_hint: {"center_x": .4, "center_y": .6}
-                    text: root.points
-                    halign:"center"
+
+        MDGridLayout:
+            pos_hint: {"center_x": .5, "center_y": .08}
+            cols:2
+            padding:[dp(15),dp(30),dp(15),dp(35)]
+            row_default_height: 50
+            row_force_default: True
+            MDLabel:
+                pos_hint: {"center_x": .6, "center_y": .8}
+                text: "Game Level:"
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .8}
+                text: root.game_level
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .6, "center_y": .8}
+                text: "Num Players:"
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .8}
+                text: root.num_players
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .6, "center_y": .7}
+                text: "Num Jumps:"
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .7}
+                text: root.num_jumps
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .6, "center_y": .6}
+                text: "Round Time:"
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .6}
+                text: root.round_time
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .6}
+                text: "Points: "
+                halign:"center"
+            MDLabel:
+                pos_hint: {"center_x": .4, "center_y": .6}
+                text: root.points
+                halign:"center"
 
         MDBoxLayout:
             orientation: "vertical"
             spacing: "10dp"
-            padding: [dp(10), dp(20), dp(10), dp(10)]
+            padding: [dp(10), dp(10), dp(10), dp(10)]
             adaptive_size: True
             pos_hint: {"center_x": 0.5, "y": 0.1}
             KMDFillRoundFlatButton:
                 text: "Back Home"
                 md_bg_color: 0.3, 0.3, 0.3, 1
-                radius: [dp(10), dp(10), dp(10), dp(10)]
+                radius: [10, 10, 10, 10]
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 on_release: root.to_home()
 
             KMDCard:
                 id: play_button
                 md_bg_color: 0.1, 0.2, 0.8, 1
-                radius: [dp(10), dp(10), dp(10), dp(10)]
+                radius: [10, 10, 10, 10]
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 on_release: root.to_game()
                 size_hint: None, None
@@ -114,6 +111,3 @@
                     bold: True
                     theme_text_color: "Custom"
                     text_color: 1, 1, 1, 1
-
-                
-                
