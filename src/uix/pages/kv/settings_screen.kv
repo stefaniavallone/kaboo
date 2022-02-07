@@ -27,13 +27,13 @@
 
     MDBoxLayout:
         orientation: "vertical"
-        spacing: dp(60)
+        spacing: dp(40)
         padding: [root.width*0.1, root.height*0.1, root.width*0.1, root.height*0.05]
         Page:
             id: settings_container
             text: "SETTINGS"
             #pos_hint: {"center_x": 0.5, "center_y": 0.5}
-            size_hint_y: 0.25
+            size_hint_y: 0.275
             size_hint_x: None
             width: self.parent.width * 0.8
             label_bg_color: 171/255, 75/255, 0/255, 1
@@ -42,7 +42,6 @@
             MDBoxLayout:
                 orientation: "vertical"
                 padding: [dp(25), dp(40), dp(25), dp(35)]
-
 
                 MDGridLayout:
                     id: settings
@@ -63,15 +62,22 @@
                         widget_style: "ios"
                         active: root.theme_dark_on
                         on_active: root.toggle_dark_theme(app)
-                    MDIconButton:
-                        icon: "assets/images/languages/english.png"
-                    MDIconButton:
-                        icon: "assets/images/languages/italian.png"
+                    MDLabel:
+                        text: "Language"
+                    MDBoxLayout:
+                        spacing: dp(5)
+                        adaptive_size: True
+                        MDIconButton:
+                            icon: "assets/images/languages/english.png"
+                            user_font_size: "12sp"
+                        MDIconButton:
+                            icon: "assets/images/languages/italian.png"
+                            user_font_size: "12sp"
 
 
         Page:
             text: "TUTORIAL"
-            size_hint_y: 0.5
+            size_hint_y: 0.6
             size_hint_x: None
             width: self.parent.width * 0.8
             callback: root.to_home
