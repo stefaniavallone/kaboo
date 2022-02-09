@@ -1,15 +1,10 @@
-#:import OnboardingItem uix.components.onboarding_item
+#:import GameSettingsContainer uix.components.game_settings_container
 
 <GameSettingsNumPlayersScreen>
 
-    OnboardingItem:
+    GameSettingsContainer:
         source: "assets/images/game_settings/players.png"
         text:
             "Select the number of players, each player will be associated with a color that will identify the team"
         title: "Players number"
-        text_button_one: "2"
-        text_button_two: "3"
-        text_button_three: "4"
-        text_button_four: "5"
-        group_name: "num"
-        callback: root.set_num_players
+        buttons: root.buttons

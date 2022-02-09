@@ -1,18 +1,13 @@
-#:import OnboardingItem uix.components.onboarding_item
+#:import GameSettingsContainer uix.components.game_settings_container
 
 <GameSettingsNumJumpsScreen>
 
-    OnboardingItem:
+    GameSettingsContainer:
         source: "assets/images/game_settings/jump.png"
         text:
             "Select the number of jumps each player will be able to make"
         title: "Jumps limit"
-        text_button_one: "0"
-        text_button_two: "3"
-        text_button_three: "5"
-        text_button_four: "10"
-        group_name: "jump"
-        callback: root.set_num_jumps
+        buttons: root.buttons
 
 
     

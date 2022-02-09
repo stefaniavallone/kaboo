@@ -1,12 +1,7 @@
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
-from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
-from kivy.metrics import dp
-from kivy.uix.label import Label
-from kivy.uix.scrollview  import ScrollView
-from kivy.factory import Factory
-
+from uix.components.text_terms_policy import TextTermsPolicy
 
 class SettingsScreen(MDScreen):
     term_policy_dialog = None
@@ -60,7 +55,3 @@ class SettingsScreen(MDScreen):
 
     def to_home(self):
         self.manager.go_to_screen('home', direction='right')
-
-
-class TextTermsPolicy(BoxLayout):
-    pass

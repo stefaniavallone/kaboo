@@ -603,10 +603,607 @@
         "word": "Cookbook",
         "forbidden": [
             "Food",
-            "How To",
-            "Kitchen",
+            "How To Kitchen",
             "Manual",
             "Guide"
+        ]
+    },
+    {
+        "word": "Fairy Tale",
+        "forbidden": [
+            "Prince",
+            "Princess",
+            "Magic",
+            "Queen",
+            "Story"
+        ]
+    },
+    {
+        "word": "Literature",
+        "forbidden": [
+            "Works",
+            "American",
+            "British",
+            "Books",
+            "Written"
+        ]
+    },
+    {
+        "word": "Globe",
+        "forbidden": [
+            "Earth",
+            "World",
+            "Model",
+            "Geography",
+            "Oceans"
+        ]
+    },
+    {
+        "word": "Peaceful",
+        "forbidden": [
+            "Harmony",
+            "Calm",
+            "Quiet",
+            "Tranquil",
+            "Violent"
+        ]
+    },
+    {
+        "word": "Unfair",
+        "forbidden": [
+            "Unjust",
+            "Fair",
+            "Equal",
+            "Just",
+            "Unreasonable"
+        ]
+    },
+    {
+        "word": "Normal",
+        "forbidden": [
+            "Strange",
+            "Standard",
+            "Typical",
+            "Status Quo",
+            "Weird"
+        ]
+    },
+    {
+        "word": "Original",
+        "forbidden": [
+            "First",
+            "Unique",
+            "Special",
+            "Standard",
+            "Early"
+        ]
+    },
+    {
+        "word": "Biology",
+        "forbidden": [
+            "Science",
+            "Subject",
+            "Life",
+            "School",
+            "Chemistry"
+        ]
+    },
+    {
+        "word": "Thrifty",
+        "forbidden": [
+            "cheap",
+            "spend",
+            "money",
+            "stingy",
+            "economical"
+        ]
+    },
+    {
+        "word": "Tragedy",
+        "forbidden": [
+            "terrible",
+            "sad",
+            "victim",
+            "disaster",
+            "catastrophe"
+        ]
+    },
+    {
+        "word": "charge",
+        "forbidden": [
+            "fee",
+            "money",
+            "transaction",
+            "bank",
+            "bill"
+        ]
+    },
+    {
+        "word": "sell",
+        "forbidden": [
+            "product",
+            "service",
+            "buy",
+            "store",
+            "market"
+        ]
+    },
+    {
+        "word": "debt",
+        "forbidden": [
+            "money",
+            "owe",
+            "loan",
+            "borrow",
+            "bill"
+        ]
+    },
+    {
+        "word": "growth",
+        "forbidden": [
+            "expand",
+            "increase",
+            "success",
+            "bigger",
+            "progress"
+        ]
+    },
+    {
+        "word": "competitor",
+        "forbidden": [
+            "same",
+            "product",
+            "advantage",
+            "market",
+            "rival"
+        ]
+    },
+    {
+        "word": "sales",
+        "forbidden": [
+            "convince",
+            "product",
+            "buy",
+            "negotiate",
+            "selling"
+        ]
+    },
+    {
+        "word": "raise",
+        "forbidden": [
+            "salary",
+            "wage",
+            "performance",
+            "price",
+            "increase"
+        ]
+    },
+    {
+        "word": "market",
+        "forbidden": [
+            "buyer",
+            "target",
+            "sector",
+            "demographic",
+            "commerce"
+        ]
+    },
+    {
+        "word": "convince",
+        "forbidden": [
+            "persuade",
+            "believe",
+            "want",
+            "talk into",
+            "satisfy"
+        ]
+    },
+    {
+        "word": "employer",
+        "forbidden": [
+            "employee",
+            "boss",
+            "salary",
+            "business",
+            "leader"
+        ]
+    },
+    {
+        "word": "margin",
+        "forbidden": [
+            "profit",
+            "mark-up",
+            "price",
+            "cost",
+            "limit"
+        ]
+    },
+    {
+        "word": "loss",
+        "forbidden": [
+            "profit",
+            "debt",
+            "deficit",
+            "money",
+            "deprivation"
+        ]
+    },
+    {
+        "word": "exchange",
+        "forbidden": [
+            "rate",
+            "trade",
+            "return",
+            "buyer",
+            "switch"
+        ]
+    },
+    {
+        "word": "suggest",
+        "forbidden": [
+            "recommend",
+            "consider",
+            "opinion",
+            "improvement",
+            "propose"
+        ]
+    },
+    {
+        "word": "encourage",
+        "forbidden": [
+            "motivate",
+            "inspire",
+            "support",
+            "manager",
+            "stimulate"
+        ]
+    },
+    {
+        "word": "profit",
+        "forbidden": [
+            "loss",
+            "revenue",
+            "expenses",
+            "money",
+            "benefit"
+        ]
+    },
+    {
+        "word": "supply and demand",
+        "forbidden": [
+            "quantity",
+            "buyer",
+            "product",
+            "economics",
+            "seller"
+        ]
+    },
+    {
+        "word": "feedback",
+        "forbidden": [
+            "manager",
+            "survey",
+            "positive",
+            "negative",
+            "review"
+        ]
+    },
+    {
+        "word": "borrow",
+        "forbidden": [
+            "lend",
+            "interest",
+            "loan",
+            "money",
+            "use"
+        ]
+    },
+    {
+        "word": "refuse",
+        "forbidden": [
+            "no",
+            "reject",
+            "deny",
+            "accept",
+            "decline"
+        ]
+    },
+    {
+        "word": "lend",
+        "forbidden": [
+            "borrow",
+            "bank",
+            "return",
+            "interest",
+            "give"
+        ]
+    },
+    {
+        "word": "swim",
+        "forbidden": [
+            "beach",
+            "water",
+            "bathing suit",
+            "exercise",
+            "underwater"
+        ]
+    },
+    {
+        "word": "cheese",
+        "forbidden": [
+            "milk",
+            "white",
+            "pizza",
+            "sandwich"
+        ]
+    },
+    {
+        "word": "vacation",
+        "forbidden": [
+            "trip",
+            "work",
+            "travel",
+            "beach",
+            "holiday"
+        ]
+    },
+    {
+        "word": "weather",
+        "forbidden": [
+            "rain",
+            "snow",
+            "sun",
+            "forecast",
+            "climate"
+        ]
+    },
+    {
+        "word": "refrigerator",
+        "forbidden": [
+            "food",
+            "kitchen",
+            "cold",
+            "freezer",
+            "fridge"
+        ]
+    },
+    {
+        "word": "smart",
+        "forbidden": [
+            "intelligent",
+            "nerd",
+            "brain",
+            "knowledge",
+            "elegant"
+        ]
+    },
+    {
+        "word": "professor",
+        "forbidden": [
+            "teacher",
+            "university",
+            "students",
+            "class",
+            "person"
+        ]
+    },
+    {
+        "word": "invoice",
+        "forbidden": [
+            "buyer",
+            "seller",
+            "payment",
+            "document",
+            "account"
+        ]
+    },
+    {
+        "word": "refund",
+        "forbidden": [
+            "return",
+            "give back",
+            "pay",
+            "complain",
+            "repayment"
+        ]
+    },
+    {
+        "word": "inventory",
+        "forbidden": [
+            "supply",
+            "goods",
+            "count",
+            "quantity",
+            "list"
+        ]
+    },
+    {
+        "word": "interest",
+        "forbidden": [
+            "profit",
+            "fee",
+            "investment",
+            "rate",
+            "curiosity"
+        ]
+    },
+    {
+        "word": "department",
+        "forbidden": [
+            "division",
+            "organization",
+            "sales",
+            "Human Resources",
+            "office"
+        ]
+    },
+    {
+        "word": "budget",
+        "forbidden": [
+            "money",
+            "plan",
+            "spend",
+            "period",
+            "economy"
+        ]
+    },
+    {
+        "word": "deadline",
+        "forbidden": [
+            "submit",
+            "finish",
+            "extension",
+            "task",
+            "time limit"
+        ]
+    },
+    {
+        "word": "production",
+        "forbidden": [
+            "factory",
+            "plant",
+            "goods",
+            "materials",
+            "fabrication"
+        ]
+    },
+    {
+        "word": "stock",
+        "forbidden": [
+            "bond",
+            "corporation",
+            "share",
+            "market",
+            "holding"
+        ]
+    },
+    {
+        "word": "bond",
+        "forbidden": [
+            "investment",
+            "Treasury",
+            "stock",
+            "loan",
+            "corporation"
+        ]
+    },
+    {
+        "word": "shareholder",
+        "forbidden": [
+            "stockholder",
+            "owner",
+            "corporation",
+            "dividends",
+            "stocks"
+        ]
+    },
+    {
+        "word": "retail",
+        "forbidden": [
+            "Walmart",
+            "mall",
+            "consumer",
+            "goods and services",
+            "Amazon"
+        ]
+    },
+    {
+        "word": "complaint",
+        "forbidden": [
+            "customer service",
+            "problem",
+            "unhappy",
+            "unacceptable",
+            "call center"
+        ]
+    },
+    {
+        "word": "guarantee",
+        "forbidden": [
+            "assure",
+            "problem",
+            "defective",
+            "document",
+            "expiration"
+        ]
+    },
+    {
+        "word": "client",
+        "forbidden": [
+            "customer",
+            "services",
+            "professional",
+            "lawyer",
+            "buyer"
+        ]
+    },
+    {
+        "word": "transaction",
+        "forbidden": [
+            "deal",
+            "money",
+            "sale",
+            "product",
+            "action"
+        ]
+    },
+    {
+        "word": "invest",
+        "forbidden": [
+            "money",
+            "profit",
+            "stock",
+            "real estate",
+            "spend"
+        ]
+    },
+    {
+        "word": "exchange rate",
+        "forbidden": [
+            "currency",
+            "dollar",
+            "Euro",
+            "price",
+            "coins"
+        ]
+    },
+    {
+        "word": "currency",
+        "forbidden": [
+            "money",
+            "Euro",
+            "dollar",
+            "exchange rate",
+            "coins"
+        ]
+    },
+    {
+        "word": "consensus",
+        "forbidden": [
+            "agreement",
+            "everyone",
+            "vote",
+            "group"
+        ]
+    },
+    {
+        "word": "conference call",
+        "forbidden": [
+            "meeting",
+            "client",
+            "presentation",
+            "listen",
+            "work"
+        ]
+    },
+    {
+        "word": "bear",
+        "forbidden": [
+            "woods",
+            "brown",
+            "black",
+            "animal",
+            "Mammalia"
         ]
     }
 ]
