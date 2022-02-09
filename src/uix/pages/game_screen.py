@@ -1,3 +1,4 @@
+import abc
 import json
 from random import shuffle
 
@@ -155,20 +156,20 @@ class GameScreen(MDScreen):
         e = CustomModal(
                 image="assets/images/go_home.png",
                 bg_color=(1, 1, 1, 1),
-                text="Are you sure?", 
-                subtext="You will lose game progress.",
+                text=self.app.i18n._("DIALOG_BACK_HOME_TITLE"),  # "Are you sure?",
+                subtext=self.app.i18n._("DIALOG_BACK_HOME_DESC"),  # "You will lose game progress.",
                 closable=False,
                 buttons=[
-                    KMDFillRoundFlatButton(text="Cancel".upper(),
+                    KMDFillRoundFlatButton(text=self.app.i18n._("GAME_CANCEL_BUTTON").upper(),  # "Cancel".upper(),
                                            radius=[10, 10, 10, 10],
                                            width="100dp", size_hint_x=None,
                                            md_bg_color=(0, 0.2, 0.9, 1),
                                            on_release=self.cancel),
-                    KMDFillRoundFlatButton(text="Back Home".upper(),
+                    KMDFillRoundFlatButton(text=self.app.i18n._("GAME_BACK_HOME_BUTTON").upper(),  # "Back Home".upper(),
                                            md_bg_color=(1, 0, 0, 1),
                                            radius=[10, 10, 10, 10],
-                                          width="100dp", size_hint_x=None,
-                                          on_release=self.to_home),
+                                           width="100dp", size_hint_x=None,
+                                           on_release=self.to_home),
                 ]
         )
         if not self.confirm_exit_dialog:

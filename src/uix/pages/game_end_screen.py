@@ -3,9 +3,9 @@ from kivy.uix.modalview import ModalView
 from kivymd.uix.screen import MDScreen
 
 from logic.game import PLAYERS_COLORS
-from logic.score import compute_points, best_player, update_score_history
+from logic.score import compute_points, best_player, update_score_history, \
+    get_score_history
 from logic.trophies_checker import check_trophies
-from uix.components.confetti_rain import ConfettiRain
 from uix.components.custom_modal import CustomModal
 from kivy.app import App
 
@@ -38,12 +38,10 @@ class GameEndScreen(MDScreen):
         best_player_index, score = best_player(players_points)
         self.ids.winner_card.md_bg_color = PLAYERS_COLORS[int(best_player_index[1])]
         self.points = str(score)
-        self.winner = f"Team {best_player_index} wins!"
+        self.winner = self.app.i18n._("GAMEEND_TEAM_WINNER", team=f"Team {best_player_index}").upper()  # f"Team {best_player_index} wins!"
+        self.previous_trophies = check_trophies(get_score_history())
         self.score_history = update_score_history(self.game_level, game_rounds, players_points)
         self.applause_sound.play()
-
-    def on_leave(self, *args):
-        self.ids.confetti_rain.stop()
 
     def on_enter(self, *args):
         new_trophies = check_trophies(self.score_history)
@@ -73,3 +71,6 @@ class GameEndScreen(MDScreen):
 
     def on_pre_leave(self, *args):
         self.applause_sound.stop()
+
+    def on_leave(self, *args):
+        self.ids.confetti_rain.stop()

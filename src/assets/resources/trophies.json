@@ -1,7 +1,7 @@
 [
     {
-        "name": "5 points",
-        "description": "You scored 5 points",
+        "name": "TROPHY_POINTS_TITLE",
+        "description": "TROPHY_POINTS_DESC",
         "image": "assets/images/trophies/trophy_5points.png",
         "obtained": true,
         "points": 5
@@ -35,8 +35,8 @@
         "points": 500
     },
     {
-        "name": "5 wrong answers",
-        "description": "You wrong 5 answers",
+        "name": "TROPHY_ANSWERS_TITLE",
+        "description": "TROPHY_ANSWERS_DESC",
         "image": "assets/images/trophies/trophy_5wrongs.png",
         "obtained": true,
         "action_type": "wrong",
@@ -75,8 +75,8 @@
         "action_count": 500
     },
     {
-        "name": "1 game Easy",
-        "description": "You played 1 game with difficult \"Easy\"",
+        "name": "TROPHY_GAME_LEVEL_TITLE",
+        "description": "TROPHY_GAME_LEVEL_DESC",
         "image": "assets/images/trophies/trophy_1easy.png",
         "obtained": true,
         "level": "easy",
@@ -99,8 +99,8 @@
         "level_count": 1
     },
     {
-        "name": "5 games Easy",
-        "description": "You played 5 games with difficult \"Easy\"",
+        "name": "TROPHY_GAMES_LEVEL_TITLE",
+        "description": "TROPHY_GAMES_LEVEL_DESC",
         "image": "assets/images/trophies/trophy_5easy.png",
         "obtained": true,
         "level": "easy",

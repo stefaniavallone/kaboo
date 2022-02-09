@@ -16,17 +16,25 @@ def best_player(player_points):
     return index, player_points[index]
 
 
-def update_score_history(level, game_rounds, players_points):
-    filename = 'assets/resources/points.json'
-    with open(filename, "r") as file:
+POINTS_FILENAME = 'assets/resources/points.json'
+
+
+def get_score_history():
+    with open(POINTS_FILENAME, "r") as file:
         data = json.load(file)
-        game = {
-            "level": level,
-            "date": str(datetime.utcnow().date()),
-            "rounds": json.loads(json.dumps(game_rounds, default=lambda s: vars(s))),
-            "players_points": players_points
-        }
-        data.append(game)
-    with open(filename, "w") as file:
+    return data
+
+
+def update_score_history(level, game_rounds, players_points):
+    data = get_score_history()
+    game = {
+        "level": level,
+        "date": str(datetime.utcnow().date()),
+        "rounds": json.loads(
+            json.dumps(game_rounds, default=lambda s: vars(s))),
+        "players_points": players_points
+    }
+    data.append(game)
+    with open(POINTS_FILENAME, "w") as file:
         file.write(json.dumps(data, indent=4))
     return data

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-02 15:23+0100\n"
+"POT-Creation-Date: 2022-02-08 14:08+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,120 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: ../src/utils/sound\sound_manager.py:10
-msgid "MAMMT"
+#: ../src/uix/pages/kv\game_end_screen.kv:102
+msgid "ENDGAME_BACK_HOME_BUTTON"
 msgstr ""
 
-#: ../src/utils/translation\internationalization.py:36
-msgid "HOME_LEVEL_EASY"
+#: ../src/uix/pages/kv\game_pre_screen.kv:47
+msgid "PREGAME_GAME_LEVEL"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_pre_screen.kv:55
+msgid "PREGAME_NUM_TEAMS"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_pre_screen.kv:63
+msgid "PREGAME_NUM_JUMPS"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_pre_screen.kv:71
+msgid "PREGAME_ROUND_TIME"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_pre_screen.kv:79
+msgid "PREGAME_POINTS"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_pre_screen.kv:93
+msgid "PREGAME_BACK_HOME_BUTTON"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_pre_screen.kv:110
+msgid "PREGAME_PLAY_BUTTON"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_num_jumps_screen.kv:7
+msgid "GAMESETTINGS_JUMPS_LIMIT_TITLE"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_num_jumps_screen.kv:8
+#: ../src/uix/pages/kv\game_settings_num_players_screen.kv:8
+msgid "GAMESETTINGS_JUMPS_LIMIT_DESC"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_num_players_screen.kv:7
+msgid "GAMESETTINGS_TEAMS_NUMBER_TITLE"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_round_time_screen.kv:7
+msgid "GAMESETTINGS_ROUND_TIME_TITLE"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_round_time_screen.kv:8
+msgid "GAMESETTINGS_ROUND_TIME_DESC"
+msgstr ""
+
+#: ../src/uix/pages/kv\history_screen.kv:14
+msgid "SECTION_HISTORY"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:38
+msgid "HOME_EASY_LEVEL"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:46
+msgid "HOME_MEDIUM_LEVEL"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:54
+msgid "HOME_HARD_LEVEL"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:66
+msgid "HOME_TOOLTIP_TROPHIES"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:76
+msgid "HOME_TOOLTIP_HISTORY"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:85
+msgid "HOME_TOOLTIP_RATEUS"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:95
+msgid "HOME_TOOLTIP_SETTINGS"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:34
+msgid "SECTION_SETTINGS"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:53
+msgid "ENABLE_SOUNDS"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:60
+msgid "ENABLE_DARK_THEME"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:66
+msgid "CHOOSE_LANGUAGE"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:88
+msgid "SECTION_TUTORIAL"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:144
+msgid "TERMS_AND_POLICY_TITLE"
+msgstr ""
+
+#: ../src/uix/pages/kv\trophies_screen.kv:15
+msgid "SECTION_TROPHIES"
+msgstr ""
+
+#: ../src/uix/pages\game_pre_screen.py:31
+msgid "PREGAME_TEAM_TURN"
 msgstr ""
 

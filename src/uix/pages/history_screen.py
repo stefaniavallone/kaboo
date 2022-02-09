@@ -1,5 +1,7 @@
 import json
 
+from kivy.app import App
+
 from uix.components.modal_scroll import ModalScroll
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.list import OneLineAvatarListItem, TwoLineListItem
@@ -19,6 +21,7 @@ class HistoryScreen(MDScreen):
 
     def __init__(self, **kw):
         super().__init__(**kw)
+        self.app = App.get_running_app()
         self.histories = []
 
     def on_pre_enter(self, *args):
@@ -44,7 +47,7 @@ class HistoryScreen(MDScreen):
         list_items = dict()
         for i in range(int(players)):
             list_items[f'Team {i + 1}'] = players_points[f'p{i}']
-        details = ModalScroll(text=f'History of {date}')
+        details = ModalScroll(text=self.app.i18n._("HISTORY_DETAIL_TITLE", date=date)) #f'History of {date}')
         details.add_item(list_items, TwoLineListItem)
         self.show_details_dialog = ModalView(size_hint=(0.7, 0.6),
                                              auto_dismiss=True,

@@ -1,6 +1,5 @@
-from utils.dp.observer import Observer, Subject
+from utils.dp.observer import Observer
 from utils.sound.sound_player import SoundPlayer
-from utils.translation.internationalization import i18n
 
 
 class SoundManager(dict, Observer):

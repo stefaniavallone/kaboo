@@ -1,6 +1,5 @@
 import webbrowser
 
-from kivmob import TestIds
 from kivy.clock import Clock
 from kivymd.uix.button import MDFlatButton
 from kivymd.uix.dialog import MDDialog
@@ -27,7 +26,7 @@ class HomeScreen(MDScreen):
     def show_rate_us_dialog(self):
         if not self.rate_us_dialog:
             self.rate_us_dialog = MDDialog(
-                text="If you like this application, please give us five stars on Play Store!",
+                text = self.app.i18n._("DIALOG_RATEUS"),  # "If you like this application, please give us five stars on Play Store!",
                 radius=[20, 7, 20, 7],
                 buttons=[
                     MDFlatButton(

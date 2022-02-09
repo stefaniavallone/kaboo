@@ -44,7 +44,7 @@
             row_force_default: True
             MDLabel:
                 pos_hint: {"center_x": .6, "center_y": .8}
-                text: "Game Level:"
+                text: app.i18n._("COMMON_GAME_LEVEL")  # "Game Level:"
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .8}
@@ -52,7 +52,7 @@
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .6, "center_y": .8}
-                text: "Num Players:"
+                text: app.i18n._("COMMON_NUM_TEAMS")  # "Num Teams:"
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .8}
@@ -60,7 +60,7 @@
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .6, "center_y": .7}
-                text: "Num Jumps:"
+                text: app.i18n._("COMMON_NUM_JUMPS")  # "Num Jumps:"
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .7}
@@ -68,7 +68,7 @@
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .6, "center_y": .6}
-                text: "Round Time:"
+                text: app.i18n._("COMMON_ROUND_TIME")  # "Round Time:"
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .6}
@@ -76,7 +76,7 @@
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .6}
-                text: "Points: "
+                text: app.i18n._("COMMON_POINTS")  # "Points: "
                 halign:"center"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .6}
@@ -90,16 +90,16 @@
             adaptive_size: True
             pos_hint: {"center_x": 0.5, "y": 0.1}
             KMDFillRoundFlatButton:
-                text: "Back Home"
+                text: app.i18n._("COMMON_BACK_HOME_BUTTON")  # "Back Home"
                 md_bg_color: 0.3, 0.3, 0.3, 1
-                radius: [10, 10, 10, 10]
+                radius: [dp(10), dp(10), dp(10), dp(10)]
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 on_release: root.to_home()
 
             KMDCard:
                 id: play_button
                 md_bg_color: 0.1, 0.2, 0.8, 1
-                radius: [10, 10, 10, 10]
+                radius: [dp(10), dp(10), dp(10), dp(10)]
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
                 on_release: root.to_game()
                 size_hint: None, None
@@ -107,7 +107,7 @@
                 height: root.height * 0.1
                 MDLabel:
                     halign: "center"
-                    text: "PLAY"
+                    text: app.i18n._("PREGAME_PLAY_BUTTON")  # "PLAY"
                     bold: True
                     theme_text_color: "Custom"
                     text_color: 1, 1, 1, 1

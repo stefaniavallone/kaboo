@@ -2,14 +2,15 @@ from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
 from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
-from kivy.metrics import dp
-from kivy.uix.label import Label
-from kivy.uix.scrollview  import ScrollView
-from kivy.factory import Factory
+
+
+class TextTermsPolicy(BoxLayout):
+    pass
 
 
 class SettingsScreen(MDScreen):
     term_policy_dialog = None
+    how_to_play_dialog = None
     theme_dark_on = False
 
     def __init__(self, **kw):
@@ -26,28 +27,17 @@ class SettingsScreen(MDScreen):
     def toggle_dark_theme(self, app):
         self.theme_dark_on = not self.theme_dark_on
         app.theme_cls.theme_style = "Dark" if self.theme_dark_on else "Light"
-
-    def show_details(self):
-        game_stats_dialog = MDDialog(
-            title="HOW TO PLAY",
-            type="simple",
-            text="Date: ",
-            items="",
-            size_hint=(0.7, 1),
-            radius=[20, 7, 20, 7]
-        )
-        game_stats_dialog.open()
     
-    def how_to_play(self, title, text):
-        how_to_play_dialog = MDDialog(
+    def open_how_to_play_dialog(self, title, text):
+        self.how_to_play_dialog = MDDialog(
             title=title,
             type="custom",
             text=text,
             radius=[20, 7, 20, 7]
         )
-        how_to_play_dialog.open()
+        self.how_to_play_dialog.open()
 
-    def informations(self):
+    def open_terms_and_policy_dialog(self):
         if not self.term_policy_dialog:
             self.term_policy_dialog = MDDialog(
                 title="Terms & Policy:",
@@ -61,6 +51,14 @@ class SettingsScreen(MDScreen):
     def to_home(self):
         self.manager.go_to_screen('home', direction='right')
 
+    def set_lang(self, lang):
+        print("set", lang)
+        self.app.status.setv("app.lang", lang)
+        #self.canvas.before.clear()
+        #with self.canvas.before:
+        #    Color(0.5, 1, 0.5, 1)
+        #    RoundedRectangle(pos=(self.pos[0] - dp(5), self.pos[1] - dp(5)),
+        #                     size=(self.size[0] - dp(5), self.pos[1] - dp(5)),
+        #                     radius=[dp(24), dp(24), dp(24), dp(24)])
 
-class TextTermsPolicy(BoxLayout):
-    pass
+

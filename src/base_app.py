@@ -6,6 +6,10 @@ from app_status import AppStatus
 
 from uix.pages.root import Root
 from utils.sound.sound_manager import SoundManager
+from utils.translation.i18n import I18n, i18n
+
+
+#i18n = I18n()
 
 
 class BaseApp(MDApp):
@@ -16,7 +20,9 @@ class BaseApp(MDApp):
         self.ads = KivMob(TestIds.APP)
         self.status = AppStatus()
         self.sound_manager = SoundManager()
+        self.i18n = i18n
         self.status.attach(self.sound_manager)
+        self.status.attach(self.i18n)
     
     def initialize_app(self):
         Window.soft_input_mode = "below_target"

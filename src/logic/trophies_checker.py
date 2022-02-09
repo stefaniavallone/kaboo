@@ -1,5 +1,7 @@
 import json
 
+from utils.translation.i18n import i18n
+
 
 class Trophy:
 
@@ -68,9 +70,11 @@ class GameLevelTrophy(Trophy):
             self.obtained = True
 
 
+
+
 trophies = {
-    "5 points": PointsTrophy(name="5 points",
-                             description="You scored 5 points",
+    "5 points": PointsTrophy(name=i18n._("TROPHY_POINTS_TITLE", points=5),  # "5 points",
+                             description=i18n._("TROPHY_POINTS_DESC", points=5),  #"You scored 5 points",
                              image="assets/images/trophies/trophy_5points.png",
                              points=5),
     "25 points": PointsTrophy(name="25 points",
@@ -89,8 +93,8 @@ trophies = {
                                description="You scored 500 points",
                                image="assets/images/trophies/trophy_500points.png",
                                points=500),
-    "5 wrong answers": ActionTrophy(name="5 wrong answers",
-                                    description="You wrong 5 answers",
+    "5 wrong answers": ActionTrophy(name=i18n._("TROPHY_ANSWERS_TITLE", answers=5), #"5 wrong answers",
+                                    description=i18n._("TROPHY_ANSWERS_DESC", answers=5), #"You wrong 5 answers",
                                     image="assets/images/trophies/trophy_5wrongs.png",
                                     action_type="wrong",
                                     action_count=5),
@@ -114,8 +118,8 @@ trophies = {
                                      image="assets/images/trophies/trophy_500wrongs.png",
                                      action_type="wrong",
                                      action_count=500),
-    "1 game Easy": GameLevelTrophy(name="1 game Easy",
-                                   description="You played 1 game with difficult \"Easy\"",
+    "1 game Easy": GameLevelTrophy(name=i18n._("TROPHY_GAME_LEVEL_TITLE", games=1, level="easy"), #"1 game Easy",
+                                   description=i18n._("TROPHY_GAME_LEVEL_DESC", games=1, level="easy"),  # "You played 1 game with difficult \"Easy\"",
                                    image="assets/images/trophies/trophy_1easy.png",
                                    level="easy",
                                    level_count=1),
@@ -129,8 +133,8 @@ trophies = {
                                         image="assets/images/trophies/trophy_1difficult.png",
                                         level="difficult",
                                         level_count=1),
-    "5 games Easy": GameLevelTrophy(name="5 games Easy",
-                                    description="You played 5 games with difficult \"Easy\"",
+    "5 games Easy": GameLevelTrophy(name=i18n._("TROPHY_GAMES_LEVEL_TITLE", games=5, level="easy"), #"5 games Easy",
+                                    description=i18n._("TROPHY_GAMES_LEVEL_DESC", games=1, level="easy"),  #"You played 5 games with difficult \"Easy\"",
                                     image="assets/images/trophies/trophy_5easy.png",
                                     level="easy",
                                     level_count=5),
