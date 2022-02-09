@@ -1,12 +1,7 @@
 from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
-from kivy.uix.boxlayout import BoxLayout
 from kivy.app import App
-
-
-class TextTermsPolicy(BoxLayout):
-    pass
-
+from uix.components.text_terms_policy import TextTermsPolicy
 
 class SettingsScreen(MDScreen):
     term_policy_dialog = None
@@ -27,6 +22,17 @@ class SettingsScreen(MDScreen):
     def toggle_dark_theme(self, app):
         self.theme_dark_on = not self.theme_dark_on
         app.theme_cls.theme_style = "Dark" if self.theme_dark_on else "Light"
+
+    def show_details(self):
+        game_stats_dialog = MDDialog(
+            title="HOW TO PLAY",
+            type="simple",
+            text="Date: ",
+            items="",
+            size_hint=(0.7, 1),
+            radius=[20, 7, 20, 7]
+        )
+        game_stats_dialog.open()
     
     def open_how_to_play_dialog(self, title, text):
         self.how_to_play_dialog = MDDialog(

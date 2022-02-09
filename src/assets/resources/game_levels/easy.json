@@ -283,15 +283,10 @@
         "word": "Exercise",
         "forbidden": [
             "Want",
-            "Desire",
-            "Hope",
             "Dream",
             "Long For",
             "Run",
-            "Sports",
-            "Healthy",
-            "Daily",
-            "Morning"
+            "Sports"
         ]
     },
     {
@@ -612,6 +607,603 @@
             "Land",
             "Seven",
             "Earth"
+        ]
+    },
+    {
+        "word": "Hippo",
+        "forbidden": [
+            "Fat",
+            "Animal",
+            "Africa",
+            "Large",
+            "River"
+        ]
+    },
+    {
+        "word": "Magic",
+        "forbidden": [
+            "Wizard",
+            "Witch",
+            "Power",
+            "Trick",
+            "Show"
+        ]
+    },
+    {
+        "word": "Naughty",
+        "forbidden": [
+            "Bad",
+            "Behavior",
+            "Good",
+            "Rude",
+            "Disobedient"
+        ]
+    },
+    {
+        "word": "Rescue",
+        "forbidden": [
+            "Save",
+            "Hero",
+            "Danger",
+            "Safe",
+            "Help"
+        ]
+    },
+    {
+        "word": "Match",
+        "forbidden": [
+            "Fire",
+            "Strike",
+            "Pair",
+            "Together",
+            "Equal"
+        ]
+    },
+    {
+        "word": "CD",
+        "forbidden": [
+            "Disc",
+            "Music",
+            "Listen",
+            "Play",
+            "Computer"
+        ]
+    },
+    {
+        "word": "Immediately",
+        "forbidden": [
+            "Fast",
+            "Now",
+            "Delay",
+            "Rapid",
+            "Soon"
+        ]
+    },
+    {
+        "word": "Danger",
+        "forbidden": [
+            "Safe",
+            "Harm",
+            "Injury",
+            "Protect",
+            "Avoid"
+        ]
+    },
+    {
+        "word": "Salt",
+        "forbidden": [
+            "White",
+            "Sweet",
+            "Popcorn",
+            "Cooking",
+            "Flavor"
+        ]
+    },
+    {
+        "word": "Stand",
+        "forbidden": [
+            "Sit",
+            "Floor",
+            "Feet",
+            "Up",
+            "Take"
+        ]
+    },
+    {
+        "word": "Bull",
+        "forbidden": [
+            "Ride",
+            "Red",
+            "Male",
+            "Horns",
+            "Charge"
+        ]
+    },
+    {
+        "word": "History",
+        "forbidden": [
+            "Politics",
+            "Past",
+            "Events",
+            "Finished",
+            "Happen"
+        ]
+    },
+    {
+        "word": "Magazine",
+        "forbidden": [
+            "Pages",
+            "Book",
+            "Entertain",
+            "News",
+            "Read"
+        ]
+    },
+    {
+        "word": "FruitCake",
+        "forbidden": [
+            "bake",
+            "sweet",
+            "dried",
+            "candied",
+            "chopped"
+        ]
+    },
+    {
+        "word": "Bell",
+        "forbidden": [
+            "ring",
+            "sleigh",
+            "instrument",
+            "cup",
+            "hollow"
+        ]
+    },
+    {
+        "word": "Lights",
+        "forbidden": [
+            "decorate",
+            "colorful",
+            "white",
+            "tree",
+            "bright"
+        ]
+    },
+    {
+        "word": "Parade",
+        "forbidden": [
+            "street",
+            "bands",
+            "floats",
+            "procession",
+            "watch"
+        ]
+    },
+    {
+        "word": "toys",
+        "forbidden": [
+            "wish",
+            "play",
+            "kids",
+            "children",
+            "present"
+        ]
+    },
+    {
+        "word": "Present",
+        "forbidden": [
+            "gifts",
+            "tree",
+            "box",
+            "wrap",
+            "Santa"
+        ]
+    },
+    {
+        "word": "Cookies",
+        "forbidden": [
+            "bake",
+            "milk",
+            "chocolate",
+            "oatmeal",
+            "sugar"
+        ]
+    },
+    {
+        "word": "Family",
+        "forbidden": [
+            "blood",
+            "Mother",
+            "Father",
+            "sister",
+            "brother"
+        ]
+    },
+    {
+        "word": "List",
+        "forbidden": [
+            "naughty",
+            "nice",
+            "check",
+            "twice",
+            "names"
+        ]
+    },
+    {
+        "word": "stocking",
+        "forbidden": [
+            "hang",
+            "mantle",
+            "fireplace",
+            "sock",
+            "stuff"
+        ]
+    },
+    {
+        "word": "North pole",
+        "forbidden": [
+            "South",
+            "Santa claus",
+            "house",
+            "live",
+            "workshop"
+        ]
+    },
+    {
+        "word": "Double",
+        "forbidden": [
+            "twice",
+            "number",
+            "triple",
+            "amount",
+            "duplicate"
+        ]
+    },
+    {
+        "word": "Lawn",
+        "forbidden": [
+            "grass",
+            "mow",
+            "green",
+            "yard",
+            "flowers"
+        ]
+    },
+    {
+        "word": "Arrest",
+        "forbidden": [
+            "jail",
+            "criminal",
+            "police",
+            "handcuffs",
+            "capture"
+        ]
+    },
+    {
+        "word": "Educate",
+        "forbidden": [
+            "child",
+            "teach",
+            "learn",
+            "school",
+            "coach"
+        ]
+    },
+    {
+        "word": "Myth",
+        "forbidden": [
+            "Greek",
+            "legend",
+            "history",
+            "culture",
+            "illusion"
+        ]
+    },
+    {
+        "word": "Measurement",
+        "forbidden": [
+            "unit",
+            "height",
+            "distance",
+            "length",
+            "dimension"
+        ]
+    },
+    {
+        "word": "Prescription",
+        "forbidden": [
+            "doctor",
+            "paper",
+            "medicine",
+            "pharmacy",
+            "remedy"
+        ]
+    },
+    {
+        "word": "Grave",
+        "forbidden": [
+            "bury",
+            "cemetery",
+            "dig",
+            "funeral",
+            "serious"
+        ]
+    },
+    {
+        "word": "Hunt",
+        "forbidden": [
+            "deer",
+            "gun",
+            "woods",
+            "food",
+            "search"
+        ]
+    },
+    {
+        "word": "Surgeon",
+        "forbidden": [
+            "doctor",
+            "surgery",
+            "operation",
+            "hospital",
+            "heart"
+        ]
+    },
+    {
+        "word": "Suburb",
+        "forbidden": [
+            "city",
+            "outside",
+            "quiet",
+            "live",
+            "neighbourhood"
+        ]
+    },
+    {
+        "word": "Minimum",
+        "forbidden": [
+            "maximum",
+            "lowest",
+            "wage",
+            "amount",
+            "smallest"
+        ]
+    },
+    {
+        "word": "Sacred",
+        "forbidden": [
+            "holy",
+            "religious",
+            "blessed",
+            "cow",
+            "consecrated"
+        ]
+    },
+    {
+        "word": "Warrior",
+        "forbidden": [
+            "soldier",
+            "war",
+            "attack",
+            "battle",
+            "gladiator"
+        ]
+    },
+    {
+        "word": "Retired",
+        "forbidden": [
+            "work",
+            "relax",
+            "old",
+            "pension",
+            "home"
+        ]
+    },
+    {
+        "word": "Survey",
+        "forbidden": [
+            "ask",
+            "questions",
+            "opinion",
+            "fill out",
+            "investigation"
+        ]
+    },
+    {
+        "word": "Corruption",
+        "forbidden": [
+            "politician",
+            "bribe",
+            "government",
+            "scandal",
+            "dishonesty"
+        ]
+    },
+    {
+        "word": "Hook",
+        "forbidden": [
+            "fishing",
+            "metal",
+            "sharp",
+            "bait",
+            "rode"
+        ]
+    },
+    {
+        "word": "Ankle",
+        "forbidden": [
+            "sprain",
+            "leg",
+            "foot",
+            "break",
+            "heel"
+        ]
+    },
+    {
+        "word": "Steep",
+        "forbidden": [
+            "climb",
+            "mountain",
+            "hill",
+            "angle",
+            "extreme"
+        ]
+    },
+    {
+        "word": "Spread",
+        "forbidden": [
+            "disease",
+            "virus",
+            "infection",
+            "prevent",
+            "extend"
+        ]
+    },
+    {
+        "word": "Cooperate",
+        "forbidden": [
+            "together",
+            "everyone",
+            "unite",
+            "work",
+            "collaborate"
+        ]
+    },
+    {
+        "word": "Sacrifice",
+        "forbidden": [
+            "human",
+            "kill",
+            "ritual",
+            "blood",
+            "surrender"
+        ]
+    },
+    {
+        "word": "Bubble",
+        "forbidden": [
+            "gum",
+            "soap",
+            "blow",
+            "pop",
+            "air ball"
+        ]
+    },
+    {
+        "word": "Jaw",
+        "forbidden": [
+            "mouth",
+            "teeth",
+            "bones",
+            "chew",
+            "talk"
+        ]
+    },
+    {
+        "word": "Sail",
+        "forbidden": [
+            "ship",
+            "boat",
+            "ocean",
+            "wind",
+            "helm"
+        ]
+    },
+    {
+        "word": "Tropical",
+        "forbidden": [
+            "hot",
+            "storm",
+            "island",
+            "exotic",
+            "humid"
+        ]
+    },
+    {
+        "word": "Mushroom",
+        "forbidden": [
+            "white",
+            "humid"
+        ]
+    },
+    {
+        "word": "Workout",
+        "forbidden": [
+            "gym",
+            "weight",
+            "train",
+            "exercise",
+            "Healthline"
+        ]
+    },
+    {
+        "word": "Chew",
+        "forbidden": [
+            "gum",
+            "food",
+            "eat",
+            "teeth",
+            "mouth"
+        ]
+    },
+    {
+        "word": "Fragile",
+        "forbidden": [
+            "delicate",
+            "break",
+            "glass",
+            "careful",
+            "insecure"
+        ]
+    },
+    {
+        "word": "Mansion",
+        "forbidden": [
+            "house",
+            "home",
+            "live",
+            "expensive",
+            "residence"
+        ]
+    },
+    {
+        "word": "Crowd",
+        "forbidden": [
+            "people",
+            "many",
+            "herd",
+            "street",
+            "group"
+        ]
+    },
+    {
+        "word": "Spit",
+        "forbidden": [
+            "mouth",
+            "saliva",
+            "liquid",
+            "tobacco",
+            "spittoon"
+        ]
+    },
+    {
+        "word": "Hike",
+        "forbidden": [
+            "walk",
+            "woods",
+            "mountain",
+            "backpack",
+            "Steep"
+        ]
+    },
+    {
+        "word": "Fried",
+        "forbidden": [
+            "chicken",
+            "cook",
+            "food",
+            "oil",
+            "fish"
         ]
     }
 ]
