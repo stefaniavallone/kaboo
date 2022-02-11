@@ -58,6 +58,6 @@ class Root(ScreenManager):
                 return False  # key event passed to Android
             else:
                 self.exit_pressed_once = True
-                toast('Press Again to exit.', duration=1)
+                toast('Press Again to exit.')
                 Clock.schedule_once(self.reset_state, 5)
                 return True  # key event consumed by app

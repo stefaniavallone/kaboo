@@ -1,5 +1,6 @@
 #:import KMDFillRoundFlatButton uix.base_components.kmd_fill_round_flat_button
 #:import KMDCard uix.base_components.kmd_card
+#:import GameResume uix.components.game_resume
 
 
 <GamePreScreen>:
@@ -36,52 +37,12 @@
                 halign: "center"
                 valign: "center"
 
-        MDGridLayout:
-            pos_hint: {"center_x": .5, "center_y": .08}
-            cols:2
-            padding:[dp(15),dp(30),dp(15),dp(35)]
-            row_default_height: 40
-            row_force_default: True
-            MDLabel:
-                pos_hint: {"center_x": .6, "center_y": .8}
-                text: app.i18n._("COMMON_GAME_LEVEL")  # "Game Level:"
-                halign: "left"
-            MDLabel:
-                pos_hint: {"center_x": .4, "center_y": .8}
-                text: root.game_level
-                halign: "right"
-            MDLabel:
-                pos_hint: {"center_x": .6, "center_y": .8}
-                text: app.i18n._("COMMON_NUM_TEAMS")  # "Num Teams:"
-                halign: "left"
-            MDLabel:
-                pos_hint: {"center_x": .4, "center_y": .8}
-                text: root.num_players
-                halign: "right"
-            MDLabel:
-                pos_hint: {"center_x": .6, "center_y": .7}
-                text: app.i18n._("COMMON_NUM_JUMPS")  # "Num Jumps:"
-                halign: "left"
-            MDLabel:
-                pos_hint: {"center_x": .4, "center_y": .7}
-                text: root.num_jumps
-                halign: "right"
-            MDLabel:
-                pos_hint: {"center_x": .6, "center_y": .6}
-                text: app.i18n._("COMMON_ROUND_TIME")  # "Round Time:"
-                halign: "left"
-            MDLabel:
-                pos_hint: {"center_x": .4, "center_y": .6}
-                text: root.round_time
-                halign: "right"
-            MDLabel:
-                pos_hint: {"center_x": .4, "center_y": .6}
-                text: app.i18n._("COMMON_POINTS")  # "Points: "
-                halign: "left"
-            MDLabel:
-                pos_hint: {"center_x": .4, "center_y": .6}
-                text: root.points
-                halign: "right"
+        GameResume:
+            game_level: root.game_level
+            num_players: root.num_players
+            num_jumps: root.num_jumps
+            round_time: root.round_time
+            points: root.points
 
         MDBoxLayout:
             orientation: "vertical"

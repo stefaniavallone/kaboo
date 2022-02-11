@@ -26,7 +26,7 @@
             MDBoxLayout:
                 orientation: "vertical"
                 spacing: dp(5)
-                padding: [dp(25), dp(40), dp(25), dp(15)]
+                padding: [dp(25), dp(35), dp(25), dp(15)]
 
                 MDBoxLayout:
                     id: sound_container
@@ -87,7 +87,7 @@
         Section:
             id: tutorial_section
             text: app.i18n._("SECTION_TUTORIAL")
-            size_hint_y: 0.625
+            size_hint_y: 0.60
             size_hint_x: None
             width: self.parent.width * 0.8
             callback: root.to_home
