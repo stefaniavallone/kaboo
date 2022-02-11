@@ -35,7 +35,6 @@ def setup_env():
                              Permission.WRITE_EXTERNAL_STORAGE])
 
     create_file_if_not_exist("assets/resources/points.json")
-    create_file_if_not_exist("assets/resources/trophies.json")
 
 
 

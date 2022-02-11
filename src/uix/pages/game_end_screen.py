@@ -1,13 +1,18 @@
+from kivy.metrics import dp
 from kivy.properties import StringProperty
-from kivy.uix.modalview import ModalView
+from kivymd.uix.carousel import MDCarousel
 from kivymd.uix.screen import MDScreen
 
 from logic.game import PLAYERS_COLORS
 from logic.score import compute_points, best_player, update_score_history, \
     get_score_history
-from logic.trophies_checker import check_trophies
-from uix.components.custom_modal import CustomModal
+from logic.trophies.trophies_checker import check_trophies, \
+    compute_trophies_diff
 from kivy.app import App
+
+from uix.base_components.kmd_icon_button import KMDIconButton
+from uix.base_components.kmodal_view import KModalView
+from uix.components.trophy_content import TrophyContent
 
 
 class GameEndScreen(MDScreen):
@@ -24,7 +29,7 @@ class GameEndScreen(MDScreen):
         self.app = App.get_running_app()
         self.applause_sound = self.app.sound_manager.get_sound(
             'assets/sounds/applause.wav')
-    
+
     def on_pre_enter(self, *args):
         G = {'r0': {'p0': {'points': 0, 'actions': []}, 'p1': {'points': 6, 'actions': ['right', 'right', 'right', 'right', 'right', 'right']}}, 'r1': {'p0': {'points': 34, 'actions': ['jump', 'jump', 'jump', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}, 'p1': {'points': 21, 'actions': ['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}}}
         game_rounds = self.app.status.getv("game.rounds", default_value=G)
@@ -33,38 +38,42 @@ class GameEndScreen(MDScreen):
         self.num_players = str(self.app.status.getv("game.num_players", default_value=2))
         self.num_jumps = str(self.app.status.getv("game.num_jumps", default_value=5))
         self.game_level = self.app.status.getv("game.level", default_value="easy")
-        
+
         players_points = compute_points(game_rounds)
         best_player_index, score = best_player(players_points)
-        self.ids.winner_card.md_bg_color = PLAYERS_COLORS[int(best_player_index[1])]
+        self.ids.winner_card.md_bg_color = PLAYERS_COLORS[best_player_index]
         self.points = str(score)
-        self.winner = self.app.i18n._("GAMEEND_TEAM_WINNER", team=f"Team {best_player_index}").upper()  # f"Team {best_player_index} wins!"
-        self.previous_trophies = check_trophies(get_score_history())
+        self.winner = self.app.i18n._("GAMEEND_TEAM_WINNER", team=f"Team {best_player_index + 1}").upper()  # f"Team {best_player_index} wins!"
+        old_trophies = check_trophies(get_score_history())
         self.score_history = update_score_history(self.game_level, game_rounds, players_points)
+        new_trophies = check_trophies(self.score_history)
+        self.trophies_diff = compute_trophies_diff(old_trophies, new_trophies)
         self.applause_sound.play()
 
     def on_enter(self, *args):
-        new_trophies = check_trophies(self.score_history)
         self.ids.confetti_rain.start()
-        self.trophies_list = new_trophies.values()
-        #for trophy in self.trophies_list:
-        #     e = CustomModal(text=trophy.name, subtext=trophy.description,
-        #                     image=trophy.image, bg_color=(255/255, 241/255, 115/255, 1))
-        #     e._size_hint = (0.6, 0.3)
-        #     e.elevation = 0
-            #self.ids.trophy_carousel.add_widget(e)
-        #animations.pop_up(self.ids.trophy_carousel)
-        self.view = ModalView(size_hint=(0.7, 0.4),
-                         auto_dismiss=True,
-                         background_color=[0,0,0,0])
-        self.view.add_widget(CustomModal(image="assets/images/trophies/trophy_5points.png",
-                                    text="asdasdsadsa", subtext="asdsadas",
-                                    on_close=self.cancel,
-                                    bg_color=(255 / 255, 241 / 255, 115 / 255, 1)))
-        self.view.open()
-
-    def cancel(self, inst=None):
-        self.view.dismiss()
+        if len(self.trophies_diff) > 0:
+            trophies_carousel = MDCarousel()
+            buttons = []
+            for name, trophy in self.trophies_diff.items():
+                trophies_carousel.add_widget(TrophyContent(image=trophy["image"],
+                                                           text=trophy["name"],
+                                                           subtext=trophy["description"]))
+            if len(self.trophies_diff) > 1:
+                buttons = [
+                    KMDIconButton(icon="chevron-left",
+                                        _radius=dp(24),
+                                        md_bg_color=[0.6, 0.6, 0.6, 1],
+                                        on_release=lambda x: trophies_carousel.load_previous()),
+                    KMDIconButton(icon="chevron-right",
+                                               _radius=dp(24),
+                                               md_bg_color=[0.6, 0.6, 0.6, 1],
+                                               on_release=lambda x: trophies_carousel.load_next()),
+                             ]
+            self.trophies_won_view = KModalView(size_hint=(0.7, 0.4),
+                          auto_dismiss=False, content=trophies_carousel,
+                          buttons=buttons)
+            self.trophies_won_view.open()
 
     def to_home(self, inst=None):
         self.manager.go_to_screen('home', direction='right')

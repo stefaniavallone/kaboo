@@ -1,4 +1,4 @@
-#:import StoryCard uix.components.page
+#:import Section uix.components.section
 #:import HistoryItem uix.components.history_item
 
 
@@ -10,7 +10,7 @@
         allow_stretch: True
 
     MDRelativeLayout:
-        Page:
+        Section:
             text: app.i18n._("SECTION_HISTORY")  # "HISTORY"
             pos_hint: {"center_x": 0.5, "center_y": 0.485}
             size_hint_y: 0.9

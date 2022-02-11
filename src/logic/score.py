@@ -1,6 +1,8 @@
 import json
 from datetime import datetime
 
+POINTS_FILENAME = 'assets/resources/points.json'
+
 
 def compute_points(game_rounds):
     player_points = dict()
@@ -12,11 +14,8 @@ def compute_points(game_rounds):
 
 
 def best_player(player_points):
-    index = max(player_points, key=player_points.get)
-    return index, player_points[index]
-
-
-POINTS_FILENAME = 'assets/resources/points.json'
+    key = max(player_points, key=player_points.get)
+    return int(key[1]), player_points[key]
 
 
 def get_score_history():

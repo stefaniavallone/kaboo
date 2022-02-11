@@ -36,24 +36,18 @@
                 md_bg_color: 210/255, 158/255, 0/255, 1
                 image:"assets/images/home/darts_easy.png"
                 text: app.i18n._("HOME_EASY_LEVEL") # "Easy"
-                #subtext:"play"
-                items_count:"33 Cards"
                 on_release: root.set_game_level("easy")
 
             ElementCard:
                 md_bg_color: 205/255, 92/255, 0/255, 1
                 image:"assets/images/home/darts_medium.png"
                 text: app.i18n._("HOME_MEDIUM_LEVEL") # "Medium"
-                #subtext:"play"
-                items_count:"45 Cards"
                 on_release: root.set_game_level("medium")
 
             ElementCard:
                 md_bg_color: 130/255, 95/255, 30/255, 1
                 image: "assets/images/home/darts_hard.png"
                 text: app.i18n._("HOME_HARD_LEVEL") # "Hard"
-                #subtext:"play"
-                items_count:"56 cards"
                 on_release: root.set_game_level("hard")
 
         MDBoxLayout:
@@ -63,7 +57,6 @@
             pos_hint: {"center_x": .5, "center_y": .5}
             KMDIconSquaredButton:
                 icon: "assets/images/icons/trophy.png"
-                tooltip_text: app.i18n._("HOME_TOOLTIP_TROPHIES") # "Trophies"
                 #md_bg_color: 210/255, 158/255, 0/255, 1
                 md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
@@ -73,7 +66,6 @@
             KMDIconSquaredButton:
                 id: history
                 icon: "assets/images/icons/to-do-list.png"
-                tooltip_text: app.i18n._("HOME_TOOLTIP_HISTORY") # "History"
                 #md_bg_color: 210/255, 158/255, 0/255, 1
                 md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
@@ -82,7 +74,6 @@
 
             KMDIconSquaredButton:
                 icon: "assets/images/icons/value.png"
-                tooltip_text: app.i18n._("HOME_TOOLTIP_RATEUS") # "Rate us"
                 pos_hint: {"center_x": .5, "center_y": .5}
                 md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
@@ -92,7 +83,6 @@
                 id: settings
                 icon: "assets/images/icons/list.png"
                 pos_hint: {"center_x": 0.5, "center_y": 0.5}
-                tooltip_text: app.i18n._("HOME_TOOLTIP_SETTINGS") # "Settings"
                 md_bg_color: 0.9, 0.9, 0.9, 1
                 theme_text_color: "Custom"
                 on_release:

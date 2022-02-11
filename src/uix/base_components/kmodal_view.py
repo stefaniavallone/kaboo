@@ -1,35 +1,33 @@
 from kivy.lang import Builder
 from kivy.metrics import dp
 from kivy.properties import Clock, BooleanProperty, StringProperty
+from kivy.uix.modalview import ModalView
 from kivymd.uix.card import MDCard
 from kivymd.uix.relativelayout import MDRelativeLayout
 
-Builder.load_file("uix/components/kv/custom_modal.kv")
+Builder.load_file("uix/base_components/kv/kmodal_view.kv")
 
 
-class CustomModal(MDRelativeLayout):
+class KModalView(ModalView):
 
     closable = BooleanProperty()
-    image = StringProperty()
-    text = StringProperty()
-    subtext = StringProperty()
 
-    def __init__(self, image, text, subtext, bg_color, on_close=None, buttons=[], **kw):
+    def __init__(self, closable=True, buttons=[], content=None, **kw):
         super().__init__(**kw)
-        self.image = image
-        self.text = text
-        self.subtext = subtext
-        self.on_close = on_close
+        self.background_color = [0, 0, 0, 0]
         self.buttons = buttons
-        Clock.schedule_once(self._late_init)
-        self.register_event_type('on_close')
+        self.closable = closable
+        self.content = content
+        self._compose()
 
-    def _late_init(self, inst):
-        if self.on_close is None:
-            self.remove_widget(self.ids.close_button)
+    def _compose(self):
+        if not self.closable:
+            self.ids.container.remove_widget(self.ids.close_button)
         if len(self.buttons) == 0:
             self.remove_widget(self.ids.buttons_container)
         elif len(self.buttons) >= 3:
             self.ids.buttons_container.y = -self.height - dp(20)
         for button in self.buttons:
             self.ids.buttons_container.add_widget(button)
+        if self.content is not None:
+            self.ids.content_container.add_widget(self.content)

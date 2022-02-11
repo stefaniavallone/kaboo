@@ -20,33 +20,40 @@
                     MDLabel:
                         id: remaining_jumps
                         text: "0"
-                        adaptive_size: True
-                        font_style: "H4"
+                        font_style: "H5"
+                        size_hint_x: None
                         width: dp(40)
-                        halign: "left"
-                    MDIconButton:
+                        halign: "right"
+                    MDIcon:
+                        size_hint_x: None
+                        width: dp(40)
+                        halign: "center"
+                        font_size: '20dp'
                         icon: "redo"
-                        padding: dp(5)
 
                     Timer:
                         id: timer
                         format: "%M:%S"
                         font_style: "H4"
                         halign: "center"
+                        bold: True
                         last_seconds: 10
                         on_finish: root.finish_round()
                         on_last_seconds: root.clock_sound.play()
 
-                    MDIconButton:
+                    MDIcon:
+                        size_hint_x: None
+                        width: dp(40)
+                        font_size: '20dp'
                         icon: "checkbox-marked-circle-outline"
-                        padding: dp(5)
+                        halign: "center"
                     MDLabel:
                         id: player_points
-                        adaptive_size: True
                         text: "0"
+                        size_hint_x: None
                         width: dp(40)
-                        font_style: "H4"
-                        halign: "right"
+                        font_style: "H5"
+                        halign: "left"
 
             MDRelativeLayout:
                 id: controls_buttons

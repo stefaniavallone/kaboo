@@ -2,10 +2,11 @@ from kivy.lang import Builder
 from kivy.properties import StringProperty, ColorProperty
 from kivymd.uix.relativelayout import MDRelativeLayout
 
-Builder.load_file("uix/components/kv/page.kv")
+Builder.load_file("uix/components/kv/section.kv")
 
 
-class Page(MDRelativeLayout):
+class Section(MDRelativeLayout):
+
     text = StringProperty()
     name = StringProperty()
     icon = StringProperty()

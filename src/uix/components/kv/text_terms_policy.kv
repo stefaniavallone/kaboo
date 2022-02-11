@@ -1,9 +1,11 @@
 <TextTermsPolicy>
     orientation: "vertical"
-    spacing: dp(12)
-    size_hint_y: None
-    height: "450dp"
     padding: [dp(10), dp(20), dp(10), dp(20)]
+    MDLabel:
+        size_hint_y: 0.15
+        text: "Terms & Policy"
+        font_style: "H5"
+        bold: True
     ScrollView:
         do_scroll_x: False
         do_scroll_y: True

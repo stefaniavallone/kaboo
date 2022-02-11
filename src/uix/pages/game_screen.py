@@ -1,18 +1,18 @@
-import abc
 import json
 from random import shuffle
 
 from kivmob import TestIds
 from kivy.clock import Clock
 from kivy.logger import Logger
-from kivy.uix.modalview import ModalView
+from kivy.metrics import dp
 from kivymd.uix.screen import MDScreen
 
 from uix.base_components.kmd_fill_round_flat_button import \
     KMDFillRoundFlatButton
-from uix.components.custom_modal import CustomModal
+from uix.components.confirm_content import ConfirmContent
 from kivy.app import App
 from logic.game import PLAYERS_COLORS
+from uix.base_components.kmodal_view import KModalView
 
 
 class GameScreen(MDScreen):
@@ -28,14 +28,17 @@ class GameScreen(MDScreen):
     def on_pre_enter(self, *args):
         self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
         self.app.ads.request_interstitial()
-        self.round_time = self.app.status.getv("game.round_time", default_value=15)
-        self.num_players = self.app.status.getv("game.num_players", default_value=2)
+        self.round_time = self.app.status.getv("game.round_time",
+                                               default_value=15)
+        self.num_players = self.app.status.getv("game.num_players",
+                                                default_value=2)
         self.num_jumps = self.app.status.getv("game.num_jumps", default_value=5)
-        self.game_level = self.app.status.getv("game.level", default_value="easy")
+        self.game_level = self.app.status.getv("game.level",
+                                               default_value="easy")
         self.current_round = self.app.status.getv("game.current_round",
-                                            default_value=0)
+                                                  default_value=0)
         self.current_player = self.app.status.getv("game.current_player",
-                                             default_value=0)
+                                                   default_value=0)
 
         Clock.schedule_once(self.load_music)
         self.load_game()
@@ -72,11 +75,13 @@ class GameScreen(MDScreen):
         self.app.status.setv("game.sound", not sounds_on)
 
     def load_game(self):
-        with open(f"assets/resources/game_levels/{self.game_level}.json") as game_file:
+        self.elements = []
+        locale = self.app.status.getv("app.lang")
+        with open(
+                f"assets/resources/game_levels/{locale}/{self.game_level}.json") as game_file:
             game_elements = json.load(game_file)
             shuffle(game_elements)
-            self.elements = game_elements + [{"word": "",
-                                              "forbidden": []}]  # add another empty for graphic reasons
+            self.elements = game_elements
         self.elem_idx = 0
         for element in self.elements[:2]:
             self.ids.card_container.add_card(element["word"],
@@ -153,30 +158,36 @@ class GameScreen(MDScreen):
     def confirm_exit(self):
         self.clock_sound.stop()
         self.ids.timer.stop()
-        e = CustomModal(
-                image="assets/images/go_home.png",
-                bg_color=(1, 1, 1, 1),
-                text=self.app.i18n._("DIALOG_BACK_HOME_TITLE"),  # "Are you sure?",
-                subtext=self.app.i18n._("DIALOG_BACK_HOME_DESC"),  # "You will lose game progress.",
-                closable=False,
-                buttons=[
-                    KMDFillRoundFlatButton(text=self.app.i18n._("GAME_CANCEL_BUTTON").upper(),  # "Cancel".upper(),
-                                           radius=[10, 10, 10, 10],
-                                           width="100dp", size_hint_x=None,
-                                           md_bg_color=(0, 0.2, 0.9, 1),
-                                           on_release=self.cancel),
-                    KMDFillRoundFlatButton(text=self.app.i18n._("GAME_BACK_HOME_BUTTON").upper(),  # "Back Home".upper(),
-                                           md_bg_color=(1, 0, 0, 1),
-                                           radius=[10, 10, 10, 10],
-                                           width="100dp", size_hint_x=None,
-                                           on_release=self.to_home),
-                ]
-        )
         if not self.confirm_exit_dialog:
-            self.confirm_exit_dialog = ModalView(size_hint=(0.7, 0.4),
-                                                 auto_dismiss=False,
-                                                 background_color=[0, 0, 0, 0])
-            self.confirm_exit_dialog.add_widget(e)
+            self.confirm_exit_dialog = \
+                KModalView(size_hint=(0.7, 0.4),
+                           auto_dismiss=False,
+                           closable=False,
+                           background_color=[0, 0, 0, 0],
+                           content=ConfirmContent(image="assets/images/go_home.png",
+                               text=self.app.i18n._("DIALOG_BACK_HOME_TITLE"),  # "Are you sure?",
+                               subtext=self.app.i18n._("DIALOG_BACK_HOME_DESC")), # "You will lose game progress.",),
+                           buttons=[
+                               KMDFillRoundFlatButton(text=self.app.i18n._(
+                                   "GAME_CANCEL_BUTTON").upper(),
+                                                      # "Cancel".upper(),
+                                                      radius=[dp(10), dp(10),
+                                                              dp(10), dp(10)],
+                                                      width="100dp",
+                                                      size_hint_x=None,
+                                                      md_bg_color=(
+                                                      0, 0.2, 0.9, 1),
+                                                      on_release=self.cancel),
+                               KMDFillRoundFlatButton(text=self.app.i18n._(
+                                   "GAME_BACK_HOME_BUTTON").upper(),
+                                                      # "Back Home".upper(),
+                                                      md_bg_color=(1, 0, 0, 1),
+                                                      radius=[dp(10), dp(10),
+                                                              dp(10), dp(10)],
+                                                      width="100dp",
+                                                      size_hint_x=None,
+                                                      on_release=self.to_home),
+                           ])
         self.confirm_exit_dialog.open()
 
     def cancel(self, inst):

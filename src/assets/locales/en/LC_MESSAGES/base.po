@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-02 15:23+0100\n"
+"POT-Creation-Date: 2022-02-10 10:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,11 +15,185 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: ../src/utils/sound\sound_manager.py:10
-msgid "MAMMT"
+#: ../src/logic/trophies\trophies.py:8
+msgid "TROPHY_POINTS_TITLE"
+msgstr "[points] points"
+
+#: ../src/logic/trophies\trophies.py:9
+msgid "TROPHY_POINTS_DESC"
+msgstr "You scored [points] points"
+
+#: ../src/logic/trophies\trophies.py:28
+msgid "TROPHY_ANSWERS_TITLE"
 msgstr ""
 
-#: ../src/utils/translation\internationalization.py:36
-msgid "HOME_LEVEL_EASY"
+#: ../src/logic/trophies\trophies.py:29
+msgid "TROPHY_ANSWERS_DESC"
+msgstr ""
+
+#: ../src/logic/trophies\trophies.py:53
+msgid "TROPHY_GAME_LEVEL_TITLE"
+msgstr ""
+
+#: ../src/logic/trophies\trophies.py:54
+msgid "TROPHY_GAME_LEVEL_DESC"
+msgstr ""
+
+#: ../src/logic/trophies\trophies.py:68
+msgid "TROPHY_GAMES_LEVEL_TITLE"
+msgstr ""
+
+#: ../src/logic/trophies\trophies.py:69
+msgid "TROPHY_GAMES_LEVEL_DESC"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_end_screen.kv:56
+#: ../src/uix/pages/kv\game_pre_screen.kv:47
+msgid "COMMON_GAME_LEVEL"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_end_screen.kv:64
+msgid "COMMON_NUM_PLAYERS"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_end_screen.kv:72
+#: ../src/uix/pages/kv\game_pre_screen.kv:63
+msgid "COMMON_NUM_JUMPS"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_end_screen.kv:80
+#: ../src/uix/pages/kv\game_pre_screen.kv:71
+msgid "COMMON_ROUND_TIME"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_end_screen.kv:88
+#: ../src/uix/pages/kv\game_pre_screen.kv:79
+msgid "COMMON_POINTS"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_end_screen.kv:102
+#: ../src/uix/pages/kv\game_pre_screen.kv:93
+msgid "COMMON_BACK_HOME_BUTTON"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_pre_screen.kv:55
+msgid "COMMON_NUM_TEAMS"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_pre_screen.kv:110
+msgid "PREGAME_PLAY_BUTTON"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_num_jumps_screen.kv:8
+msgid "GAMESETTINGS_JUMPS_LIMIT_TITLE"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_num_jumps_screen.kv:9
+#: ../src/uix/pages/kv\game_settings_num_players_screen.kv:8
+msgid "GAMESETTINGS_JUMPS_LIMIT_DESC"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_num_players_screen.kv:7
+msgid "GAMESETTINGS_TEAMS_NUMBER_TITLE"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_round_time_screen.kv:8
+msgid "GAMESETTINGS_ROUND_TIME_TITLE"
+msgstr ""
+
+#: ../src/uix/pages/kv\game_settings_round_time_screen.kv:9
+msgid "GAMESETTINGS_ROUND_TIME_DESC"
+msgstr ""
+
+#: ../src/uix/pages/kv\history_screen.kv:14
+msgid "SECTION_HISTORY"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:38
+msgid "HOME_EASY_LEVEL"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:44
+msgid "HOME_MEDIUM_LEVEL"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:50
+msgid "HOME_HARD_LEVEL"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:60
+msgid "HOME_TOOLTIP_TROPHIES"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:70
+msgid "HOME_TOOLTIP_HISTORY"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:79
+msgid "HOME_TOOLTIP_RATEUS"
+msgstr ""
+
+#: ../src/uix/pages/kv\home_screen.kv:89
+msgid "HOME_TOOLTIP_SETTINGS"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:17
+msgid "SECTION_SETTINGS"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:36
+msgid "ENABLE_SOUNDS"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:43
+msgid "ENABLE_DARK_THEME"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:49
+msgid "CHOOSE_LANGUAGE"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:71
+msgid "SECTION_TUTORIAL"
+msgstr ""
+
+#: ../src/uix/pages/kv\settings_screen.kv:127
+msgid "TERMS_AND_POLICY_TITLE"
+msgstr ""
+
+#: ../src/uix/pages/kv\trophies_screen.kv:15
+msgid "SECTION_TROPHIES"
+msgstr ""
+
+#: ../src/uix/pages\game_end_screen.py:41
+msgid "GAMEEND_TEAM_WINNER"
+msgstr ""
+
+#: ../src/uix/pages\game_pre_screen.py:31
+msgid "PREGAME_TEAM_TURN"
+msgstr ""
+
+#: ../src/uix/pages\game_screen.py:159
+msgid "DIALOG_BACK_HOME_TITLE"
+msgstr ""
+
+#: ../src/uix/pages\game_screen.py:160
+msgid "DIALOG_BACK_HOME_DESC"
+msgstr ""
+
+#: ../src/uix/pages\game_screen.py:163
+msgid "GAME_CANCEL_BUTTON"
+msgstr ""
+
+#: ../src/uix/pages\game_screen.py:168
+msgid "GAME_BACK_HOME_BUTTON"
+msgstr ""
+
+#: ../src/uix/pages\history_screen.py:50
+msgid "HISTORY_DETAIL_TITLE"
+msgstr ""
+
+#: ../src/uix/pages\home_screen.py:29
+msgid "DIALOG_RATEUS"
 msgstr ""
 

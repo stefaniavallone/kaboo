@@ -50,13 +50,4 @@ class I18n(Observer, Observable):
             self.switch_lang(new_state)
 
 
-
 i18n = I18n()
-
-
-if __name__ == "__main__":
-    i18n = I18n()
-
-    print(i18n._("TEXT_WITH_PARAMS", team="Team 1", points="3"))
-    i18n.switch_lang("it")
-    print(i18n._("TEXT_WITH_PARAMS", team="Team 1", points="3"))

@@ -1,0 +1,6 @@
+[
+	{
+		"word": "Parola",
+		"forbidden" : ["ita", "itadas2", "iads", "dsadasd", "asda"]
+	}
+]

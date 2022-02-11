@@ -9,7 +9,6 @@ from utils.sound.sound_manager import SoundManager
 from utils.translation.i18n import I18n, i18n
 
 
-#i18n = I18n()
 
 
 class BaseApp(MDApp):
@@ -23,6 +22,7 @@ class BaseApp(MDApp):
         self.i18n = i18n
         self.status.attach(self.sound_manager)
         self.status.attach(self.i18n)
+        self.status.setv("app.lang", "en")
     
     def initialize_app(self):
         Window.soft_input_mode = "below_target"

@@ -1,0 +1,15 @@
+<TitleAndTextContent>
+    orientation: "vertical"
+    padding: [dp(10), dp(20), dp(10), dp(20)]
+    MDLabel:
+        id: title
+        size_hint_y: 0.15
+        text: root.title
+        font_style: "H5"
+        bold: True
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+        MDLabel:
+            id: content
+            text: root.text

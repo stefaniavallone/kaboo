@@ -43,7 +43,6 @@ class ConfettiRain(FloatLayout):
         self.running = False
 
     def add_item(self, count):
-        print("ADD_ITEMMMMMMM")
         for x in range(count):
             color = [randint(0, 255)/255, randint(0, 255)/255, randint(0, 255)/255, 1]
             item = ConfettiItem(
