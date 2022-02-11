@@ -13,7 +13,6 @@ on:
 
 jobs:
   # Build job. Builds app for Android with Buildozer
-  # Build job. Builds app for Android with Buildozer
   build-android:
     name: Build for Android
     runs-on: ubuntu-latest
@@ -22,15 +21,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          path: master
+          path: main
 
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
-          repository_root: master
           workdir: .
+          repository_root: main
           buildozer_version: stable
+          command: buildozer appclean; buildozer android debug
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2

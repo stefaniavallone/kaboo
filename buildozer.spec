@@ -13,7 +13,7 @@ package.domain = org.kames
 source.dir = ./src
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,kv,png,jpg,jpeg,atlas,ttf,json,wav,mp3,ogg,mo
+source.include_exts = py,kv,png,jpg,jpeg,atlas,ttf,json,wav,mp3,ogg,mo,po,pot
 
 # (list) List of inclusions using pattern matching
 source.include_patterns = assets/*

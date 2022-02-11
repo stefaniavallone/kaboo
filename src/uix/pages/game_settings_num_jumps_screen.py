@@ -1,7 +1,8 @@
 from kivymd.uix.screen import MDScreen
 from kivy.app import App
-from src.uix.base_components.kmd_fill_round_flat_button import KMDFillRoundFlatButton
 from kivy.properties import ListProperty
+from uix.base_components.kmd_fill_round_flat_button import KMDFillRoundFlatButton
+
 
 class GameSettingsNumJumpsScreen(MDScreen):
     buttons = ListProperty()

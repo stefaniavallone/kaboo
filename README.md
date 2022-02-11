@@ -30,7 +30,7 @@ android.release_artifact = aab
 p4a.branch = develop
 ```
 
-Create a keystore
+Create a keystore (do it on Windows, not WSL!)
 ```bash
 KEYSTORE_NAME=kaboo
 KEYSTORE_ALIAS=kabooalias
@@ -65,7 +65,7 @@ bundletool validate --bundle bin/kaboo-release.aab
 Create APK 
 To have it signed you have to pass also keystore
 ```bash
-bundletool build-apks --mode universal --bundle bin/kaboo-release.aab --output bin/kaboo-release.apks --ks keystores/ktaboo.keystore --ks-key-alias ktaboo --ks-pass pass:ktaboo.11
+bundletool build-apks --mode universal --bundle bin/kaboo-release.aab --output bin/kaboo-release.apks --ks keystores/kaboo.keystore --ks-key-alias kaboo --ks-pass pass:kaboo.11
 ```
 Install
 ```bash
