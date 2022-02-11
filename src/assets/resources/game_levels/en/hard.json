@@ -1,59 +1,1100 @@
 [
-	{
-		"word": "Food",
-		"forbidden" : ["eat", "mouth", "hungry", "full", "delicious"]
-	},
-	{
-		"word": "Music",
-		"forbidden" : ["listen", "song", "instrument", "play", "hear"]
-	},
-	{
-		"word": "Fish",
-		"forbidden" : ["swim", "food", "ocean", "lake", "river"]
-	},
-	{
-		"word": "Physics",
-		"forbidden" : ["study", "science", "gravity", "force", "move"]
-	},
-	{
-		"word": "Java",
-		"forbidden" : ["coffee", "language", "drink", "oracle", "hot"]
-	},
-	{
-		"word": "Money",
-		"forbidden" : ["wealth", "job", "pay", "buy", "sell"]
-	},
-	{
-		"word": "Shotgun",
-		"forbidden" : ["weapon", "pump", "zombie", "barrel", "bullet"]
-	},
-	{
-		"word": "Rice",
-		"forbidden" : ["chinese", "field", "university", "grain", "food"]
-	},
-	{
-		"word": "Cellphone",
-		"forbidden" : ["call", "mobile", "pocket", "internet", "ear"]
-	},
-	{
-		"word": "Peanut Butter",
-		"forbidden" : ["bread", "sandwich", "jam", "jelly", "brown"]
-	},
-	{
-		"word": "Ketchup",
-		"forbidden" : ["fries", "tomato", "sauce", "condiment", "dip"]
-	},
-	{
-		"word": "Pikachu",
-		"forbidden" : ["Pokemon", "Ash", "mouse", "rat", "electric"]
-	},
-	{
-		"word": "Swimming",
-		"forbidden" : ["water", "pool", "lake", "ocean", "suit"]
-	},
-	{
-		"word": "Piano",
-		"forbidden" : ["music", "instrument", "key", "pedal", "grand"]
-	}
-	
+    {
+        "word": "Dare",
+        "forbidden": [
+            "truth",
+            "challenge",
+            "courage",
+            "bold",
+            "risk"
+        ]
+    },
+    {
+        "word": "forecast",
+        "forbidden": [
+            "weather",
+            "future",
+            "radio",
+            "prediction",
+            "news"
+        ]
+    },
+    {
+        "word": "hose",
+        "forbidden": [
+            "water",
+            "rubber",
+            "stockings",
+            "panty",
+            "sprinkler"
+        ]
+    },
+    {
+        "word": "luggage",
+        "forbidden": [
+            "baggage",
+            "suitcase",
+            "travel",
+            "holiday",
+            "pack"
+        ]
+    },
+    {
+        "word": "camouflage",
+        "forbidden": [
+            "disguise",
+            "uniform",
+            "hide",
+            "cover",
+            "army"
+        ]
+    },
+    {
+        "word": "jukebox",
+        "forbidden": [
+            "songs",
+            "music",
+            "select",
+            "machine",
+            "coin"
+        ]
+    },
+    {
+        "word": "shade",
+        "forbidden": [
+            "hot",
+            "lamp",
+            "window",
+            "tree",
+            "sunglasses"
+        ]
+    },
+    {
+        "word": "leftovers",
+        "forbidden": [
+            "reheat",
+            "yesterday",
+            "food",
+            "meal",
+            "save"
+        ]
+    },
+    {
+        "word": "bulb",
+        "forbidden": [
+            "light",
+            "glass",
+            "watt",
+            "tulip",
+            "plant"
+        ]
+    },
+    {
+        "word": "chart",
+        "forbidden": [
+            "graph",
+            "numbers",
+            "visual",
+            "data",
+            "dashboard"
+        ]
+    },
+    {
+        "word": "drummer",
+        "forbidden": [
+            "Ringo",
+            "beat",
+            "sticks",
+            "band",
+            "drums"
+        ]
+    },
+    {
+        "word": "Loch Ness Monster",
+        "forbidden": [
+            "scotland",
+            "creature",
+            "lake",
+            "water",
+            "nessie"
+        ]
+    },
+    {
+        "word": "grease",
+        "forbidden": [
+            "fat",
+            "oil",
+            "fry",
+            "lubricate",
+            "John Travolta"
+        ]
+    },
+    {
+        "word": "nozzle",
+        "forbidden": [
+            "tap",
+            "shower",
+            "hose",
+            "water",
+            "adjust"
+        ]
+    },
+    {
+        "word": "stew",
+        "forbidden": [
+            "cook",
+            "food",
+            "beef",
+            "flavour",
+            "mad"
+        ]
+    },
+    {
+        "word": "quick",
+        "forbidden": [
+            "fast",
+            "express",
+            "rapid",
+            "hasty",
+            "swift"
+        ]
+    },
+    {
+        "word": "headline",
+        "forbidden": [
+            "news",
+            "act",
+            "performer",
+            "title",
+            "star"
+        ]
+    },
+    {
+        "word": "Centurion",
+        "forbidden": [
+            "Hundred",
+            "Soldier",
+            "Fight",
+            "Rome",
+            "Leader"
+        ]
+    },
+    {
+        "word": "Leper",
+        "forbidden": [
+            "Jesus",
+            "Healed",
+            "Lazarus",
+            "Disease",
+            "Unclean"
+        ]
+    },
+    {
+        "word": "Oath",
+        "forbidden": [
+            "Covenant",
+            "Break",
+            "Promise",
+            "Vow",
+            "Swear"
+        ]
+    },
+    {
+        "word": "Exodus",
+        "forbidden": [
+            "Egypt",
+            "Pharaoh",
+            "Desert",
+            "Moses",
+            "Cross"
+        ]
+    },
+    {
+        "word": "Nile",
+        "forbidden": [
+            "Moses",
+            "Pharaoh",
+            "River",
+            "Egypt",
+            "Blood"
+        ]
+    },
+    {
+        "word": "Peace",
+        "forbidden": [
+            "Anxious",
+            "Quiet",
+            "Fruit",
+            "War",
+            "Calm"
+        ]
+    },
+    {
+        "word": "Command",
+        "forbidden": [
+            "Obey",
+            "Instruct",
+            "Order",
+            "Soldier",
+            "Master"
+        ]
+    },
+    {
+        "word": "donkey",
+        "forbidden": [
+            "gray",
+            "cart",
+            "stubborn",
+            "ride",
+            "carrots"
+        ]
+    },
+    {
+        "word": "barefoot",
+        "forbidden": [
+            "shoes",
+            "socks",
+            "summer",
+            "beach",
+            "foot"
+        ]
+    },
+    {
+        "word": "public relations",
+        "forbidden": [
+            "advertising",
+            "marketing",
+            "PR",
+            "media",
+            "digital"
+        ]
+    },
+    {
+        "word": "promotion",
+        "forbidden": [
+            "marketing",
+            "advertising",
+            "sale",
+            "offer",
+            "discount"
+        ]
+    },
+    {
+        "word": "CEO",
+        "forbidden": [
+            "leader",
+            "Board of Directors",
+            "in-charge",
+            "executive",
+            "company"
+        ]
+    },
+    {
+        "word": "negotiate",
+        "forbidden": [
+            "agreement",
+            "compromise",
+            "convince",
+            "discussion",
+            "business"
+        ]
+    },
+    {
+        "word": "Abolitionist",
+        "forbidden": [
+            "advocate",
+            "Abolition",
+            "Protest",
+            "Activist",
+            "slave"
+        ]
+    },
+    {
+        "word": "Transcontinental Railroad",
+        "forbidden": [
+            "train",
+            "Locomotive",
+            "Train Station",
+            "Transportation",
+            "goods"
+        ]
+    },
+    {
+        "word": "Slavery",
+        "forbidden": [
+            "Bondage",
+            "slave",
+            "Force",
+            "Work",
+            "master"
+        ]
+    },
+    {
+        "word": "scarecrow",
+        "forbidden": [
+            "the wizard of oz",
+            "garden",
+            "field",
+            "birds",
+            "dummy"
+        ]
+    },
+    {
+        "word": "hanger",
+        "forbidden": [
+            "closet",
+            "clothes",
+            "prosthetics",
+            "steak",
+            "hook"
+        ]
+    },
+    {
+        "word": "soy sauce",
+        "forbidden": [
+            "assess",
+            "chinese",
+            "liquid",
+            "brown",
+            "cooking"
+        ]
+    },
+    {
+        "word": "curtailed",
+        "forbidden": [
+            "deficient",
+            "imperfect",
+            "incomplete",
+            "partial",
+            "shortened"
+        ]
+    },
+    {
+        "word": "negotiator",
+        "forbidden": [
+            "priceline",
+            "william shatner",
+            "mediator",
+            "deal"
+        ]
+    },
+    {
+        "word": "phone charger",
+        "forbidden": [
+            "cellphone",
+            "battery",
+            "power",
+            "device",
+            "plug"
+        ]
+    },
+    {
+        "word": "dissident",
+        "forbidden": [
+            "insubordinate",
+            "rebellious",
+            "revolutionary",
+            "seditious",
+            "subversive"
+        ]
+    },
+    {
+        "word": "rockstar",
+        "forbidden": [
+            "band",
+            "groupie",
+            "guitar",
+            "play",
+            "fan"
+        ]
+    },
+    {
+        "word": "3d",
+        "forbidden": [
+            "movie",
+            "red & blue",
+            "avatar",
+            "cinema",
+            "glasses"
+        ]
+    },
+    {
+        "word": "festive",
+        "forbidden": [
+            "celebration",
+            "happy",
+            "cheer",
+            "christmas",
+            "meeting"
+        ]
+    },
+    {
+        "word": "define",
+        "forbidden": [
+            "delineate",
+            "demarcate",
+            "describe",
+            "explain",
+            "outline"
+        ]
+    },
+    {
+        "word": "actually",
+        "forbidden": [
+            "authentically",
+            "fully",
+            "genuinely",
+            "indisputably",
+            "legitimately"
+        ]
+    },
+    {
+        "word": "blurry",
+        "forbidden": [
+            "dim",
+            "faint",
+            "hazy",
+            "imprecise",
+            "indefinite"
+        ]
+    },
+    {
+        "word": "contrive",
+        "forbidden": [
+            "engineer",
+            "finagle",
+            "fix",
+            "get",
+            "obtain"
+        ]
+    },
+    {
+        "word": "understand",
+        "forbidden": [
+            "grasp",
+            "familiar with",
+            "know",
+            "comprehend",
+            "apprehend"
+        ]
+    },
+    {
+        "word": "abbreviation",
+        "forbidden": [
+            "abridgment",
+            "cutting",
+            "shortening",
+            "summarizing",
+            "compression"
+        ]
+    },
+    {
+        "word": "applause",
+        "forbidden": [
+            "cheers",
+            "clapping",
+            "hand",
+            "ovation",
+            "approval"
+        ]
+    },
+    {
+        "word": "fishbowl",
+        "forbidden": [
+            "bowl",
+            "fish",
+            "water",
+            "glass",
+            "salty / sweet"
+        ]
+    },
+    {
+        "word": "patriotism",
+        "forbidden": [
+            "nationalism",
+            "loyalty",
+            "country",
+            "pride",
+            "patrimony"
+        ]
+    },
+    {
+        "word": "vocal cords",
+        "forbidden": [
+            "speak",
+            "sing",
+            "throat",
+            "lose",
+            "voice"
+        ]
+    },
+    {
+        "word": "security",
+        "forbidden": [
+            "protection",
+            "safe",
+            "indemnity",
+            "insurance",
+            "defence"
+        ]
+    },
+    {
+        "word": "whack",
+        "forbidden": [
+            "belt",
+            "hit",
+            "smack",
+            "clobber",
+            "bash"
+        ]
+    },
+    {
+        "word": "Leisure",
+        "forbidden": [
+            "hobby",
+            "vacation",
+            "relaxation",
+            "holiday",
+            "free time"
+        ]
+    },
+    {
+        "word": "corporate ladder",
+        "forbidden": [
+            "climb",
+            "get",
+            "ahead",
+            "business",
+            "offer"
+        ]
+    },
+    {
+        "word": "sunscreen",
+        "forbidden": [
+            "block",
+            "burn",
+            "protection",
+            "spf"
+        ]
+    },
+    {
+        "word": "nucleus",
+        "forbidden": [
+            "element",
+            "proton",
+            "chemistry",
+            "neutrons",
+            "core"
+        ]
+    },
+    {
+        "word": "surface",
+        "forbidden": [
+            "exterior",
+            "outside",
+            "facede",
+            "coat",
+            "superficial"
+        ]
+    },
+    {
+        "word": "rainforest",
+        "forbidden": [
+            "endangered",
+            "water",
+            "jungle",
+            "south america",
+            "forest"
+        ]
+    },
+    {
+        "word": "south caroline",
+        "forbidden": [
+            "cherleston",
+            "secede",
+            "north",
+            "slave",
+            "Columbia"
+        ]
+    },
+    {
+        "word": "havana",
+        "forbidden": [
+            "cuba",
+            "capital",
+            "cigar",
+            "tobacco",
+            "caribben"
+        ]
+    },
+    {
+        "word": "atlas",
+        "forbidden": [
+            "map",
+            "book",
+            "chart",
+            "world",
+            "globe"
+        ]
+    },
+    {
+        "word": "knot",
+        "forbidden": [
+            "tie",
+            "rope",
+            "loop",
+            "shoelace",
+            "tangle"
+        ]
+    },
+    {
+        "word": "pinstripe",
+        "forbidden": [
+            "suit",
+            "business",
+            "fabric",
+            "navy",
+            "pattern"
+        ]
+    },
+    {
+        "word": "cinnamon",
+        "forbidden": [
+            "spice",
+            "bun",
+            "stick",
+            "challenge",
+            "sugar"
+        ]
+    },
+    {
+        "word": "laundromat",
+        "forbidden": [
+            "washing machines",
+            "dryers",
+            "clothes",
+            "clean",
+            "coins"
+        ]
+    },
+    {
+        "word": "sieve",
+        "forbidden": [
+            "colander",
+            "strainer",
+            "drain",
+            "holes",
+            "sift"
+        ]
+    },
+    {
+        "word": "propel",
+        "forbidden": [
+            "push",
+            "thrust",
+            "launch",
+            "throw",
+            "drive"
+        ]
+    },
+    {
+        "word": "dandruff",
+        "forbidden": [
+            "hair",
+            "flakes",
+            "scalp",
+            "shampoo",
+            "white"
+        ]
+    },
+    {
+        "word": "screwdriver",
+        "forbidden": [
+            "tool",
+            "flathead",
+            "phillips",
+            "turn",
+            "nail"
+        ]
+    },
+    {
+        "word": "deck chair",
+        "forbidden": [
+            "stripe",
+            "relax",
+            "beach",
+            "sunshine",
+            "fold"
+        ]
+    },
+    {
+        "word": "biology",
+        "forbidden": [
+            "science",
+            "study",
+            "life",
+            "animals",
+            "marine"
+        ]
+    },
+    {
+        "word": "Astrology",
+        "forbidden": [
+            "stars",
+            "future",
+            "predict",
+            "sign",
+            "zodiac"
+        ]
+    },
+    {
+        "word": "raffle",
+        "forbidden": [
+            "lottery",
+            "ticket",
+            "draw",
+            "buy",
+            "win"
+        ]
+    },
+    {
+        "word": "windfall",
+        "forbidden": [
+            "money",
+            "unexpected",
+            "good",
+            "gift",
+            "fortune"
+        ]
+    },
+    {
+        "word": "chalet",
+        "forbidden": [
+            "swiss",
+            "mountain",
+            "alps",
+            "ski lodge",
+            "house"
+        ]
+    },
+    {
+        "word": "amnesia",
+        "forbidden": [
+            "forget",
+            "memory",
+            "remember",
+            "head",
+            "brain"
+        ]
+    },
+    {
+        "word": "survive",
+        "forbidden": [
+            "alive",
+            "die",
+            "succed",
+            "persevere",
+            "endure"
+        ]
+    },
+    {
+        "word": "ukulele",
+        "forbidden": [
+            "banjo",
+            "guitar",
+            "music",
+            "instrument",
+            "strings"
+        ]
+    },
+    {
+        "word": "gravy",
+        "forbidden": [
+            "turkey",
+            "meat",
+            "mashed potatoes",
+            "dressing",
+            "sauce"
+        ]
+    },
+    {
+        "word": "ranson",
+        "forbidden": [
+            "kidnap",
+            "money",
+            "hostage",
+            "pay",
+            "take"
+        ]
+    },
+    {
+        "word": "speed dating",
+        "forbidden": [
+            "fast",
+            "single",
+            "tables",
+            "many",
+            "time"
+        ]
+    },
+    {
+        "word": "achilles",
+        "forbidden": [
+            "heel",
+            "greek",
+            "hero",
+            "mythology",
+            "weak"
+        ]
+    },
+    {
+        "word": "tambourine",
+        "forbidden": [
+            "shake",
+            "jangle",
+            "music",
+            "instrument",
+            "beat"
+        ]
+    },
+    {
+        "word": "nutcracker",
+        "forbidden": [
+            "ballet",
+            "open",
+            "suite",
+            "christmas",
+            "dance"
+        ]
+    },
+    {
+        "word": "ambassador",
+        "forbidden": [
+            "diplomat",
+            "united nations",
+            "country",
+            "embassy",
+            "foreign"
+        ]
+    },
+    {
+        "word": "astronaut",
+        "forbidden": [
+            "space",
+            "shuttle",
+            "moon",
+            "rocket",
+            "neil armstrong"
+        ]
+    },
+    {
+        "word": "lawn mower",
+        "forbidden": [
+            "garden",
+            "cut",
+            "grass",
+            "push",
+            "blade"
+        ]
+    },
+    {
+        "word": "fool",
+        "forbidden": [
+            "trick",
+            "schema",
+            "fraud",
+            "con",
+            "deceive"
+        ]
+    },
+    {
+        "word": "tariyaki",
+        "forbidden": [
+            "sweet",
+            "japanese",
+            "chicken",
+            "sauce",
+            "rice"
+        ]
+    },
+    {
+        "word": "parsley",
+        "forbidden": [
+            "garnish",
+            "food",
+            "green",
+            "herb",
+            "spice"
+        ]
+    },
+    {
+        "word": "jedi",
+        "forbidden": [
+            "lightsaber",
+            "force",
+            "skywalker",
+            "star wars",
+            "yoda"
+        ]
+    },
+    {
+        "word": "colander",
+        "forbidden": [
+            "drain",
+            "holes",
+            "bowl",
+            "pasta",
+            "water"
+        ]
+    },
+    {
+        "word": "shaving cream",
+        "forbidden": [
+            "face",
+            "razor",
+            "foam",
+            "beard",
+            "white"
+        ]
+    },
+    {
+        "word": "spy",
+        "forbidden": [
+            "agent",
+            "traitor",
+            "secret",
+            "james bond",
+            "undercover"
+        ]
+    },
+    {
+        "word": "wrinkle",
+        "forbidden": [
+            "crease",
+            "line",
+            "old",
+            "skin",
+            "face"
+        ]
+    },
+    {
+        "word": "hypnosis",
+        "forbidden": [
+            "trance",
+            "sleep",
+            "watch",
+            "relax",
+            "subconscious"
+        ]
+    },
+    {
+        "word": "asia",
+        "forbidden": [
+            "orient",
+            "continent",
+            "china",
+            "Europe",
+            "land"
+        ]
+    },
+    {
+        "word": "bollywook",
+        "forbidden": [
+            "india",
+            "movies",
+            "films",
+            "cinema",
+            "famous"
+        ]
+    },
+    {
+        "word": "paper clip",
+        "forbidden": [
+            "staple",
+            "fastener",
+            "metal",
+            "together",
+            "twist"
+        ]
+    },
+    {
+        "word": "quintuplets",
+        "forbidden": [
+            "babies",
+            "five",
+            "birth",
+            "twins",
+            "multiple"
+        ]
+    },
+    {
+        "word": "quicksand",
+        "forbidden": [
+            "sink",
+            "trap",
+            "desert",
+            "danger",
+            "mud"
+        ]
+    },
+    {
+        "word": "honeymoon",
+        "forbidden": [
+            "marriage",
+            "newlyweds",
+            "travel",
+            "trip",
+            "holiday"
+        ]
+    },
+    {
+        "word": "simon cowell",
+        "forbidden": [
+            "the x factor",
+            "music",
+            "judge",
+            "contest",
+            "talent"
+        ]
+    },
+    {
+        "word": "toddler",
+        "forbidden": [
+            "child",
+            "active",
+            "baby",
+            "walk",
+            "two"
+        ]
+    },
+    {
+        "word": "pomegranate",
+        "forbidden": [
+            "fruit",
+            "tree",
+            "health",
+            "juice",
+            "red"
+        ]
+    },
+    {
+        "word": "cupholder",
+        "forbidden": [
+            "hold",
+            "drink",
+            "car",
+            "spill",
+            "beverage"
+        ]
+    },
+    {
+        "word": "knight",
+        "forbidden": [
+            "armour",
+            "castle",
+            "horse",
+            "sword",
+            "dark"
+        ]
+    }
 ]

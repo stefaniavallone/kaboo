@@ -570,16 +570,6 @@
         ]
     },
     {
-        "word": "Nan She Shan",
-        "forbidden": [
-            "Mountain",
-            "Yizhou",
-            "Climb",
-            "Snake",
-            "South"
-        ]
-    },
-    {
         "word": "Toothbrush",
         "forbidden": [
             "Teeth",
@@ -1204,6 +1194,16 @@
             "black",
             "animal",
             "Mammalia"
+        ]
+    },
+    {
+        "word": "imported",
+        "forbidden": [
+            "exported",
+            "foreign",
+            "expensive",
+            "product",
+            "customer"
         ]
     }
 ]
