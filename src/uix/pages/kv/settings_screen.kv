@@ -16,9 +16,8 @@
         padding: [root.width*0.1, root.height*0.1, root.width*0.1, root.height*0.05]
         Section:
             id: settings_container
-            text: app.i18n._("SECTION_SETTINGS")  # "SETTINGS"
-            #pos_hint: {"center_x": 0.5, "center_y": 0.5}
-            size_hint_y: 0.275
+            text: app.i18n._("SECTION_SETTINGS")
+            size_hint_y: 0.3
             size_hint_x: None
             width: self.parent.width * 0.8
             label_bg_color: 171/255, 75/255, 0/255, 1
@@ -26,56 +25,69 @@
             icon: "menu"
             MDBoxLayout:
                 orientation: "vertical"
-                padding: [dp(25), dp(40), dp(25), dp(35)]
+                spacing: dp(5)
+                padding: [dp(25), dp(40), dp(25), dp(15)]
 
-                MDGridLayout:
-                    id: settings
-                    cols:2
-                    size: root.width * 0.8, root.height * 0.8
-                    row_default_height: dp(30)
-                    row_force_default: True
+                MDBoxLayout:
+                    id: sound_container
+                    orientation: "horizontal"
+                    size_hint_y: None
+                    height: dp(30)
                     MDLabel:
-                        text: app.i18n._("ENABLE_SOUNDS") #"Enable sounds"
+                        valign: "center"
+                        halign: "left"
+                        text: app.i18n._("ENABLE_SOUNDS")
+
                     MDSwitch:
                         id: sound_switch
                         widget_style: "ios"
+                        pos: self.pos[0], sound_container.pos[1] - dp(10)
                         active: True
                         on_active: root.toggle_sounds()
+
+                MDBoxLayout:
+                    id: dark_theme_container
+                    orientation: "horizontal"
+                    size_hint_y: None
+                    height: dp(30)
                     MDLabel:
-                        text: app.i18n._("ENABLE_DARK_THEME") #"Enable Dark Theme"
+                        valign: "center"
+                        halign: "left"
+                        text: app.i18n._("ENABLE_DARK_THEME")
                     MDSwitch:
                         widget_style: "ios"
+                        pos: self.pos[0], dark_theme_container.pos[1] - dp(10)
                         active: root.theme_dark_on
                         on_active: root.toggle_dark_theme(app)
+
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    size_hint_y: None
+                    height: dp(30)
                     MDLabel:
-                        text: app.i18n._("CHOOSE_LANGUAGE") #"Choose language"
+                        valign: "center"
+                        halign: "left"
+                        text: app.i18n._("CHOOSE_LANGUAGE")
                     MDBoxLayout:
                         id: languages_container
-                        spacing: dp(5)
+                        spacing: dp(10)
+                        valign: "center"
                         adaptive_size: True
                         MDIconButton:
-                            #canvas.before:
-                            #    Clear
-                            #    Color:
-                            #        rgba: 1,0,0,1
-                            #    RoundedRectangle:
-                            #        pos: self.pos[0]-dp(5), self.pos[1] - dp(5)
-                            #        size: self.size[0]+dp(10), self.size[1]+dp(10)
-                            #        radius: dp(24), dp(24), dp(24), dp(24)
                             id: lang_en
                             icon: "assets/images/languages/english.png"
-                            user_font_size: "8sp"
+                            user_font_size: "6sp"
                             on_release: root.set_lang("en", self)
                         MDIconButton:
                             id: lang_it
                             icon: "assets/images/languages/italian.png"
-                            user_font_size: "8sp"
+                            user_font_size: "6sp"
                             on_release: root.set_lang("it", self)
 
         Section:
             id: tutorial_section
-            text: app.i18n._("SECTION_TUTORIAL")  # "TUTORIAL"
-            size_hint_y: 0.6
+            text: app.i18n._("SECTION_TUTORIAL")
+            size_hint_y: 0.625
             size_hint_x: None
             width: self.parent.width * 0.8
             callback: root.to_home
@@ -89,39 +101,39 @@
                 width: tutorial_section.width
                 adaptive_size: True
                 OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_GOAL_TITLE")  # "Goal"
+                    text: app.i18n._("TUTORIAL_GOAL_TITLE")
                     halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_GOAL_TITLE"), app.i18n._("TUTORIAL_GOAL_DESC")),  # "Goal", "Kaboo is a team game in which players describe words to their teammates without mentioning any of the words listed. The team that guesses the most words wins!")
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_GOAL_TITLE"), app.i18n._("TUTORIAL_GOAL_DESC")),
                     IconLeftWidget:
                         icon: "plus-circle"
                 OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_ROLE_TITLE")  # "Role"
+                    text: app.i18n._("TUTORIAL_ROLE_TITLE")
                     halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_ROLE_TITLE"), app.i18n._("TUTORIAL_ROLE_DESC")),  # "Role","In each turn, one team guesses and the other watches. In the team that guesses, the Prompter best describes the word on paper, while the teammates guess what it is. Teams alternate roles at each turn.")
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_ROLE_TITLE"), app.i18n._("TUTORIAL_ROLE_DESC")),
                     IconLeftWidget:
                         icon: "plus-circle"
                 OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_JUMPS_TITLE")  # "Jumps"
+                    text: app.i18n._("TUTORIAL_JUMPS_TITLE")
                     halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_JUMPS_TITLE"), app.i18n._("TUTORIAL_JUMPS_DESC")),  # "Jumps","If the Prompter is locked, you can press the Step button to switch to the next word. Be careful: the step can only be used for the number of jumps required!")
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_JUMPS_TITLE"), app.i18n._("TUTORIAL_JUMPS_DESC")),
                     IconLeftWidget:
                         icon: "plus-circle"
                 OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_WRONG_TITLE")  # "Wrong"
+                    text: app.i18n._("TUTORIAL_WRONG_TITLE")
                     halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WRONG_TITLE"), app.i18n._("TUTORIAL_WRONG_DESC")),  # "Wrong", "If the Prompter breaks any of the rules, the team watching must accept that the Prompter must mark the answer as wrong and move on to the next word.")
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WRONG_TITLE"), app.i18n._("TUTORIAL_WRONG_DESC")),
                     IconLeftWidget:
                         icon: "plus-circle"
                 OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_WINNER_TITLE")  # "Winner"
+                    text: app.i18n._("TUTORIAL_WINNER_TITLE")
                     halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WINNER_TITLE"), app.i18n._("TUTORIAL_WINNER_DESC")),  # "Winner","At the end of the game, the winning team is the one with the most points!")
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WINNER_TITLE"), app.i18n._("TUTORIAL_WINNER_DESC")),
                     IconLeftWidget:
                         icon: "plus-circle"
                 
         MDCard:
             radius: [dp(20), dp(20), dp(20), dp(20)]
-            size_hint_y: 0.1
+            size_hint_y: 0.125
             size_hint_x: None
             width: self.parent.width * 0.8
             ripple_behavior: True
@@ -130,6 +142,6 @@
                 MDLabel:
                     pos_hint: {"center_x": 0.5, "center_y": 0.5}
                     halign: "center"
-                    text: app.i18n._("TERMS_AND_POLICY_TITLE")  # "Terms and Policy"
+                    text: app.i18n._("TERMS_AND_POLICY_TITLE")
 
 

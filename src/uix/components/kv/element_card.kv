@@ -1,19 +1,19 @@
 <ElementCard@KMDCard>:
+    image: ''
+    text: ''
+    orientation:'vertical'
     padding: dp(15)
-    spacing: dp(15)
+    spacing: dp(10)
     radius: dp(25)
     ripple_behavior: True
-    image:''
-    text:""
-    items_count:""
-    subtext:''
-    md_bg_color:69/255,55/255,86/255,1
-    orientation:'vertical'
+    md_bg_color: 69/255,55/255,86/255,1
+
     Image:
         source: root.image
     MDBoxLayout:
-        orientation:'vertical'
+        orientation: 'vertical'
+        size_hint_y: 0.3
         MDLabel:
-            halign:"center"
-            text:root.text
-            font_style:"H6"
+            halign: "center"
+            text: root.text
+            font_style: "H6"

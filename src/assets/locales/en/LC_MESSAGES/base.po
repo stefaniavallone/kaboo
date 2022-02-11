@@ -4,196 +4,225 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-02-10 10:14+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: 0.0.1\n"
+"POT-Creation-Date: 2022-02-11 11:52+0100\n"
+"PO-Revision-Date: 2022-02-11 11:52+0100\n"
+"Last-Translator: Stefania Avallone <stefaniaavallone3@gmail.com>\n"
+"Language-Team: en <stefaniaavallone3@gmail.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=cp1252\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
 "Generated-By: pygettext.py 1.5\n"
 
-
-#: ../src/logic/trophies\trophies.py:8
-msgid "TROPHY_POINTS_TITLE"
-msgstr "[points] points"
-
-#: ../src/logic/trophies\trophies.py:9
-msgid "TROPHY_POINTS_DESC"
-msgstr "You scored [points] points"
-
-#: ../src/logic/trophies\trophies.py:28
-msgid "TROPHY_ANSWERS_TITLE"
-msgstr ""
-
-#: ../src/logic/trophies\trophies.py:29
-msgid "TROPHY_ANSWERS_DESC"
-msgstr ""
-
-#: ../src/logic/trophies\trophies.py:53
-msgid "TROPHY_GAME_LEVEL_TITLE"
-msgstr ""
-
-#: ../src/logic/trophies\trophies.py:54
-msgid "TROPHY_GAME_LEVEL_DESC"
-msgstr ""
-
-#: ../src/logic/trophies\trophies.py:68
-msgid "TROPHY_GAMES_LEVEL_TITLE"
-msgstr ""
-
-#: ../src/logic/trophies\trophies.py:69
-msgid "TROPHY_GAMES_LEVEL_DESC"
-msgstr ""
 
 #: ../src/uix/pages/kv\game_end_screen.kv:56
 #: ../src/uix/pages/kv\game_pre_screen.kv:47
 msgid "COMMON_GAME_LEVEL"
-msgstr ""
+msgstr "Game Level:"
 
+#: ../src/uix/pages/kv\game_pre_screen.kv:55
 #: ../src/uix/pages/kv\game_end_screen.kv:64
-msgid "COMMON_NUM_PLAYERS"
-msgstr ""
+msgid "COMMON_NUM_TEAMS"
+msgstr "Teams number:"
 
 #: ../src/uix/pages/kv\game_end_screen.kv:72
 #: ../src/uix/pages/kv\game_pre_screen.kv:63
 msgid "COMMON_NUM_JUMPS"
-msgstr ""
+msgstr "Skips number:"
 
 #: ../src/uix/pages/kv\game_end_screen.kv:80
 #: ../src/uix/pages/kv\game_pre_screen.kv:71
 msgid "COMMON_ROUND_TIME"
-msgstr ""
+msgstr "Round Time:"
 
 #: ../src/uix/pages/kv\game_end_screen.kv:88
 #: ../src/uix/pages/kv\game_pre_screen.kv:79
 msgid "COMMON_POINTS"
-msgstr ""
+msgstr "Points:"
 
 #: ../src/uix/pages/kv\game_end_screen.kv:102
 #: ../src/uix/pages/kv\game_pre_screen.kv:93
 msgid "COMMON_BACK_HOME_BUTTON"
-msgstr ""
-
-#: ../src/uix/pages/kv\game_pre_screen.kv:55
-msgid "COMMON_NUM_TEAMS"
-msgstr ""
+msgstr "Back Home"
 
 #: ../src/uix/pages/kv\game_pre_screen.kv:110
 msgid "PREGAME_PLAY_BUTTON"
-msgstr ""
+msgstr "PLAY"
 
 #: ../src/uix/pages/kv\game_settings_num_jumps_screen.kv:8
 msgid "GAMESETTINGS_JUMPS_LIMIT_TITLE"
-msgstr ""
+msgstr "Skips limit"
 
 #: ../src/uix/pages/kv\game_settings_num_jumps_screen.kv:9
-#: ../src/uix/pages/kv\game_settings_num_players_screen.kv:8
 msgid "GAMESETTINGS_JUMPS_LIMIT_DESC"
-msgstr ""
+msgstr "Select the number of skips each team will be able to make"
 
 #: ../src/uix/pages/kv\game_settings_num_players_screen.kv:7
 msgid "GAMESETTINGS_TEAMS_NUMBER_TITLE"
-msgstr ""
+msgstr "Teams number"
+
+#: ../src/uix/pages/kv\game_settings_num_players_screen.kv:8
+msgid "GAMESETTINGS_TEAMS_NUMBER_DESC"
+msgstr "Select the Teams number. Each team will be associated with a color"
 
 #: ../src/uix/pages/kv\game_settings_round_time_screen.kv:8
 msgid "GAMESETTINGS_ROUND_TIME_TITLE"
-msgstr ""
+msgstr "Round Time"
 
 #: ../src/uix/pages/kv\game_settings_round_time_screen.kv:9
 msgid "GAMESETTINGS_ROUND_TIME_DESC"
-msgstr ""
+msgstr "Select the round time for each Team"
 
 #: ../src/uix/pages/kv\history_screen.kv:14
 msgid "SECTION_HISTORY"
-msgstr ""
+msgstr "HISTORY"
 
 #: ../src/uix/pages/kv\home_screen.kv:38
 msgid "HOME_EASY_LEVEL"
-msgstr ""
+msgstr "Easy"
 
 #: ../src/uix/pages/kv\home_screen.kv:44
 msgid "HOME_MEDIUM_LEVEL"
-msgstr ""
+msgstr "Medium"
 
 #: ../src/uix/pages/kv\home_screen.kv:50
 msgid "HOME_HARD_LEVEL"
-msgstr ""
+msgstr "Hard"
 
-#: ../src/uix/pages/kv\home_screen.kv:60
-msgid "HOME_TOOLTIP_TROPHIES"
-msgstr ""
-
-#: ../src/uix/pages/kv\home_screen.kv:70
-msgid "HOME_TOOLTIP_HISTORY"
-msgstr ""
-
-#: ../src/uix/pages/kv\home_screen.kv:79
-msgid "HOME_TOOLTIP_RATEUS"
-msgstr ""
-
-#: ../src/uix/pages/kv\home_screen.kv:89
-msgid "HOME_TOOLTIP_SETTINGS"
-msgstr ""
-
-#: ../src/uix/pages/kv\settings_screen.kv:17
+#: ../src/uix/pages/kv\settings_screen.kv:19
 msgid "SECTION_SETTINGS"
-msgstr ""
+msgstr "SETTINGS"
 
-#: ../src/uix/pages/kv\settings_screen.kv:36
+#: ../src/uix/pages/kv\settings_screen.kv:38
 msgid "ENABLE_SOUNDS"
-msgstr ""
+msgstr "Enable sounds"
 
-#: ../src/uix/pages/kv\settings_screen.kv:43
+#: ../src/uix/pages/kv\settings_screen.kv:45
 msgid "ENABLE_DARK_THEME"
-msgstr ""
+msgstr "Enable dark theme"
 
-#: ../src/uix/pages/kv\settings_screen.kv:49
+#: ../src/uix/pages/kv\settings_screen.kv:51
 msgid "CHOOSE_LANGUAGE"
-msgstr ""
+msgstr "Choose language"
 
-#: ../src/uix/pages/kv\settings_screen.kv:71
+#: ../src/uix/pages/kv\settings_screen.kv:77
 msgid "SECTION_TUTORIAL"
-msgstr ""
+msgstr "TUTORIAL"
 
-#: ../src/uix/pages/kv\settings_screen.kv:127
+#: ../src/uix/pages/kv\settings_screen.kv:92
+#: ../src/uix/pages/kv\settings_screen.kv:94
+msgid "TUTORIAL_GOAL_TITLE"
+msgstr "Goal"
+
+#: ../src/uix/pages/kv\settings_screen.kv:94
+msgid "TUTORIAL_GOAL_DESC"
+msgstr "Kaboo is a team game where players describe words to their teammates without mentioning any of the words listed. The team that guesses the most words wins!"
+
+#: ../src/uix/pages/kv\settings_screen.kv:98
+#: ../src/uix/pages/kv\settings_screen.kv:100
+msgid "TUTORIAL_ROLE_TITLE"
+msgstr "Role"
+
+#: ../src/uix/pages/kv\settings_screen.kv:100
+msgid "TUTORIAL_ROLE_DESC"
+msgstr "In each turn, one team guesses and the others watch. In the team that guesses, the Prompter best describes the word on paper, while the teammates guess what it is. Teams alternate roles at each turn."
+
+#: ../src/uix/pages/kv\settings_screen.kv:104
+#: ../src/uix/pages/kv\settings_screen.kv:106
+msgid "TUTORIAL_JUMPS_TITLE"
+msgstr "Skips"
+
+#: ../src/uix/pages/kv\settings_screen.kv:106
+msgid "TUTORIAL_JUMPS_DESC"
+msgstr "If the Prompter is stuck, you can press the Skip button to switch to the next word. Be careful: the skip action can only be used for a limited number of times!"
+
+#: ../src/uix/pages/kv\settings_screen.kv:110
+#: ../src/uix/pages/kv\settings_screen.kv:112
+msgid "TUTORIAL_WRONG_TITLE"
+msgstr "Mistakes"
+
+#: ../src/uix/pages/kv\settings_screen.kv:112
+msgid "TUTORIAL_WRONG_DESC"
+msgstr "If the Prompter breaks any of the rules, he must mark the word as a mistake and move on to the next word. The score will be decreased by 1."
+
+#: ../src/uix/pages/kv\settings_screen.kv:116
+#: ../src/uix/pages/kv\settings_screen.kv:118
+msgid "TUTORIAL_WINNER_TITLE"
+msgstr "Winner"
+
+#: ../src/uix/pages/kv\settings_screen.kv:118
+msgid "TUTORIAL_WINNER_DESC"
+msgstr "At the end of the game, the winning team is the one with the most points!"
+
+#: ../src/uix/pages/kv\settings_screen.kv:133
 msgid "TERMS_AND_POLICY_TITLE"
-msgstr ""
+msgstr "Terms and Policy"
 
 #: ../src/uix/pages/kv\trophies_screen.kv:15
 msgid "SECTION_TROPHIES"
-msgstr ""
+msgstr "TROPHIES"
 
-#: ../src/uix/pages\game_end_screen.py:41
+#: ../src/uix/pages\game_end_screen.py:46
 msgid "GAMEEND_TEAM_WINNER"
-msgstr ""
+msgstr "[team] wins!"
 
 #: ../src/uix/pages\game_pre_screen.py:31
 msgid "PREGAME_TEAM_TURN"
-msgstr ""
-
-#: ../src/uix/pages\game_screen.py:159
-msgid "DIALOG_BACK_HOME_TITLE"
-msgstr ""
-
-#: ../src/uix/pages\game_screen.py:160
-msgid "DIALOG_BACK_HOME_DESC"
-msgstr ""
-
-#: ../src/uix/pages\game_screen.py:163
-msgid "GAME_CANCEL_BUTTON"
-msgstr ""
+msgstr "It's [team] turn!"
 
 #: ../src/uix/pages\game_screen.py:168
+msgid "DIALOG_BACK_HOME_TITLE"
+msgstr "Are you sure?"
+
+#: ../src/uix/pages\game_screen.py:169
+msgid "DIALOG_BACK_HOME_DESC"
+msgstr "You will lose game progress."
+
+#: ../src/uix/pages\game_screen.py:171
+msgid "GAME_CANCEL_BUTTON"
+msgstr "Cancel"
+
+#: ../src/uix/pages\game_screen.py:181
 msgid "GAME_BACK_HOME_BUTTON"
-msgstr ""
+msgstr "Back Home"
 
 #: ../src/uix/pages\history_screen.py:50
 msgid "HISTORY_DETAIL_TITLE"
-msgstr ""
+msgstr "History of [date]"
 
-#: ../src/uix/pages\home_screen.py:29
-msgid "DIALOG_RATEUS"
-msgstr ""
+#: ../src/uix/pages\home_screen.py:36
+msgid "RATEUS_DIALOG_TITLE"
+msgstr "Do you like Kaboo?"
 
+#: ../src/uix/pages\home_screen.py:38
+msgid "RATEUS_DIALOG_DESC"
+msgstr "If you like this application, please give us 5 stars on Play Store!"
+
+#: ../src/uix/pages\home_screen.py:42
+msgid "RATEUS_BUTTON"
+msgstr "Rate us!"
+
+#: ../src/logic/trophies
+msgid "TROPHY_POINTS_TITLE"
+msgstr "[points] points"
+
+msgid "TROPHY_POINTS_DESC"
+msgstr "You scored [points] points"
+
+msgid "TROPHY_ANSWERS_TITLE"
+msgstr "[action_count] [action_type] answers"
+
+msgid "TROPHY_ANSWERS_DESC"
+msgstr "You made [action_count] mistakes"
+
+msgid "TROPHY_GAME_LEVEL_TITLE"
+msgstr "[level_count] \"[level]\" game"
+
+msgid "TROPHY_GAME_LEVEL_DESC"
+msgstr "You played [level_count] \"[level]\" game"
+
+msgid "TROPHY_GAMES_LEVEL_TITLE"
+msgstr "[level_count] \"[level]\" games"
+
+msgid "TROPHY_GAMES_LEVEL_DESC"
+msgstr "You played [level_count] \"[level]\" games"

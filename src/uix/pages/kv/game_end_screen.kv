@@ -49,48 +49,48 @@
             pos_hint: {"center_x": .5, "center_y": .08}
             cols:2
             padding:[dp(15),dp(30),dp(15),dp(35)]
-            row_default_height: dp(50)
+            row_default_height: dp(40)
             row_force_default: True
             MDLabel:
                 pos_hint: {"center_x": .6, "center_y": .8}
                 text: app.i18n._("COMMON_GAME_LEVEL")  # "Game Level:"
-                halign:"center"
+                halign: "left"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .8}
                 text: root.game_level
-                halign:"center"
+                halign: "right"
             MDLabel:
                 pos_hint: {"center_x": .6, "center_y": .8}
-                text: app.i18n._("COMMON_NUM_PLAYERS")  # "Num Players:"
-                halign:"center"
+                text: app.i18n._("COMMON_NUM_TEAMS")  # "Num Players:"
+                halign: "left"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .8}
                 text: root.num_players
-                halign:"center"
+                halign: "right"
             MDLabel:
                 pos_hint: {"center_x": .6, "center_y": .7}
                 text: app.i18n._("COMMON_NUM_JUMPS")  # "Num Jumps:"
-                halign:"center"
+                halign: "left"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .7}
                 text: root.num_jumps
-                halign:"center"
+                halign: "right"
             MDLabel:
                 pos_hint: {"center_x": .6, "center_y": .6}
                 text: app.i18n._("COMMON_ROUND_TIME")  # "Round Time:"
-                halign:"center"
+                halign: "left"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .6}
                 text: root.round_time
-                halign:"center"
+                halign: "right"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .6}
                 text: app.i18n._("COMMON_POINTS") #"Points: "
-                halign:"center"
+                halign: "left"
             MDLabel:
                 pos_hint: {"center_x": .4, "center_y": .6}
                 text: root.points
-                halign:"center"
+                halign: "right"
 
         MDBoxLayout:
             orientation: "vertical"

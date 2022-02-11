@@ -1,4 +1,5 @@
 from kivy.lang import Builder
+from kivy.metrics import dp
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import Clock
 from kivy.properties import  ListProperty
@@ -13,10 +14,13 @@ class GameSettingsContainer(BoxLayout):
     def __init__(self, buttons=[], **kwargs):
         super().__init__(**kwargs)
         self.buttons = buttons
+
         Clock.schedule_once(self._late_init)
     
     def _late_init(self, inst):
         for button in self.buttons:
+            button.size_hint = (None, None)
+            button.width = dp(100)
             self.ids.buttons_container.add_widget(button)
 
     

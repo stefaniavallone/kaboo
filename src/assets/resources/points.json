@@ -9395,5 +9395,35 @@
             "p0": 34,
             "p1": 27
         }
+    },
+    {
+        "level": "easy",
+        "date": "2022-02-11",
+        "rounds": {
+            "r0": {
+                "p0": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p1": {
+                    "points": 0,
+                    "actions": []
+                }
+            },
+            "r1": {
+                "p0": {
+                    "points": 0,
+                    "actions": []
+                },
+                "p1": {
+                    "points": 0,
+                    "actions": []
+                }
+            }
+        },
+        "players_points": {
+            "p0": 0,
+            "p1": 0
+        }
     }
 ]

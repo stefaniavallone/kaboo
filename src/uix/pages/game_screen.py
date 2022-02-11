@@ -158,36 +158,33 @@ class GameScreen(MDScreen):
     def confirm_exit(self):
         self.clock_sound.stop()
         self.ids.timer.stop()
-        if not self.confirm_exit_dialog:
-            self.confirm_exit_dialog = \
-                KModalView(size_hint=(0.7, 0.4),
-                           auto_dismiss=False,
-                           closable=False,
-                           background_color=[0, 0, 0, 0],
-                           content=ConfirmContent(image="assets/images/go_home.png",
-                               text=self.app.i18n._("DIALOG_BACK_HOME_TITLE"),  # "Are you sure?",
-                               subtext=self.app.i18n._("DIALOG_BACK_HOME_DESC")), # "You will lose game progress.",),
-                           buttons=[
-                               KMDFillRoundFlatButton(text=self.app.i18n._(
-                                   "GAME_CANCEL_BUTTON").upper(),
-                                                      # "Cancel".upper(),
-                                                      radius=[dp(10), dp(10),
-                                                              dp(10), dp(10)],
-                                                      width="100dp",
-                                                      size_hint_x=None,
-                                                      md_bg_color=(
-                                                      0, 0.2, 0.9, 1),
-                                                      on_release=self.cancel),
-                               KMDFillRoundFlatButton(text=self.app.i18n._(
-                                   "GAME_BACK_HOME_BUTTON").upper(),
-                                                      # "Back Home".upper(),
-                                                      md_bg_color=(1, 0, 0, 1),
-                                                      radius=[dp(10), dp(10),
-                                                              dp(10), dp(10)],
-                                                      width="100dp",
-                                                      size_hint_x=None,
-                                                      on_release=self.to_home),
-                           ])
+        self.confirm_exit_dialog = \
+            KModalView(size_hint=(0.7, 0.4),
+                       auto_dismiss=False,
+                       closable=False,
+                       background_color=[0, 0, 0, 0],
+                       content=ConfirmContent(image="assets/images/go_home.png",
+                           text=self.app.i18n._("DIALOG_BACK_HOME_TITLE"),
+                           subtext=self.app.i18n._("DIALOG_BACK_HOME_DESC")),
+                       buttons=[
+                           KMDFillRoundFlatButton(text=self.app.i18n._(
+                               "GAME_CANCEL_BUTTON").upper(),
+                                                  radius=[dp(10), dp(10),
+                                                          dp(10), dp(10)],
+                                                  width="100dp",
+                                                  size_hint_x=None,
+                                                  md_bg_color=(
+                                                  0, 0.2, 0.9, 1),
+                                                  on_release=self.cancel),
+                           KMDFillRoundFlatButton(text=self.app.i18n._(
+                               "GAME_BACK_HOME_BUTTON").upper(),
+                                                  md_bg_color=(1, 0, 0, 1),
+                                                  radius=[dp(10), dp(10),
+                                                          dp(10), dp(10)],
+                                                  width="100dp",
+                                                  size_hint_x=None,
+                                                  on_release=self.to_home),
+                       ])
         self.confirm_exit_dialog.open()
 
     def cancel(self, inst):
