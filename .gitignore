@@ -60,7 +60,6 @@ coverage.xml
 *,cover
 
 # Translations
-*.mo
 *.pot
 
 # Sphinx documentation
