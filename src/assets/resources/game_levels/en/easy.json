@@ -1205,5 +1205,65 @@
             "oil",
             "fish"
         ]
+    },
+    {
+        "word": "barber",
+        "forbidden": [
+            "haircut",
+            "shave",
+            "scissors",
+            "hairdresser",
+            "comb"
+        ]
+    },
+    {
+        "word": "pajamas",
+        "forbidden": [
+            "bed",
+            "night",
+            "sleepover",
+            "clothes",
+            "wear"
+        ]
+    },
+    {
+        "word": "mustache",
+        "forbidden": [
+            "hair",
+            "beard",
+            "lip",
+            "shave",
+            "mouth"
+        ]
+    },
+    {
+        "word": "Sword",
+        "forbidden": [
+            "King Arthur",
+            "Peter",
+            "ear",
+            "Malchus",
+            "Blade"
+        ]
+    },
+    {
+        "word": "Shepherd",
+        "forbidden": [
+            "Joseph",
+            "Birth",
+            "Sheep",
+            "Care",
+            "Lamb"
+        ]
+    },
+    {
+        "word": "Scripture",
+        "forbidden": [
+            "Bible",
+            "Read",
+            "Holy",
+            "Inspired",
+            "Story"
+        ]
     }
 ]
