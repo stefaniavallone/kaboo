@@ -1,8 +1,9 @@
 import json
-
+from threading import Thread
+from time import sleep
 from kivy.app import App
-from kivy.clock import Clock
 
+from kivy.clock import Clock
 from uix.components.game_history_content import GameHistoryContent
 from uix.base_components.kmodal_view import KModalView
 from kivymd.uix.screen import MDScreen
@@ -10,6 +11,7 @@ from kivymd.uix.list import OneLineAvatarListItem
 from kivy.properties import StringProperty
 from logic.game import PLAYERS_COLORS
 from logic.score import best_player
+from kivy.properties import BooleanProperty
 
 
 class Item(OneLineAvatarListItem):
@@ -19,16 +21,20 @@ class Item(OneLineAvatarListItem):
 
 class HistoryScreen(MDScreen):
     show_details_dialog = None
+    refreshing = BooleanProperty()
 
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
         self.histories = []
 
-    def on_enter(self, *args):
-        Clock.schedule_once(self._load_data)
+    def on_pre_enter(self,  *args):
+        #Clock.schedule_once(self._load_data)
+        Thread(target=self._refresh_data).start()
 
-    def _load_data(self, delay):
+    def _refresh_data(self):
+        self.refreshing = True
+        sleep(2)
         with open("assets/resources/points.json") as histories_file:
             self.histories = json.load(histories_file)
 
@@ -46,6 +52,7 @@ class HistoryScreen(MDScreen):
                                'text_color': color
                                })
         self.ids.table_floor.data = table_data[::-1]
+        self.refreshing = False
 
     def show_details(self, players_points, players, date):
         list_items = dict()
