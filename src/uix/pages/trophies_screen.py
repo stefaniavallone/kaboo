@@ -12,18 +12,21 @@ from kivy.properties import BooleanProperty
 
 class TrophiesScreen(MDScreen):
     refreshing = BooleanProperty()
+
     def __init__(self, **kw):
         super().__init__(**kw)
 
     def on_pre_enter(self):
-        #Clock.schedule_once(self._load_data)
-        if not self.refreshing:
-            return
-        Thread(target=self._refresh_data).start()
+        pass
+        #if not self.refreshing:
+        #    return
+        #Thread(target=self._load_data).start()
 
-    def _refresh_data(self):
+    def on_enter(self, *args):
+        Clock.schedule_once(self._load_data)
+
+    def _load_data(self, delay=0):
         self.refreshing = True
-        sleep(2)
         list_trophies = list()
         score_history = get_score_history()
         checked_trophies = check_trophies(score_history)
@@ -37,16 +40,7 @@ class TrophiesScreen(MDScreen):
         self.ids.list_trophies.data = list_trophies
         self.refreshing = False
 
-
     def show_details(self, name, description, image):
-        #self.view = ModalView(size_hint=(0.7, 0.4),
-        #                 auto_dismiss=True,
-        #                 background_color=[0,0,0,0])
-        #self.view.add_widget(CustomModal(image=image,
-        #                            text=name, subtext=description,
-        #                            on_close=self.cancel,
-        #                            bg_color=(255 / 255, 241 / 255, 115 / 255, 1)))
-        #self.view.open()
         self.kmodal = KModalView(size_hint=(0.7, 0.4), auto_dismiss=True,
                                  background_color=[0, 0, 0, 0], content=
                                  TrophyContent(image=image,

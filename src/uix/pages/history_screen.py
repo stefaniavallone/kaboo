@@ -28,17 +28,16 @@ class HistoryScreen(MDScreen):
         self.app = App.get_running_app()
         self.histories = []
 
-    def on_pre_enter(self,  *args):
-        #Clock.schedule_once(self._load_data)
-        Thread(target=self._refresh_data).start()
+    def on_enter(self,  *args):
+        Clock.schedule_once(self._load_data)
 
-    def _refresh_data(self):
+    def _load_data(self, delay=0):
         self.refreshing = True
-        sleep(2)
         with open("assets/resources/points.json") as histories_file:
             self.histories = json.load(histories_file)
 
         table_data = list()
+
         for history in self.histories:
             winner_index, score = best_player(history['players_points'])
             color = PLAYERS_COLORS[winner_index]
