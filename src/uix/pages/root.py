@@ -1,4 +1,5 @@
 from kivy import Logger
+from kivy.app import App
 from kivy.clock import Clock
 from kivy.core.window import Window
 from kivy.lang import Builder
@@ -19,6 +20,7 @@ class Root(ScreenManager):
     """
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self.app = App.get_running_app()
         for screen_idx, screen_name in enumerate(screens.keys()):
             # deferred late screen initialization
             self.add_screen(screen_name, delay=3*screen_idx)
@@ -58,6 +60,6 @@ class Root(ScreenManager):
                 return False  # key event passed to Android
             else:
                 self.exit_pressed_once = True
-                toast('Press Again to exit.')
+                toast(self.app.i18n._("EXIT_MESSAGE"))
                 Clock.schedule_once(self.reset_state, 5)
                 return True  # key event consumed by app

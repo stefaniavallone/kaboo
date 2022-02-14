@@ -1,3 +1,4 @@
+from kivy.clock import Clock
 from kivymd.uix.screen import MDScreen
 
 from logic.score import get_score_history
@@ -11,7 +12,10 @@ class TrophiesScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
 
-    def on_pre_enter(self):
+    def on_enter(self):
+        Clock.schedule_once(self._load_data)
+
+    def _load_data(self, delay):
         score_history = get_score_history()
         checked_trophies = check_trophies(score_history)
 

@@ -8,9 +8,3 @@ class KMDIconSquaredButton(MDIconButton):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
-    def on_disabled(self, instance, value):
-        self.md_bg_color = (self.md_bg_color[0] * 0.5,
-                            self.md_bg_color[1] * 0.5,
-                            self.md_bg_color[2] * 0.5,
-                            self.md_bg_color[3])

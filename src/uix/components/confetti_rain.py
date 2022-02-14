@@ -47,8 +47,8 @@ class ConfettiRain(FloatLayout):
             color = [randint(0, 255)/255, randint(0, 255)/255, randint(0, 255)/255, 1]
             item = ConfettiItem(
                 size=[
-                    randint(*self.size_range),
-                    randint(*self.size_range)
+                    randint(int(self.size_range[0]), int(self.size_range[1])),
+                    randint(int(self.size_range[0]), int(self.size_range[1]))
                 ],
                 pos=[
                     randint(0, int(self.width)),

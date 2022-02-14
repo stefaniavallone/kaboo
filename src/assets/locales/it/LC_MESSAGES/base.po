@@ -163,7 +163,7 @@ msgstr "TROFEI"
 
 #: ../src/uix/pages\game_end_screen.py:46
 msgid "GAMEEND_TEAM_WINNER"
-msgstr "Ha vinto il [team]!"
+msgstr "[team] vince!"
 
 #: ../src/uix/pages\game_pre_screen.py:31
 msgid "PREGAME_TEAM_TURN"
@@ -225,3 +225,6 @@ msgstr "[level_count] partite livello \"[level]\""
 
 msgid "TROPHY_GAMES_LEVEL_DESC"
 msgstr "Hai giocato [level_count] partite livello \"[level]\""
+
+msgid "EXIT_MESSAGE"
+msgstr "Premi di nuovo per uscire"

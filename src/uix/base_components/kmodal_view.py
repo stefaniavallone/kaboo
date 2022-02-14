@@ -31,3 +31,10 @@ class KModalView(ModalView):
             self.ids.buttons_container.add_widget(button)
         if self.content is not None:
             self.ids.content_container.add_widget(self.content)
+
+    def on_content(self):
+        self.ids.content_container.add_widget(self.content)
+
+    def on_buttons(self):
+        for button in self.buttons:
+            self.ids.buttons_container.add_widget(button)

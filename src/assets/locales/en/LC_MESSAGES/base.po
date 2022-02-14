@@ -226,3 +226,6 @@ msgstr "[level_count] \"[level]\" games"
 
 msgid "TROPHY_GAMES_LEVEL_DESC"
 msgstr "You played [level_count] \"[level]\" games"
+
+msgid "EXIT_MESSAGE"
+msgstr "Press again to exit"

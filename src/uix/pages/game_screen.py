@@ -28,6 +28,7 @@ class GameScreen(MDScreen):
     def on_pre_enter(self, *args):
         self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
         self.app.ads.request_interstitial()
+        self.app.ads.show_interstitial()
         self.round_time = self.app.status.getv("game.round_time",
                                                default_value=15)
         self.num_players = self.app.status.getv("game.num_players",
@@ -40,13 +41,15 @@ class GameScreen(MDScreen):
         self.current_player = self.app.status.getv("game.current_player",
                                                    default_value=0)
 
+        sounds_on = self.app.status.getv("game.sound", default_value=True)
+        self._set_sound_icon(sounds_on)
+
         Clock.schedule_once(self.load_music)
         self.load_game()
         self.play_round()
-        sounds_on = self.app.status.getv("game.sound", default_value=True)
-        self._set_sound_icon(sounds_on)
-        if self.num_jumps == 0:
-            self.ids.jump_button.disabled = True
+
+    def on_enter(self, *args):
+        pass
 
     def load_music(self, *args):
         self.app_background_music = self.app.sound_manager.get_sound(
@@ -74,7 +77,7 @@ class GameScreen(MDScreen):
         self._set_sound_icon(not sounds_on)
         self.app.status.setv("game.sound", not sounds_on)
 
-    def load_game(self):
+    def load_game(self, *args):
         self.elements = []
         locale = self.app.status.getv("app.lang")
         with open(
@@ -82,17 +85,18 @@ class GameScreen(MDScreen):
             game_elements = json.load(game_file)
             shuffle(game_elements)
             self.elements = game_elements
+            Logger.info(f"Loading Game - {len(self.elements)} Elements: {self.elements}")
         self.elem_idx = 0
         for element in self.elements[:2]:
             self.ids.card_container.add_card(element["word"],
                                              element["forbidden"])
             self.elem_idx = self.elem_idx + 1
 
-    def play_round(self):
+    def play_round(self, *args):
         Logger.debug(
             f"Playing round {self.current_round + 1} for player {self.current_player + 1}")
         self.ids.remaining_jumps.text = str(self.num_jumps)
-        self.ids.jump_button.disabled = False
+        self.ids.jump_button.disabled = True if self.num_jumps == 0 else False
         self.ids.container.md_bg_color = PLAYERS_COLORS[self.current_player]
         self.ids.player_points.text = "0"
         self.actions = []

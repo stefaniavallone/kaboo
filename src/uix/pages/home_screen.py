@@ -30,24 +30,22 @@ class HomeScreen(MDScreen):
         self.app_background_music.play(restart=False)
 
     def show_rate_us_dialog(self):
-        if not self.rate_us_dialog:
-            self.rate_us_dialog = \
-                KModalView(size_hint=(0.8, 0.3), auto_dismiss=True,
-                           content=TitleAndTextContent(title=self.app.i18n._(
-                                                           "RATEUS_DIALOG_TITLE"),
-                                                       text=self.app.i18n._(
-                                                           "RATEUS_DIALOG_DESC")),
-                           buttons=[
-                               KMDFillRoundFlatButton(
-                                   text=self.app.i18n._(
-                                       "RATEUS_BUTTON"),
-                                   # "Rate us",
-                                   radius=[dp(10), dp(10), dp(10), dp(10)],
-                                   md_bg_color=(0, 0.2, 0.9, 1),
-                                   on_release=self.go_to_play_store
-                               ),
-                           ])
-
+        self.rate_us_dialog = \
+            KModalView(size_hint=(0.8, 0.3), auto_dismiss=True,
+                       content=TitleAndTextContent(title=self.app.i18n._(
+                           "RATEUS_DIALOG_TITLE"),
+                           text=self.app.i18n._(
+                               "RATEUS_DIALOG_DESC")),
+                       buttons=[
+                           KMDFillRoundFlatButton(
+                               text=self.app.i18n._(
+                                   "RATEUS_BUTTON"),
+                               # "Rate us",
+                               radius=[dp(10), dp(10), dp(10), dp(10)],
+                               md_bg_color=(0, 0.2, 0.9, 1),
+                               on_release=self.go_to_play_store
+                           ),
+                       ])
         self.rate_us_dialog.open()
 
     def go_to_play_store(self, inst):

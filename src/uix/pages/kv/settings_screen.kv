@@ -14,6 +14,7 @@
         orientation: "vertical"
         spacing: dp(40)
         padding: [root.width*0.1, root.height*0.1, root.width*0.1, root.height*0.05]
+
         Section:
             id: settings_container
             text: app.i18n._("SECTION_SETTINGS")
@@ -26,7 +27,7 @@
             MDBoxLayout:
                 orientation: "vertical"
                 spacing: dp(5)
-                padding: [dp(25), dp(35), dp(25), dp(15)]
+                padding: [dp(25), dp(15), dp(25), dp(15)]
 
                 MDBoxLayout:
                     id: sound_container
@@ -95,7 +96,7 @@
             label_bg_color: 26/255, 28/255, 31/255, 1
 
             MDBoxLayout:
-                padding: [0, dp(30), 0, 0]
+                #padding: [0, dp(30), 0, 0]
                 orientation: 'vertical'
                 size_hint: None, None
                 width: tutorial_section.width

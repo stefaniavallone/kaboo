@@ -1,6 +1,7 @@
 import json
 
 from kivy.app import App
+from kivy.clock import Clock
 
 from uix.components.game_history_content import GameHistoryContent
 from uix.base_components.kmodal_view import KModalView
@@ -24,7 +25,10 @@ class HistoryScreen(MDScreen):
         self.app = App.get_running_app()
         self.histories = []
 
-    def on_pre_enter(self, *args):
+    def on_enter(self, *args):
+        Clock.schedule_once(self._load_data)
+
+    def _load_data(self, delay):
         with open("assets/resources/points.json") as histories_file:
             self.histories = json.load(histories_file)
 
