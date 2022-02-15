@@ -2,7 +2,7 @@ from kivmob import TestIds
 from kivymd.uix.screen import MDScreen
 from kivy.properties import StringProperty
 from kivy.app import App
-
+from kivmob import KivMob, TestIds
 from logic.game import PLAYERS_COLORS
 
 
@@ -40,9 +40,10 @@ class GamePreScreen(MDScreen):
         self.manager.go_to_screen('home', direction='right')
 
     def on_pre_leave(self, *args):
-        self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
-        self.app.ads.request_interstitial()
-        self.app.ads.show_interstitial()
+        self.ads = KivMob(TestIds.APP)
+        self.ads.new_interstitial(TestIds.INTERSTITIAL)
+        self.ads.request_interstitial()
+        self.ads.show_interstitial()
 
     def on_resume(self):
-        self.app.ads.request_interstitial()
+        self.ads.request_interstitial()
