@@ -48,9 +48,6 @@ class GameScreen(MDScreen):
         self.load_game()
         self.play_round()
 
-    def on_enter(self, *args):
-        pass
-
     def load_music(self, *args):
         self.app_background_music = self.app.sound_manager.get_sound(
             "assets/sounds/cute.ogg")
@@ -78,6 +75,7 @@ class GameScreen(MDScreen):
         self.app.status.setv("game.sound", not sounds_on)
 
     def load_game(self, *args):
+        self.ids.card_container.reset_cards()
         self.elements = []
         locale = self.app.status.getv("app.lang")
         with open(
@@ -86,11 +84,13 @@ class GameScreen(MDScreen):
             shuffle(game_elements)
             self.elements = game_elements
             Logger.info(f"Loading Game - {len(self.elements)} Elements: {self.elements}")
+
         self.elem_idx = 0
         for element in self.elements[:2]:
             self.ids.card_container.add_card(element["word"],
                                              element["forbidden"])
             self.elem_idx = self.elem_idx + 1
+
 
     def play_round(self, *args):
         Logger.debug(
@@ -127,13 +127,13 @@ class GameScreen(MDScreen):
 
     def next_card(self):
         if self.elem_idx < len(self.elements):
-            self.ids.card_container.ids.swiper.next()
+            self.ids.card_container.next_card()
             self.ids.card_container.add_card(
                 self.elements[self.elem_idx]["word"],
                 self.elements[self.elem_idx]["forbidden"])
             self.elem_idx = self.elem_idx + 1
         else:
-            self.ids.card_container.ids.swiper.next()
+            self.ids.card_container.next_card()
 
     def finish_round(self):
         self.app.status.setv(

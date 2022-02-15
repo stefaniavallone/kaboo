@@ -1,23 +1,24 @@
 <SWCard>:
     text: "WORD"
     forbidden: "forbidden1\nforbidden2\nforbidden3\nforbidden4"
-    MDBoxLayout:
-        padding: [dp(0), dp(20), dp(0), dp(20)] 
-        MDCard:
-            radius: [dp(25),]
-            MDBoxLayout:
-                orientation:'vertical'
-                padding: [dp(10), dp(10), dp(10), dp(10)]
-                spacing: dp(15)
-                MDLabel:
-                    id: word 
-                    text: root.text
-                    halign: "center"
-                    bold: True
-                    font_style: "H4"
-                MDLabel:
-                    id: forbidden
-                    halign:"center"
-                    text: root.forbidden
-                    font_style: "H6"
+    md_bg_color: 0, 0, 0, 0
+    padding: [dp(20), dp(40), dp(20), dp(40)]
+
+    MDCard:
+        radius: [dp(25),]
+        MDBoxLayout:
+            orientation:'vertical'
+            padding: [dp(10), dp(10), dp(10), dp(10)]
+            spacing: dp(15)
+            MDLabel:
+                id: word
+                text: root.text
+                halign: "center"
+                bold: True
+                font_style: "H4"
+            MDLabel:
+                id: forbidden
+                halign:"center"
+                text: root.forbidden
+                font_style: "H6"
                 

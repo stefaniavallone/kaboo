@@ -9997,5 +9997,141 @@
             "p0": -31,
             "p1": 96
         }
+    },
+    {
+        "level": "easy",
+        "date": "2022-02-15",
+        "rounds": {
+            "r0": {
+                "p0": {
+                    "points": 60,
+                    "actions": [
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right"
+                    ]
+                },
+                "p1": {
+                    "points": -15,
+                    "actions": [
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong"
+                    ]
+                }
+            },
+            "r1": {
+                "p0": {
+                    "points": 10,
+                    "actions": [
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right",
+                        "right"
+                    ]
+                },
+                "p1": {
+                    "points": -17,
+                    "actions": [
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong",
+                        "wrong"
+                    ]
+                }
+            }
+        },
+        "players_points": {
+            "p0": 70,
+            "p1": -32
+        }
     }
 ]

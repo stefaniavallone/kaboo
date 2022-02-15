@@ -90,7 +90,7 @@ msgstr "Difficile"
 
 #: ../src/uix/pages/kv\settings_screen.kv:19
 msgid "SECTION_SETTINGS"
-msgstr "IMPOSTAZIONI"
+msgstr "IMPOSTAZ."
 
 #: ../src/uix/pages/kv\settings_screen.kv:38
 msgid "ENABLE_SOUNDS"
