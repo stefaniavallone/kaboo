@@ -20,21 +20,17 @@
             size_hint_x: None
             width: root.width*0.8
             adaptive_size: True
-
-        KMDCard:
+      
+        KMDIconButton:
             id: close_button
-            elevation: 0
+            icon: "close"
+            _radius: dp(24)
+            icon_color: "#ffffff"
+            md_bg_color: 0.9, 0.1, 0.1, 1
+            on_release: root.dismiss()
             x: container.width - dp(40) - self.width / 2
             y: container.height - self.height / 2
-            size_hint: None, None
             size: 48, 48
-            radius: dp(24)
-            on_release: root.dismiss()
-            KMDIconButton:
-                icon: "close"
-                _radius: dp(24)
-                icon_color: "#ffffff"
-                md_bg_color: 0.9, 0.1, 0.1, 1
 
 
 
