@@ -15,6 +15,6 @@ class PointsTrophy(AbstractTrophy):
                 round = game_rounds.get(r)
                 for p in list(round.keys()):
                     points_sum = points_sum + round.get(p).get("points")
-        if points_sum > self.points:
+        if points_sum >= self.points:
             return True
         return False

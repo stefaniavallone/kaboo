@@ -18,6 +18,6 @@ class ActionTrophy(AbstractTrophy):
                     type_actions = [a for a in round.get(p).get("actions")
                                     if a == self.action_type]
                     actions_sum = actions_sum + len(type_actions)
-        if actions_sum > self.action_count:
+        if actions_sum >= self.action_count:
             return True
         return False

@@ -84,7 +84,6 @@ class GameScreen(MDScreen):
                                              element["forbidden"])
             self.elem_idx = self.elem_idx + 1
 
-
     def play_round(self, *args):
         Logger.debug(
             f"Playing round {self.current_round + 1} for player {self.current_player + 1}")
@@ -139,7 +138,7 @@ class GameScreen(MDScreen):
         if self.current_player == self.num_players - 1:
             self.app.status.setv("game.current_player", 0)
             self.app.status.setv("game.current_round", self.current_round + 1)
-            if self.current_round == 1:
+            if self.current_round >= 1:
                 self.manager.go_to_screen('game_end', direction='right')
             else:
                 self.manager.go_to_screen('game_pre', direction='right')

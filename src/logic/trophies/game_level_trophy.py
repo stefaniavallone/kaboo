@@ -10,6 +10,6 @@ class GameLevelTrophy(AbstractTrophy):
 
     def check(self, games):
         level_games_sum = len([g for g in games if g["level"] == self.level])
-        if level_games_sum > self.level_count:
+        if level_games_sum >= self.level_count:
             return True
         return False

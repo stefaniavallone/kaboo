@@ -52,6 +52,7 @@ class GameEndScreen(MDScreen):
 
     def on_enter(self, *args):
         self.ids.confetti_rain.start()
+        print("self.trophies_diff", self.trophies_diff)
         if len(self.trophies_diff) > 0:
             trophies_carousel = MDCarousel()
             buttons = []
