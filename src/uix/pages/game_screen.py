@@ -1,7 +1,6 @@
 import json
 from random import shuffle
 
-from kivmob import TestIds
 from kivy.clock import Clock
 from kivy.logger import Logger
 from kivy.metrics import dp
@@ -22,13 +21,7 @@ class GameScreen(MDScreen):
         super().__init__(**kw)
         self.app = App.get_running_app()
 
-    def on_resume(self):
-        self.app.ads.request_interstitial()
-
     def on_pre_enter(self, *args):
-        self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
-        self.app.ads.request_interstitial()
-        self.app.ads.show_interstitial()
         self.round_time = self.app.status.getv("game.round_time",
                                                default_value=15)
         self.num_players = self.app.status.getv("game.num_players",

@@ -1,3 +1,4 @@
+from kivmob import TestIds
 from kivymd.uix.screen import MDScreen
 from kivy.properties import StringProperty
 from kivy.app import App
@@ -37,3 +38,11 @@ class GamePreScreen(MDScreen):
     def to_home(self):
         self.app.status.setv("game.current_player", 0)
         self.manager.go_to_screen('home', direction='right')
+
+    def on_pre_leave(self, *args):
+        self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
+        self.app.ads.request_interstitial()
+        self.app.ads.show_interstitial()
+
+    def on_resume(self):
+        self.app.ads.request_interstitial()
