@@ -25,8 +25,8 @@ class GamePreScreen(MDScreen):
         self.game_level = self.app.status.getv("game.level", default_value="easy")
         self.current_round = str(self.app.status.getv("game.current_round", default_value=0))
         curr_player = self.app.status.getv("game.current_player", default_value=0)
+        self.points = str(self.app.status.getv(f"game.rounds.r{str(int(self.current_round)-1)}.p{str(curr_player)}.points", default_value="0"))
         self.current_player = f"Team {str(curr_player + 1)}"
-        self.points = str(self.app.status.getv(f"game.rounds.{str(self.current_round)}.{str(self.current_player)}", default_value="0"))
         self.image = f"assets/images/pregame/your_turn_{str(curr_player)}.png"
         self.title = self.app.i18n._("PREGAME_TEAM_TURN", team=self.current_player) # f"It's {self.current_player} turn!"
         self.ids.play_button.md_bg_color = PLAYERS_COLORS[curr_player]
