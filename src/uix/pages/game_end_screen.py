@@ -28,7 +28,7 @@ class GameEndScreen(MDScreen):
         super().__init__(**kw)
         self.app = App.get_running_app()
         self.applause_sound = self.app.sound_manager.get_sound(
-            'assets/sounds/applause.wav')
+            'assets/sounds/applause.ogg')
 
     def on_pre_enter(self, *args):
         G = {'r0': {'p0': {'points': 0, 'actions': []}, 'p1': {'points': 6, 'actions': ['right', 'right', 'right', 'right', 'right', 'right']}}, 'r1': {'p0': {'points': 34, 'actions': ['jump', 'jump', 'jump', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}, 'p1': {'points': 21, 'actions': ['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}}}

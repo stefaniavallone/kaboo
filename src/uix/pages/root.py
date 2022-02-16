@@ -21,9 +21,10 @@ class Root(ScreenManager):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.app = App.get_running_app()
-        for screen_idx, screen_name in enumerate(screens.keys()):
+        self.add_screen("home", delay=0)
+        #for screen_idx, screen_name in enumerate(screens.keys()):
             # deferred late screen initialization
-            self.add_screen(screen_name, delay=3*screen_idx)
+        #    self.add_screen(screen_name, delay=3*screen_idx)
         Window.bind(on_keyboard=self.keyboard)
         self.exit_pressed_once = False
 

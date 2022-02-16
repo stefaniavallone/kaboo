@@ -8,7 +8,7 @@ class Timer(MDLabel):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.format = kwargs.get("format", "%H:%M:%S")
-        self.seconds = kwargs.get("seconds", 60)
+        self.seconds = kwargs.get("seconds", 90)
         self.interval = kwargs.get("interval", 0.25)
         self.start_time = None
         self.running = False
@@ -18,6 +18,9 @@ class Timer(MDLabel):
         self._last_seconds_event_fired = False
         self.register_event_type('on_finish')
         self.register_event_type('on_last_seconds')
+
+    def on_seconds(self, dt):
+        self.text = time.strftime(self.format, time.gmtime(self.seconds))
     
     def update(self, dt):
         self.seconds = self.start_time - time.time()

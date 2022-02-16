@@ -33,16 +33,14 @@ class GamePreScreen(MDScreen):
         self.ids.play_button.md_bg_color = PLAYERS_COLORS[curr_player]
 
     def to_game(self):
+        self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
+        self.app.ads.request_interstitial()
+        self.app.ads.show_interstitial()
         self.manager.go_to_screen('game', direction='left')
 
     def to_home(self):
         self.app.status.setv("game.current_player", 0)
         self.manager.go_to_screen('home', direction='right')
-
-    def on_pre_leave(self, *args):
-        self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
-        self.app.ads.request_interstitial()
-        self.app.ads.show_interstitial()
 
     def on_resume(self):
         self.app.ads.request_interstitial()

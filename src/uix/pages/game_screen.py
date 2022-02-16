@@ -36,9 +36,10 @@ class GameScreen(MDScreen):
 
         sounds_on = self.app.status.getv("game.sound", default_value=True)
         self._set_sound_icon(sounds_on)
-
-        Clock.schedule_once(self.load_music)
         self.load_game()
+
+    def on_enter(self, *args):
+        Clock.schedule_once(self.load_music)
         self.play_round()
 
     def load_music(self, *args):
@@ -50,11 +51,11 @@ class GameScreen(MDScreen):
         self.clock_sound = self.app.sound_manager.get_sound(
             'assets/sounds/clock-ticking.ogg')
         self.right_notification = self.app.sound_manager.get_sound(
-            'assets/sounds/right-notification.wav')
+            'assets/sounds/right-notification.ogg')
         self.wrong_notification = self.app.sound_manager.get_sound(
-            'assets/sounds/wrong-notification.wav')
+            'assets/sounds/wrong-notification.ogg')
         self.jump_notification = self.app.sound_manager.get_sound(
-            'assets/sounds/jump-notification.wav')
+            'assets/sounds/jump-notification.ogg')
         self.app_background_music.stop()
         self.game_background_music.play()
 
@@ -83,16 +84,16 @@ class GameScreen(MDScreen):
             self.ids.card_container.add_card(element["word"],
                                              element["forbidden"])
             self.elem_idx = self.elem_idx + 1
-
-    def play_round(self, *args):
-        Logger.debug(
-            f"Playing round {self.current_round + 1} for player {self.current_player + 1}")
         self.ids.remaining_jumps.text = str(self.num_jumps)
         self.ids.jump_button.disabled = True if self.num_jumps == 0 else False
         self.ids.container.md_bg_color = PLAYERS_COLORS[self.current_player]
         self.ids.player_points.text = "0"
-        self.actions = []
         self.ids.timer.seconds = self.round_time
+        self.actions = []
+
+    def play_round(self, *args):
+        Logger.debug(
+            f"Playing round {self.current_round + 1} for player {self.current_player + 1}")
         self.ids.timer.start()
 
     def wrong_answer(self):
