@@ -1,4 +1,3 @@
-from kivmob import KivMob, TestIds
 from kivy.core.text import LabelBase
 from kivy.core.window import Window
 from kivymd.app import MDApp
@@ -16,7 +15,6 @@ class BaseApp(MDApp):
     def __init__(self, **kwargs):
         super(BaseApp, self).__init__(**kwargs)
         self.initialize_app()
-        self.ads = KivMob(TestIds.APP)
         self.status = AppStatus()
         self.sound_manager = SoundManager()
         self.i18n = i18n
