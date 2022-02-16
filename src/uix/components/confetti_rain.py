@@ -24,11 +24,11 @@ class ConfettiItem(FloatLayout):
 
 
 class ConfettiRain(FloatLayout):
-    size_range = ListProperty([dp(2), dp(5)])
+    size_range = ListProperty([dp(2), dp(7)])
     time_range = ListProperty([3, 5])
     speed = ListProperty([3, 6])
     time_before_fade = ListProperty([1, 3])
-    number = NumericProperty(250)
+    number = NumericProperty(150)
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
