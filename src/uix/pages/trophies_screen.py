@@ -26,8 +26,6 @@ class TrophiesScreen(MDScreen):
         Clock.schedule_once(self._load_data)
 
     def _load_data(self, delay=0):
-        for i in range(1000000):
-            print(i)
         self.refreshing = True
         list_trophies = list()
         score_history = get_score_history()
