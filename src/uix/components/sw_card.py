@@ -1,12 +1,11 @@
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 from kivymd.uix.boxlayout import MDBoxLayout
-from kivymd.uix.swiper import MDSwiperItem
 
 Builder.load_file("uix/components/kv/sw_card.kv")
 
 
-class SWCard(MDBoxLayout):#(MDSwiperItem):
+class SWCard(MDBoxLayout):
 
     text = StringProperty()
     forbidden = StringProperty()
