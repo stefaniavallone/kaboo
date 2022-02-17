@@ -45,12 +45,9 @@ class GameScreen(MDScreen):
     def load_music(self, *args):
         self.app_background_music = self.app.sound_manager.get_sound(
             "assets/sounds/cute.ogg")
-        # self.game_background_music = self.app.sound_manager.get_sound(
-        #     'assets/sounds/ukulele.ogg',
-        #     True, 0.2)
         self.game_background_music = self.app.sound_manager.get_sound(
-            'assets/sounds/sound.mp3',
-            True, 0.3)
+            'assets/sounds/ukulele.ogg',
+            True, 0.2)
         self.clock_sound = self.app.sound_manager.get_sound(
             'assets/sounds/clock-ticking.ogg')
         self.right_notification = self.app.sound_manager.get_sound(
