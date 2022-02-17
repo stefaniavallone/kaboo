@@ -22,15 +22,8 @@ class Root(ScreenManager):
         super().__init__(**kwargs)
         self.app = App.get_running_app()
         self._add_screen("home")
-        #for screen_idx, screen_name in enumerate(screens.keys()):
-            # deferred late screen initialization
-        #    self.add_screen(screen_name)
         Window.bind(on_keyboard=self.keyboard)
         self.exit_pressed_once = False
-
-    #def add_screen(self, screen_name):
-    #    self.loading_screens[screen_name] = self.executor.submit(self._add_screen, screen_name)
-    #    Clock.schedule_once(lambda x: self._add_screen(screen_name), 0.001 + delay)
 
     def _add_screen(self, screen_name):
         if screen_name not in self.screen_names:
@@ -64,3 +57,4 @@ class Root(ScreenManager):
                 toast(self.app.i18n._("EXIT_MESSAGE"))
                 Clock.schedule_once(self.reset_state, 5)
                 return True  # key event consumed by app
+

@@ -17,9 +17,8 @@ class BaseApp(MDApp):
         self.ads = KivMob(TestIds.APP)
         self.status = AppStatus()
         self.sound_manager = SoundManager()
-        self.sound_manager.load_sound('assets/sounds/cute.ogg')
+        self.sound_manager.load_sound('assets/sounds/cute.ogg', True)
         self.sound_manager.load_sound('assets/sounds/ukulele.ogg', True, 0.2)
-        self.sound_manager.load_sound('assets/sounds/sound.mp3', True, 0.3)
         self.sound_manager.load_sound('assets/sounds/clock-ticking.ogg')
         self.sound_manager.load_sound('assets/sounds/right-notification.ogg')
         self.sound_manager.load_sound('assets/sounds/wrong-notification.ogg')
@@ -28,6 +27,7 @@ class BaseApp(MDApp):
         self.status.attach(self.sound_manager)
         self.status.attach(self.i18n)
         self.status.setv("app.lang", "en")
+
 
     def initialize_app(self):
         Window.soft_input_mode = "below_target"
