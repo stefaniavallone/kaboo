@@ -1,6 +1,4 @@
 from threading import Thread
-from time import sleep
-from kivy.clock import Clock
 from kivymd.uix.screen import MDScreen
 
 from logic.score import get_score_history
@@ -16,14 +14,8 @@ class TrophiesScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
 
-    def on_pre_enter(self):
-        pass
-        #if not self.refreshing:
-        #    return
-        #Thread(target=self._load_data).start()
-
     def on_enter(self, *args):
-        Clock.schedule_once(self._load_data)
+        Thread(target=self._load_data).start()
 
     def _load_data(self, delay=0):
         self.refreshing = True

@@ -29,7 +29,7 @@ class HistoryScreen(MDScreen):
         self.histories = []
 
     def on_enter(self,  *args):
-        Clock.schedule_once(self._load_data)
+        Thread(target=self._load_data).start()
 
     def _load_data(self, delay=0):
         self.refreshing = True

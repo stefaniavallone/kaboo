@@ -45,9 +45,12 @@ class GameScreen(MDScreen):
     def load_music(self, *args):
         self.app_background_music = self.app.sound_manager.get_sound(
             "assets/sounds/cute.ogg")
+        # self.game_background_music = self.app.sound_manager.get_sound(
+        #     'assets/sounds/ukulele.ogg',
+        #     True, 0.2)
         self.game_background_music = self.app.sound_manager.get_sound(
-            'assets/sounds/ukulele.ogg',
-            True, 0.2)
+            'assets/sounds/sound.mp3',
+            True, 0.3)
         self.clock_sound = self.app.sound_manager.get_sound(
             'assets/sounds/clock-ticking.ogg')
         self.right_notification = self.app.sound_manager.get_sound(
@@ -145,6 +148,14 @@ class GameScreen(MDScreen):
                 self.manager.go_to_screen('game_pre', direction='right')
         else:
             self.manager.go_to_screen('game_pre', direction='right')
+
+    def on_pause(self, *args):
+        print("--------> ON PAUSE ----------")
+        self.ids.timer.stop()
+        
+    def on_resume(self, *args):
+        print("--------> ON RESUME ----------")
+        self.ids.timer.start()
 
     def on_pre_leave(self, *args):
         if self.confirm_exit_dialog:

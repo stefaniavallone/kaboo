@@ -1,3 +1,7 @@
+from concurrent.futures import ThreadPoolExecutor, Future
+
+from kivy import Logger
+
 from utils.dp.observer import Observer
 from utils.sound.sound_player import SoundPlayer
 
@@ -6,13 +10,24 @@ class SoundManager(dict, Observer):
 
     def __init__(self):
         super().__init__()
+        self.executor = ThreadPoolExecutor()
 
     def get_sound(self, path, loop=False, volume=1):
         if path not in self:
-            sp = SoundPlayer(path, loop, volume)
-            self[path] = sp
+            self.load_sound(path, loop, volume)
+        if isinstance(self[path], Future):
+            return self[path].result()
         else:
-            sp = self[path]
+            return self[path]
+
+    def load_sound(self, path, loop=False, volume=1):
+        self[path] = self.executor.submit(self._load, path, loop, volume)
+
+    def _load(self, path, loop, volume):
+        Logger.debug(f"Sound {path} loading started.")
+        sp = SoundPlayer(path, loop, volume)
+        Logger.debug(f"Sound {path} loaded.")
+        self[path] = sp
         return sp
 
     def remove_sound(self, path):

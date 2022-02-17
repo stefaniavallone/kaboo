@@ -35,8 +35,8 @@ class Timer(MDLabel):
             self.stop()
     
     def start(self):
-        self.start_time = time.time() + self.seconds
         if not self.running:
+            self.start_time = time.time() + self.seconds
             self.running = True
             self._last_seconds_event_fired = False
             Clock.schedule_interval(self.update, self.interval)
