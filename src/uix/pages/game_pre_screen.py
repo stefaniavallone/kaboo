@@ -33,7 +33,6 @@ class GamePreScreen(MDScreen):
         self.ids.play_button.md_bg_color = PLAYERS_COLORS[curr_player]
 
     def to_game(self):
-        self.app.ads.new_interstitial(TestIds.INTERSTITIAL)
         self.app.ads.request_interstitial()
         self.app.ads.show_interstitial()
         self.manager.go_to_screen('game', direction='left')

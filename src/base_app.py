@@ -1,4 +1,4 @@
-from kivmob import KivMob, TestIds
+from kivmob import KivMob
 from kivy.core.text import LabelBase
 from kivy.core.window import Window
 from kivymd.app import MDApp
@@ -6,7 +6,7 @@ from app_status import AppStatus
 
 from uix.pages.root import Root
 from utils.sound.sound_manager import SoundManager
-from utils.translation.i18n import I18n, i18n
+from utils.translation.i18n import i18n
 
 
 class BaseApp(MDApp):
@@ -14,7 +14,8 @@ class BaseApp(MDApp):
     def __init__(self, **kwargs):
         super(BaseApp, self).__init__(**kwargs)
         self.initialize_app()
-        self.ads = KivMob(TestIds.APP)
+        self.ads = KivMob("ca-app-pub-5506785496629412~2619392502")
+        self.ads.new_interstitial("ca-app-pub-5506785496629412/2803225337")
         self.status = AppStatus()
         self.sound_manager = SoundManager()
         self.sound_manager.load_sound('assets/sounds/cute.ogg', True)

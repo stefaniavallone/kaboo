@@ -1,59 +1,1101 @@
 [
-	{
-		"word": "Food",
-		"forbidden" : ["eat", "mouth", "hungry", "full", "delicious"]
-	},
-	{
-		"word": "Music",
-		"forbidden" : ["listen", "song", "instrument", "play", "hear"]
-	},
-	{
-		"word": "Fish",
-		"forbidden" : ["swim", "food", "ocean", "lake", "river"]
-	},
-	{
-		"word": "Physics",
-		"forbidden" : ["study", "science", "gravity", "force", "move"]
-	},
-	{
-		"word": "Java",
-		"forbidden" : ["coffee", "language", "drink", "oracle", "hot"]
-	},
-	{
-		"word": "Money",
-		"forbidden" : ["wealth", "job", "pay", "buy", "sell"]
-	},
-	{
-		"word": "Shotgun",
-		"forbidden" : ["weapon", "pump", "zombie", "barrel", "bullet"]
-	},
-	{
-		"word": "Rice",
-		"forbidden" : ["chinese", "field", "university", "grain", "food"]
-	},
-	{
-		"word": "Cellphone",
-		"forbidden" : ["call", "mobile", "pocket", "internet", "ear"]
-	},
-	{
-		"word": "Peanut Butter",
-		"forbidden" : ["bread", "sandwich", "jam", "jelly", "brown"]
-	},
-	{
-		"word": "Ketchup",
-		"forbidden" : ["fries", "tomato", "sauce", "condiment", "dip"]
-	},
-	{
-		"word": "Pikachu",
-		"forbidden" : ["Pokemon", "Ash", "mouse", "rat", "electric"]
-	},
-	{
-		"word": "Swimming",
-		"forbidden" : ["water", "pool", "lake", "ocean", "suit"]
-	},
-	{
-		"word": "Piano",
-		"forbidden" : ["music", "instrument", "key", "pedal", "grand"]
-	}
-	
+  {
+    "word": "Dare",
+    "forbidden": [
+      "verità",
+      "sfida",
+      "coraggio",
+      "audace",
+      "rischio"
+    ]
+  },
+  {
+    "word": "previsione",
+    "forbidden": [
+      "tempo",
+      "futuro",
+      "radio",
+      "predizione",
+      "notizie"
+    ]
+  },
+  {
+    "word": "manichetta",
+    "forbidden": [
+      "Acqua",
+      "gomma",
+      "Calze",
+      "Panty",
+      "spruzzatore"
+    ]
+  },
+  {
+    "word": "bagaglio",
+    "forbidden": [
+      "bagaglio",
+      "valigia",
+      "viaggio",
+      "giorno festivo",
+      "branco"
+    ]
+  },
+  {
+    "word": "Camuffamento",
+    "forbidden": [
+      "travestimento",
+      "uniforme",
+      "nascondere",
+      "coprire",
+      "esercito"
+    ]
+  },
+  {
+    "word": "juke-box",
+    "forbidden": [
+      "Canzoni",
+      "musica",
+      "selezionare",
+      "macchina",
+      "moneta"
+    ]
+  },
+  {
+    "word": "ombra",
+    "forbidden": [
+      "caldo",
+      "lampada",
+      "finestra",
+      "albero",
+      "occhiali da sole"
+    ]
+  },
+  {
+    "word": "avanzi",
+    "forbidden": [
+      "Riscaldare",
+      "Ieri",
+      "cibo",
+      "pasto",
+      "salvare"
+    ]
+  },
+  {
+    "word": "bulbo",
+    "forbidden": [
+      "Leggero",
+      "vetro",
+      "watt",
+      "tulipano",
+      "pianta"
+    ]
+  },
+  {
+    "word": "tabella",
+    "forbidden": [
+      "grafico",
+      "Numeri",
+      "visivo",
+      "dati",
+      "cruscotto"
+    ]
+  },
+  {
+    "word": "batterista",
+    "forbidden": [
+      "Ringo",
+      "picchiare",
+      "Bastoni",
+      "banda",
+      "batteria"
+    ]
+  },
+  {
+    "word": "Mostro di Loch Ness",
+    "forbidden": [
+      "Scozia",
+      "creatura",
+      "lago",
+      "Acqua",
+      "Nessie"
+    ]
+  },
+  {
+    "word": "grasso",
+    "forbidden": [
+      "grasso",
+      "olio",
+      "fritto",
+      "lubrificare",
+      "Giovanni Travolta"
+    ]
+  },
+  {
+    "word": "ugello",
+    "forbidden": [
+      "rubinetto",
+      "doccia",
+      "manichetta",
+      "Acqua",
+      "adattare"
+    ]
+  },
+  {
+    "word": "stufato",
+    "forbidden": [
+      "cuoco",
+      "cibo",
+      "manzo",
+      "aroma",
+      "matto"
+    ]
+  },
+  {
+    "word": "rapido",
+    "forbidden": [
+      "quasi",
+      "esprimere",
+      "rapido",
+      "frettoloso",
+      "Repentino"
+    ]
+  },
+  {
+    "word": "titolo",
+    "forbidden": [
+      "notizie",
+      "agire",
+      "esecutore",
+      "titolo",
+      "stella"
+    ]
+  },
+  {
+    "word": "Centurione",
+    "forbidden": [
+      "Cento",
+      "Soldato",
+      "Combattere",
+      "Roma",
+      "Capo"
+    ]
+  },
+  {
+    "word": "Lebbroso",
+    "forbidden": [
+      "Gesù",
+      "Sanato",
+      "Lazzaro",
+      "Malattia",
+      "Immondo"
+    ]
+  },
+  {
+    "word": "Giuramento",
+    "forbidden": [
+      "Contratto",
+      "Rompere",
+      "Promettere",
+      "Giurare",
+      "Giurare"
+    ]
+  },
+  {
+    "word": "Esodo",
+    "forbidden": [
+      "Egitto",
+      "Faraone",
+      "Deserto",
+      "Muse",
+      "Croce"
+    ]
+  },
+  {
+    "word": "Nilo",
+    "forbidden": [
+      "Muse",
+      "Faraone",
+      "Fiume",
+      "Egitto",
+      "Sangue"
+    ]
+  },
+  {
+    "word": "Pace",
+    "forbidden": [
+      "Ansioso",
+      "Tranquillo",
+      "Frutta",
+      "Fui",
+      "Calmo"
+    ]
+  },
+  {
+    "word": "Comando",
+    "forbidden": [
+      "Ubbidire",
+      "Istruire",
+      "Ordine",
+      "Soldato",
+      "Padrone"
+    ]
+  },
+  {
+    "word": "asino",
+    "forbidden": [
+      "grigio",
+      "carretto",
+      "testardo",
+      "cavalcare",
+      "carote"
+    ]
+  },
+  {
+    "word": "scalzo",
+    "forbidden": [
+      "scarpe",
+      "calzini",
+      "estate",
+      "spiaggia",
+      "piede"
+    ]
+  },
+  {
+    "word": "Pubbliche relazioni",
+    "forbidden": [
+      "pubblicità",
+      "marketing",
+      "PR",
+      "media",
+      "digitale"
+    ]
+  },
+  {
+    "word": "promozione",
+    "forbidden": [
+      "marketing",
+      "pubblicità",
+      "vendita",
+      "offerta",
+      "sconto"
+    ]
+  },
+  {
+    "word": "AMMINISTRATORE DELEGATO",
+    "forbidden": [
+      "capo",
+      "Consiglio di Amministrazione",
+      "responsabile",
+      "esecutivo",
+      "societ\u00e0"
+    ]
+  },
+  {
+    "word": "negoziare",
+    "forbidden": [
+      "accordo",
+      "compromettere",
+      "convincere",
+      "discussione",
+      "Azienda"
+    ]
+  },
+  {
+    "word": "Abolizionista",
+    "forbidden": [
+      "avvocato",
+      "Abolizione",
+      "Protesta",
+      "Attivista",
+      "schiavo"
+    ]
+  },
+  {
+    "word": "Ferrovia transcontinentale",
+    "forbidden": [
+      "treno",
+      "Locomotiva",
+      "Stazione ferroviaria",
+      "Trasporto",
+      "merce"
+    ]
+  },
+  {
+    "word": "Schiavitù",
+    "forbidden": [
+      "Legato",
+      "schiavo",
+      "Forza",
+      "Lavoro",
+      "padrone"
+    ]
+  },
+  {
+    "word": "spaventapasseri",
+    "forbidden": [
+      "il mago di oz",
+      "giardino",
+      "campo",
+      "uccelli",
+      "manichino"
+    ]
+  },
+  {
+    "word": "gruccia",
+    "forbidden": [
+      "armadio",
+      "vestiti",
+      "Protesi",
+      "bistecca",
+      "uncino"
+    ]
+  },
+  {
+    "word": "salsa di soia",
+    "forbidden": [
+      "valutare",
+      "Cinese",
+      "liquido",
+      "marrone",
+      "cottura"
+    ]
+  },
+  {
+    "word": "Ridotto",
+    "forbidden": [
+      "deficiente",
+      "imperfetto",
+      "incompleto",
+      "parziale",
+      "accorciato"
+    ]
+  },
+  {
+    "word": "negoziatore",
+    "forbidden": [
+      "priceline",
+      "William Shatner",
+      "mediatore",
+      "affare"
+    ]
+  },
+  {
+    "word": "caricabatterie del telefono",
+    "forbidden": [
+      "cellulare",
+      "batteria",
+      "potenza",
+      "dispositivo",
+      "spina"
+    ]
+  },
+  {
+    "word": "dissidente",
+    "forbidden": [
+      "insubordinato",
+      "ribelle",
+      "rivoluzionario",
+      "sedizioso",
+      "sovversivo"
+    ]
+  },
+  {
+    "word": "rockstar",
+    "forbidden": [
+      "banda",
+      "Groupie",
+      "chitarra",
+      "giocare",
+      "ventilatore"
+    ]
+  },
+  {
+    "word": "3d",
+    "forbidden": [
+      "film",
+      "rosso & blu",
+      "avatar",
+      "cinema",
+      "occhiali"
+    ]
+  },
+  {
+    "word": "festivo",
+    "forbidden": [
+      "celebrazione",
+      "felice",
+      "acclamare",
+      "Natale",
+      "riunione"
+    ]
+  },
+  {
+    "word": "definire",
+    "forbidden": [
+      "delineare",
+      "demarcare",
+      "descrivere",
+      "spiegare",
+      "contorno"
+    ]
+  },
+  {
+    "word": "infatti",
+    "forbidden": [
+      "autenticamente",
+      "completamente",
+      "genuinamente",
+      "irrecusabilmente",
+      "legittimamente"
+    ]
+  },
+  {
+    "word": "sfocato",
+    "forbidden": [
+      "oscuro",
+      "svenire",
+      "nebbioso",
+      "impreciso",
+      "indefinito"
+    ]
+  },
+  {
+    "word": "escogitare",
+    "forbidden": [
+      "ingegnere",
+      "finagle",
+      "correzione",
+      "Ottieni",
+      "ottenere"
+    ]
+  },
+  {
+    "word": "Capito",
+    "forbidden": [
+      "afferrare",
+      "familiarità con",
+      "sapere",
+      "comprendere",
+      "arrestare"
+    ]
+  },
+  {
+    "word": "abbreviazione",
+    "forbidden": [
+      "abbreviazione",
+      "taglio",
+      "accorciamento",
+      "Riassumendo",
+      "compressione"
+    ]
+  },
+  {
+    "word": "applauso",
+    "forbidden": [
+      "Cin cin",
+      "battimano",
+      "mano",
+      "ovazione",
+      "approvazione"
+    ]
+  },
+  {
+    "word": "Fishbowl",
+    "forbidden": [
+      "ciotola",
+      "pesce",
+      "Acqua",
+      "vetro",
+      "salato / dolce"
+    ]
+  },
+  {
+    "word": "patriottismo",
+    "forbidden": [
+      "nazionalismo",
+      "lealt\u00e0",
+      "paese",
+      "orgoglio",
+      "patrimonio"
+    ]
+  },
+  {
+    "word": "corde vocali",
+    "forbidden": [
+      "parlare",
+      "cantare",
+      "gola",
+      "perdere",
+      "voce"
+    ]
+  },
+  {
+    "word": "sicurezza",
+    "forbidden": [
+      "protezione",
+      "cassaforte",
+      "indennità",
+      "assicurazione",
+      "difesa"
+    ]
+  },
+  {
+    "word": "percossa",
+    "forbidden": [
+      "cintura",
+      "colpire",
+      "ceffone",
+      "clobber",
+      "Bash"
+    ]
+  },
+  {
+    "word": "Tempo libero",
+    "forbidden": [
+      "passatempo",
+      "vacanza",
+      "rilassamento",
+      "giorno festivo",
+      "tempo libero"
+    ]
+  },
+  {
+    "word": "scala aziendale",
+    "forbidden": [
+      "arrampicarsi",
+      "Ie:",
+      "avanti",
+      "Azienda",
+      "offerta"
+    ]
+  },
+  {
+    "word": "crema solare",
+    "forbidden": [
+      "blocco",
+      "bruciare",
+      "protezione",
+      "scottarsi",
+      "sole"
+    ]
+  },
+  {
+    "word": "nucleo",
+    "forbidden": [
+      "elemento",
+      "protone",
+      "chimica",
+      "Neutroni",
+      "nucleo"
+    ]
+  },
+  {
+    "word": "Superficie",
+    "forbidden": [
+      "fuori",
+      "fuori",
+      "facede",
+      "cappotto",
+      "superficiale"
+    ]
+  },
+  {
+    "word": "foresta pluviale",
+    "forbidden": [
+      "in pericolo",
+      "Acqua",
+      "giungla",
+      "America del Sud",
+      "foresta"
+    ]
+  },
+  {
+    "word": "carolina del sud",
+    "forbidden": [
+      "cherleston",
+      "Secessione",
+      "A nord",
+      "schiavo",
+      "Columbia"
+    ]
+  },
+  {
+    "word": "L'Avana",
+    "forbidden": [
+      "Cuba",
+      "capitale",
+      "sigaro",
+      "tabacco",
+      "caribben"
+    ]
+  },
+  {
+    "word": "atlante",
+    "forbidden": [
+      "mappa",
+      "libro",
+      "tabella",
+      "mondo",
+      "globo"
+    ]
+  },
+  {
+    "word": "nodo",
+    "forbidden": [
+      "legare",
+      "corda",
+      "ciclo",
+      "laccio",
+      "groviglio"
+    ]
+  },
+  {
+    "word": "Pinstripe",
+    "forbidden": [
+      "vestito",
+      "Azienda",
+      "tessuto",
+      "Marina militare",
+      "modello"
+    ]
+  },
+  {
+    "word": "cannella",
+    "forbidden": [
+      "spezia",
+      "Buono",
+      "bastone",
+      "sfida",
+      "zucchero"
+    ]
+  },
+  {
+    "word": "lavanderia",
+    "forbidden": [
+      "Lavatrici",
+      "essiccatoi",
+      "vestiti",
+      "pulito",
+      "Monete"
+    ]
+  },
+  {
+    "word": "setaccio",
+    "forbidden": [
+      "colino",
+      "colino",
+      "Drenaggio",
+      "buchi",
+      "setacciare"
+    ]
+  },
+  {
+    "word": "propellere",
+    "forbidden": [
+      "spingere",
+      "spinta",
+      "lanciare",
+      "gettare",
+      "Guida"
+    ]
+  },
+  {
+    "word": "forfora",
+    "forbidden": [
+      "capello",
+      "Fiocchi",
+      "scalpo",
+      "shampoo",
+      "bianco"
+    ]
+  },
+  {
+    "word": "cacciavite",
+    "forbidden": [
+      "strumento",
+      "Flathead",
+      "Phillips",
+      "girare",
+      "chiodo"
+    ]
+  },
+  {
+    "word": "sedia a sdraio",
+    "forbidden": [
+      "striscia",
+      "rilassare",
+      "spiaggia",
+      "raggio di sole",
+      "piegare"
+    ]
+  },
+  {
+    "word": "biologia",
+    "forbidden": [
+      "scienza",
+      "Studiare",
+      "vita",
+      "animali",
+      "marino"
+    ]
+  },
+  {
+    "word": "Astrologia",
+    "forbidden": [
+      "Stelle",
+      "futuro",
+      "predire",
+      "segno",
+      "zodiaco"
+    ]
+  },
+  {
+    "word": "lotteria",
+    "forbidden": [
+      "lotteria",
+      "biglietto",
+      "disegnare",
+      "comprare",
+      "vincere"
+    ]
+  },
+  {
+    "word": "Manna",
+    "forbidden": [
+      "denaro",
+      "inaspettato",
+      "Buono",
+      "regalo",
+      "fortuna"
+    ]
+  },
+  {
+    "word": "chalet",
+    "forbidden": [
+      "svizzero",
+      "montagna",
+      "Alpi",
+      "rifugio sciistico",
+      "casa"
+    ]
+  },
+  {
+    "word": "amnesia",
+    "forbidden": [
+      "dimenticare",
+      "memoria",
+      "ricordare",
+      "testa",
+      "cervello"
+    ]
+  },
+  {
+    "word": "sopravvivere",
+    "forbidden": [
+      "vivo",
+      "Le",
+      "riuscire",
+      "perseverare",
+      "sopportare"
+    ]
+  },
+  {
+    "word": "ukulele",
+    "forbidden": [
+      "banjo",
+      "chitarra",
+      "musica",
+      "strumento",
+      "Stringhe"
+    ]
+  },
+  {
+    "word": "sugo",
+    "forbidden": [
+      "Turchia",
+      "carne",
+      "puré",
+      "condimento",
+      "salsa"
+    ]
+  },
+  {
+    "word": "Ranson",
+    "forbidden": [
+      "rapire",
+      "denaro",
+      "ostaggio",
+      "pagare",
+      "prendere"
+    ]
+  },
+  {
+    "word": "speed dating",
+    "forbidden": [
+      "quasi",
+      "singolo",
+      "Tabelle",
+      "molti",
+      "Ore"
+    ]
+  },
+  {
+    "word": "Achille",
+    "forbidden": [
+      "intero",
+      "Greco",
+      "eroe",
+      "mitologia",
+      "debole"
+    ]
+  },
+  {
+    "word": "tamburello",
+    "forbidden": [
+      "scuotere",
+      "tintinnio",
+      "musica",
+      "strumento",
+      "picchiare"
+    ]
+  },
+  {
+    "word": "schiaccianoci",
+    "forbidden": [
+      "balletto",
+      "aperto",
+      "suite",
+      "Natale",
+      "ballo"
+    ]
+  },
+  {
+    "word": "ambasciatore",
+    "forbidden": [
+      "diplomatico",
+      "Nazioni Unite",
+      "paese",
+      "ambasciata",
+      "straniero"
+    ]
+  },
+  {
+    "word": "astronauta",
+    "forbidden": [
+      "spazio",
+      "navetta",
+      "luna",
+      "razzo",
+      "Neil Armstrong"
+    ]
+  },
+  {
+    "word": "tosaerba",
+    "forbidden": [
+      "giardino",
+      "tagliare",
+      "erba",
+      "spingere",
+      "lama"
+    ]
+  },
+  {
+    "word": "sciocco",
+    "forbidden": [
+      "trucco",
+      "schema",
+      "frode",
+      "con",
+      "ingannare"
+    ]
+  },
+  {
+    "word": "tariyaki",
+    "forbidden": [
+      "dolce",
+      "Giapponese",
+      "pollo",
+      "salsa",
+      "riso"
+    ]
+  },
+  {
+    "word": "prezzemolo",
+    "forbidden": [
+      "guarnire",
+      "cibo",
+      "verde",
+      "erba",
+      "spezia"
+    ]
+  },
+  {
+    "word": "jedi",
+    "forbidden": [
+      "spada laser",
+      "forza",
+      "skywalker",
+      "Guerre stellari",
+      "yoda \u00b7"
+    ]
+  },
+  {
+    "word": "colino",
+    "forbidden": [
+      "Drenaggio",
+      "buchi",
+      "ciotola",
+      "pasta",
+      "Acqua"
+    ]
+  },
+  {
+    "word": "crema da barba",
+    "forbidden": [
+      "faccia",
+      "rasoio",
+      "schiuma",
+      "barba",
+      "bianco"
+    ]
+  },
+  {
+    "word": "spia",
+    "forbidden": [
+      "agente",
+      "traditore",
+      "segreto",
+      "James Bond",
+      "Sotto copertura"
+    ]
+  },
+  {
+    "word": "ruga",
+    "forbidden": [
+      "piega",
+      "linea",
+      "vecchio",
+      "pelle",
+      "faccia"
+    ]
+  },
+  {
+    "word": "ipnosi",
+    "forbidden": [
+      "trance",
+      "dormire",
+      "orologio",
+      "rilassare",
+      "subconscio"
+    ]
+  },
+  {
+    "word": "Asia",
+    "forbidden": [
+      "A est",
+      "continente",
+      "Cina",
+      "Europa",
+      "terra"
+    ]
+  },
+  {
+    "word": "bollywook",
+    "forbidden": [
+      "India",
+      "cinema",
+      "pellicole",
+      "cinema",
+      "famoso"
+    ]
+  },
+  {
+    "word": "graffetta",
+    "forbidden": [
+      "graffetta",
+      "fermaglio",
+      "metallo",
+      "insieme",
+      "Curva"
+    ]
+  },
+  {
+    "word": "quintuplette",
+    "forbidden": [
+      "Bambini",
+      "Cinque",
+      "nascita",
+      "Gemelli",
+      "multiplo"
+    ]
+  },
+  {
+    "word": "sabbie mobili",
+    "forbidden": [
+      "affondare",
+      "trappola",
+      "deserto",
+      "pericolo",
+      "fango"
+    ]
+  },
+  {
+    "word": "Luna di miele",
+    "forbidden": [
+      "matrimonio",
+      "Sposi",
+      "viaggio",
+      "viaggio",
+      "giorno festivo"
+    ]
+  },
+  {
+    "word": "simon cowell",
+    "forbidden": [
+      "il fattore x",
+      "musica",
+      "giudice",
+      "concorso",
+      "talento"
+    ]
+  },
+  {
+    "word": "bambino",
+    "forbidden": [
+      "bambino",
+      "attivo",
+      "neonato",
+      "camminare",
+      "Due"
+    ]
+  },
+  {
+    "word": "melograno",
+    "forbidden": [
+      "frutta",
+      "albero",
+      "Salute",
+      "succo",
+      "rosso"
+    ]
+  },
+  {
+    "word": "portabicchieri",
+    "forbidden": [
+      "tenere",
+      "bere",
+      "auto",
+      "spandere",
+      "bevanda"
+    ]
+  },
+  {
+    "word": "cavaliere",
+    "forbidden": [
+      "armatura",
+      "castello",
+      "cavallo",
+      "spada",
+      "oscuro"
+    ]
+  }
 ]
