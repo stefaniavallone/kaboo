@@ -12,8 +12,7 @@ class SoundManager(dict, Observer):
     def get_sound(self, path, loop=False, volume=1):
         if path not in self:
             self.load_sound(path, loop, volume)
-        else:
-            return self[path]
+        return self[path]
 
     def load_sound(self, path, loop=False, volume=1):
         self[path] = self._load(path, loop, volume)

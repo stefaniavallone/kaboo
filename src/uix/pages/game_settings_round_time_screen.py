@@ -15,7 +15,7 @@ class GameSettingsRoundTimeScreen(MDScreen):
         super().__init__(**kw)
         self.app = App.get_running_app()
         self.buttons = [
-            KMDFillRoundFlatButton(text="0:30",
+            KMDFillRoundFlatButton(text="0:03",
                                    radius=[dp(10), dp(10), dp(10), dp(10)],
                                    theme_text_color="Custom",
                                    width="100dp",

@@ -1,3 +1,5 @@
+import cProfile
+
 from kivmob import KivMob
 from kivy.core.text import LabelBase
 from kivy.core.window import Window
@@ -24,11 +26,11 @@ class BaseApp(MDApp):
         self.sound_manager.load_sound('assets/sounds/right-notification.ogg')
         self.sound_manager.load_sound('assets/sounds/wrong-notification.ogg')
         self.sound_manager.load_sound('assets/sounds/jump-notification.ogg')
+        self.sound_manager.load_sound('assets/sounds/applause.ogg')
         self.i18n = i18n
         self.status.attach(self.sound_manager)
         self.status.attach(self.i18n)
         self.status.setv("app.lang", "en")
-
 
     def initialize_app(self):
         Window.soft_input_mode = "below_target"
@@ -75,6 +77,18 @@ class BaseApp(MDApp):
                 style[0] = f"{font_name}Medium"
             elif style[0] != "Icons":
                 style[0] = f"{font_name}"
+
+    def on_pause(self):
+        print("App pause")
+        if self.root.current_screen == "game":
+            self.root.current_screen.ids.timer.stop()
+        return True
+
+    def on_resume(self):
+        print("App resume")
+        if self.root.current_screen == "game":
+            self.root.current_screen.ids.timer.start()
+        return True
 
     def build(self):
         return Root()

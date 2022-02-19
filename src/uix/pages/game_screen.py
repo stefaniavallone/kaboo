@@ -115,7 +115,7 @@ class GameScreen(MDScreen):
             value = int(self.ids.remaining_jumps.text)
             self.ids.remaining_jumps.text = str(value - 1)
             if value - 1 == 0:
-                self.ids.jump_button.disabled = True
+                self.ids.jump_button.set_disabled(True)
             self.next_card()
 
     def next_card(self):
@@ -145,14 +145,6 @@ class GameScreen(MDScreen):
                 self.manager.go_to_screen('game_pre', direction='right')
         else:
             self.manager.go_to_screen('game_pre', direction='right')
-
-    def on_pause(self, *args):
-        print("--------> ON PAUSE ----------")
-        self.ids.timer.stop()
-        
-    def on_resume(self, *args):
-        print("--------> ON RESUME ----------")
-        self.ids.timer.start()
 
     def on_pre_leave(self, *args):
         if self.confirm_exit_dialog:

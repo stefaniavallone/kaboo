@@ -31,9 +31,7 @@ class GameEndScreen(MDScreen):
             'assets/sounds/applause.ogg')
 
     def on_pre_enter(self, *args):
-        G = {'r0': {'p0': {'points': 0, 'actions': []}, 'p1': {'points': 6, 'actions': ['right', 'right', 'right', 'right', 'right', 'right']}}, 'r1': {'p0': {'points': 34, 'actions': ['jump', 'jump', 'jump', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'wrong', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}, 'p1': {'points': 21, 'actions': ['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']}}}
-        game_rounds = self.app.status.getv("game.rounds", default_value=G)
-
+        game_rounds = self.app.status.getv("game.rounds")
         self.round_time = str(self.app.status.getv("game.round_time", default_value=25))
         self.num_players = str(self.app.status.getv("game.num_players", default_value=2))
         self.num_jumps = str(self.app.status.getv("game.num_jumps", default_value=5))
