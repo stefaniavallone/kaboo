@@ -32,10 +32,10 @@ class GameEndScreen(MDScreen):
 
     def on_pre_enter(self, *args):
         game_rounds = self.app.status.getv("game.rounds")
-        self.round_time = str(self.app.status.getv("game.round_time", default_value=25))
-        self.num_players = str(self.app.status.getv("game.num_players", default_value=2))
-        self.num_jumps = str(self.app.status.getv("game.num_jumps", default_value=5))
-        self.game_level = self.app.status.getv("game.level", default_value="easy")
+        self.round_time = str(self.app.status.getv("game.round_time"))
+        self.num_players = str(self.app.status.getv("game.num_players"))
+        self.num_jumps = str(self.app.status.getv("game.num_jumps"))
+        self.game_level = self.app.status.getv("game.level")
 
         players_points = compute_points(game_rounds)
         best_player_index, score = best_player(players_points)
@@ -50,7 +50,6 @@ class GameEndScreen(MDScreen):
 
     def on_enter(self, *args):
         self.ids.confetti_rain.start()
-        print("self.trophies_diff", self.trophies_diff)
         if len(self.trophies_diff) > 0:
             trophies_carousel = MDCarousel()
             buttons = []

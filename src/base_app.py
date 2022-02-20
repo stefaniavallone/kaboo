@@ -79,13 +79,11 @@ class BaseApp(MDApp):
                 style[0] = f"{font_name}"
 
     def on_pause(self):
-        print("App pause")
         if self.root.current_screen == "game":
             self.root.current_screen.ids.timer.stop()
         return True
 
     def on_resume(self):
-        print("App resume")
         if self.root.current_screen == "game":
             self.root.current_screen.ids.timer.start()
         return True

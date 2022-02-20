@@ -1,3 +1,4 @@
+import datetime
 import json
 from random import shuffle
 
@@ -22,18 +23,12 @@ class GameScreen(MDScreen):
         self.app = App.get_running_app()
 
     def on_pre_enter(self, *args):
-        self.round_time = self.app.status.getv("game.round_time",
-                                               default_value=15)
-        self.num_players = self.app.status.getv("game.num_players",
-                                                default_value=2)
-        self.num_jumps = self.app.status.getv("game.num_jumps", default_value=5)
-        self.game_level = self.app.status.getv("game.level",
-                                               default_value="easy")
-        self.current_round = self.app.status.getv("game.current_round",
-                                                  default_value=0)
-        self.current_player = self.app.status.getv("game.current_player",
-                                                   default_value=0)
-
+        self.round_time = self.app.status.getv("game.round_time")
+        self.num_players = self.app.status.getv("game.num_players")
+        self.num_jumps = self.app.status.getv("game.num_jumps")
+        self.game_level = self.app.status.getv("game.level")
+        self.current_round = self.app.status.getv("game.current_round")
+        self.current_player = self.app.status.getv("game.current_player")
         sounds_on = self.app.status.getv("game.sound", default_value=True)
         self._set_sound_icon(sounds_on)
         self.load_game()
@@ -88,7 +83,8 @@ class GameScreen(MDScreen):
         self.ids.jump_button.disabled = True if self.num_jumps == 0 else False
         self.ids.container.md_bg_color = PLAYERS_COLORS[self.current_player]
         self.ids.player_points.text = "0"
-        self.ids.timer.seconds = self.round_time
+        m, s = self.round_time.split(':')
+        self.ids.timer.seconds = int(datetime.timedelta(minutes=int(m), seconds=int(s)).total_seconds())
         self.actions = []
 
     def play_round(self, *args):
