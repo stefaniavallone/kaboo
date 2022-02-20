@@ -16,7 +16,6 @@ class I18n(Observer, Observable):
         self.switch_lang(self.language)
 
     def switch_lang(self, lang):
-        # get the right locales directory, and instanciate a gettext
         self.language = lang
         locales = gettext.translation(self.module, localedir=self.base_dir,
                                       languages=[lang])

@@ -40,7 +40,6 @@ class HomeScreen(MDScreen):
                            KMDFillRoundFlatButton(
                                text=self.app.i18n._(
                                    "RATEUS_BUTTON"),
-                               # "Rate us",
                                radius=[dp(10), dp(10), dp(10), dp(10)],
                                md_bg_color=(0, 0.2, 0.9, 1),
                                on_release=self.go_to_play_store

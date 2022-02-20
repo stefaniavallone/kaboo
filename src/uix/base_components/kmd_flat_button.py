@@ -6,5 +6,5 @@ Builder.load_file("uix/base_components/kv/kmd_flat_button.kv")
 
 
 class KMDFlatButton(MDFlatButton):
-    width = NumericProperty(100)  # Same as in Widget class
-    height = NumericProperty(100)  # Same as in Widget class
+    width = NumericProperty(100)
+    height = NumericProperty(100)
