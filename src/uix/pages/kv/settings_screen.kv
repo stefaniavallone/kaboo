@@ -26,13 +26,12 @@
             icon: "menu"
             MDBoxLayout:
                 orientation: "vertical"
-                spacing: dp(5)
-                padding: [dp(25), dp(15), dp(25), dp(15)]
+                spacing: dp(2)
+                padding: [dp(25), dp(35), dp(25), dp(15)]
 
                 MDBoxLayout:
                     id: sound_container
                     orientation: "horizontal"
-                    size_hint_y: None
                     height: dp(30)
                     MDLabel:
                         valign: "center"
@@ -49,7 +48,6 @@
                 MDBoxLayout:
                     id: dark_theme_container
                     orientation: "horizontal"
-                    size_hint_y: None
                     height: dp(30)
                     MDLabel:
                         valign: "center"
@@ -63,7 +61,6 @@
 
                 MDBoxLayout:
                     orientation: "horizontal"
-                    size_hint_y: None
                     height: dp(30)
                     MDLabel:
                         valign: "center"
@@ -96,41 +93,55 @@
             label_bg_color: 26/255, 28/255, 31/255, 1
 
             MDBoxLayout:
-                #padding: [0, dp(30), 0, 0]
-                orientation: 'vertical'
-                size_hint: None, None
-                width: tutorial_section.width
-                adaptive_size: True
-                OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_GOAL_TITLE")
-                    halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_GOAL_TITLE"), app.i18n._("TUTORIAL_GOAL_DESC")),
-                    IconLeftWidget:
-                        icon: "plus-circle"
-                OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_ROLE_TITLE")
-                    halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_ROLE_TITLE"), app.i18n._("TUTORIAL_ROLE_DESC")),
-                    IconLeftWidget:
-                        icon: "plus-circle"
-                OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_JUMPS_TITLE")
-                    halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_JUMPS_TITLE"), app.i18n._("TUTORIAL_JUMPS_DESC")),
-                    IconLeftWidget:
-                        icon: "plus-circle"
-                OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_WRONG_TITLE")
-                    halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WRONG_TITLE"), app.i18n._("TUTORIAL_WRONG_DESC")),
-                    IconLeftWidget:
-                        icon: "plus-circle"
-                OneLineAvatarListItem:
-                    text: app.i18n._("TUTORIAL_WINNER_TITLE")
-                    halign: "center"
-                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WINNER_TITLE"), app.i18n._("TUTORIAL_WINNER_DESC")),
-                    IconLeftWidget:
-                        icon: "plus-circle"
+                orientation: "vertical"
+                spacing: dp(2)
+                padding: [dp(0), dp(35), dp(0), dp(0)]
+            
+                MDBoxLayout:
+                    height: dp(30)
+                    OneLineAvatarListItem:
+                        width: tutorial_section.width
+                        text: app.i18n._("TUTORIAL_GOAL_TITLE")
+                        halign: "center"
+                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_GOAL_TITLE"), app.i18n._("TUTORIAL_GOAL_DESC")),
+                        IconLeftWidget:
+                            icon: "plus-circle"
+
+                MDBoxLayout:
+                    height: dp(30)
+                    OneLineAvatarListItem:
+                        text: app.i18n._("TUTORIAL_ROLE_TITLE")
+                        halign: "center"
+                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_ROLE_TITLE"), app.i18n._("TUTORIAL_ROLE_DESC")),
+                        IconLeftWidget:
+                            icon: "plus-circle"
+                
+                MDBoxLayout:
+                    height: dp(30)
+                    OneLineAvatarListItem:
+                        text: app.i18n._("TUTORIAL_JUMPS_TITLE")
+                        halign: "center"
+                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_JUMPS_TITLE"), app.i18n._("TUTORIAL_JUMPS_DESC")),
+                        IconLeftWidget:
+                            icon: "plus-circle"
+
+                MDBoxLayout:
+                    height: dp(30)
+                    OneLineAvatarListItem:
+                        text: app.i18n._("TUTORIAL_WRONG_TITLE")
+                        halign: "center"
+                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WRONG_TITLE"), app.i18n._("TUTORIAL_WRONG_DESC")),
+                        IconLeftWidget:
+                            icon: "plus-circle"
+
+                MDBoxLayout:
+                    height: dp(30)
+                    OneLineAvatarListItem:
+                        text: app.i18n._("TUTORIAL_WINNER_TITLE")
+                        halign: "center"
+                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WINNER_TITLE"), app.i18n._("TUTORIAL_WINNER_DESC")),
+                        IconLeftWidget:
+                            icon: "plus-circle"
                 
         MDCard:
             radius: [dp(20), dp(20), dp(20), dp(20)]

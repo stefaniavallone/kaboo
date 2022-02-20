@@ -1,9 +1,7 @@
 from kivy.lang import Builder
 from kivy.metrics import dp
-from kivy.properties import Clock, BooleanProperty, StringProperty
+from kivy.properties import BooleanProperty
 from kivy.uix.modalview import ModalView
-from kivymd.uix.card import MDCard
-from kivymd.uix.relativelayout import MDRelativeLayout
 
 Builder.load_file("uix/base_components/kv/kmodal_view.kv")
 

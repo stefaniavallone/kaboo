@@ -1,10 +1,9 @@
 from kivy.lang import Builder
-from kivy.properties import StringProperty, BooleanProperty
+from kivy.properties import StringProperty
 from kivy.uix.recycleview.views import RecycleKVIDsDataViewBehavior
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.label import MDIcon
-from kivymd.uix.list import ILeftBodyTouch, IRightBodyTouch, TwoLineAvatarIconListItem
-from kivymd.uix.selectioncontrol import MDCheckbox
+from kivymd.uix.list import ILeftBodyTouch, TwoLineAvatarIconListItem
 
 
 Builder.load_file("uix/base_components/kv/list_item_with_checkbox.kv")

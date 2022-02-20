@@ -7,17 +7,9 @@ from kivy.clock import Clock
 from uix.components.game_history_content import GameHistoryContent
 from uix.base_components.kmodal_view import KModalView
 from kivymd.uix.screen import MDScreen
-from kivymd.uix.list import OneLineAvatarListItem
-from kivy.properties import StringProperty
 from logic.game import PLAYERS_COLORS
 from logic.score import best_player
 from kivy.properties import BooleanProperty
-
-
-class Item(OneLineAvatarListItem):
-    name = StringProperty()
-    divider = None
-
 
 class HistoryScreen(MDScreen):
     show_details_dialog = None
