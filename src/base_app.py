@@ -71,15 +71,5 @@ class BaseApp(MDApp):
             elif style[0] != "Icons":
                 style[0] = f"{font_name}"
 
-    def on_pause(self):
-        if self.root.current_screen == "game":
-            self.root.current_screen.ids.timer.stop()
-        return True
-
-    def on_resume(self):
-        if self.root.current_screen == "game":
-            self.root.current_screen.ids.timer.start()
-        return True
-
     def build(self):
         return Root()

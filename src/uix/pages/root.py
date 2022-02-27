@@ -21,11 +21,11 @@ class Root(ScreenManager):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.app = App.get_running_app()
-        self._add_screen("loading")
+        self.add_screen("loading")
         Window.bind(on_keyboard=self.keyboard)
         self.exit_pressed_once = False
 
-    def _add_screen(self, screen_name):
+    def add_screen(self, screen_name):
         if screen_name not in self.screen_names:
             screen_details = screens[screen_name]
             Builder.load_file(screen_details["kv"])  # You must import kv before
@@ -39,7 +39,7 @@ class Root(ScreenManager):
             Logger.debug(f"Added Screen: {screen_name}")
 
     def go_to_screen(self, screen_name, direction="left"):
-        self._add_screen(screen_name)
+        self.add_screen(screen_name)
         self.transition.direction = direction
         self.current = screen_name
 
