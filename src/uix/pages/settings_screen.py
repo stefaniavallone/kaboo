@@ -1,9 +1,8 @@
+from kivy.app import App
 from kivy.clock import Clock
 from kivy.graphics import RoundedRectangle, Color
 from kivy.metrics import dp
-from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
-from kivy.app import App
 
 from uix.base_components.kmodal_view import KModalView
 from uix.components.text_terms_policy import TextTermsPolicy

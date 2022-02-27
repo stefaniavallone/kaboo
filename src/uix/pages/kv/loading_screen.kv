@@ -1,0 +1,33 @@
+
+<LoadingScreen>
+    version: ''
+    MDRelativeLayout:
+        id: container
+        orientation: "vertical"
+        Image:
+            pos_hint: {"center_x": .5, "center_y": .65}
+            source: 'assets/images/home/logo.png'
+            keep_ratio: True
+            opacity: 1
+            size_hint_y: 0.2
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: dp(20)
+            pos_hint: {"center_x": .5, "center_y": .40}
+            adaptive_size: True
+            MDProgressBar:
+                id: progress_bar
+                pos_hint: {"center_x": .5}
+                #type: "determinate"
+                value: 0
+                size_hint_x: None
+                width: container.width * 0.6
+            MDLabel:
+                halign: "center"
+                text: f"{progress_bar.value}%"
+
+        MDLabel:
+            halign: "center"
+            pos_hint: { "center_y": .02}
+            text: f"App version: {root.version}"
+            font_style: "Overline"

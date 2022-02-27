@@ -5,6 +5,7 @@ from kivy.app import App
 class SoundPlayer:
 
     def __init__(self, path, loop=False, volume=1) -> None:
+        super().__init__()
         self.app = App.get_running_app()
         self.sound = SoundLoader.load(path)
         self.sound.loop = loop

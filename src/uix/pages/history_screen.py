@@ -4,6 +4,8 @@ from time import sleep
 from kivy.app import App
 
 from kivy.clock import Clock
+from kivymd.uix.list import OneLineAvatarListItem
+
 from uix.components.game_history_content import GameHistoryContent
 from uix.base_components.kmodal_view import KModalView
 from kivymd.uix.screen import MDScreen
@@ -29,7 +31,7 @@ class HistoryScreen(MDScreen):
             self.histories = json.load(histories_file)
 
         table_data = list()
-
+        OneLineAvatarListItem
         for history in self.histories:
             winner_index, score = best_player(history['players_points'])
             color = PLAYERS_COLORS[winner_index]

@@ -1,6 +1,7 @@
 #:import Section uix.components.section
 #:import TextTermsPolicy uix.components.text_terms_policy
 #:import app_content_strings uix.constants.app_content_strings
+#:import FlexibleOneLineAvatarListItem uix.base_components.flexible_one_line_avatar_list_item
 
 
 <SettingsScreen>
@@ -74,12 +75,12 @@
                         MDIconButton:
                             id: lang_en
                             icon: "assets/images/languages/english.png"
-                            user_font_size: "6sp"
+                            user_font_size: "3sp"
                             on_release: root.set_lang("en", self)
                         MDIconButton:
                             id: lang_it
                             icon: "assets/images/languages/italian.png"
-                            user_font_size: "6sp"
+                            user_font_size: "3sp"
                             on_release: root.set_lang("it", self)
 
         Section:
@@ -94,54 +95,34 @@
 
             MDBoxLayout:
                 orientation: "vertical"
-                spacing: dp(2)
+                spacing: 0
                 padding: [dp(0), dp(35), dp(0), dp(0)]
-            
-                MDBoxLayout:
-                    height: dp(30)
-                    OneLineAvatarListItem:
-                        width: tutorial_section.width
-                        text: app.i18n._("TUTORIAL_GOAL_TITLE")
-                        halign: "center"
-                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_GOAL_TITLE"), app.i18n._("TUTORIAL_GOAL_DESC")),
-                        IconLeftWidget:
-                            icon: "plus-circle"
 
-                MDBoxLayout:
-                    height: dp(30)
-                    OneLineAvatarListItem:
-                        text: app.i18n._("TUTORIAL_ROLE_TITLE")
-                        halign: "center"
-                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_ROLE_TITLE"), app.i18n._("TUTORIAL_ROLE_DESC")),
-                        IconLeftWidget:
-                            icon: "plus-circle"
-                
-                MDBoxLayout:
-                    height: dp(30)
-                    OneLineAvatarListItem:
-                        text: app.i18n._("TUTORIAL_JUMPS_TITLE")
-                        halign: "center"
-                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_JUMPS_TITLE"), app.i18n._("TUTORIAL_JUMPS_DESC")),
-                        IconLeftWidget:
-                            icon: "plus-circle"
-
-                MDBoxLayout:
-                    height: dp(30)
-                    OneLineAvatarListItem:
-                        text: app.i18n._("TUTORIAL_WRONG_TITLE")
-                        halign: "center"
-                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WRONG_TITLE"), app.i18n._("TUTORIAL_WRONG_DESC")),
-                        IconLeftWidget:
-                            icon: "plus-circle"
-
-                MDBoxLayout:
-                    height: dp(30)
-                    OneLineAvatarListItem:
-                        text: app.i18n._("TUTORIAL_WINNER_TITLE")
-                        halign: "center"
-                        on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WINNER_TITLE"), app.i18n._("TUTORIAL_WINNER_DESC")),
-                        IconLeftWidget:
-                            icon: "plus-circle"
+                FlexibleOneLineAvatarListItem:
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_GOAL_TITLE"), app.i18n._("TUTORIAL_GOAL_DESC"))
+                    text: app.i18n._("TUTORIAL_GOAL_TITLE")
+                    icon: "plus-circle"
+                MDSeparator:
+                FlexibleOneLineAvatarListItem:
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_ROLE_TITLE"), app.i18n._("TUTORIAL_ROLE_DESC"))
+                    text: app.i18n._("TUTORIAL_ROLE_TITLE")
+                    icon: "plus-circle"
+                MDSeparator:
+                FlexibleOneLineAvatarListItem:
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_JUMPS_TITLE"), app.i18n._("TUTORIAL_JUMPS_DESC"))
+                    text: app.i18n._("TUTORIAL_JUMPS_TITLE")
+                    icon: "plus-circle"
+                MDSeparator:
+                FlexibleOneLineAvatarListItem:
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WRONG_TITLE"), app.i18n._("TUTORIAL_WRONG_DESC"))
+                    text: app.i18n._("TUTORIAL_WRONG_TITLE")
+                    icon: "plus-circle"
+                MDSeparator:
+                FlexibleOneLineAvatarListItem:
+                    on_release: root.open_how_to_play_dialog(app.i18n._("TUTORIAL_WINNER_TITLE"), app.i18n._("TUTORIAL_WINNER_DESC"))
+                    text: app.i18n._("TUTORIAL_WINNER_TITLE")
+                    icon: "plus-circle"
+                    radius: [dp(0), dp(0), dp(32), dp(32)]
                 
         MDCard:
             radius: [dp(20), dp(20), dp(20), dp(20)]

@@ -2,8 +2,6 @@ import webbrowser
 
 from kivy.clock import Clock
 from kivy.metrics import dp
-from kivymd.uix.button import MDFlatButton
-from kivymd.uix.dialog import MDDialog
 from kivymd.uix.screen import MDScreen
 from kivy.app import App
 
@@ -14,7 +12,6 @@ from uix.components.title_and_text_content import TitleAndTextContent
 
 
 class HomeScreen(MDScreen):
-    HOME = True
     rate_us_dialog = None
 
     def __init__(self, **kw):

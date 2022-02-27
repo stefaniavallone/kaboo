@@ -21,7 +21,7 @@ class Root(ScreenManager):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.app = App.get_running_app()
-        self._add_screen("home")
+        self._add_screen("loading")
         Window.bind(on_keyboard=self.keyboard)
         self.exit_pressed_once = False
 

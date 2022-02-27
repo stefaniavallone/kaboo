@@ -2,8 +2,6 @@ import os
 import sys
 import traceback
 
-__version__ = "0.0.1"
-
 root_dir = os.path.split(os.path.abspath(sys.argv[0]))[0]
 sys.path.insert(0, os.path.join(root_dir, "utils"))
 
