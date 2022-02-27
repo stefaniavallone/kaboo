@@ -6,8 +6,6 @@ import version
 from utils.setup.class_loader import import_and_create_screens
 
 
-
-
 class LoadingScreen(MDScreen):
 
     def __init__(self, **kw):

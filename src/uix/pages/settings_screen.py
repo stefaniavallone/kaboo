@@ -17,11 +17,11 @@ class SettingsScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
-        Clock.schedule_once(lambda x: self.select_button(self.ids.lang_en))
 
     def on_pre_enter(self, *args):
         sounds_on = self.app.status.getv("game.sound", default_value=True)
         self.ids.sound_switch.active = sounds_on
+        Clock.schedule_once(lambda x: self.select_button(self.ids.lang_en))
 
     def toggle_sounds(self):
         self.app.status.setv("game.sound", self.ids.sound_switch.active)
