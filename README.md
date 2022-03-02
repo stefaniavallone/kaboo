@@ -17,7 +17,7 @@ make the other of his team guess the words, avoiding saying the forbidden ones!
   </tr>
   <tr>
     <td><img src="assets/game1.jpg" width=240 height=480></td>
-    <td><img src="assets/game1.jpg" width=240 height=480></td>
+    <td><img src="assets/game_end.jpg" width=240 height=480></td>
     <td><img src="assets/pregame1.jpg" width=240 height=480></td>
   </tr>
    <tr>
