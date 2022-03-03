@@ -27,10 +27,10 @@ class GameEndScreen(MDScreen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
-        self.applause_sound = self.app.sound_manager.get_sound(
-            'assets/sounds/applause.ogg')
 
     def on_pre_enter(self, *args):
+        self.applause_sound = self.app.sound_manager.get_sound(
+            'assets/sounds/applause.ogg')
         game_rounds = self.app.status.getv("game.rounds")
         self.round_time = str(self.app.status.getv("game.round_time"))
         self.num_players = str(self.app.status.getv("game.num_players"))

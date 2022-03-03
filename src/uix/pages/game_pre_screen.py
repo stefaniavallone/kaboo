@@ -35,6 +35,7 @@ class GamePreScreen(MDScreen):
     def to_game(self):
         if self.curr_player == 0:
             self.app.ads.request_interstitial()
+            self.app.ads.is_interstitial_loaded()
             self.app.ads.show_interstitial()
         self.manager.go_to_screen('game', direction='left')
 
