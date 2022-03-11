@@ -1,1269 +1,4356 @@
-[
-    {
-        "word": "Car",
-        "forbidden": [
-            "driver",
-            "ride",
-            "transport",
-            "fast",
-            "travel"
-        ]
-    },
-    {
-        "word": "Dragonfly",
-        "forbidden": [
-            "red",
-            "wings",
-            "Insect",
-            "Fly",
-            "dragon"
-        ]
-    },
-    {
-        "word": "Snowflake",
-        "forbidden": [
-            "cold",
-            "winter",
-            "flower",
-            "snow",
-            "fall"
-        ]
-    },
-    {
-        "word": "Hungry",
-        "forbidden": [
-            "feeling",
-            "eat",
-            "food",
-            "breakfast",
-            "meal"
-        ]
-    },
-    {
-        "word": "Duck",
-        "forbidden": [
-            "bird",
-            "yellow",
-            "chicken",
-            "quack",
-            "food"
-        ]
-    },
-    {
-        "word": "Pillow",
-        "forbidden": [
-            "head",
-            "sleep",
-            "soft",
-            "bed",
-            "blanket"
-        ]
-    },
-    {
-        "word": "Dance",
-        "forbidden": [
-            "Shoes",
-            "Romantic",
-            "Music",
-            "Sing",
-            "Town Square"
-        ]
-    },
-    {
-        "word": "Blanket",
-        "forbidden": [
-            "Warm",
-            "Bed",
-            "Pillow",
-            "Soft",
-            "Cold"
-        ]
-    },
-    {
-        "word": "Soccer",
-        "forbidden": [
-            "Ball",
-            "world Cup",
-            "Black",
-            "Sport",
-            "Team"
-        ]
-    },
-    {
-        "word": "Cheese",
-        "forbidden": [
-            "Yellow",
-            "White",
-            "Pizza",
-            "Food",
-            "Italy"
-        ]
-    },
-    {
-        "word": "Snail",
-        "forbidden": [
-            "Round",
-            "Slow",
-            "River",
-            "Eat",
-            "Animal"
-        ]
-    },
-    {
-        "word": "Husband",
-        "forbidden": [
-            "Wife",
-            "Ring",
-            "Marry",
-            "Man",
-            "Friend"
-        ]
-    },
-    {
-        "word": "Underwear",
-        "forbidden": [
-            "Small",
-            "Clothing",
-            "Every Day",
-            "Secret",
-            "Under"
-        ]
-    },
-    {
-        "word": "Girlfriend",
-        "forbidden": [
-            "Boyfriend",
-            "Beautiful",
-            "Flowers",
-            "Date",
-            "Female"
-        ]
-    },
-    {
-        "word": "Giraffe",
-        "forbidden": [
-            "Tall",
-            "Africa",
-            "Neck",
-            "Long",
-            "Yellow"
-        ]
-    },
-    {
-        "word": "Camera",
-        "forbidden": [
-            "Photos",
-            "Pictures",
-            "Snapshot",
-            "Travel",
-            "Memories"
-        ]
-    },
-    {
-        "word": "Slippers",
-        "forbidden": [
-            "Warm",
-            "Feet",
-            "Winter",
-            "House",
-            "Soft"
-        ]
-    },
-    {
-        "word": "Comb",
-        "forbidden": [
-            "Brush",
-            "Hair",
-            "Smooth",
-            "Small",
-            "Beautiful"
-        ]
-    },
-    {
-        "word": "Hamburger",
-        "forbidden": [
-            "America",
-            "Beef",
-            "Bread",
-            "McDonalds",
-            "Unhealthy"
-        ]
-    },
-    {
-        "word": "Polar Bear",
-        "forbidden": [
-            "cold",
-            "Winter",
-            "Alaska",
-            "White",
-            "Snow"
-        ]
-    },
-    {
-        "word": "Penguin",
-        "forbidden": [
-            "Bird",
-            "Fly",
-            "Animal",
-            "Black",
-            "White"
-        ]
-    },
-    {
-        "word": "Glasses",
-        "forbidden": [
-            "Eyes",
-            "See",
-            "Contacts",
-            "Wear",
-            "Face"
-        ]
-    },
-    {
-        "word": "Popcorn",
-        "forbidden": [
-            "Kernel",
-            "Butter",
-            "Sweet",
-            "Microwave",
-            "Snack Food"
-        ]
-    },
-    {
-        "word": "Speech",
-        "forbidden": [
-            "Give",
-            "Speak",
-            "Important",
-            "Audience",
-            "Nervous"
-        ]
-    },
-    {
-        "word": "Furious",
-        "forbidden": [
-            "Angry",
-            "Red Face",
-            "Hurt",
-            "Rage",
-            "Violent"
-        ]
-    },
-    {
-        "word": "Chicken Leg",
-        "forbidden": [
-            "Bird",
-            "Body",
-            "Eat",
-            "Food",
-            "KFC"
-        ]
-    },
-    {
-        "word": "Toilet",
-        "forbidden": [
-            "Washroom",
-            "WC",
-            "Pee",
-            "Poop",
-            "Bathroom"
-        ]
-    },
-    {
-        "word": "Wish",
-        "forbidden": [
-            "Want",
-            "Desire",
-            "Hope",
-            "Dream",
-            "Long For"
-        ]
-    },
-    {
-        "word": "Exercise",
-        "forbidden": [
-            "Want",
-            "Dream",
-            "Long For",
-            "Run",
-            "Sports"
-        ]
-    },
-    {
-        "word": "Crown",
-        "forbidden": [
-            "Head",
-            "Gold",
-            "King",
-            "Queen",
-            "Jewels"
-        ]
-    },
-    {
-        "word": "Princess",
-        "forbidden": [
-            "Prince",
-            "Queen",
-            "Daughter",
-            "Royal",
-            "Castle"
-        ]
-    },
-    {
-        "word": "Internet",
-        "forbidden": [
-            "Computer",
-            "Surf",
-            "Web",
-            "Net",
-            "Technology"
-        ]
-    },
-    {
-        "word": "Jacket",
-        "forbidden": [
-            "Coat",
-            "Warm",
-            "Clothes",
-            "Sleeves",
-            "Zipper"
-        ]
-    },
-    {
-        "word": "Shower",
-        "forbidden": [
-            "Rain",
-            "Clean",
-            "Water",
-            "Every Day",
-            "Bath"
-        ]
-    },
-    {
-        "word": "Wind",
-        "forbidden": [
-            "Blow",
-            "Autumn",
-            "Invisible",
-            "Trees",
-            "Kite"
-        ]
-    },
-    {
-        "word": "Church",
-        "forbidden": [
-            "Sing",
-            "Building",
-            "Cross",
-            "God",
-            "Speaker"
-        ]
-    },
-    {
-        "word": "Police",
-        "forbidden": [
-            "Uniform",
-            "Safety",
-            "Peace",
-            "Protect",
-            "Siren"
-        ]
-    },
-    {
-        "word": "Freezer",
-        "forbidden": [
-            "Cold",
-            "Refrigerator",
-            "Ice",
-            "Food",
-            "Kitchen"
-        ]
-    },
-    {
-        "word": "Straw",
-        "forbidden": [
-            "Hollow",
-            "Horses",
-            "Farm",
-            "Drink",
-            "Suck"
-        ]
-    },
-    {
-        "word": "Leaf",
-        "forbidden": [
-            "Tree",
-            "Green",
-            "Fall",
-            "Plant",
-            "Section"
-        ]
-    },
-    {
-        "word": "Noun",
-        "forbidden": [
-            "Verb",
-            "Speech",
-            "Adjective",
-            "PERSON",
-            "Place"
-        ]
-    },
-    {
-        "word": "Taxi",
-        "forbidden": [
-            "Car",
-            "Public",
-            "Transport",
-            "Fare",
-            "City"
-        ]
-    },
-    {
-        "word": "Witch",
-        "forbidden": [
-            "Broom",
-            "Green",
-            "Magic",
-            "Halloween",
-            "Powers"
-        ]
-    },
-    {
-        "word": "Fork",
-        "forbidden": [
-            "Spoon",
-            "Knife",
-            "Eat",
-            "Prongs",
-            "Divide"
-        ]
-    },
-    {
-        "word": "Food",
-        "forbidden": [
-            "eat",
-            "mouth",
-            "hungry",
-            "full",
-            "delicious"
-        ]
-    },
-    {
-        "word": "Music",
-        "forbidden": [
-            "listen",
-            "song",
-            "instrument",
-            "play",
-            "hear"
-        ]
-    },
-    {
-        "word": "Fish",
-        "forbidden": [
-            "swim",
-            "food",
-            "ocean",
-            "lake",
-            "river"
-        ]
-    },
-    {
-        "word": "Physics",
-        "forbidden": [
-            "study",
-            "science",
-            "gravity",
-            "force",
-            "move"
-        ]
-    },
-    {
-        "word": "Java",
-        "forbidden": [
-            "coffee",
-            "language",
-            "drink",
-            "oracle",
-            "hot"
-        ]
-    },
-    {
-        "word": "Money",
-        "forbidden": [
-            "wealth",
-            "job",
-            "pay",
-            "buy",
-            "sell"
-        ]
-    },
-    {
-        "word": "Shotgun",
-        "forbidden": [
-            "weapon",
-            "pump",
-            "zombie",
-            "barrel",
-            "bullet"
-        ]
-    },
-    {
-        "word": "Rice",
-        "forbidden": [
-            "chinese",
-            "field",
-            "university",
-            "grain",
-            "food"
-        ]
-    },
-    {
-        "word": "Cellphone",
-        "forbidden": [
-            "call",
-            "mobile",
-            "pocket",
-            "internet",
-            "ear"
-        ]
-    },
-    {
-        "word": "Peanut Butter",
-        "forbidden": [
-            "bread",
-            "sandwich",
-            "jam",
-            "jelly",
-            "brown"
-        ]
-    },
-    {
-        "word": "Ketchup",
-        "forbidden": [
-            "fries",
-            "tomato",
-            "sauce",
-            "condiment",
-            "dip"
-        ]
-    },
-    {
-        "word": "Pikachu",
-        "forbidden": [
-            "Pokemon",
-            "Ash",
-            "mouse",
-            "rat",
-            "electric"
-        ]
-    },
-    {
-        "word": "Swimming",
-        "forbidden": [
-            "water",
-            "pool",
-            "lake",
-            "ocean",
-            "suit"
-        ]
-    },
-    {
-        "word": "Piano",
-        "forbidden": [
-            "music",
-            "instrument",
-            "key",
-            "pedal",
-            "grand"
-        ]
-    },
-    {
-        "word": "Advice",
-        "forbidden": [
-            "Guide",
-            "Wise",
-            "Recommend",
-            "What to do",
-            "Help"
-        ]
-    },
-    {
-        "word": "Director",
-        "forbidden": [
-            "Movie",
-            "Producer",
-            "In Charge",
-            "Supervise",
-            "Set"
-        ]
-    },
-    {
-        "word": "Continent",
-        "forbidden": [
-            "Ocean",
-            "Asia",
-            "Land",
-            "Seven",
-            "Earth"
-        ]
-    },
-    {
-        "word": "Hippo",
-        "forbidden": [
-            "Fat",
-            "Animal",
-            "Africa",
-            "Large",
-            "River"
-        ]
-    },
-    {
-        "word": "Magic",
-        "forbidden": [
-            "Wizard",
-            "Witch",
-            "Power",
-            "Trick",
-            "Show"
-        ]
-    },
-    {
-        "word": "Naughty",
-        "forbidden": [
-            "Bad",
-            "Behavior",
-            "Good",
-            "Rude",
-            "Disobedient"
-        ]
-    },
-    {
-        "word": "Rescue",
-        "forbidden": [
-            "Save",
-            "Hero",
-            "Danger",
-            "Safe",
-            "Help"
-        ]
-    },
-    {
-        "word": "Match",
-        "forbidden": [
-            "Fire",
-            "Strike",
-            "Pair",
-            "Together",
-            "Equal"
-        ]
-    },
-    {
-        "word": "CD",
-        "forbidden": [
-            "Disc",
-            "Music",
-            "Listen",
-            "Play",
-            "Computer"
-        ]
-    },
-    {
-        "word": "Immediately",
-        "forbidden": [
-            "Fast",
-            "Now",
-            "Delay",
-            "Rapid",
-            "Soon"
-        ]
-    },
-    {
-        "word": "Danger",
-        "forbidden": [
-            "Safe",
-            "Harm",
-            "Injury",
-            "Protect",
-            "Avoid"
-        ]
-    },
-    {
-        "word": "Salt",
-        "forbidden": [
-            "White",
-            "Sweet",
-            "Popcorn",
-            "Cooking",
-            "Flavor"
-        ]
-    },
-    {
-        "word": "Stand",
-        "forbidden": [
-            "Sit",
-            "Floor",
-            "Feet",
-            "Up",
-            "Take"
-        ]
-    },
-    {
-        "word": "Bull",
-        "forbidden": [
-            "Ride",
-            "Red",
-            "Male",
-            "Horns",
-            "Charge"
-        ]
-    },
-    {
-        "word": "History",
-        "forbidden": [
-            "Politics",
-            "Past",
-            "Events",
-            "Finished",
-            "Happen"
-        ]
-    },
-    {
-        "word": "Magazine",
-        "forbidden": [
-            "Pages",
-            "Book",
-            "Entertain",
-            "News",
-            "Read"
-        ]
-    },
-    {
-        "word": "FruitCake",
-        "forbidden": [
-            "bake",
-            "sweet",
-            "dried",
-            "candied",
-            "chopped"
-        ]
-    },
-    {
-        "word": "Bell",
-        "forbidden": [
-            "ring",
-            "sleigh",
-            "instrument",
-            "cup",
-            "hollow"
-        ]
-    },
-    {
-        "word": "Lights",
-        "forbidden": [
-            "decorate",
-            "colorful",
-            "white",
-            "tree",
-            "bright"
-        ]
-    },
-    {
-        "word": "Parade",
-        "forbidden": [
-            "street",
-            "bands",
-            "floats",
-            "procession",
-            "watch"
-        ]
-    },
-    {
-        "word": "toys",
-        "forbidden": [
-            "wish",
-            "play",
-            "kids",
-            "children",
-            "present"
-        ]
-    },
-    {
-        "word": "Present",
-        "forbidden": [
-            "gifts",
-            "tree",
-            "box",
-            "wrap",
-            "Santa"
-        ]
-    },
-    {
-        "word": "Cookies",
-        "forbidden": [
-            "bake",
-            "milk",
-            "chocolate",
-            "oatmeal",
-            "sugar"
-        ]
-    },
-    {
-        "word": "Family",
-        "forbidden": [
-            "blood",
-            "Mother",
-            "Father",
-            "sister",
-            "brother"
-        ]
-    },
-    {
-        "word": "List",
-        "forbidden": [
-            "naughty",
-            "nice",
-            "check",
-            "twice",
-            "names"
-        ]
-    },
-    {
-        "word": "stocking",
-        "forbidden": [
-            "hang",
-            "mantle",
-            "fireplace",
-            "sock",
-            "stuff"
-        ]
-    },
-    {
-        "word": "North pole",
-        "forbidden": [
-            "South",
-            "Santa claus",
-            "house",
-            "live",
-            "workshop"
-        ]
-    },
-    {
-        "word": "Double",
-        "forbidden": [
-            "twice",
-            "number",
-            "triple",
-            "amount",
-            "duplicate"
-        ]
-    },
-    {
-        "word": "Lawn",
-        "forbidden": [
-            "grass",
-            "mow",
-            "green",
-            "yard",
-            "flowers"
-        ]
-    },
-    {
-        "word": "Arrest",
-        "forbidden": [
-            "jail",
-            "criminal",
-            "police",
-            "handcuffs",
-            "capture"
-        ]
-    },
-    {
-        "word": "Educate",
-        "forbidden": [
-            "child",
-            "teach",
-            "learn",
-            "school",
-            "coach"
-        ]
-    },
-    {
-        "word": "Myth",
-        "forbidden": [
-            "Greek",
-            "legend",
-            "history",
-            "culture",
-            "illusion"
-        ]
-    },
-    {
-        "word": "Measurement",
-        "forbidden": [
-            "unit",
-            "height",
-            "distance",
-            "length",
-            "dimension"
-        ]
-    },
-    {
-        "word": "Prescription",
-        "forbidden": [
-            "doctor",
-            "paper",
-            "medicine",
-            "pharmacy",
-            "remedy"
-        ]
-    },
-    {
-        "word": "Grave",
-        "forbidden": [
-            "bury",
-            "cemetery",
-            "dig",
-            "funeral",
-            "serious"
-        ]
-    },
-    {
-        "word": "Hunt",
-        "forbidden": [
-            "deer",
-            "gun",
-            "woods",
-            "food",
-            "search"
-        ]
-    },
-    {
-        "word": "Surgeon",
-        "forbidden": [
-            "doctor",
-            "surgery",
-            "operation",
-            "hospital",
-            "heart"
-        ]
-    },
-    {
-        "word": "Suburb",
-        "forbidden": [
-            "city",
-            "outside",
-            "quiet",
-            "live",
-            "neighbourhood"
-        ]
-    },
-    {
-        "word": "Minimum",
-        "forbidden": [
-            "maximum",
-            "lowest",
-            "wage",
-            "amount",
-            "smallest"
-        ]
-    },
-    {
-        "word": "Sacred",
-        "forbidden": [
-            "holy",
-            "religious",
-            "blessed",
-            "cow",
-            "consecrated"
-        ]
-    },
-    {
-        "word": "Warrior",
-        "forbidden": [
-            "soldier",
-            "war",
-            "attack",
-            "battle",
-            "gladiator"
-        ]
-    },
-    {
-        "word": "Retired",
-        "forbidden": [
-            "work",
-            "relax",
-            "old",
-            "pension",
-            "home"
-        ]
-    },
-    {
-        "word": "Survey",
-        "forbidden": [
-            "ask",
-            "questions",
-            "opinion",
-            "fill out",
-            "investigation"
-        ]
-    },
-    {
-        "word": "Corruption",
-        "forbidden": [
-            "politician",
-            "bribe",
-            "government",
-            "scandal",
-            "dishonesty"
-        ]
-    },
-    {
-        "word": "Hook",
-        "forbidden": [
-            "fishing",
-            "metal",
-            "sharp",
-            "bait",
-            "rode"
-        ]
-    },
-    {
-        "word": "Ankle",
-        "forbidden": [
-            "sprain",
-            "leg",
-            "foot",
-            "break",
-            "heel"
-        ]
-    },
-    {
-        "word": "Steep",
-        "forbidden": [
-            "climb",
-            "mountain",
-            "hill",
-            "angle",
-            "extreme"
-        ]
-    },
-    {
-        "word": "Spread",
-        "forbidden": [
-            "disease",
-            "virus",
-            "infection",
-            "prevent",
-            "extend"
-        ]
-    },
-    {
-        "word": "Cooperate",
-        "forbidden": [
-            "together",
-            "everyone",
-            "unite",
-            "work",
-            "collaborate"
-        ]
-    },
-    {
-        "word": "Sacrifice",
-        "forbidden": [
-            "human",
-            "kill",
-            "ritual",
-            "blood",
-            "surrender"
-        ]
-    },
-    {
-        "word": "Bubble",
-        "forbidden": [
-            "gum",
-            "soap",
-            "blow",
-            "pop",
-            "air ball"
-        ]
-    },
-    {
-        "word": "Jaw",
-        "forbidden": [
-            "mouth",
-            "teeth",
-            "bones",
-            "chew",
-            "talk"
-        ]
-    },
-    {
-        "word": "Sail",
-        "forbidden": [
-            "ship",
-            "boat",
-            "ocean",
-            "wind",
-            "helm"
-        ]
-    },
-    {
-        "word": "Tropical",
-        "forbidden": [
-            "hot",
-            "storm",
-            "island",
-            "exotic",
-            "humid"
-        ]
-    },
-    {
-        "word": "Mushroom",
-        "forbidden": [
-            "white",
-            "humid"
-        ]
-    },
-    {
-        "word": "Workout",
-        "forbidden": [
-            "gym",
-            "weight",
-            "train",
-            "exercise",
-            "Healthline"
-        ]
-    },
-    {
-        "word": "Chew",
-        "forbidden": [
-            "gum",
-            "food",
-            "eat",
-            "teeth",
-            "mouth"
-        ]
-    },
-    {
-        "word": "Fragile",
-        "forbidden": [
-            "delicate",
-            "break",
-            "glass",
-            "careful",
-            "insecure"
-        ]
-    },
-    {
-        "word": "Mansion",
-        "forbidden": [
-            "house",
-            "home",
-            "live",
-            "expensive",
-            "residence"
-        ]
-    },
-    {
-        "word": "Crowd",
-        "forbidden": [
-            "people",
-            "many",
-            "herd",
-            "street",
-            "group"
-        ]
-    },
-    {
-        "word": "Spit",
-        "forbidden": [
-            "mouth",
-            "saliva",
-            "liquid",
-            "tobacco",
-            "spittoon"
-        ]
-    },
-    {
-        "word": "Hike",
-        "forbidden": [
-            "walk",
-            "woods",
-            "mountain",
-            "backpack",
-            "Steep"
-        ]
-    },
-    {
-        "word": "Fried",
-        "forbidden": [
-            "chicken",
-            "cook",
-            "food",
-            "oil",
-            "fish"
-        ]
-    },
-    {
-        "word": "barber",
-        "forbidden": [
-            "haircut",
-            "shave",
-            "scissors",
-            "hairdresser",
-            "comb"
-        ]
-    },
-    {
-        "word": "pajamas",
-        "forbidden": [
-            "bed",
-            "night",
-            "sleepover",
-            "clothes",
-            "wear"
-        ]
-    },
-    {
-        "word": "mustache",
-        "forbidden": [
-            "hair",
-            "beard",
-            "lip",
-            "shave",
-            "mouth"
-        ]
-    },
-    {
-        "word": "Sword",
-        "forbidden": [
-            "King Arthur",
-            "Peter",
-            "ear",
-            "Malchus",
-            "Blade"
-        ]
-    },
-    {
-        "word": "Shepherd",
-        "forbidden": [
-            "Joseph",
-            "Birth",
-            "Sheep",
-            "Care",
-            "Lamb"
-        ]
-    },
-    {
-        "word": "Scripture",
-        "forbidden": [
-            "Bible",
-            "Read",
-            "Holy",
-            "Inspired",
-            "Story"
-        ]
-    }
-]
+{
+    "car": [
+        "driver",
+        "ride",
+        "transport",
+        "fast",
+        "travel"
+    ],
+    "dragonfly": [
+        "red",
+        "wings",
+        "insect",
+        "fly",
+        "dragon"
+    ],
+    "snowflake": [
+        "cold",
+        "winter",
+        "flower",
+        "snow",
+        "fall"
+    ],
+    "hungry": [
+        "feeling",
+        "eat",
+        "food",
+        "breakfast",
+        "meal"
+    ],
+    "duck": [
+        "bird",
+        "yellow",
+        "chicken",
+        "quack",
+        "food"
+    ],
+    "pillow": [
+        "soft",
+        "sleep",
+        "bed",
+        "case",
+        "head"
+    ],
+    "dance": [
+        "shoes",
+        "romantic",
+        "music",
+        "sing",
+        "town square"
+    ],
+    "blanket": [
+        "soft",
+        "sleep",
+        "bed",
+        "cover",
+        "throw"
+    ],
+    "soccer": [
+        "ball",
+        "world cup",
+        "black",
+        "sport",
+        "team"
+    ],
+    "cheese": [
+        "taste",
+        "food",
+        "swiss",
+        "dairy",
+        "cheddar"
+    ],
+    "snail": [
+        "round",
+        "slow",
+        "river",
+        "eat",
+        "animal"
+    ],
+    "husband": [
+        "wife",
+        "ring",
+        "marry",
+        "man",
+        "friend"
+    ],
+    "underwear": [
+        "small",
+        "clothing",
+        "every day",
+        "secret",
+        "under"
+    ],
+    "girlfriend": [
+        "boyfriend",
+        "beautiful",
+        "flowers",
+        "date",
+        "female"
+    ],
+    "giraffe": [
+        "neck",
+        "tall",
+        "yellow",
+        "tree",
+        "safari"
+    ],
+    "camera": [
+        "shoot",
+        "picture",
+        "digital",
+        "focus",
+        "memory"
+    ],
+    "slippers": [
+        "sandals",
+        "shoes",
+        "feet",
+        "sand",
+        "wear"
+    ],
+    "comb": [
+        "brush",
+        "hair",
+        "smooth",
+        "small",
+        "beautiful"
+    ],
+    "hamburger": [
+        "america",
+        "beef",
+        "bread",
+        "mcdonalds",
+        "unhealthy"
+    ],
+    "polar bear": [
+        "arctic",
+        "express",
+        "chinese food",
+        "white",
+        "animal"
+    ],
+    "penguin": [
+        "bird",
+        "fly",
+        "animal",
+        "black",
+        "white"
+    ],
+    "glasses": [
+        "eyes",
+        "see",
+        "contacts",
+        "wear",
+        "face"
+    ],
+    "popcorn": [
+        "kernel",
+        "butter",
+        "sweet",
+        "microwave",
+        "snack food"
+    ],
+    "speech": [
+        "give",
+        "speak",
+        "important",
+        "audience",
+        "nervous"
+    ],
+    "furious": [
+        "angry",
+        "red face",
+        "hurt",
+        "rage",
+        "violent"
+    ],
+    "chicken leg": [
+        "bird",
+        "body",
+        "eat",
+        "food",
+        "kfc"
+    ],
+    "toilet": [
+        "washroom",
+        "wc",
+        "pee",
+        "poop",
+        "bathroom"
+    ],
+    "wish": [
+        "want",
+        "desire",
+        "hope",
+        "dream",
+        "long for"
+    ],
+    "exercise": [
+        "want",
+        "dream",
+        "long for",
+        "run",
+        "sports"
+    ],
+    "crown": [
+        "head",
+        "gold",
+        "king",
+        "queen",
+        "jewels"
+    ],
+    "princess": [
+        "prince",
+        "queen",
+        "daughter",
+        "royal",
+        "castle"
+    ],
+    "internet": [
+        "speed",
+        "computer",
+        "laptop",
+        "information",
+        "find"
+    ],
+    "jacket": [
+        "coat",
+        "warm",
+        "clothes",
+        "sleeves",
+        "zipper"
+    ],
+    "shower": [
+        "rain",
+        "clean",
+        "water",
+        "every day",
+        "bath"
+    ],
+    "wind": [
+        "blow",
+        "autumn",
+        "invisible",
+        "trees",
+        "kite"
+    ],
+    "church": [
+        "sing",
+        "building",
+        "cross",
+        "god",
+        "speaker"
+    ],
+    "police": [
+        "uniform",
+        "safety",
+        "peace",
+        "protect",
+        "siren"
+    ],
+    "freezer": [
+        "cold",
+        "store",
+        "food",
+        "keep",
+        "ice"
+    ],
+    "straw": [
+        "hollow",
+        "horses",
+        "farm",
+        "drink",
+        "suck"
+    ],
+    "leaf": [
+        "tree",
+        "green",
+        "fall",
+        "plant",
+        "section"
+    ],
+    "noun": [
+        "verb",
+        "speech",
+        "adjective",
+        "person",
+        "place"
+    ],
+    "taxi": [
+        "car",
+        "public",
+        "transport",
+        "fare",
+        "city"
+    ],
+    "witch": [
+        "broom",
+        "green",
+        "magic",
+        "halloween",
+        "powers"
+    ],
+    "fork": [
+        "spoon",
+        "knife",
+        "eat",
+        "prongs",
+        "divide"
+    ],
+    "food": [
+        "eat",
+        "mouth",
+        "hungry",
+        "full",
+        "delicious"
+    ],
+    "music": [
+        "notes",
+        "sound",
+        "hear",
+        "band",
+        "rock"
+    ],
+    "fish": [
+        "water",
+        "animals",
+        "ocean",
+        "lake",
+        "pond"
+    ],
+    "physics": [
+        "study",
+        "science",
+        "gravity",
+        "force",
+        "move"
+    ],
+    "java": [
+        "coffee",
+        "language",
+        "drink",
+        "oracle",
+        "hot"
+    ],
+    "money": [
+        "wealth",
+        "job",
+        "pay",
+        "buy",
+        "sell"
+    ],
+    "shotgun": [
+        "weapon",
+        "pump",
+        "zombie",
+        "barrel",
+        "bullet"
+    ],
+    "rice": [
+        "chinese",
+        "field",
+        "university",
+        "grain",
+        "food"
+    ],
+    "cellphone": [
+        "call",
+        "mobile",
+        "pocket",
+        "internet",
+        "ear"
+    ],
+    "peanut butter": [
+        "sandwich",
+        "jelly",
+        "jif",
+        "skippy",
+        "nuts"
+    ],
+    "ketchup": [
+        "fries",
+        "tomato",
+        "sauce",
+        "condiment",
+        "dip"
+    ],
+    "pikachu": [
+        "pokemon",
+        "ash",
+        "mouse",
+        "rat",
+        "electric"
+    ],
+    "swimming": [
+        "water",
+        "pool",
+        "lake",
+        "ocean",
+        "suit"
+    ],
+    "piano": [
+        "music",
+        "instrument",
+        "key",
+        "pedal",
+        "grand"
+    ],
+    "advice": [
+        "guide",
+        "wise",
+        "recommend",
+        "what to do",
+        "help"
+    ],
+    "director": [
+        "movie",
+        "producer",
+        "in charge",
+        "supervise",
+        "set"
+    ],
+    "continent": [
+        "ocean",
+        "asia",
+        "land",
+        "seven",
+        "earth"
+    ],
+    "hippo": [
+        "fat",
+        "animal",
+        "africa",
+        "large",
+        "river"
+    ],
+    "magic": [
+        "wizard",
+        "witch",
+        "power",
+        "trick",
+        "show"
+    ],
+    "naughty": [
+        "bad",
+        "behavior",
+        "good",
+        "rude",
+        "disobedient"
+    ],
+    "rescue": [
+        "save",
+        "hero",
+        "danger",
+        "safe",
+        "help"
+    ],
+    "match": [
+        "fire",
+        "strike",
+        "pair",
+        "together",
+        "equal"
+    ],
+    "cd": [
+        "disc",
+        "music",
+        "listen",
+        "play",
+        "computer"
+    ],
+    "immediately": [
+        "fast",
+        "now",
+        "delay",
+        "rapid",
+        "soon"
+    ],
+    "danger": [
+        "safe",
+        "harm",
+        "injury",
+        "protect",
+        "avoid"
+    ],
+    "salt": [
+        "white",
+        "sweet",
+        "popcorn",
+        "cooking",
+        "flavor"
+    ],
+    "stand": [
+        "sit",
+        "floor",
+        "feet",
+        "up",
+        "take"
+    ],
+    "bull": [
+        "ride",
+        "red",
+        "male",
+        "horns",
+        "charge"
+    ],
+    "history": [
+        "politics",
+        "past",
+        "events",
+        "finished",
+        "happen"
+    ],
+    "magazine": [
+        "pages",
+        "book",
+        "entertain",
+        "news",
+        "read"
+    ],
+    "fruitcake": [
+        "bake",
+        "sweet",
+        "dried",
+        "candied",
+        "chopped"
+    ],
+    "bell": [
+        "ring",
+        "sleigh",
+        "instrument",
+        "cup",
+        "hollow"
+    ],
+    "lights": [
+        "decorate",
+        "colorful",
+        "white",
+        "tree",
+        "bright"
+    ],
+    "parade": [
+        "street",
+        "bands",
+        "floats",
+        "procession",
+        "watch"
+    ],
+    "toys": [
+        "wish",
+        "play",
+        "kids",
+        "children",
+        "present"
+    ],
+    "present": [
+        "gifts",
+        "tree",
+        "box",
+        "wrap",
+        "santa"
+    ],
+    "cookies": [
+        "bake",
+        "milk",
+        "chocolate",
+        "oatmeal",
+        "sugar"
+    ],
+    "family": [
+        "blood",
+        "mother",
+        "father",
+        "sister",
+        "brother"
+    ],
+    "list": [
+        "naughty",
+        "nice",
+        "check",
+        "twice",
+        "names"
+    ],
+    "stocking": [
+        "hang",
+        "mantle",
+        "fireplace",
+        "sock",
+        "stuff"
+    ],
+    "north pole": [
+        "cold",
+        "earth",
+        "arctic",
+        "snow",
+        "south"
+    ],
+    "double": [
+        "twice",
+        "number",
+        "triple",
+        "amount",
+        "duplicate"
+    ],
+    "lawn": [
+        "grass",
+        "mow",
+        "green",
+        "yard",
+        "flowers"
+    ],
+    "arrest": [
+        "jail",
+        "criminal",
+        "police",
+        "handcuffs",
+        "capture"
+    ],
+    "educate": [
+        "child",
+        "teach",
+        "learn",
+        "school",
+        "coach"
+    ],
+    "myth": [
+        "greek",
+        "legend",
+        "history",
+        "culture",
+        "illusion"
+    ],
+    "measurement": [
+        "unit",
+        "height",
+        "distance",
+        "length",
+        "dimension"
+    ],
+    "prescription": [
+        "medicine",
+        "pharmacy",
+        "doctor",
+        "cvs",
+        "refill"
+    ],
+    "grave": [
+        "bury",
+        "cemetery",
+        "dig",
+        "funeral",
+        "serious"
+    ],
+    "hunt": [
+        "deer",
+        "gun",
+        "woods",
+        "food",
+        "search"
+    ],
+    "surgeon": [
+        "doctor",
+        "surgery",
+        "operation",
+        "hospital",
+        "heart"
+    ],
+    "suburb": [
+        "city",
+        "outside",
+        "quiet",
+        "live",
+        "neighbourhood"
+    ],
+    "minimum": [
+        "maximum",
+        "lowest",
+        "wage",
+        "amount",
+        "smallest"
+    ],
+    "sacred": [
+        "holy",
+        "religious",
+        "blessed",
+        "cow",
+        "consecrated"
+    ],
+    "warrior": [
+        "soldier",
+        "war",
+        "attack",
+        "battle",
+        "gladiator"
+    ],
+    "retired": [
+        "work",
+        "relax",
+        "old",
+        "pension",
+        "home"
+    ],
+    "survey": [
+        "ask",
+        "questions",
+        "opinion",
+        "fill out",
+        "investigation"
+    ],
+    "corruption": [
+        "politician",
+        "bribe",
+        "government",
+        "scandal",
+        "dishonesty"
+    ],
+    "hook": [
+        "fishing",
+        "metal",
+        "sharp",
+        "bait",
+        "rode"
+    ],
+    "ankle": [
+        "sprain",
+        "leg",
+        "foot",
+        "break",
+        "heel"
+    ],
+    "steep": [
+        "climb",
+        "mountain",
+        "hill",
+        "angle",
+        "extreme"
+    ],
+    "spread": [
+        "disease",
+        "virus",
+        "infection",
+        "prevent",
+        "extend"
+    ],
+    "cooperate": [
+        "together",
+        "everyone",
+        "unite",
+        "work",
+        "collaborate"
+    ],
+    "sacrifice": [
+        "human",
+        "kill",
+        "ritual",
+        "blood",
+        "surrender"
+    ],
+    "bubble": [
+        "gum",
+        "soap",
+        "blow",
+        "pop",
+        "air ball"
+    ],
+    "jaw": [
+        "mouth",
+        "teeth",
+        "bones",
+        "chew",
+        "talk"
+    ],
+    "sail": [
+        "ship",
+        "boat",
+        "ocean",
+        "wind",
+        "helm"
+    ],
+    "tropical": [
+        "hot",
+        "storm",
+        "island",
+        "exotic",
+        "humid"
+    ],
+    "mushroom": [
+        "white",
+        "humid",
+        "mold",
+        "champignon",
+        "autumn"
+    ],
+    "workout": [
+        "gym",
+        "weight",
+        "train",
+        "exercise",
+        "healthline"
+    ],
+    "chew": [
+        "gum",
+        "food",
+        "eat",
+        "teeth",
+        "mouth"
+    ],
+    "fragile": [
+        "break",
+        "drop",
+        "glass",
+        "mail",
+        "smash"
+    ],
+    "mansion": [
+        "house",
+        "home",
+        "live",
+        "expensive",
+        "residence"
+    ],
+    "crowd": [
+        "people",
+        "many",
+        "herd",
+        "street",
+        "group"
+    ],
+    "spit": [
+        "mouth",
+        "saliva",
+        "liquid",
+        "tobacco",
+        "spittoon"
+    ],
+    "hike": [
+        "walk",
+        "woods",
+        "mountain",
+        "backpack",
+        "steep"
+    ],
+    "fried": [
+        "chicken",
+        "cook",
+        "food",
+        "oil",
+        "fish"
+    ],
+    "barber": [
+        "haircut",
+        "shave",
+        "scissors",
+        "hairdresser",
+        "comb"
+    ],
+    "pajamas": [
+        "bed",
+        "night",
+        "sleepover",
+        "clothes",
+        "wear"
+    ],
+    "mustache": [
+        "hair",
+        "beard",
+        "lip",
+        "shave",
+        "mouth"
+    ],
+    "sword": [
+        "king arthur",
+        "peter",
+        "ear",
+        "malchus",
+        "blade"
+    ],
+    "shepherd": [
+        "joseph",
+        "birth",
+        "sheep",
+        "care",
+        "lamb"
+    ],
+    "scripture": [
+        "bible",
+        "read",
+        "holy",
+        "inspired",
+        "story"
+    ],
+    "tree": [
+        "branch",
+        "trunk",
+        "wood",
+        "paper",
+        "plant"
+    ],
+    "lemon": [
+        "seeds",
+        "juice",
+        "green",
+        "yellow",
+        "fruit"
+    ],
+    "helicopter": [
+        "propellor",
+        "fly",
+        "wings",
+        "helipad",
+        "news"
+    ],
+    "island": [
+        "beach",
+        "sand",
+        "lost",
+        "hawaii",
+        "land"
+    ],
+    "heart": [
+        "blood",
+        "organ",
+        "valentine",
+        "love",
+        "beat"
+    ],
+    "diamond": [
+        "ring",
+        "carat",
+        "jewel",
+        "glass",
+        "gem"
+    ],
+    "crack": [
+        "sleuth",
+        "break",
+        "drop",
+        "glass",
+        "fragile"
+    ],
+    "orange": [
+        "seeds",
+        "juice",
+        "apple",
+        "peel",
+        "fruit"
+    ],
+    "apple": [
+        "computer",
+        "steve jobs",
+        "fruit",
+        "orange",
+        "red"
+    ],
+    "jail": [
+        "law",
+        "penalty",
+        "police",
+        "illegal",
+        "bars"
+    ],
+    "frog": [
+        "green",
+        "animal",
+        "hops",
+        "slimy",
+        "leap"
+    ],
+    "kitten": [
+        "purr",
+        "meow",
+        "pet",
+        "dog",
+        "cat"
+    ],
+    "ghost": [
+        "scared",
+        "white",
+        "fly",
+        "haunted",
+        "dead"
+    ],
+    "rainbow": [
+        "leprauchan",
+        "colors",
+        "roy g biv",
+        "gold",
+        "rain"
+    ],
+    "carrot": [
+        "orange",
+        "vegetable",
+        "eyes",
+        "long",
+        "crunchy"
+    ],
+    "rain": [
+        "wet",
+        "water",
+        "drizzle",
+        "pour",
+        "umbrella"
+    ],
+    "computer": [
+        "ibm",
+        "desktop",
+        "laptop",
+        "internet",
+        "apple"
+    ],
+    "turtle": [
+        "crawl",
+        "slow",
+        "shell",
+        "ninja",
+        "tank"
+    ],
+    "snake": [
+        "animal",
+        "long",
+        "cobra",
+        "venom",
+        "poison"
+    ],
+    "ring": [
+        "gold",
+        "wear",
+        "engagement",
+        "wedding",
+        "finger"
+    ],
+    "monster": [
+        "bed",
+        "closet",
+        "scared",
+        "afraid",
+        "kids"
+    ],
+    "milk": [
+        "cow",
+        "dairy",
+        "cereal",
+        "cookies",
+        "drink"
+    ],
+    "book": [
+        "author",
+        "story",
+        "novel",
+        "read",
+        "cover"
+    ],
+    "head": [
+        "face",
+        "toe",
+        "part",
+        "body",
+        "torso"
+    ],
+    "cookie": [
+        "milk",
+        "santa claus",
+        "chocolate chip",
+        "oatmeal raisin",
+        "eat"
+    ],
+    "cloud": [
+        "sky",
+        "white",
+        "fluffy",
+        "nine",
+        "rain"
+    ],
+    "banana": [
+        "monkey",
+        "slip",
+        "yellow",
+        "peel",
+        "fruit"
+    ],
+    "pencil": [
+        "eraser",
+        "pen",
+        "yellow",
+        "write",
+        "paper"
+    ],
+    "shirt": [
+        "button",
+        "wear",
+        "tee",
+        "top",
+        "blouse"
+    ],
+    "king": [
+        "queen",
+        "chess",
+        "checkmate",
+        "royalty",
+        "head"
+    ],
+    "slide": [
+        "park",
+        "down",
+        "kids",
+        "slip",
+        "photo"
+    ],
+    "mouse": [
+        "cat",
+        "trap",
+        "cheese",
+        "tom jerry",
+        "animal"
+    ],
+    "octopus": [
+        "eight",
+        "tentacles",
+        "fish",
+        "water",
+        "ocean"
+    ],
+    "flag": [
+        "stars",
+        "stripes",
+        "american",
+        "mast",
+        "pole"
+    ],
+    "button": [
+        "shirt",
+        "pant",
+        "together",
+        "zipper",
+        "clothes"
+    ],
+    "truck": [
+        "car",
+        "big",
+        "wheels",
+        "large",
+        "road"
+    ],
+    "spoon": [
+        "eat",
+        "cereal",
+        "bowl",
+        "fork",
+        "silverware"
+    ],
+    "bathroom": [
+        "toilet",
+        "sink",
+        "wash",
+        "shower",
+        "clean"
+    ],
+    "corn": [
+        "cob",
+        "grill",
+        "yellow",
+        "ears",
+        "bite"
+    ],
+    "lamp": [
+        "light",
+        "bulb",
+        "see",
+        "dark",
+        "on"
+    ],
+    "pizza": [
+        "hut",
+        "pie",
+        "pepperoni",
+        "topping",
+        "deep dish"
+    ],
+    "whale": [
+        "ocean",
+        "large",
+        "massive",
+        "blue",
+        "moby dick"
+    ],
+    "crayon": [
+        "colors",
+        "crayola",
+        "marker",
+        "school",
+        "write"
+    ],
+    "purse": [
+        "money",
+        "cash",
+        "credit cards",
+        "license",
+        "wallet"
+    ],
+    "dream": [
+        "sleep",
+        "rest",
+        "brain",
+        "activity",
+        "nightmare"
+    ],
+    "fire": [
+        "flame",
+        "hot",
+        "wood",
+        "heat",
+        "ice"
+    ],
+    "desk": [
+        "work",
+        "top",
+        "study",
+        "office",
+        "papers"
+    ],
+    "robot": [
+        "electronic",
+        "automatic",
+        "robocop",
+        "r2d2",
+        "machine"
+    ],
+    "bread": [
+        "morning",
+        "breakfast",
+        "carbohydrate",
+        "eat",
+        "wheat"
+    ],
+    "river": [
+        "water",
+        "lake",
+        "stream",
+        "mississippi",
+        "runs"
+    ],
+    "monkey": [
+        "banana",
+        "swing",
+        "zoo",
+        "tree",
+        "baboon"
+    ],
+    "knee": [
+        "body",
+        "walk",
+        "joint",
+        "elbow",
+        "legs"
+    ],
+    "snowman": [
+        "frosty",
+        "balls",
+        "carrot",
+        "christmas",
+        "abominable"
+    ],
+    "suitcase": [
+        "travel",
+        "airport",
+        "pack",
+        "luggage",
+        "bag"
+    ],
+    "moon": [
+        "sun",
+        "planet",
+        "circle",
+        "space",
+        "armstrong"
+    ],
+    "rabbit": [
+        "long ears",
+        "hop",
+        "bunny",
+        "animal",
+        "bugs bunny"
+    ],
+    "bowl": [
+        "eat",
+        "cereal",
+        "spoon",
+        "pins",
+        "ball"
+    ],
+    "burger king": [
+        "whopper",
+        "mcdonalds",
+        "wendys",
+        "arbys",
+        "fast food"
+    ],
+    "golf ball": [
+        "tee",
+        "swing",
+        "club",
+        "iron",
+        "wood"
+    ],
+    "marbles": [
+        "balls",
+        "small",
+        "roll",
+        "strike",
+        "game"
+    ],
+    "protein": [
+        "shake",
+        "muscle",
+        "peanuts",
+        "meat",
+        "nutrition"
+    ],
+    "minny mouse": [
+        "orlando",
+        "donald duck",
+        "disney",
+        "character",
+        "magic"
+    ],
+    "nerd": [
+        "candy",
+        "sweet",
+        "dork",
+        "school",
+        "revenge"
+    ],
+    "georgia": [
+        "atlanta",
+        "savannah",
+        "south",
+        "peach",
+        "dixie"
+    ],
+    "poker": [
+        "flush",
+        "cards",
+        "table",
+        "vegas",
+        "rounders"
+    ],
+    "frosty": [
+        "snowman",
+        "character",
+        "carrot",
+        "christmas",
+        "button"
+    ],
+    "soap opera": [
+        "lives",
+        "romance",
+        "actors",
+        "daytime",
+        "television"
+    ],
+    "grand": [
+        "finale",
+        "great",
+        "end",
+        "large",
+        "important"
+    ],
+    "office": [
+        "space",
+        "desk",
+        "work",
+        "time",
+        "computer"
+    ],
+    "pepper": [
+        "salt",
+        "shaker",
+        "sneeze",
+        "restaurant",
+        "black"
+    ],
+    "strike": [
+        "bowl",
+        "hit",
+        "ball",
+        "pitch",
+        "out"
+    ],
+    "ice box": [
+        "cold",
+        "store",
+        "cooler",
+        "keep",
+        "ice"
+    ],
+    "landing": [
+        "airplane",
+        "base",
+        "helicopter",
+        "takeoff",
+        "descent"
+    ],
+    "quiz": [
+        "cheat",
+        "school",
+        "test",
+        "study",
+        "exam"
+    ],
+    "step dad": [
+        "grandparent",
+        "mother",
+        "father",
+        "children",
+        "parent"
+    ],
+    "prada": [
+        "devil",
+        "bags",
+        "shoes",
+        "fashion",
+        "meryl streep"
+    ],
+    "predict": [
+        "future",
+        "foresee",
+        "happen",
+        "later",
+        "knowledge"
+    ],
+    "headlight": [
+        "deer",
+        "car",
+        "light",
+        "night",
+        "drive"
+    ],
+    "wait": [
+        "line",
+        "time",
+        "anxious",
+        "bored",
+        "queue"
+    ],
+    "ruler": [
+        "12",
+        "inch",
+        "foot",
+        "measure",
+        "school"
+    ],
+    "donald": [
+        "duck",
+        "trump",
+        "name",
+        "first",
+        "apprentice"
+    ],
+    "tortilla": [
+        "taco",
+        "bread",
+        "mexico",
+        "flour",
+        "round"
+    ],
+    "select": [
+        "choose",
+        "start",
+        "pick",
+        "decide",
+        "house"
+    ],
+    "sombrero": [
+        "hats",
+        "mexico",
+        "head",
+        "spanish",
+        "round"
+    ],
+    "liberal": [
+        "democrat",
+        "conservative",
+        "change",
+        "donkey",
+        "arts"
+    ],
+    "waffles": [
+        "syrup",
+        "maple",
+        "sap",
+        "butter",
+        "pancake"
+    ],
+    "smurfs": [
+        "lalalala",
+        "happy",
+        "blue",
+        "cartoon",
+        "gargamel"
+    ],
+    "clouds": [
+        "fluffy",
+        "air",
+        "fly",
+        "sky",
+        "white"
+    ],
+    "robbery": [
+        "thief",
+        "invasion",
+        "steal",
+        "take",
+        "home"
+    ],
+    "dominate": [
+        "win",
+        "destroy",
+        "margin",
+        "completely",
+        "utterly"
+    ],
+    "lightning": [
+        "wet",
+        "rain",
+        "thunder",
+        "bolt",
+        "umbrella"
+    ],
+    "explain": [
+        "tell",
+        "say",
+        "speak",
+        "describe",
+        "communicate"
+    ],
+    "goofy": [
+        "mickey mouse",
+        "donald duck",
+        "disney",
+        "character",
+        "dog"
+    ],
+    "network": [
+        "computer",
+        "jobs",
+        "people",
+        "internet",
+        "connection"
+    ],
+    "vcr": [
+        "tape",
+        "movie",
+        "film",
+        "player",
+        "dvd"
+    ],
+    "budget": [
+        "finance",
+        "plan",
+        "rental",
+        "monthly",
+        "annual"
+    ],
+    "tradition": [
+        "ritual",
+        "culture",
+        "repeat",
+        "time",
+        "every"
+    ],
+    "help": [
+        "sos",
+        "assist",
+        "need",
+        "accomplish",
+        "call"
+    ],
+    "x-box": [
+        "play",
+        "controller",
+        "playstation",
+        "microsoft",
+        "video game"
+    ],
+    "interested": [
+        "involved",
+        "enjoy",
+        "hobby",
+        "pashion",
+        "time"
+    ],
+    "dictionary": [
+        "webster",
+        "definition",
+        "words",
+        "alphabet",
+        "book"
+    ],
+    "wednesday": [
+        "tuesday",
+        "thursday",
+        "days",
+        "two",
+        "eve"
+    ],
+    "district": [
+        "attorney",
+        "area",
+        "code",
+        "jurisdiction",
+        "school"
+    ],
+    "stop light": [
+        "red",
+        "green",
+        "drive",
+        "yellow",
+        "intersection"
+    ],
+    "nostril": [
+        "nose",
+        "sneeze",
+        "smell",
+        "breathe",
+        "opening"
+    ],
+    "remember": [
+        "forget",
+        "titans",
+        "alamo",
+        "brain",
+        "retain"
+    ],
+    "chicago": [
+        "sears tower",
+        "illinois",
+        "city",
+        "navy pier",
+        "midwest"
+    ],
+    "trend": [
+        "fashion",
+        "style",
+        "copy",
+        "imitate",
+        "catch"
+    ],
+    "genre": [
+        "category",
+        "movie",
+        "music",
+        "type",
+        "classify"
+    ],
+    "lane": [
+        "shoulder",
+        "cars",
+        "pass",
+        "drive",
+        "turn"
+    ],
+    "place": [
+        "location",
+        "destination",
+        "here",
+        "there",
+        "city"
+    ],
+    "meet up": [
+        "together",
+        "plan",
+        "event",
+        "call",
+        "phone"
+    ],
+    "senator": [
+        "state",
+        "representative",
+        "congress",
+        "100",
+        "elect"
+    ],
+    "visor": [
+        "hat",
+        "golf",
+        "sun",
+        "wear",
+        "head"
+    ],
+    "simple": [
+        "easy",
+        "quick",
+        "complicated",
+        "fast",
+        "small"
+    ],
+    "walking": [
+        "running",
+        "skipping",
+        "feet",
+        "move",
+        "slow"
+    ],
+    "calculator": [
+        "numbers",
+        "math",
+        "electronic",
+        "paper",
+        "punch"
+    ],
+    "porsche": [
+        "car",
+        "fast",
+        "boxster",
+        "speed",
+        "exotic"
+    ],
+    "water bottle": [
+        "drink",
+        "thirsty",
+        "hot",
+        "sports",
+        "fill"
+    ],
+    "lucky charm": [
+        "leprauchan",
+        "cereal",
+        "milk",
+        "marshmallow",
+        "rain"
+    ],
+    "general": [
+        "attorney",
+        "vague",
+        "military",
+        "rank",
+        "officer"
+    ],
+    "dollars": [
+        "cents",
+        "penny",
+        "washington",
+        "money",
+        "cash"
+    ],
+    "thursday": [
+        "friday",
+        "wednesday",
+        "days",
+        "two",
+        "eve"
+    ],
+    "ice cream": [
+        "freezer",
+        "vanilla",
+        "chocolate",
+        "flavors",
+        "cold"
+    ],
+    "orientation": [
+        "school",
+        "job",
+        "new",
+        "begin",
+        "teach"
+    ],
+    "shuttle": [
+        "bus",
+        "transportation",
+        "airport",
+        "train",
+        "travel"
+    ],
+    "house party": [
+        "bar",
+        "apartment",
+        "keg",
+        "people",
+        "crowded"
+    ],
+    "citation": [
+        "ticket",
+        "speeding",
+        "police",
+        "law",
+        "pull over"
+    ],
+    "olive oil": [
+        "popeye",
+        "sailor",
+        "cook",
+        "health",
+        "vegetable"
+    ],
+    "closet": [
+        "clothes",
+        "hang",
+        "bedroom",
+        "store",
+        "monster"
+    ],
+    "appraisal": [
+        "value",
+        "real estate",
+        "finance",
+        "taxes",
+        "worth"
+    ],
+    "freedom": [
+        "ring",
+        "choice",
+        "democracy",
+        "america",
+        "liberty"
+    ],
+    "republican": [
+        "george bush",
+        "party",
+        "political",
+        "elephant",
+        "red"
+    ],
+    "mother": [
+        "grandparent",
+        "father",
+        "mom",
+        "children",
+        "parent"
+    ],
+    "scrabble": [
+        "letters",
+        "words",
+        "dictionary",
+        "tile",
+        "board game"
+    ],
+    "govern": [
+        "rule",
+        "establish",
+        "watch",
+        "preside",
+        "dictate"
+    ],
+    "score": [
+        "run",
+        "point",
+        "earn",
+        "sports",
+        "game"
+    ],
+    "thank you": [
+        "welcome",
+        "something",
+        "greeting",
+        "response",
+        "polite"
+    ],
+    "next": [
+        "after",
+        "one",
+        "before",
+        "mtv",
+        "whos"
+    ],
+    "salt water": [
+        "ocean",
+        "lake",
+        "purify",
+        "drinking",
+        "taste"
+    ],
+    "exactly": [
+        "precise",
+        "amount",
+        "understand",
+        "true",
+        "time"
+    ],
+    "argument": [
+        "fight",
+        "anger",
+        "yell",
+        "quarrel",
+        "couple"
+    ],
+    "orange chicken": [
+        "panda",
+        "express",
+        "food",
+        "rice",
+        "noodles"
+    ],
+    "binder": [
+        "keep",
+        "papers",
+        "folder",
+        "store",
+        "school"
+    ],
+    "modern": [
+        "new",
+        "age",
+        "era",
+        "ancient",
+        "history"
+    ],
+    "pence": [
+        "money",
+        "pound",
+        "great britain",
+        "spend",
+        "coins"
+    ],
+    "architect": [
+        "create",
+        "build",
+        "house",
+        "home",
+        "construct"
+    ],
+    "whats up": [
+        "greeting",
+        "hello",
+        "hi",
+        "doing",
+        "you"
+    ],
+    "labor day": [
+        "september",
+        "holiday",
+        "summer",
+        "wedding",
+        "work"
+    ],
+    "tounge": [
+        "body",
+        "part",
+        "taste",
+        "eat",
+        "sense"
+    ],
+    "indiana": [
+        "state",
+        "hoosier",
+        "bobby",
+        "basketball",
+        "midwest"
+    ],
+    "clean": [
+        "mess",
+        "garbage",
+        "dirty",
+        "house",
+        "maid"
+    ],
+    "playstation": [
+        "play",
+        "controller",
+        "xbox",
+        "sony",
+        "video game"
+    ],
+    "certificate": [
+        "award",
+        "paper",
+        "trophy",
+        "present",
+        "complete"
+    ],
+    "cows": [
+        "milk",
+        "farm",
+        "animals",
+        "grass",
+        "dairy"
+    ],
+    "contact": [
+        "call",
+        "e-mail",
+        "question",
+        "problem",
+        "support"
+    ],
+    "grandfather": [
+        "generation",
+        "dad",
+        "mom",
+        "children",
+        "parent"
+    ],
+    "scary movie": [
+        "fright",
+        "funny",
+        "comedy",
+        "sequel",
+        "mock"
+    ],
+    "watermelon": [
+        "seeds",
+        "juice",
+        "green",
+        "pink",
+        "fruit"
+    ],
+    "month": [
+        "day",
+        "week",
+        "30",
+        "31",
+        "year"
+    ],
+    "nuts": [
+        "bolts",
+        "tools",
+        "eat",
+        "park",
+        "food"
+    ],
+    "hanger": [
+        "clothes",
+        "rack",
+        "coat",
+        "jacket",
+        "closet"
+    ],
+    "technical": [
+        "foul",
+        "gritty",
+        "correct",
+        "aspect",
+        "time"
+    ],
+    "court": [
+        "judge",
+        "verdict",
+        "jury",
+        "attorney",
+        "defense"
+    ],
+    "airplane": [
+        "fly",
+        "travel",
+        "delta",
+        "united",
+        "airline"
+    ],
+    "dessert": [
+        "after",
+        "dinner",
+        "eat",
+        "sweet",
+        "chocolate"
+    ],
+    "almost": [
+        "close",
+        "cigar",
+        "short",
+        "miss",
+        "attempt"
+    ],
+    "backslash": [
+        "drummer",
+        "lightning",
+        "internet",
+        "keyboard",
+        "computer"
+    ],
+    "construction": [
+        "build",
+        "crane",
+        "company",
+        "hard",
+        "hat"
+    ],
+    "dime": [
+        "ten",
+        "penny",
+        "nickel",
+        "quarter",
+        "change"
+    ],
+    "tall tale": [
+        "story",
+        "lie",
+        "honesty",
+        "deceipt",
+        "short"
+    ],
+    "fever": [
+        "sick",
+        "ill",
+        "thermometer",
+        "chills",
+        "sweat"
+    ],
+    "hire": [
+        "employee",
+        "boss",
+        "manager",
+        "recruit",
+        "work"
+    ],
+    "koala bear": [
+        "australia",
+        "animals",
+        "wild",
+        "tree",
+        "climb"
+    ],
+    "pretty woman": [
+        "julia roberts",
+        "movie",
+        "song",
+        "man",
+        "ugly"
+    ],
+    "anatomy": [
+        "body",
+        "parts",
+        "bones",
+        "organs",
+        "medical"
+    ],
+    "bow and arrow": [
+        "practice",
+        "cupid",
+        "love",
+        "shoot",
+        "target"
+    ],
+    "element": [
+        "periodic",
+        "chemistry",
+        "table",
+        "piece",
+        "water"
+    ],
+    "application": [
+        "accept",
+        "denied",
+        "admit",
+        "college",
+        "school"
+    ],
+    "catwalk": [
+        "model",
+        "fashion show",
+        "runway",
+        "heidi klum",
+        "bruce"
+    ],
+    "best man": [
+        "wedding",
+        "marriage",
+        "maid honor",
+        "speech",
+        "groomsmen"
+    ],
+    "allergy": [
+        "sneeze",
+        "cough",
+        "pollen",
+        "spring",
+        "season"
+    ],
+    "service": [
+        "gas",
+        "car",
+        "auto",
+        "fix",
+        "repair"
+    ],
+    "piggy bank": [
+        "store",
+        "money",
+        "coins",
+        "save",
+        "allowance"
+    ],
+    "rabbits foot": [
+        "luck",
+        "superstitous",
+        "believe",
+        "magic",
+        "fortune"
+    ],
+    "conversation": [
+        "speak",
+        "carry",
+        "talk",
+        "people",
+        "between"
+    ],
+    "on the hour": [
+        "depart",
+        "time",
+        "travel",
+        "clock",
+        "watch"
+    ],
+    "strip mall": [
+        "suburbs",
+        "grocery",
+        "store",
+        "mcdonalds",
+        "parking lot"
+    ],
+    "avalanche": [
+        "snow",
+        "mountains",
+        "falling",
+        "skiing",
+        "winter"
+    ],
+    "ring finger": [
+        "thumb",
+        "finger",
+        "hand",
+        "toe",
+        "index"
+    ],
+    "temperature": [
+        "hot",
+        "cold",
+        "weather",
+        "outside",
+        "degrees"
+    ],
+    "forever": [
+        "sometimes",
+        "never",
+        "eternity",
+        "end",
+        "always"
+    ],
+    "paper clip": [
+        "hold",
+        "together",
+        "metal",
+        "office",
+        "desk"
+    ],
+    "snowmobile": [
+        "white",
+        "ice",
+        "cold",
+        "clean",
+        "push"
+    ],
+    "olive": [
+        "oil",
+        "taste",
+        "food",
+        "pizza",
+        "anchovies"
+    ],
+    "chores": [
+        "trash",
+        "dishes",
+        "responsible",
+        "duty",
+        "children"
+    ],
+    "twice": [
+        "three",
+        "two",
+        "times",
+        "happen",
+        "occur"
+    ],
+    "helmet": [
+        "protect",
+        "head",
+        "motorcycle",
+        "football",
+        "sports"
+    ],
+    "solar": [
+        "sun",
+        "system",
+        "space",
+        "earth",
+        "milky way"
+    ],
+    "medal": [
+        "olympic",
+        "gold",
+        "bronze",
+        "silver",
+        "athens"
+    ],
+    "cubical": [
+        "office",
+        "space",
+        "work",
+        "business",
+        "computer"
+    ],
+    "thanksgiving": [
+        "turkey",
+        "november",
+        "pilgrims",
+        "holiday",
+        "christmas"
+    ],
+    "ridiculous": [
+        "silly",
+        "crazy",
+        "nuts",
+        "whacky",
+        "funny"
+    ],
+    "handkerchief": [
+        "nose",
+        "cloth",
+        "pocket",
+        "wipe",
+        "tissue"
+    ],
+    "sprint": [
+        "cell",
+        "phone",
+        "wireless",
+        "network",
+        "roam"
+    ],
+    "illegal": [
+        "law",
+        "break",
+        "fined",
+        "police",
+        "wrong"
+    ],
+    "rough": [
+        "tough",
+        "hard",
+        "difficult",
+        "edge",
+        "sandpaper"
+    ],
+    "labrador": [
+        "dog",
+        "golden retriever",
+        "smart",
+        "pet",
+        "home"
+    ],
+    "slash": [
+        "drummer",
+        "lightning",
+        "internet",
+        "keyboard",
+        "computer"
+    ],
+    "broadway": [
+        "musical",
+        "play",
+        "new york",
+        "actor",
+        "theatre"
+    ],
+    "always": [
+        "sometimes",
+        "never",
+        "eternity",
+        "end",
+        "forever"
+    ],
+    "friends": [
+        "television",
+        "partner",
+        "companion",
+        "hang out",
+        "college"
+    ],
+    "equity": [
+        "stock",
+        "private",
+        "home",
+        "mortgage",
+        "interest"
+    ],
+    "non fiction": [
+        "library",
+        "books",
+        "encyclopedia",
+        "reference",
+        "section"
+    ],
+    "sincere": [
+        "honest",
+        "trust",
+        "loyal",
+        "true",
+        "actual"
+    ],
+    "laughter": [
+        "funny",
+        "joke",
+        "riddle",
+        "mouth",
+        "tells"
+    ],
+    "nickel": [
+        "five",
+        "penny",
+        "dime",
+        "quarter",
+        "change"
+    ],
+    "grafitti": [
+        "spray paint",
+        "vandalize",
+        "colors",
+        "wall",
+        "thug"
+    ],
+    "website": [
+        "online",
+        "google",
+        "yahoo",
+        "internet",
+        "computer"
+    ],
+    "cab driver": [
+        "taxi",
+        "tip",
+        "transport",
+        "yellow",
+        "new york"
+    ],
+    "uncle": [
+        "brother",
+        "father",
+        "mother",
+        "sibling",
+        "parent"
+    ],
+    "alphabet": [
+        "letters",
+        "26",
+        "vowels",
+        "spell",
+        "song"
+    ],
+    "authority": [
+        "police",
+        "cops",
+        "government",
+        "charge",
+        "fight"
+    ],
+    "laugh": [
+        "joke",
+        "riddle",
+        "funny",
+        "smile",
+        "frown"
+    ],
+    "business": [
+        "wall street journal",
+        "school",
+        "graduate",
+        "startup",
+        "economy"
+    ],
+    "manager": [
+        "review",
+        "boss",
+        "work",
+        "job",
+        "run"
+    ],
+    "suffice": [
+        "enough",
+        "amount",
+        "complete",
+        "should",
+        "time"
+    ],
+    "halloween": [
+        "october",
+        "scary",
+        "holiday",
+        "pumpkin",
+        "costume"
+    ],
+    "caffeine": [
+        "coke",
+        "soda",
+        "pop",
+        "drink",
+        "water"
+    ],
+    "famous": [
+        "celebrity",
+        "actor",
+        "athlete",
+        "known",
+        "people"
+    ],
+    "cancun": [
+        "mexico",
+        "vacation",
+        "spring break",
+        "water",
+        "beach"
+    ],
+    "review": [
+        "analyze",
+        "look",
+        "critique",
+        "check",
+        "manager"
+    ],
+    "ghost town": [
+        "cowboys",
+        "goldrush",
+        "deserted",
+        "western",
+        "tumbling weeg"
+    ],
+    "duke": [
+        "carolina",
+        "university",
+        "college",
+        "study",
+        "admission"
+    ],
+    "cry": [
+        "sad",
+        "tears",
+        "eye",
+        "hurt",
+        "water"
+    ],
+    "note": [
+        "write",
+        "post",
+        "stick",
+        "remember",
+        "musical"
+    ],
+    "gentle": [
+        "hard",
+        "soft",
+        "careful",
+        "break",
+        "careless"
+    ],
+    "tequila": [
+        "mexico",
+        "shot",
+        "alcohol",
+        "drink",
+        "bar"
+    ],
+    "lcd": [
+        "television",
+        "plasma",
+        "projection",
+        "inch",
+        "view"
+    ],
+    "nothing": [
+        "zero",
+        "none",
+        "amount",
+        "left",
+        "zilch"
+    ],
+    "steak": [
+        "eat",
+        "red meat",
+        "rare",
+        "well done",
+        "fancy"
+    ],
+    "memorial day": [
+        "may",
+        "holiday",
+        "spring",
+        "wedding",
+        "soldiers"
+    ],
+    "christmas": [
+        "december",
+        "santa",
+        "tree",
+        "presents",
+        "celebrate"
+    ],
+    "honeymoon": [
+        "vegas",
+        "marriage",
+        "vacation",
+        "travel",
+        "exotic"
+    ],
+    "democrat": [
+        "bill clinton",
+        "obama",
+        "party",
+        "political",
+        "donkey"
+    ],
+    "slant": [
+        "tilt",
+        "v8",
+        "tip",
+        "straight",
+        "side"
+    ],
+    "bottles": [
+        "beer",
+        "drink",
+        "glass",
+        "broken",
+        "liquid"
+    ],
+    "dvd": [
+        "disc",
+        "movie",
+        "film",
+        "player",
+        "vcr"
+    ],
+    "design": [
+        "create",
+        "make",
+        "copy",
+        "draw",
+        "sculpt"
+    ],
+    "salad dressing": [
+        "thousand island",
+        "french",
+        "lite",
+        "croutons",
+        "topping"
+    ],
+    "kangaroo": [
+        "pouch",
+        "hop",
+        "animal",
+        "australia",
+        "captain"
+    ],
+    "sit-ups": [
+        "push ups",
+        "workout",
+        "abs",
+        "crunch",
+        "six-pack"
+    ],
+    "brilliant": [
+        "excellent",
+        "perfect",
+        "smart",
+        "awesome",
+        "good"
+    ],
+    "basement": [
+        "downstairs",
+        "storage",
+        "house",
+        "home",
+        "finish"
+    ],
+    "begin": [
+        "start",
+        "finish",
+        "before",
+        "after",
+        "end"
+    ],
+    "e-mail": [
+        "online",
+        "electronic",
+        "send",
+        "fast",
+        "internet"
+    ],
+    "report": [
+        "book",
+        "above",
+        "manager",
+        "summary",
+        "speak"
+    ],
+    "friday": [
+        "saturday",
+        "thursday",
+        "days",
+        "two",
+        "weekend"
+    ],
+    "fix": [
+        "repair",
+        "accident",
+        "handyman",
+        "tools",
+        "screwdrivers"
+    ],
+    "hush": [
+        "silent",
+        "quiet",
+        "puppy",
+        "talk",
+        "speak"
+    ],
+    "roses": [
+        "red",
+        "flower",
+        "thorn",
+        "date",
+        "valentine"
+    ],
+    "fish tank": [
+        "goldfish",
+        "bowl",
+        "pet",
+        "simple",
+        "feed"
+    ],
+    "route": [
+        "football",
+        "bus",
+        "directions",
+        "road",
+        "path"
+    ],
+    "ponds": [
+        "fish",
+        "lake",
+        "water",
+        "frogs",
+        "small"
+    ],
+    "purpose": [
+        "reason",
+        "behind",
+        "fault",
+        "accident",
+        "timing"
+    ],
+    "several": [
+        "many",
+        "few",
+        "lot",
+        "hard",
+        "clue"
+    ],
+    "sticker": [
+        "apply",
+        "tape",
+        "glue",
+        "cartoon",
+        "fun"
+    ],
+    "sunday": [
+        "monday",
+        "saturday",
+        "friday",
+        "weekend",
+        "sabbath"
+    ],
+    "complete": [
+        "finish",
+        "over",
+        "done",
+        "pass",
+        "end"
+    ],
+    "maximum": [
+        "top",
+        "highest",
+        "amount",
+        "minimum",
+        "height"
+    ],
+    "week": [
+        "seven",
+        "days",
+        "month",
+        "calendar",
+        "year"
+    ],
+    "olympics": [
+        "gold",
+        "bronze",
+        "silver",
+        "athletes",
+        "rings"
+    ],
+    "nephew": [
+        "relative",
+        "family",
+        "cousin",
+        "sibling",
+        "child"
+    ],
+    "orange juice": [
+        "apple",
+        "drink",
+        "vitamin c",
+        "breakfast",
+        "pulp"
+    ],
+    "lime": [
+        "seeds",
+        "juice",
+        "green",
+        "yellow",
+        "fruit"
+    ],
+    "burden": [
+        "proof",
+        "weight",
+        "hinder",
+        "leave",
+        "down"
+    ],
+    "bellagio": [
+        "las vegas",
+        "casino",
+        "hotel",
+        "fountain",
+        "strip"
+    ],
+    "flop": [
+        "fall",
+        "down",
+        "poker",
+        "turn",
+        "river"
+    ],
+    "sesame": [
+        "chicken",
+        "spice",
+        "big bird",
+        "seasoning",
+        "taste"
+    ],
+    "pink": [
+        "girl",
+        "color",
+        "bear",
+        "blue",
+        "female"
+    ],
+    "wealthy": [
+        "rich",
+        "bill gates",
+        "money",
+        "dollars",
+        "cash"
+    ],
+    "interest": [
+        "rate",
+        "mortgage",
+        "home",
+        "like",
+        "appeal"
+    ],
+    "monitor": [
+        "computer",
+        "screen",
+        "display",
+        "hallway",
+        "baby"
+    ],
+    "deck": [
+        "grill",
+        "house",
+        "home",
+        "porch",
+        "party"
+    ],
+    "jam": [
+        "fruit",
+        "traffic",
+        "jelly",
+        "toast",
+        "bread"
+    ],
+    "touch": [
+        "hands",
+        "finger",
+        "feel",
+        "sense",
+        "reach"
+    ],
+    "drama": [
+        "genre",
+        "queen",
+        "soap",
+        "movie",
+        "book"
+    ],
+    "lobby": [
+        "doorman",
+        "entrance",
+        "petition",
+        "plead",
+        "grand"
+    ],
+    "mediator": [
+        "listen",
+        "peer",
+        "problem",
+        "dispute",
+        "settle"
+    ],
+    "goggles": [
+        "swim",
+        "eye",
+        "see",
+        "ski",
+        "wear"
+    ],
+    "star trek": [
+        "starship",
+        "enterprise",
+        "kirk",
+        "picard",
+        "science fiction"
+    ],
+    "forrest": [
+        "trees",
+        "woods",
+        "trails",
+        "fire",
+        "animals"
+    ],
+    "seminar": [
+        "teach",
+        "learn",
+        "job",
+        "training",
+        "education"
+    ],
+    "captain morgan": [
+        "rum",
+        "drink",
+        "spiced",
+        "alcohol",
+        "liquor"
+    ],
+    "birth": [
+        "date",
+        "pregnant",
+        "hospital",
+        "nine months",
+        "place"
+    ],
+    "wallpaper": [
+        "paint",
+        "rooms",
+        "attach",
+        "glue",
+        "home"
+    ],
+    "grand canyon": [
+        "nevada",
+        "big hole",
+        "colors",
+        "huge",
+        "colorado river"
+    ],
+    "construction paper": [
+        "art",
+        "kids",
+        "school",
+        "make",
+        "crafts"
+    ],
+    "semi-final": [
+        "match",
+        "tennis",
+        "bracket",
+        "sports",
+        "playoffs"
+    ],
+    "harvard": [
+        "boston",
+        "university",
+        "college",
+        "study",
+        "admission"
+    ],
+    "mozart": [
+        "piano",
+        "cembalo",
+        "austria",
+        "salzburg",
+        "music"
+    ],
+    "stripes": [
+        "flag",
+        "stars",
+        "pants",
+        "shirt",
+        "lines"
+    ],
+    "syrup": [
+        "waffles",
+        "maple",
+        "sap",
+        "butter",
+        "pancake"
+    ],
+    "monday": [
+        "sunday",
+        "tuesday",
+        "days",
+        "two",
+        "eve"
+    ],
+    "seems": [
+        "appears",
+        "looks",
+        "imagine",
+        "time",
+        "thought"
+    ],
+    "corn on the cob": [
+        "shear",
+        "grill",
+        "yellow",
+        "ears",
+        "bite"
+    ],
+    "brother": [
+        "sister",
+        "father",
+        "mother",
+        "sibling",
+        "parent"
+    ],
+    "warm": [
+        "hot",
+        "luke",
+        "cold",
+        "mild",
+        "temperature"
+    ],
+    "pot of gold": [
+        "leprauchan",
+        "colors",
+        "water",
+        "rainbow",
+        "rain"
+    ],
+    "funny": [
+        "smile",
+        "laugh",
+        "giggle",
+        "joke",
+        "riddle"
+    ],
+    "wine": [
+        "red",
+        "shiraz",
+        "merlot",
+        "white",
+        "drink"
+    ],
+    "auction": [
+        "ebay",
+        "gavel",
+        "sold",
+        "bid",
+        "antiques"
+    ],
+    "father": [
+        "grandparent",
+        "mother",
+        "dad",
+        "children",
+        "parent"
+    ],
+    "red": [
+        "heart",
+        "color",
+        "orange",
+        "fire",
+        "hot"
+    ],
+    "ninja": [
+        "fight",
+        "karate",
+        "mutant",
+        "turtles",
+        "black belt"
+    ],
+    "annoying": [
+        "painful",
+        "words",
+        "repeat",
+        "kids",
+        "time"
+    ],
+    "american": [
+        "citizen",
+        "country",
+        "usa",
+        "canada",
+        "states"
+    ],
+    "plasma": [
+        "television",
+        "lcd",
+        "projection",
+        "inch",
+        "view"
+    ],
+    "tuesday": [
+        "monday",
+        "wednesday",
+        "days",
+        "two",
+        "eve"
+    ],
+    "flush": [
+        "toilet",
+        "poker",
+        "suit",
+        "bathroom",
+        "royal"
+    ],
+    "building": [
+        "home",
+        "skyscraper",
+        "office",
+        "work",
+        "empire state"
+    ],
+    "greet": [
+        "meet",
+        "welcome",
+        "address",
+        "bring",
+        "beginning"
+    ],
+    "pick up": [
+        "food",
+        "drive thru",
+        "delivery",
+        "restaurant",
+        "car"
+    ],
+    "mall": [
+        "shopping",
+        "stores",
+        "food court",
+        "kids",
+        "clothes"
+    ],
+    "ancient": [
+        "old",
+        "era",
+        "age",
+        "modern",
+        "history"
+    ],
+    "afro": [
+        "hair",
+        "lot",
+        "pik",
+        "curls",
+        "perm"
+    ],
+    "valentines day": [
+        "february",
+        "heart",
+        "hallmark",
+        "cards",
+        "flowers"
+    ],
+    "x-men": [
+        "marvel",
+        "superheroes",
+        "wolverine",
+        "mutant",
+        "cartoons"
+    ],
+    "flower girl": [
+        "wedding",
+        "marriage",
+        "walk",
+        "aisle",
+        "petals"
+    ],
+    "billionaire": [
+        "bill gates",
+        "money",
+        "cash",
+        "warren buffett",
+        "loot"
+    ],
+    "fantasy": [
+        "football",
+        "dream",
+        "imagine",
+        "sports",
+        "stats"
+    ],
+    "sun glasses": [
+        "sky",
+        "see",
+        "clear",
+        "block",
+        "prevent"
+    ],
+    "freak": [
+        "super",
+        "weird",
+        "whacky",
+        "show",
+        "friday"
+    ],
+    "gift card": [
+        "purchase",
+        "wallet",
+        "best buy",
+        "supermarket",
+        "christmas"
+    ],
+    "egg roll": [
+        "chinese",
+        "food",
+        "appetizer",
+        "fried",
+        "filled"
+    ],
+    "mechanic": [
+        "automobile",
+        "wrench",
+        "car",
+        "oil change",
+        "accident"
+    ],
+    "pizza hut": [
+        "food",
+        "restaurant",
+        "breadsticks",
+        "pepper",
+        "roof"
+    ],
+    "talking": [
+        "speak",
+        "laugh",
+        "mouth",
+        "communicate",
+        "tell"
+    ],
+    "center": [
+        "around",
+        "middle",
+        "position",
+        "focus",
+        "circle"
+    ],
+    "private": [
+        "public",
+        "advertise",
+        "keep",
+        "tight",
+        "silent"
+    ],
+    "text": [
+        "message",
+        "phone",
+        "keyboard",
+        "type",
+        "words"
+    ],
+    "real world": [
+        "mtv",
+        "show",
+        "reality",
+        "job",
+        "college"
+    ],
+    "jog": [
+        "run",
+        "walk",
+        "fast",
+        "morning",
+        "path"
+    ],
+    "vacuum cleaner": [
+        "hoover",
+        "carpet",
+        "dusty",
+        "filthy",
+        "clean"
+    ],
+    "cupid": [
+        "arrow",
+        "heart",
+        "valentine",
+        "february",
+        "love"
+    ],
+    "rush": [
+        "hurry",
+        "speed",
+        "fast",
+        "quick",
+        "mail"
+    ],
+    "toad": [
+        "princess",
+        "frog",
+        "green",
+        "tadpole",
+        "wet"
+    ],
+    "piece": [
+        "pie",
+        "cake",
+        "slice",
+        "fraction",
+        "math"
+    ],
+    "relax": [
+        "vacation",
+        "trip",
+        "busy",
+        "rest",
+        "chill"
+    ],
+    "microwave": [
+        "oven",
+        "appliance",
+        "heat",
+        "warm",
+        "food"
+    ],
+    "wanted": [
+        "flyer",
+        "sheriff",
+        "most",
+        "america",
+        "poster"
+    ],
+    "power": [
+        "electricity",
+        "battery",
+        "strength",
+        "cord",
+        "outlet"
+    ],
+    "teenager": [
+        "school",
+        "ten",
+        "kids",
+        "grow",
+        "fight"
+    ],
+    "tuxedo": [
+        "suit",
+        "prom",
+        "wedding",
+        "bow-tie",
+        "vest"
+    ],
+    "vampire": [
+        "teeth",
+        "blood",
+        "coffin",
+        "dead",
+        "night"
+    ],
+    "arrow": [
+        "bow",
+        "cupid",
+        "love",
+        "shoot",
+        "target"
+    ],
+    "denver": [
+        "coors",
+        "mile high",
+        "broncos",
+        "city",
+        "colorado"
+    ],
+    "piano man": [
+        "billy joel",
+        "musician",
+        "singer",
+        "blind",
+        "fire"
+    ],
+    "india": [
+        "billion",
+        "people",
+        "hindi",
+        "democracy",
+        "asia"
+    ],
+    "palm trees": [
+        "hawaii",
+        "vacation",
+        "ground",
+        "fruit",
+        "hand"
+    ],
+    "carbonated": [
+        "coke",
+        "soda",
+        "pop",
+        "drink",
+        "water"
+    ],
+    "question": [
+        "ask",
+        "answer",
+        "interrogate",
+        "period",
+        "mark"
+    ],
+    "trust": [
+        "believe",
+        "promise",
+        "break",
+        "family",
+        "friend"
+    ],
+    "patch": [
+        "award",
+        "scout",
+        "fix",
+        "together",
+        "bind"
+    ],
+    "madonna": [
+        "britney spears",
+        "celebrate",
+        "pop",
+        "singer",
+        "music"
+    ],
+    "cameo": [
+        "appearance",
+        "show",
+        "television",
+        "camera",
+        "director"
+    ],
+    "stanford": [
+        "university",
+        "california",
+        "college",
+        "study",
+        "admission"
+    ],
+    "nintendo wii": [
+        "play",
+        "controller",
+        "xbox",
+        "sony",
+        "video game"
+    ],
+    "document": [
+        "paper",
+        "briefcase",
+        "microsoft word",
+        "file",
+        "new"
+    ],
+    "north wing": [
+        "white house",
+        "fly",
+        "south",
+        "east",
+        "west"
+    ],
+    "fingernail": [
+        "cut",
+        "hand",
+        "polish",
+        "fake",
+        "manicure"
+    ],
+    "intelligent": [
+        "brain",
+        "smart",
+        "creative",
+        "intellect",
+        "iq"
+    ],
+    "author": [
+        "book",
+        "write",
+        "pen",
+        "name",
+        "mark twain"
+    ],
+    "subscribe": [
+        "newspaper",
+        "magazine",
+        "issue",
+        "order",
+        "weekly"
+    ],
+    "igloo": [
+        "eskimo",
+        "ice",
+        "antarctica",
+        "live",
+        "home"
+    ],
+    "michael jordan": [
+        "bulls",
+        "chicago",
+        "basketball",
+        "star",
+        "23"
+    ],
+    "sandals": [
+        "slippers",
+        "shoes",
+        "feet",
+        "sand",
+        "wear"
+    ],
+    "dairy": [
+        "product",
+        "milk",
+        "cheese",
+        "cow",
+        "grocery"
+    ],
+    "cocacola": [
+        "drink",
+        "pepsi",
+        "soda",
+        "beverage",
+        "pop"
+    ],
+    "straight": [
+        "arrow",
+        "line",
+        "parallel",
+        "forward",
+        "flush"
+    ],
+    "romance": [
+        "love",
+        "heart",
+        "date",
+        "marriage",
+        "single"
+    ],
+    "write": [
+        "author",
+        "books",
+        "words",
+        "pen",
+        "paper"
+    ],
+    "couple": [
+        "married",
+        "together",
+        "two",
+        "dating",
+        "relationship"
+    ],
+    "crystal": [
+        "ball",
+        "glass",
+        "kitchen",
+        "fancy",
+        "gift"
+    ],
+    "six flags": [
+        "great america",
+        "roller coaster",
+        "amusement park",
+        "texas",
+        "batman"
+    ],
+    "thread": [
+        "needle",
+        "sew",
+        "thimble",
+        "string",
+        "button"
+    ],
+    "san francisco": [
+        "city",
+        "golden gate bridge",
+        "bay",
+        "alcatraz",
+        "california"
+    ],
+    "dandruff": [
+        "white",
+        "hair",
+        "flakes",
+        "head",
+        "shampoo"
+    ],
+    "focus": [
+        "camera",
+        "lose",
+        "blur",
+        "attention",
+        "ford"
+    ],
+    "badge": [
+        "cops",
+        "law",
+        "rules",
+        "ticket",
+        "police"
+    ],
+    "time-out": [
+        "delay",
+        "stop",
+        "sports",
+        "game",
+        "coach"
+    ],
+    "nintendo": [
+        "play",
+        "controller",
+        "xbox",
+        "playstation",
+        "video game"
+    ],
+    "draft": [
+        "sports",
+        "military",
+        "pick",
+        "select",
+        "choose"
+    ],
+    "granddaughter": [
+        "generation",
+        "kids",
+        "mom",
+        "children",
+        "parent"
+    ],
+    "racket": [
+        "tennis",
+        "hit",
+        "swing",
+        "net",
+        "ball"
+    ],
+    "florida": [
+        "orange",
+        "peninsula",
+        "state",
+        "tallahassee",
+        "miami"
+    ],
+    "finally": [
+        "finish",
+        "eventually",
+        "end",
+        "beginning",
+        "after"
+    ],
+    "disney world": [
+        "florida",
+        "orlando",
+        "mickey mouse",
+        "epcot",
+        "magic mountain"
+    ],
+    "citizen": [
+        "kane",
+        "police",
+        "country",
+        "person",
+        "common"
+    ],
+    "scrambled eggs": [
+        "omelette",
+        "yolk",
+        "white",
+        "yellow",
+        "breakfast"
+    ],
+    "perfume": [
+        "smell",
+        "nice",
+        "flowers",
+        "ready",
+        "spray"
+    ],
+    "beans": [
+        "toot",
+        "green",
+        "long",
+        "vegetable",
+        "refried"
+    ],
+    "value": [
+        "worth",
+        "money",
+        "cash flow",
+        "discount",
+        "period"
+    ],
+    "defendant": [
+        "prosecution",
+        "court",
+        "law",
+        "judge",
+        "attorney"
+    ],
+    "protractor": [
+        "instrument",
+        "math",
+        "school",
+        "shapes",
+        "circle"
+    ],
+    "ann arbor": [
+        "university",
+        "michigan",
+        "wolverines",
+        "blue",
+        "gold"
+    ],
+    "white house": [
+        "president",
+        "home",
+        "lives",
+        "building",
+        "washington d.c."
+    ],
+    "investment": [
+        "return",
+        "interest",
+        "money",
+        "deposit",
+        "cash"
+    ],
+    "politician": [
+        "public",
+        "official",
+        "representative",
+        "vote",
+        "elect"
+    ],
+    "morse code": [
+        "communicate",
+        "phone",
+        "old",
+        "history",
+        "talk"
+    ],
+    "mario brothers": [
+        "luigi",
+        "yoshi",
+        "mushroom",
+        "nintendo",
+        "video game"
+    ],
+    "out": [
+        "inside",
+        "baseball",
+        "box",
+        "crickett",
+        "inning"
+    ],
+    "panda express": [
+        "chinese",
+        "food",
+        "orange",
+        "chicken",
+        "fast"
+    ],
+    "superman": [
+        "hero",
+        "movie",
+        "flies",
+        "kryptonite",
+        "underwear"
+    ],
+    "omelette": [
+        "breakfast",
+        "eggs",
+        "yolk",
+        "white",
+        "eat"
+    ],
+    "full house": [
+        "tanner",
+        "poker",
+        "straight",
+        "flush",
+        "olsen twins"
+    ],
+    "blackberry": [
+        "e-mail",
+        "phone",
+        "travel",
+        "computer",
+        "time"
+    ],
+    "wheel of fortune": [
+        "pat sajak",
+        "vanna white",
+        "game show",
+        "jeopardy",
+        "puzzles"
+    ],
+    "town": [
+        "city",
+        "place",
+        "hall",
+        "gather",
+        "small"
+    ],
+    "leaving": [
+        "depart",
+        "take",
+        "airplane",
+        "bus",
+        "train"
+    ],
+    "fireworks": [
+        "4th of july",
+        "independence day",
+        "sparkle",
+        "sky",
+        "disney"
+    ],
+    "polo": [
+        "shirt",
+        "sport",
+        "ball",
+        "horse",
+        "collar"
+    ],
+    "liver": [
+        "chopped",
+        "organ",
+        "body",
+        "drink",
+        "health"
+    ],
+    "born": [
+        "pregnant",
+        "hospital",
+        "nine months",
+        "time",
+        "date"
+    ],
+    "relative": [
+        "related",
+        "family",
+        "member",
+        "blood",
+        "cousin"
+    ],
+    "flying saucer": [
+        "ufo",
+        "alien",
+        "night",
+        "lights",
+        "space"
+    ],
+    "popeye's": [
+        "chicken",
+        "kfc",
+        "biscuit",
+        "olive oil",
+        "spinach"
+    ],
+    "streak": [
+        "win",
+        "nude",
+        "loss",
+        "chain",
+        "row"
+    ],
+    "grandson": [
+        "generation",
+        "kids",
+        "mom",
+        "children",
+        "parent"
+    ],
+    "ceiling": [
+        "roof",
+        "floor",
+        "ground",
+        "height",
+        "above"
+    ],
+    "flinstones": [
+        "barney rubble",
+        "fred",
+        "wilma",
+        "cartoon",
+        "old"
+    ],
+    "telescope": [
+        "view",
+        "see",
+        "space",
+        "solar",
+        "planet"
+    ],
+    "mars": [
+        "sun",
+        "system",
+        "space",
+        "earth",
+        "planet"
+    ],
+    "presentation": [
+        "powerpoint",
+        "show",
+        "display",
+        "review",
+        "oral"
+    ],
+    "yogurt": [
+        "dannon",
+        "culture",
+        "milk",
+        "dairy",
+        "food"
+    ],
+    "hip hop": [
+        "rap",
+        "music",
+        "slang",
+        "artist",
+        "kanye"
+    ],
+    "winter": [
+        "season",
+        "christmas",
+        "snow",
+        "december",
+        "cold"
+    ],
+    "skyscraper": [
+        "builing",
+        "tall",
+        "city",
+        "downtown",
+        "office"
+    ],
+    "fiction": [
+        "library",
+        "books",
+        "novel",
+        "story",
+        "section"
+    ],
+    "google": [
+        "yahoo",
+        "internet",
+        "search engine",
+        "gmail",
+        "public"
+    ],
+    "wire": [
+        "electric",
+        "plug",
+        "power",
+        "battery",
+        "computer"
+    ],
+    "prosecutor": [
+        "defendant",
+        "court",
+        "law",
+        "judge",
+        "attorney"
+    ],
+    "richie rich": [
+        "kid",
+        "money",
+        "child",
+        "wealthy",
+        "slide"
+    ],
+    "spray paint": [
+        "graffiti",
+        "vandalize",
+        "colors",
+        "wall",
+        "thug"
+    ],
+    "jeopardy": [
+        "alex trabek",
+        "game show",
+        "wheel of fortune",
+        "contestants",
+        "double"
+    ],
+    "carbohydrates": [
+        "nutrition",
+        "sugar",
+        "bread",
+        "beer",
+        "atkins"
+    ],
+    "portrait": [
+        "family",
+        "picture",
+        "frame",
+        "pose",
+        "photo"
+    ],
+    "fable": [
+        "story",
+        "moral",
+        "tale",
+        "point",
+        "short"
+    ],
+    "firetruck": [
+        "red",
+        "siren",
+        "emergency",
+        "hose",
+        "flame"
+    ],
+    "loser": [
+        "winner",
+        "sore",
+        "beck",
+        "baby",
+        "last"
+    ],
+    "illinois": [
+        "chicago",
+        "midwest",
+        "wisconsin",
+        "indiana",
+        "state"
+    ],
+    "mickey mouse": [
+        "orlando",
+        "donald duck",
+        "disney",
+        "character",
+        "magic"
+    ],
+    "central park": [
+        "zoo",
+        "new york",
+        "manhattan",
+        "middle",
+        "green"
+    ],
+    "discover": [
+        "look",
+        "see",
+        "find",
+        "columbus",
+        "explorer"
+    ],
+    "stop sign": [
+        "red",
+        "octagon",
+        "drive",
+        "car",
+        "intersection"
+    ],
+    "china": [
+        "beijing",
+        "yao ming",
+        "population",
+        "billion",
+        "asia"
+    ],
+    "steeple": [
+        "church",
+        "tall",
+        "cross",
+        "doors",
+        "tower"
+    ],
+    "volkswagen": [
+        "car",
+        "beetle",
+        "german",
+        "jetta",
+        "passat"
+    ],
+    "engagement": [
+        "propose",
+        "marriage",
+        "ring",
+        "wedding",
+        "boyfriend"
+    ],
+    "county": [
+        "city",
+        "state",
+        "district",
+        "local",
+        "map"
+    ],
+    "take-out": [
+        "order",
+        "restaurant",
+        "delivery",
+        "eat",
+        "dine"
+    ],
+    "surgery": [
+        "cut",
+        "body",
+        "hospital",
+        "perform",
+        "operation"
+    ],
+    "pregnant": [
+        "baby",
+        "kids",
+        "delivery",
+        "nine months",
+        "belly"
+    ],
+    "artifact": [
+        "stone",
+        "ancient",
+        "ground",
+        "bones",
+        "museum"
+    ],
+    "prison": [
+        "law",
+        "penalty",
+        "jail",
+        "illegal",
+        "bars"
+    ],
+    "math": [
+        "school",
+        "subject",
+        "numbers",
+        "reading",
+        "english"
+    ],
+    "bus stop": [
+        "kids",
+        "children",
+        "wait",
+        "yellow",
+        "school"
+    ],
+    "test": [
+        "cheat",
+        "school",
+        "quiz",
+        "study",
+        "exam"
+    ],
+    "pinky": [
+        "thumb",
+        "finger",
+        "hand",
+        "toe",
+        "ring"
+    ],
+    "wow": [
+        "exclamation",
+        "awesome",
+        "cool",
+        "surprised",
+        "look"
+    ],
+    "chipotle": [
+        "mexican",
+        "food",
+        "burritos",
+        "mcdonalds",
+        "recent"
+    ],
+    "seven oclock": [
+        "time",
+        "six",
+        "five",
+        "eight",
+        "four"
+    ],
+    "pressure": [
+        "nervous",
+        "sweat",
+        "heart",
+        "must",
+        "under"
+    ],
+    "mouthwash": [
+        "brush",
+        "rinse",
+        "teeth",
+        "dentist",
+        "cavity"
+    ],
+    "pretty": [
+        "woman",
+        "beautiful.",
+        "fair",
+        "looks",
+        "face"
+    ],
+    "credit card": [
+        "wallet",
+        "pay",
+        "cash",
+        "carry",
+        "purchase"
+    ],
+    "cardinal": [
+        "bird",
+        "red",
+        "chirp",
+        "spring",
+        "bishop"
+    ],
+    "legal": [
+        "law",
+        "against",
+        "allowed",
+        "okay",
+        "right"
+    ],
+    "las vegas": [
+        "casino",
+        "hotel",
+        "strip",
+        "playground",
+        "eiffel tower"
+    ],
+    "sprite": [
+        "coke",
+        "pop",
+        "drink",
+        "can",
+        "vending machine"
+    ],
+    "at least": [
+        "minimum",
+        "requirement",
+        "most",
+        "bare",
+        "time"
+    ],
+    "cereal": [
+        "bowl",
+        "eat",
+        "breakfast",
+        "morning",
+        "milk"
+    ],
+    "penalty": [
+        "illegal",
+        "punishment",
+        "offense",
+        "wrong",
+        "law"
+    ],
+    "logistics": [
+        "details",
+        "schedule",
+        "time",
+        "figure",
+        "decide"
+    ],
+    "clutch": [
+        "stick",
+        "gear",
+        "grab",
+        "shift",
+        "tight"
+    ],
+    "caught": [
+        "apprehended",
+        "snatch",
+        "ball",
+        "found",
+        "guilty"
+    ],
+    "removed": [
+        "away",
+        "take",
+        "grab",
+        "cousin",
+        "aunt"
+    ],
+    "shutes and ladders": [
+        "board",
+        "game",
+        "kids",
+        "monopoly",
+        "life"
+    ],
+    "interpret": [
+        "speech",
+        "language",
+        "person",
+        "help",
+        "understand"
+    ],
+    "barbecue": [
+        "grill",
+        "outdoor",
+        "backyard",
+        "weber",
+        "meat"
+    ],
+    "sound": [
+        "music",
+        "voice",
+        "hear",
+        "speech",
+        "ear"
+    ],
+    "grandmother": [
+        "generation",
+        "dad",
+        "mom",
+        "children",
+        "parent"
+    ],
+    "consumer": [
+        "user",
+        "product",
+        "customer",
+        "audience",
+        "brand"
+    ],
+    "temple": [
+        "worship",
+        "church",
+        "pray",
+        "peace",
+        "god"
+    ],
+    "great grandfather": [
+        "generation",
+        "dad",
+        "mom",
+        "children",
+        "parent"
+    ]
+}

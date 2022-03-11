@@ -1,1204 +1,843 @@
-[
+
   {
-    "word": "Dinosauro",
-    "forbidden": [
+     "Dinosauro":[
       "Grande",
       "Animale",
       "Estinto",
       "Molto tempo fa",
       "Rettile"
-    ]
-  },
-  {
-    "word": "Giappone",
-    "forbidden": [
+    ],
+     "Giappone":[
       "Paese",
       "Asia",
       "Fiore di ciliegio",
       "Sushi",
       "Tokyo"
-    ]
-  },
-  {
-    "word": "New York",
-    "forbidden": [
+    ],
+     "New York":[
       "Citt\u00e0",
       "America",
       "Grande Mela",
       "Statua della Libert\u00e0",
       "Manhattan"
-    ]
-  },
-  {
-    "word": "Shanghai",
-    "forbidden": [
+    ],
+     "Shanghai":[
       "Moderno",
       "Grande",
       "Cina",
       "Expo",
       "Famoso"
-    ]
-  },
-  {
-    "word": "Michael Jackson",
-    "forbidden": [
+    ],
+     "Michael Jackson":[
       "Ballo",
       "Thriller",
       "Strano",
       "Famoso",
       "Cantante"
-    ]
-  },
-  {
-    "word": "Panca",
-    "forbidden": [
+    ],
+     "Panca":[
       "Sedere",
       "Di legno",
       "Sedia",
       "Lungo",
       "Parco"
-    ]
-  },
-  {
-    "word": "Gelato",
-    "forbidden": [
+    ],
+     "Gelato":[
       "Freddo",
       "Estate",
       "Dolce",
       "Spuntino",
       "Cono"
-    ]
-  },
-  {
-    "word": "Straniero",
-    "forbidden": [
+    ],
+     "Straniero":[
       "Insegnante",
       "Differente",
       "Fuori",
       "Paese",
       "Viaggio"
-    ]
-  },
-  {
-    "word": "Stivali",
-    "forbidden": [
+    ],
+     "Stivali":[
       "Inverno",
       "Scarpe",
       "Caldo",
       "Moda",
       "Neve"
-    ]
-  },
-  {
-    "word": "biglietto aereo",
-    "forbidden": [
+    ],
+     "biglietto aereo":[
       "Caro",
       "Volo",
       "Viaggio",
       "Carta",
       "Posto a sedere"
-    ]
-  },
-  {
-    "word": "Turchia",
-    "forbidden": [
+    ],
+     "Turchia":[
       "uccello",
       "Giorno festivo",
       "ringraziamento",
       "Grande",
       "Stanco"
-    ]
-  },
-  {
-    "word": "Salsa di soia",
-    "forbidden": [
+    ],
+     "Salsa di soia":[
       "Cinese",
       "Liquido",
       "Marrone",
       "Cottura",
       "Salato"
-    ]
-  },
-  {
-    "word": "Insegnante di Yoga",
-    "forbidden": [
+    ],
+     "Insegnante di Yoga":[
       "Esercizio",
       "Istruttore",
       "Padrone",
       "Cinese",
       "Guida"
-    ]
-  },
-  {
-    "word": "Portare",
-    "forbidden": [
+    ],
+     "Portare":[
       "Tenere",
       "Ritiro",
       "Sposta",
       "Trasporto",
       "Appoggiare"
-    ]
-  },
-  {
-    "word": "Bocciolo",
-    "forbidden": [
+    ],
+     "Bocciolo":[
       "Fiore",
       "Giovane",
       "Germoglio",
       "Primavera",
       "Fiore"
-    ]
-  },
-  {
-    "word": "Scopa",
-    "forbidden": [
+    ],
+     "Scopa":[
       "Spazzare",
       "Pavimento",
       "Strega",
       "Di legno",
       "Polvere"
-    ]
-  },
-  {
-    "word": "Parata",
-    "forbidden": [
+    ],
+     "Parata":[
       "Linea",
       "Folla",
       "Galleggianti",
       "Raccogliere",
       "Giorno festivo"
-    ]
-  },
-  {
-    "word": "Moda",
-    "forbidden": [
+    ],
+     "Moda":[
       "Vestiti",
       "Modello",
       "Ragazze",
       "Guardare",
       "Rivista"
-    ]
-  },
-  {
-    "word": "Abito da sposa",
-    "forbidden": [
+    ],
+     "Abito da sposa":[
       "Bianco",
       "sposato",
       "Vestiti",
       "SPECIALE",
       "Ragazze"
-    ]
-  },
-  {
-    "word": "Kung Fu Panda",
-    "forbidden": [
+    ],
+     "Kung Fu Panda":[
       "Film",
       "Cina",
       "Pasta",
       "Bambini",
       "famoso"
-    ]
-  },
-  {
-    "word": "Marcatore",
-    "forbidden": [
+    ],
+     "Marcatore":[
       "Scrivere",
       "Disegnare",
       "Colori",
       "Bambini",
       "Arte"
-    ]
-  },
-  {
-    "word": "Pattumiera",
-    "forbidden": [
+    ],
+     "Pattumiera":[
       "Spazzatura",
       "Barile",
       "Senza valore",
       "Rovina",
       "Vecchio"
-    ]
-  },
-  {
-    "word": "Pupazzo di neve",
-    "forbidden": [
+    ],
+     "Pupazzo di neve":[
       "Tre",
       "Bambini",
       "Fare",
       "Inverno",
       "Fuori"
-    ]
-  },
-  {
-    "word": "Ali",
-    "forbidden": [
+    ],
+     "Ali":[
       "Uccello",
       "Pollo",
       "Volare",
       "Arme",
       "Piume"
-    ]
-  },
-  {
-    "word": "Gelosia",
-    "forbidden": [
+    ],
+     "Gelosia":[
       "Invidia",
       "Emozione",
       "Confrontare",
       "Verde",
       "Raggiungere"
-    ]
-  },
-  {
-    "word": "Pilota",
-    "forbidden": [
+    ],
+     "Pilota":[
       "Volare",
       "Aereo",
       "Elicottero",
       "Uno",
       "Viaggio"
-    ]
-  },
-  {
-    "word": "Avvocato",
-    "forbidden": [
+    ],
+     "Avvocato":[
       "Argomentare",
       "Difendere",
       "Legge",
       "Cliente",
       "Crimine"
-    ]
-  },
-  {
-    "word": "Parrucchiere",
-    "forbidden": [
+    ],
+     "Parrucchiere":[
       "Stile",
       "Tingere",
       "Lavare",
       "Tagliare",
       "Barbiere"
-    ]
-  },
-  {
-    "word": "Cornice per immagini",
-    "forbidden": [
+    ],
+     "Cornice per immagini":[
       "Foto",
       "Memoria",
       "Legno",
       "Vetro",
       "Casa"
-    ]
-  },
-  {
-    "word": "Borsa",
-    "forbidden": [
+    ],
+     "Borsa":[
       "Cuoio",
       "Sacco",
       "Denaro",
       "Donna",
       "Portare"
-    ]
-  },
-  {
-    "word": "Trucco",
-    "forbidden": [
+    ],
+     "Trucco":[
       "Faccia",
       "Mascara",
       "Rossetto",
       "Ragazze",
       "Bello"
-    ]
-  },
-  {
-    "word": "Alligatore",
-    "forbidden": [
+    ],
+     "Alligatore":[
       "Coccodrillo",
       "Florida",
       "Verde",
       "Animale",
       "Denti"
-    ]
-  },
-  {
-    "word": "Preoccuparsi",
-    "forbidden": [
+    ],
+     "Preoccuparsi":[
       "Nervoso",
       "Ansia",
       "Stress",
       "Spaventato",
       "Guaio"
-    ]
-  },
-  {
-    "word": "Alce",
-    "forbidden": [
+    ],
+     "Alce":[
       "Animale",
       "Mammifero",
       "Foresta",
       "Corna",
       "Caccia"
-    ]
-  },
-  {
-    "word": "Ponte",
-    "forbidden": [
+    ],
+     "Ponte":[
       "Croce",
       "Fiume",
       "Costruire",
       "Sopra",
       "Connettersi"
-    ]
-  },
-  {
-    "word": "Nervoso",
-    "forbidden": [
+    ],
+     "Nervoso":[
       "Ansioso",
       "Test",
       "Difficolt\u00e0",
       "Pressione",
       "Spaventato"
-    ]
-  },
-  {
-    "word": "Cammello",
-    "forbidden": [
+    ],
+     "Cammello":[
       "Gobbe",
       "Deserto",
       "Animale",
       "Acqua",
       "Sigaretta"
-    ]
-  },
-  {
-    "word": "Licenza",
-    "forbidden": [
+    ],
+     "Licenza":[
       "Autista",
       "Auto",
       "Scheda",
       "Permettere",
       "Permettere"
-    ]
-  },
-  {
-    "word": "Libert\u00e0",
-    "forbidden": [
+    ],
+     "Libert\u00e0":[
       "Libert\u00e0",
       "Statua",
       "Potenza",
       "Scegliere",
       "Decidere"
-    ]
-  },
-  {
-    "word": "Gridare",
-    "forbidden": [
+    ],
+     "Gridare":[
       "Grido",
       "Forte",
       "Parlare",
       "Arrabbiato",
       "Pericolo"
-    ]
-  },
-  {
-    "word": "Mostro",
-    "forbidden": [
+    ],
+     "Mostro":[
       "Spaventoso",
       "Verde",
       "Straniero",
       "Zombi",
       "Creare"
-    ]
-  },
-  {
-    "word": "Sedia a rotelle",
-    "forbidden": [
+    ],
+     "Sedia a rotelle":[
       "Storpio",
       "Handicappato",
       "Gambe",
       "Vecchio",
       "Anziano"
-    ]
-  },
-  {
-    "word": "Tornado",
-    "forbidden": [
+    ],
+     "Tornado":[
       "Tempesta",
       "Dorothy",
       "Vortice",
       "Vento",
       "Esplosione"
-    ]
-  },
-  {
-    "word": "Guanto",
-    "forbidden": [
+    ],
+     "Guanto":[
       "Mano",
       "Freddo",
       "Inverno",
       "Monouso",
       "Nel mezzo"
-    ]
-  },
-  {
-    "word": "Esame",
-    "forbidden": [
+    ],
+     "Esame":[
       "Test",
       "Esame",
       "Met\u00e0",
       "Finale",
       "Scuola"
-    ]
-  },
-  {
-    "word": "Margherita",
-    "forbidden": [
+    ],
+     "Margherita":[
       "Bianco",
       "Giallo",
       "Fiore",
       "Anatra",
       "Campo"
-    ]
-  },
-  {
-    "word": "Sipario",
-    "forbidden": [
+    ],
+     "Sipario":[
       "Rosso",
       "Finestra",
       "Leggero",
       "Stoffa",
       "Giocare"
-    ]
-  },
-  {
-    "word": "Petardo",
-    "forbidden": [
+    ],
+     "Petardo":[
       "Esplodere",
       "Forte",
       "Rosso",
       "Leggero",
       "Giorno festivo"
-    ]
-  },
-  {
-    "word": "Scimmia",
-    "forbidden": [
+    ],
+     "Scimmia":[
       "Altalena",
       "Banana",
       "Zoo",
       "Marrone",
       "Animale"
-    ]
-  },
-  {
-    "word": "Pescecane",
-    "forbidden": [
+    ],
+     "Pescecane":[
       "Nuotare",
       "Denti",
       "Pericoloso",
       "Oceano",
       "Mare"
-    ]
-  },
-  {
-    "word": "Rotolo di uova",
-    "forbidden": [
+    ],
+     "Rotolo di uova":[
       "Primavera",
       "Ortaggio",
       "Rotondo",
       "Cina",
       "Cibo"
-    ]
-  },
-  {
-    "word": "Mal di testa",
-    "forbidden": [
+    ],
+     "Mal di testa":[
       "Libbra",
       "Picchiare",
       "Medicina",
       "Malato",
       "Fretta"
-    ]
-  },
-  {
-    "word": "Prigioniero",
-    "forbidden": [
+    ],
+     "Prigioniero":[
       "prigione",
       "Condannare",
       "Assassinare",
       "Crimine",
       "cattivo"
-    ]
-  },
-  {
-    "word": "Bruco",
-    "forbidden": [
+    ],
+     "Bruco":[
       "Strisciare",
       "Insetto",
       "Gambe",
       "Albero",
       "Farfalla"
-    ]
-  },
-  {
-    "word": "Parigi",
-    "forbidden": [
+    ],
+     "Parigi":[
       "Romanzo",
       "Compere",
       "Eiffel",
       "Torre",
       "Francese"
-    ]
-  },
-  {
-    "word": "Studente di scambio",
-    "forbidden": [
+    ],
+     "Studente di scambio":[
       "Viaggio",
       "Studiare",
       "All\u2019estero",
       "Esperienza",
       "Straniero"
-    ]
-  },
-  {
-    "word": "Studente di Londra",
-    "forbidden": [
+    ],
+     "Studente di Londra":[
       "Big Ben",
       "Inghilterra",
       "Europa",
       "Capitale",
       "Regno Unito"
-    ]
-  },
-  {
-    "word": "Spazzolino",
-    "forbidden": [
+    ],
+     "Spazzolino":[
       "Denti",
       "Incollare",
       "Pulito",
       "Igiene",
       "Strofinare"
-    ]
-  },
-  {
-    "word": "Chimica",
-    "forbidden": [
+    ],
+     "Chimica":[
       "Fisica",
       "Prodotti chimici",
       "Scuola",
       "Scienza",
       "Oggetto"
-    ]
-  },
-  {
-    "word": "Ricettario",
-    "forbidden": [
+    ],
+     "Ricettario":[
       "Cibo",
       "Come cucinare",
       "Manuale",
       "Guida"
-    ]
-  },
-  {
-    "word": "Fiaba",
-    "forbidden": [
+    ],
+     "Fiaba":[
       "Principe",
       "Principessa",
       "Magia",
       "Regina",
       "Storia"
-    ]
-  },
-  {
-    "word": "Letteratura",
-    "forbidden": [
+    ],
+     "Letteratura":[
       "Fabbrica",
       "Americano",
       "Britannico",
       "Libri",
       "Scritto"
-    ]
-  },
-  {
-    "word": "Globo",
-    "forbidden": [
+    ],
+     "Globo":[
       "Terra",
       "Mondo",
       "Modello",
       "Geografia",
       "Oceani"
-    ]
-  },
-  {
-    "word": "Pacifico",
-    "forbidden": [
+    ],
+     "Pacifico":[
       "Armonia",
       "Calmo",
       "Tranquillo",
       "Calmo",
       "Violento"
-    ]
-  },
-  {
-    "word": "Ingiusto",
-    "forbidden": [
+    ],
+     "Ingiusto":[
       "Ingiusto",
       "Fiera",
       "Uguale",
       "Proprio",
       "Irragionevole"
-    ]
-  },
-  {
-    "word": "Normale",
-    "forbidden": [
+    ],
+     "Normale":[
       "Strano",
       "Standard",
       "Tipico",
       "Status quo",
       "Strano"
-    ]
-  },
-  {
-    "word": "Originale",
-    "forbidden": [
+    ],
+     "Originale":[
       "Primo",
       "Unico",
       "Speciale",
       "Standard",
       "Presto"
-    ]
-  },
-  {
-    "word": "Biologia",
-    "forbidden": [
+    ],
+     "Biologia":[
       "Scienza",
       "Oggetto",
       "Vita",
       "Scuola",
       "Chimica"
-    ]
-  },
-  {
-    "word": "Parsimonioso",
-    "forbidden": [
+    ],
+     "Parsimonioso":[
       "economico",
       "spendere",
       "denaro",
       "avaro",
       "economico"
-    ]
-  },
-  {
-    "word": "Tragedia",
-    "forbidden": [
+    ],
+     "Tragedia":[
       "terribile",
       "triste",
       "vittima",
       "disastro",
       "catastrofe"
-    ]
-  },
-  {
-    "word": "accusa",
-    "forbidden": [
+    ],
+     "accusa":[
       "onorario",
       "denaro",
       "transazione",
       "banca",
       "bolletta"
-    ]
-  },
-  {
-    "word": "vendere",
-    "forbidden": [
+    ],
+     "vendere":[
       "prodotto",
       "servizio",
       "comprare",
       "negozio",
       "mercato"
-    ]
-  },
-  {
-    "word": "debito",
-    "forbidden": [
+    ],
+     "debito":[
       "denaro",
       "dovere",
       "prestito",
       "prestare",
       "bolletta"
-    ]
-  },
-  {
-    "word": "crescita",
-    "forbidden": [
+    ],
+     "crescita":[
       "espandere",
       "aumento",
       "successo",
       "maggiore",
       "progresso"
-    ]
-  },
-  {
-    "word": "concorrente",
-    "forbidden": [
+    ],
+     "concorrente":[
       "stesso",
       "prodotto",
       "vantaggio",
       "mercato",
       "rivale"
-    ]
-  },
-  {
-    "word": "vendite",
-    "forbidden": [
+    ],
+     "vendite":[
       "convincere",
       "prodotto",
       "comprare",
       "negoziare",
       "Vendita"
-    ]
-  },
-  {
-    "word": "alzare",
-    "forbidden": [
+    ],
+     "alzare":[
       "stipendio",
       "salario",
       "Prestazione",
       "prezzo",
       "aumento"
-    ]
-  },
-  {
-    "word": "mercato",
-    "forbidden": [
+    ],
+     "mercato":[
       "compratore",
       "bersaglio",
       "settore",
       "demografico",
       "commercio"
-    ]
-  },
-  {
-    "word": "convincere",
-    "forbidden": [
+    ],
+     "convincere":[
       "persuadere",
       "credere",
       "volere",
       "parla in",
       "soddisfare"
-    ]
-  },
-  {
-    "word": "datore di lavoro",
-    "forbidden": [
+    ],
+     "datore di lavoro":[
       "impiegato",
       "capo",
       "stipendio",
       "Azienda",
       "capo"
-    ]
-  },
-  {
-    "word": "margine",
-    "forbidden": [
+    ],
+     "margine":[
       "profitto",
       "ricarico",
       "prezzo",
       "costo",
       "limite"
-    ]
-  },
-  {
-    "word": "perdita",
-    "forbidden": [
+    ],
+     "perdita":[
       "profitto",
       "debito",
       "deficit",
       "denaro",
       "privazione"
-    ]
-  },
-  {
-    "word": "sostituzione",
-    "forbidden": [
+    ],
+     "sostituzione":[
       "tasso",
       "commercio",
       "ritorno",
       "compratore",
       "interruttore"
-    ]
-  },
-  {
-    "word": "suggerire",
-    "forbidden": [
+    ],
+     "suggerire":[
       "Consigliato",
       "considerare",
       "parere",
       "miglioramento",
       "Offre"
-    ]
-  },
-  {
-    "word": "incoraggiare",
-    "forbidden": [
+    ],
+     "incoraggiare":[
       "motivare",
       "ispirare",
       "appoggiare",
       "direttore",
       "stimolare"
-    ]
-  },
-  {
-    "word": "profitto",
-    "forbidden": [
+    ],
+     "profitto":[
       "perdita",
       "ricavo",
       "spese",
       "denaro",
       "beneficio"
-    ]
-  },
-  {
-    "word": "domanda e offerta",
-    "forbidden": [
+    ],
+     "domanda e offerta":[
       "quantit\u00e0",
       "compratore",
       "prodotto",
       "economia",
       "venditore"
-    ]
-  },
-  {
-    "word": "Valutazione",
-    "forbidden": [
+    ],
+     "Valutazione":[
       "direttore",
       "sondaggio",
       "Positivo",
       "Negativo",
       "recensione"
-    ]
-  },
-  {
-    "word": "prestare",
-    "forbidden": [
+    ],
+     "prestare":[
       "prestare",
       "interesse",
       "prestito",
       "denaro",
       "usare"
-    ]
-  },
-  {
-    "word": "rifiutare",
-    "forbidden": [
+    ],
+     "rifiutare":[
       "No",
       "rigettare",
       "negare",
       "accettare",
       "declinare"
-    ]
-  },
-  {
-    "word": "prestare",
-    "forbidden": [
+    ],
+     "prestare":[
       "prestare",
       "banca",
       "ritorno",
       "interesse",
       "dare"
-    ]
-  },
-  {
-    "word": "nuotare",
-    "forbidden": [
+    ],
+     "nuotare":[
       "spiaggia",
       "Acqua",
       "Costume",
       "esercizio",
       "subacqueo"
-    ]
-  },
-  {
-    "word": "formaggio",
-    "forbidden": [
+    ],
+     "formaggio":[
       "latte",
       "bianco",
       "pizza",
       "sandwich"
-    ]
-  },
-  {
-    "word": "vacanza",
-    "forbidden": [
+    ],
+     "vacanza":[
       "viaggio",
       "lavoro",
       "viaggio",
       "spiaggia",
       "giorno festivo"
-    ]
-  },
-  {
-    "word": "tempo",
-    "forbidden": [
+    ],
+     "tempo":[
       "pioggia",
       "neve",
       "sole",
       "previsione",
       "clima"
-    ]
-  },
-  {
-    "word": "frigorifero",
-    "forbidden": [
+    ],
+     "frigorifero":[
       "cibo",
       "cucina",
       "freddo",
       "congelatore",
       "frigorifero"
-    ]
-  },
-  {
-    "word": "intelligente",
-    "forbidden": [
+    ],
+     "intelligente":[
       "intelligente",
       "secchione",
       "cervello",
       "conoscenza",
       "elegante"
-    ]
-  },
-  {
-    "word": "professore",
-    "forbidden": [
+    ],
+     "professore":[
       "insegnante",
       "universit\u00e0",
       "studenti",
       "classe",
       "persona"
-    ]
-  },
-  {
-    "word": "fattura",
-    "forbidden": [
+    ],
+     "fattura":[
       "compratore",
       "venditore",
       "pagamento",
       "documento",
       "conto"
-    ]
-  },
-  {
-    "word": "rimborso",
-    "forbidden": [
+    ],
+     "rimborso":[
       "ritorno",
       "restituire",
       "pagare",
       "lamentarsi",
       "rimborso"
-    ]
-  },
-  {
-    "word": "inventario",
-    "forbidden": [
+    ],
+     "inventario":[
       "fornitura",
       "merce",
       "contare",
       "quantit\u00e0",
       "lista"
-    ]
-  },
-  {
-    "word": "interesse",
-    "forbidden": [
+    ],
+     "interesse":[
       "profitto",
       "onorario",
       "investimento",
       "tasso",
       "curiosit\u00e0"
-    ]
-  },
-  {
-    "word": "dipartimento",
-    "forbidden": [
+    ],
+     "dipartimento":[
       "divisione",
       "organizzazione",
       "vendite",
       "Risorse umane",
       "ufficio"
-    ]
-  },
-  {
-    "word": "bilancio",
-    "forbidden": [
+    ],
+     "bilancio":[
       "denaro",
       "piano",
       "spendere",
       "periodo",
       "economia"
-    ]
-  },
-  {
-    "word": "scadenza",
-    "forbidden": [
+    ],
+     "scadenza":[
       "Invia",
       "finire",
       "estensione",
       "compito",
       "limite di tempo"
-    ]
-  },
-  {
-    "word": "produzione",
-    "forbidden": [
+    ],
+     "produzione":[
       "fabbrica",
       "pianta",
       "merce",
       "materiali",
       "fabbricare"
-    ]
-  },
-  {
-    "word": "ceppo",
-    "forbidden": [
+    ],
+     "ceppo":[
       "legame",
       "corporazione",
       "Condividi",
       "mercato",
       "patrimonio"
-    ]
-  },
-  {
-    "word": "legame",
-    "forbidden": [
+    ],
+     "legame":[
       "investimento",
       "Tesoreria",
       "ceppo",
       "prestito",
       "corporazione"
-    ]
-  },
-  {
-    "word": "azionista",
-    "forbidden": [
+    ],
+     "azionista":[
       "azionista",
       "proprietario",
       "corporazione",
       "redditiere",
       "scorte"
-    ]
-  },
-  {
-    "word": "Commercio al dettaglio",
-    "forbidden": [
+    ],
+     "Commercio al dettaglio":[
       "Walmart \u00b7",
       "Centro commerciale",
       "consumatore",
       "beni e servizi",
       "Amazzone"
-    ]
-  },
-  {
-    "word": "reclamo",
-    "forbidden": [
+    ],
+     "reclamo":[
       "servizio clienti",
       "problema",
       "infelice",
       "Inaccettabile",
       "call center"
-    ]
-  },
-  {
-    "word": "garantire",
-    "forbidden": [
+    ],
+     "garantire":[
       "Assicura",
       "problema",
       "difettoso",
       "documento",
       "scadenza"
-    ]
-  },
-  {
-    "word": "cliente",
-    "forbidden": [
+    ],
+     "cliente":[
       "cliente",
       "servizi",
       "professionale",
       "avvocato",
       "compratore"
-    ]
-  },
-  {
-    "word": "transazione",
-    "forbidden": [
+    ],
+     "transazione":[
       "affare",
       "denaro",
       "vendita",
       "prodotto",
       "azione"
-    ]
-  },
-  {
-    "word": "investire",
-    "forbidden": [
+    ],
+     "investire":[
       "denaro",
       "profitto",
       "ceppo",
       "beni immobili",
       "spendere"
-    ]
-  },
-  {
-    "word": "tasso di cambio",
-    "forbidden": [
+    ],
+     "tasso di cambio":[
       "valuta",
       "dollaro",
       "Euro",
       "prezzo",
       "Monete"
-    ]
-  },
-  {
-    "word": "valuta",
-    "forbidden": [
+    ],
+     "valuta":[
       "denaro",
       "Euro",
       "dollaro",
       "tasso di cambio",
       "Monete"
-    ]
-  },
-  {
-    "word": "consenso",
-    "forbidden": [
+    ],
+     "consenso":[
       "accordo",
       "ciascuno",
       "votare",
       "gruppo"
-    ]
-  },
-  {
-    "word": "teleconferenza",
-    "forbidden": [
+    ],
+     "teleconferenza":[
       "riunione",
       "cliente",
       "presentazione",
       "ascoltare",
       "lavoro"
-    ]
-  },
-  {
-    "word": "orso",
-    "forbidden": [
+    ],
+     "orso":[
       "bosco",
       "marrone",
       "nero",
       "animale",
       "Mammalia"
-    ]
-  },
-  {
-    "word": "Importati",
-    "forbidden": [
+    ],
+     "Importati":[
       "Esportato",
       "straniero",
       "caro",
@@ -1206,4 +845,3 @@
       "cliente"
     ]
   }
-]

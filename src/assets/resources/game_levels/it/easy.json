@@ -1,1264 +1,885 @@
-[
+
   {
-    "word": "Auto",
-    "forbidden": [
+     "Auto":[
       "autista",
       "cavalcare",
       "trasporto",
       "quasi",
       "viaggio"
-    ]
-  },
-  {
-    "word": "Libellula",
-    "forbidden": [
+    ],
+     "Libellula":[
       "rosso",
       "Ali",
       "Insetto",
       "Volare",
       "drago"
-    ]
-  },
-  {
-    "word": "Fiocco",
-    "forbidden": [
+    ],
+     "Fiocco":[
       "freddo",
       "inverno",
       "fiore",
       "neve",
       "cadere"
-    ]
-  },
-  {
-    "word": "Affamato",
-    "forbidden": [
+    ],
+     "Affamato":[
       "sentimento",
       "mangiare",
       "cibo",
       "colazione",
       "pasto"
-    ]
-  },
-  {
-    "word": "Anatra",
-    "forbidden": [
+    ],
+     "Anatra":[
       "uccello",
       "giallo",
       "pollo",
       "ciarlatano",
       "cibo"
-    ]
-  },
-  {
-    "word": "Guanciale",
-    "forbidden": [
+    ],
+     "Guanciale":[
       "testa",
       "dormire",
       "morbido",
       "letto",
       "coperta"
-    ]
-  },
-  {
-    "word": "Ballo",
-    "forbidden": [
+    ],
+     "Ballo":[
       "Scarpe",
       "Romantico",
       "Musica",
       "Cantare",
       "Piazza"
-    ]
-  },
-  {
-    "word": "Coperta",
-    "forbidden": [
+    ],
+     "Coperta":[
       "Caldo",
       "Letto",
       "Guanciale",
       "Morbido",
       "Freddo"
-    ]
-  },
-  {
-    "word": "Calcio",
-    "forbidden": [
+    ],
+     "Calcio":[
       "Palla",
       "coppa del mondo",
       "Nero",
       "Sport",
       "Squadra"
-    ]
-  },
-  {
-    "word": "Formaggio",
-    "forbidden": [
+    ],
+     "Formaggio":[
       "Giallo",
       "Bianco",
       "Pizza",
       "Cibo",
       "Italia"
-    ]
-  },
-  {
-    "word": "Lumaca",
-    "forbidden": [
+    ],
+     "Lumaca":[
       "Rotondo",
       "Lento",
       "Fiume",
       "Mangiare",
       "Animale"
-    ]
-  },
-  {
-    "word": "Marito",
-    "forbidden": [
+    ],
+     "Marito":[
       "Moglie",
       "Anello",
       "Sposare",
       "Uno",
       "Amico"
-    ]
-  },
-  {
-    "word": "Biancheria intima",
-    "forbidden": [
+    ],
+     "Biancheria intima":[
       "Piccolo",
       "Abbigliamento",
       "Ogni giorno",
       "Segreto",
       "Sotto"
-    ]
-  },
-  {
-    "word": "Fidanzata",
-    "forbidden": [
+    ],
+     "Fidanzata":[
       "Fidanzato",
       "Bello",
       "Fiori",
       "Dattero",
       "Femmina"
-    ]
-  },
-  {
-    "word": "Giraffa",
-    "forbidden": [
+    ],
+     "Giraffa":[
       "Alto",
       "Africa",
       "Collo",
       "Lungo",
       "Giallo"
-    ]
-  },
-  {
-    "word": "Macchina fotografica",
-    "forbidden": [
+    ],
+     "Macchina fotografica":[
       "Foto",
       "Immagini",
       "Istantanea",
       "Viaggio",
       "Ricordi"
-    ]
-  },
-  {
-    "word": "Pantofole",
-    "forbidden": [
+    ],
+     "Pantofole":[
       "Caldo",
       "Piedi",
       "Inverno",
       "Casa",
       "Morbido"
-    ]
-  },
-  {
-    "word": "Pettine",
-    "forbidden": [
+    ],
+     "Pettine":[
       "Spazzola",
       "Capello",
       "Liscio",
       "Piccolo",
       "Bello"
-    ]
-  },
-  {
-    "word": "Hamburger",
-    "forbidden": [
+    ],
+     "Hamburger":[
       "America",
       "Manzo",
       "Pane",
       "McDonald's",
       "Malsano"
-    ]
-  },
-  {
-    "word": "Orso polare",
-    "forbidden": [
+    ],
+     "Orso polare":[
       "freddo",
       "Inverno",
       "Alaska",
       "Bianco",
       "Neve"
-    ]
-  },
-  {
-    "word": "Pinguino",
-    "forbidden": [
+    ],
+     "Pinguino":[
       "Uccello",
       "Volare",
       "Animale",
       "Nero",
       "Bianco"
-    ]
-  },
-  {
-    "word": "Occhiali",
-    "forbidden": [
+    ],
+     "Occhiali":[
       "Occhi",
       "Vedere",
       "Contatti",
       "Portare",
       "Faccia"
-    ]
-  },
-  {
-    "word": "Popcorn",
-    "forbidden": [
+    ],
+     "Popcorn":[
       "Chicco",
       "Burro",
       "Dolce",
       "Microonde",
       "Snack Food"
-    ]
-  },
-  {
-    "word": "Discorso",
-    "forbidden": [
+    ],
+     "Discorso":[
       "Dare",
       "Parlare",
       "Importante",
       "Pubblico",
       "Nervoso"
-    ]
-  },
-  {
-    "word": "Furioso",
-    "forbidden": [
+    ],
+     "Furioso":[
       "Arrabbiato",
       "Faccia Rossa",
       "Ferire",
       "Rabbia",
       "Violento"
-    ]
-  },
-  {
-    "word": "Coscia di pollo",
-    "forbidden": [
+    ],
+     "Coscia di pollo":[
       "Uccello",
       "Corpo",
       "Mangiare",
       "Cibo",
       "KFC \u00b7"
-    ]
-  },
-  {
-    "word": "Gabinetto",
-    "forbidden": [
+    ],
+     "Gabinetto":[
       "Bagno",
       "GABINETTO",
       "Pip\u00ec",
       "Cacca",
       "Stanza da bagno"
-    ]
-  },
-  {
-    "word": "Desiderio",
-    "forbidden": [
+    ],
+     "Desiderio":[
       "Volere",
       "Desiderio",
       "Speranza",
       "Sogno",
       "Vagheggiare"
-    ]
-  },
-  {
-    "word": "Esercizio",
-    "forbidden": [
+    ],
+     "Esercizio":[
       "Volere",
       "Sogno",
       "Vagheggiare",
       "Correre",
       "Sportivo"
-    ]
-  },
-  {
-    "word": "Corona",
-    "forbidden": [
+    ],
+     "Corona":[
       "Testa",
       "Oro",
       "Re",
       "Regina",
       "Gioielli"
-    ]
-  },
-  {
-    "word": "Principessa",
-    "forbidden": [
+    ],
+     "Principessa":[
       "Principe",
       "Regina",
       "Figlia",
       "Regale",
       "Castello"
-    ]
-  },
-  {
-    "word": "Internet",
-    "forbidden": [
+    ],
+     "Internet":[
       "Computer",
       "Fare surf",
       "Ragnatela",
       "Rete",
       "Tecnologia"
-    ]
-  },
-  {
-    "word": "Giacca",
-    "forbidden": [
+    ],
+     "Giacca":[
       "Cappotto",
       "Caldo",
       "Vestiti",
       "Maniche lunghe",
       "Chiusura lampo"
-    ]
-  },
-  {
-    "word": "Doccia",
-    "forbidden": [
+    ],
+     "Doccia":[
       "Pioggia",
       "Pulito",
       "Acqua",
       "Ogni giorno",
       "Bagno"
-    ]
-  },
-  {
-    "word": "Vento",
-    "forbidden": [
+    ],
+     "Vento":[
       "Esplosione",
       "Autunno",
       "Invisibile",
       "Alberi",
       "Aquilone"
-    ]
-  },
-  {
-    "word": "Chiesa",
-    "forbidden": [
+    ],
+     "Chiesa":[
       "Cantare",
       "Edificio",
       "Croce",
       "Dio",
       "Altoparlante"
-    ]
-  },
-  {
-    "word": "Polizia",
-    "forbidden": [
+    ],
+     "Polizia":[
       "Uniforme",
       "Sicurezza",
       "Pace",
       "Proteggere",
       "Sirena"
-    ]
-  },
-  {
-    "word": "Congelatore",
-    "forbidden": [
+    ],
+     "Congelatore":[
       "Freddo",
       "Frigorifero",
       "Ghiaccio",
       "Cibo",
       "Cucina"
-    ]
-  },
-  {
-    "word": "Paglia",
-    "forbidden": [
+    ],
+     "Paglia":[
       "Cava",
       "Cavalli",
       "Fattoria",
       "Bere",
       "Succhiare"
-    ]
-  },
-  {
-    "word": "Foglia",
-    "forbidden": [
+    ],
+     "Foglia":[
       "Albero",
       "Verde",
       "Cadere",
       "Pianta",
       "Sezione"
-    ]
-  },
-  {
-    "word": "Sostantivo",
-    "forbidden": [
+    ],
+     "Sostantivo":[
       "Verbo",
       "Discorso",
       "Aggettivo",
       "PERSONA",
       "Luogo"
-    ]
-  },
-  {
-    "word": "Taxi",
-    "forbidden": [
+    ],
+     "Taxi":[
       "Auto",
       "Pubblico",
       "Trasporto",
       "Fare",
       "Citt\u00e0"
-    ]
-  },
-  {
-    "word": "Strega",
-    "forbidden": [
+    ],
+     "Strega":[
       "Scopa",
       "Verde",
       "Magia",
       "Halloween",
       "Poteri"
-    ]
-  },
-  {
-    "word": "Forchetta",
-    "forbidden": [
+    ],
+     "Forchetta":[
       "Cucchiaio",
       "Coltello",
       "Mangiare",
       "Rebbi",
       "Dividere"
-    ]
-  },
-  {
-    "word": "Cibo",
-    "forbidden": [
+    ],
+     "Cibo":[
       "mangiare",
       "bocca",
       "affamato",
       "pieno",
       "delizioso"
-    ]
-  },
-  {
-    "word": "Musica",
-    "forbidden": [
+    ],
+     "Musica":[
       "ascoltare",
       "canzone",
       "strumento",
       "giocare",
       "sentire"
-    ]
-  },
-  {
-    "word": "Pesce",
-    "forbidden": [
+    ],
+     "Pesce":[
       "nuotare",
       "cibo",
       "oceano",
       "lago",
       "fiume"
-    ]
-  },
-  {
-    "word": "Fisica",
-    "forbidden": [
+    ],
+     "Fisica":[
       "Studiare",
       "scienza",
       "gravit\u00e0",
       "forza",
       "Sposta"
-    ]
-  },
-  {
-    "word": "Giava",
-    "forbidden": [
+    ],
+     "Giava":[
       "caff\u00e8",
       "Lingua",
       "bere",
       "oracolo",
       "caldo"
-    ]
-  },
-  {
-    "word": "Denaro",
-    "forbidden": [
+    ],
+     "Denaro":[
       "ricchezza",
       "lavoro",
       "pagare",
       "comprare",
       "vendere"
-    ]
-  },
-  {
-    "word": "Schioppo",
-    "forbidden": [
+    ],
+     "Schioppo":[
       "arma",
       "pompa",
       "zombi",
       "barile",
       "pallottola"
-    ]
-  },
-  {
-    "word": "Riso",
-    "forbidden": [
+    ],
+     "Riso":[
       "Cinese",
       "campo",
       "universit\u00e0",
       "grano",
       "cibo"
-    ]
-  },
-  {
-    "word": "Cellulare",
-    "forbidden": [
+    ],
+     "Cellulare":[
       "chiamare",
       "mobile",
       "tasca",
       "Internet",
       "orecchio"
-    ]
-  },
-  {
-    "word": "Burro di arachidi",
-    "forbidden": [
+    ],
+     "Burro di arachidi":[
       "pane",
       "sandwich",
       "marmellata",
       "gelatina",
       "marrone"
-    ]
-  },
-  {
-    "word": "Ketchup",
-    "forbidden": [
+    ],
+     "Ketchup":[
       "Frisone",
       "pomodoro",
       "salsa",
       "condimento",
       "immergere"
-    ]
-  },
-  {
-    "word": "Pikachu \u00b7",
-    "forbidden": [
+    ],
+     "Pikachu \u00b7":[
       "Pokemon",
       "Cenere",
       "topo",
       "ratto",
       "elettrico"
-    ]
-  },
-  {
-    "word": "Nuoto",
-    "forbidden": [
+    ],
+     "Nuoto":[
       "Acqua",
       "pozza",
       "lago",
       "oceano",
       "vestito"
-    ]
-  },
-  {
-    "word": "Piano",
-    "forbidden": [
+    ],
+     "Piano":[
       "musica",
       "strumento",
       "chiave",
       "pedale",
       "grandioso"
-    ]
-  },
-  {
-    "word": "Consiglio",
-    "forbidden": [
+    ],
+     "Consiglio":[
       "Guida",
       "Saggio",
       "Consigliato",
       "Cosa fare",
       "Guida"
-    ]
-  },
-  {
-    "word": "Direttore",
-    "forbidden": [
+    ],
+     "Direttore":[
       "Film",
       "Produttore",
       "Responsabile",
       "Soprintendere",
       "Mettere"
-    ]
-  },
-  {
-    "word": "Continente",
-    "forbidden": [
+    ],
+     "Continente":[
       "Oceano",
       "Asia",
       "Terra",
       "Sette",
       "Terra"
-    ]
-  },
-  {
-    "word": "Ippopotamo",
-    "forbidden": [
+    ],
+     "Ippopotamo":[
       "Grasso",
       "Animale",
       "Africa",
       "Grande",
       "Fiume"
-    ]
-  },
-  {
-    "word": "Magia",
-    "forbidden": [
+    ],
+     "Magia":[
       "Mago",
       "Strega",
       "Potenza",
       "Trucco",
       "Mostrare"
-    ]
-  },
-  {
-    "word": "Cattivo",
-    "forbidden": [
+    ],
+     "Cattivo":[
       "Cattivo",
       "Comportamento",
       "Buono",
       "Scortese",
       "Disobbediente"
-    ]
-  },
-  {
-    "word": "Salvataggio",
-    "forbidden": [
+    ],
+     "Salvataggio":[
       "Salvare",
       "Eroe",
       "Pericolo",
       "Cassaforte",
       "Guida"
-    ]
-  },
-  {
-    "word": "Fiammifero",
-    "forbidden": [
+    ],
+     "Fiammifero":[
       "Fuoco",
       "Sciopero",
       "Paio",
       "Insieme",
       "Uguale"
-    ]
-  },
-  {
-    "word": "CD",
-    "forbidden": [
+    ],
+     "CD":[
       "Disco",
       "Musica",
       "Ascoltare",
       "Giocare",
       "Computer"
-    ]
-  },
-  {
-    "word": "Immediatamente",
-    "forbidden": [
+    ],
+     "Immediatamente":[
       "Quasi",
       "Ora",
       "Ritardo",
       "Rapido",
       "Presto"
-    ]
-  },
-  {
-    "word": "Pericolo",
-    "forbidden": [
+    ],
+     "Pericolo":[
       "Cassaforte",
       "Nuocere",
       "Ferita",
       "Proteggere",
       "Evitare"
-    ]
-  },
-  {
-    "word": "Sale",
-    "forbidden": [
+    ],
+     "Sale":[
       "Bianco",
       "Dolce",
       "Popcorn",
       "Cottura",
       "Sapore"
-    ]
-  },
-  {
-    "word": "Alzarsi",
-    "forbidden": [
+    ],
+     "Alzarsi":[
       "Sedere",
       "Pavimento",
       "Piedi",
       "Su",
       "Prendere"
-    ]
-  },
-  {
-    "word": "Toro",
-    "forbidden": [
+    ],
+     "Toro":[
       "Cavalcare",
       "Rosso",
       "Maschio",
       "Corna",
       "Accusa"
-    ]
-  },
-  {
-    "word": "Storia",
-    "forbidden": [
+    ],
+     "Storia":[
       "Politica",
       "Passato",
       "Avvenimenti",
       "Finito",
       "Accadere"
-    ]
-  },
-  {
-    "word": "Rivista",
-    "forbidden": [
+    ],
+     "Rivista":[
       "Pagine",
       "Libro",
       "Intrattenere",
       "Notizie",
       "Leggere"
-    ]
-  },
-  {
-    "word": "Fruitcake",
-    "forbidden": [
+    ],
+     "Fruitcake":[
       "cuocere",
       "dolce",
       "essiccato",
       "candito",
       "tritato"
-    ]
-  },
-  {
-    "word": "Campana",
-    "forbidden": [
+    ],
+     "Campana":[
       "anello",
       "slitta",
       "strumento",
       "tazza",
       "Cava"
-    ]
-  },
-  {
-    "word": "Fanaleria",
-    "forbidden": [
+    ],
+     "Fanaleria":[
       "decorare",
       "colorato",
       "bianco",
       "albero",
       "brillante"
-    ]
-  },
-  {
-    "word": "Parata",
-    "forbidden": [
+    ],
+     "Parata":[
       "via",
       "Bande",
       "Galleggianti",
       "processione",
       "orologio"
-    ]
-  },
-  {
-    "word": "Giocattoli",
-    "forbidden": [
+    ],
+     "Giocattoli":[
       "desiderio",
       "giocare",
       "capretti",
       "bambini",
       "presente"
-    ]
-  },
-  {
-    "word": "Presente",
-    "forbidden": [
+    ],
+     "Presente":[
       "Regali",
       "albero",
       "scatola",
       "avvolgere",
       "Babbo Natale"
-    ]
-  },
-  {
-    "word": "Biscotti",
-    "forbidden": [
+    ],
+     "Biscotti":[
       "cuocere",
       "latte",
       "cioccolato",
       "Farina d' avena",
       "zucchero"
-    ]
-  },
-  {
-    "word": "Famiglia",
-    "forbidden": [
+    ],
+     "Famiglia":[
       "sangue",
       "Madre",
       "Padre",
       "sorella",
       "fratello"
-    ]
-  },
-  {
-    "word": "Lista",
-    "forbidden": [
+    ],
+     "Lista":[
       "cattivo",
       "gentile",
       "assegno",
       "due volte",
       "Nomi"
-    ]
-  },
-  {
-    "word": "calza",
-    "forbidden": [
+    ],
+     "calza":[
       "appendere",
       "manto",
       "caminetto",
       "calzino",
       "imbottire"
-    ]
-  },
-  {
-    "word": "Polo Nord",
-    "forbidden": [
+    ],
+     "Polo Nord":[
       "A sud",
       "Babbo Natale",
       "casa",
       "vivere",
       "officina"
-    ]
-  },
-  {
-    "word": "Doppio",
-    "forbidden": [
+    ],
+     "Doppio":[
       "due volte",
       "numero",
       "triplo",
       "importo",
       "duplicare"
-    ]
-  },
-  {
-    "word": "Prato",
-    "forbidden": [
+    ],
+     "Prato":[
       "erba",
       "falciare",
       "verde",
       "cortile",
       "fiori"
-    ]
-  },
-  {
-    "word": "Arresto",
-    "forbidden": [
+    ],
+     "Arresto":[
       "prigione",
       "criminale",
       "polizia",
       "manette",
       "cattura"
-    ]
-  },
-  {
-    "word": "Educare",
-    "forbidden": [
+    ],
+     "Educare":[
       "bambino",
       "insegnare",
       "imparare",
       "scuola",
       "allenatore"
-    ]
-  },
-  {
-    "word": "Mito",
-    "forbidden": [
+    ],
+     "Mito":[
       "Greco",
       "leggenda",
       "storia",
       "cultura",
       "illusione"
-    ]
-  },
-  {
-    "word": "Misurazione",
-    "forbidden": [
+    ],
+     "Misurazione":[
       "unit\u00e0",
       "altezza",
       "distanza",
       "lunghezza",
       "dimensione"
-    ]
-  },
-  {
-    "word": "Prescrizione",
-    "forbidden": [
+    ],
+     "Prescrizione":[
       "dottore",
       "carta",
       "medicina",
       "farmacia",
       "rimedio"
-    ]
-  },
-  {
-    "word": "Tomba",
-    "forbidden": [
+    ],
+     "Tomba":[
       "seppellire",
       "cimitero",
       "tu",
       "funerale",
       "serio"
-    ]
-  },
-  {
-    "word": "Cacciare",
-    "forbidden": [
+    ],
+     "Cacciare":[
       "Cervo",
       "fucile",
       "bosco",
       "cibo",
       "ricerca"
-    ]
-  },
-  {
-    "word": "Chirurgo",
-    "forbidden": [
+    ],
+     "Chirurgo":[
       "dottore",
       "chirurgia",
       "operazione",
       "ospedale",
       "cuore"
-    ]
-  },
-  {
-    "word": "Sobborgo",
-    "forbidden": [
+    ],
+     "Sobborgo":[
       "citt\u00e0",
       "fuori",
       "tranquillo",
       "vivere",
       "vicinato"
-    ]
-  },
-  {
-    "word": "Minimo",
-    "forbidden": [
+    ],
+     "Minimo":[
       "massimo",
       "infimo",
       "salario",
       "importo",
       "minimo"
-    ]
-  },
-  {
-    "word": "Sacro",
-    "forbidden": [
+    ],
+     "Sacro":[
       "santo",
       "Religioso",
       "beato",
       "vacca",
       "consacrato"
-    ]
-  },
-  {
-    "word": "Guerriero",
-    "forbidden": [
+    ],
+     "Guerriero":[
       "soldato",
       "fui",
       "attacco",
       "battaglia",
       "gladiatore"
-    ]
-  },
-  {
-    "word": "Pensionato",
-    "forbidden": [
+    ],
+     "Pensionato":[
       "lavoro",
       "rilassare",
       "vecchio",
       "Pensione",
       "casa"
-    ]
-  },
-  {
-    "word": "Sondaggio",
-    "forbidden": [
+    ],
+     "Sondaggio":[
       "domandare",
       "Domande",
       "parere",
       "Compilare",
       "investigazione"
-    ]
-  },
-  {
-    "word": "Corruzione",
-    "forbidden": [
+    ],
+     "Corruzione":[
       "politico",
       "bustarella",
       "governo",
       "scandalo",
       "disonest\u00e0"
-    ]
-  },
-  {
-    "word": "Uncino",
-    "forbidden": [
+    ],
+     "Uncino":[
       "pesca",
       "metallo",
       "Affilato",
       "esca",
       "rosso"
-    ]
-  },
-  {
-    "word": "Caviglia",
-    "forbidden": [
+    ],
+     "Caviglia":[
       "distorsione",
       "gamba",
       "piede",
       "rompere",
       "intero"
-    ]
-  },
-  {
-    "word": "Ripido",
-    "forbidden": [
+    ],
+     "Ripido":[
       "arrampicarsi",
       "montagna",
       "collina",
       "angolo",
       "estremo"
-    ]
-  },
-  {
-    "word": "Diffusione",
-    "forbidden": [
+    ],
+     "Diffusione":[
       "malattia",
       "virus",
       "Infezione",
       "impedire",
       "estendere"
-    ]
-  },
-  {
-    "word": "Cooperare",
-    "forbidden": [
+    ],
+     "Cooperare":[
       "insieme",
       "ciascuno",
       "unire",
       "lavoro",
       "collaborare"
-    ]
-  },
-  {
-    "word": "Sacrificio",
-    "forbidden": [
+    ],
+     "Sacrificio":[
       "Umano",
       "uccidere",
       "rituale",
       "sangue",
       "arrendersi"
-    ]
-  },
-  {
-    "word": "Bolla",
-    "forbidden": [
+    ],
+     "Bolla":[
       "gengiva",
       "sapone",
       "Esplosione",
       "Pop",
       "sfera d'aria"
-    ]
-  },
-  {
-    "word": "Mascella",
-    "forbidden": [
+    ],
+     "Mascella":[
       "bocca",
       "denti",
       "ossa",
       "masticare",
       "parlare"
-    ]
-  },
-  {
-    "word": "Vela",
-    "forbidden": [
+    ],
+     "Vela":[
       "nave",
       "barca",
       "oceano",
       "vento",
       "timone"
-    ]
-  },
-  {
-    "word": "Tropicale",
-    "forbidden": [
+    ],
+     "Tropicale":[
       "caldo",
       "tempesta",
       "isola",
       "esotico",
       "umido"
-    ]
-  },
-  {
-    "word": "Fungo",
-    "forbidden": [
+    ],
+     "Fungo":[
       "bianco",
       "umido"
-    ]
-  },
-  {
-    "word": "Allenamento",
-    "forbidden": [
+    ],
+     "Allenamento":[
       "palestra",
       "peso",
       "treno",
       "esercizio",
       "Linea sanitaria"
-    ]
-  },
-  {
-    "word": "Masticare",
-    "forbidden": [
+    ],
+     "Masticare":[
       "gengiva",
       "cibo",
       "mangiare",
       "denti",
       "bocca"
-    ]
-  },
-  {
-    "word": "Fragile",
-    "forbidden": [
+    ],
+     "Fragile":[
       "delicato",
       "rompere",
       "vetro",
       "attento",
       "malsicuro"
-    ]
-  },
-  {
-    "word": "Villa",
-    "forbidden": [
+    ],
+     "Villa":[
       "casa",
       "casa",
       "vivere",
       "caro",
       "residenza"
-    ]
-  },
-  {
-    "word": "Folla",
-    "forbidden": [
+    ],
+     "Folla":[
       "gente",
       "molti",
       "mandria",
       "via",
       "gruppo"
-    ]
-  },
-  {
-    "word": "Sputare",
-    "forbidden": [
+    ],
+     "Sputare":[
       "bocca",
       "saliva",
       "liquido",
       "tabacco",
       "sputacchiera"
-    ]
-  },
-  {
-    "word": "Escursione",
-    "forbidden": [
+    ],
+     "Escursione":[
       "camminare",
       "bosco",
       "montagna",
       "zaino",
       "Ripido"
-    ]
-  },
-  {
-    "word": "Fritto",
-    "forbidden": [
+    ],
+     "Fritto":[
       "pollo",
       "cuoco",
       "cibo",
       "olio",
       "pesce"
-    ]
-  },
-  {
-    "word": "barbiere",
-    "forbidden": [
+    ],
+     "barbiere":[
       "Taglio di capelli",
       "radere",
       "forbici",
       "parrucchiere",
       "pettine"
-    ]
-  },
-  {
-    "word": "pigiama",
-    "forbidden": [
+    ],
+     "pigiama":[
       "letto",
       "Notte",
       "pigiama party",
       "vestiti",
       "portare"
-    ]
-  },
-  {
-    "word": "baffi",
-    "forbidden": [
+    ],
+     "baffi":[
       "capello",
       "barba",
       "labbro",
       "radere",
       "bocca"
-    ]
-  },
-  {
-    "word": "Spada",
-    "forbidden": [
+    ],
+     "Spada":[
       "Re Art\u00f9",
       "Pietro",
       "orecchio",
       "Malchus \u00b7",
       "Lama"
-    ]
-  },
-  {
-    "word": "Pastore",
-    "forbidden": [
+    ],
+     "Pastore":[
       "Giuseppe",
       "Nascita",
       "Pecora",
       "Cura",
       "Agnello"
-    ]
-  },
-  {
-    "word": "Scrittura",
-    "forbidden": [
+    ],
+     "Scrittura":[
       "Bibbia",
       "Leggere",
       "Santo",
@@ -1266,4 +887,3 @@
       "Storia"
     ]
   }
-]
