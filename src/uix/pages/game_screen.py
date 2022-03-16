@@ -72,11 +72,11 @@ class GameScreen(MDScreen):
             game_elements = json.load(game_file)
             game_elements = list(game_elements.items())
             shuffle(game_elements)
-            self.elements = dict(game_elements)
+            self.elements = game_elements
             Logger.info(f"Loading Game - {len(self.elements)} Elements: {self.elements}")
 
         self.elem_idx = 0
-        for word, forbidden in list(self.elements.items())[:1]:
+        for word, forbidden in self.elements[:1]:
             self.ids.card_container.add_card(word, forbidden)
             self.elem_idx = self.elem_idx + 1
         self.ids.remaining_jumps.text = str(self.num_jumps)
@@ -117,11 +117,9 @@ class GameScreen(MDScreen):
     def next_card(self):
         if self.elem_idx < len(self.elements):
             self.ids.card_container.next_card()
-            keys = self.elements.keys()
-            word = list(keys)[self.elem_idx]
-            self.ids.card_container.add_card(
-                word, self.elements[word])
-            self.elem_idx = self.elem_idx + 1
+            word, forbidden = self.elements[self.elem_idx]
+            self.ids.card_container.add_card(word, forbidden)
+            self.elem_idx += 1
         else:
             self.ids.card_container.next_card()
 

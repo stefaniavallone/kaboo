@@ -31,7 +31,6 @@ class HistoryScreen(MDScreen):
             self.histories = json.load(histories_file)
 
         table_data = list()
-        OneLineAvatarListItem
         for history in self.histories:
             winner_index, score = best_player(history['players_points'])
             color = PLAYERS_COLORS[winner_index]
